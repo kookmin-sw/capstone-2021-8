@@ -32,6 +32,7 @@ class ArxivSpider(scrapy.Spider):
             self.curr_date = dt.date.today() - dt.timedelta(days=2)
             self.end_date = dt.date.today() - dt.timedelta(days=1)
         self.base_save_path = config['ARXIV']['BASE_SAVE_PATH']
+        self.get_pdf = config['ARXIV']['GET_PDF']
 
 
     def start_requests(self):
@@ -74,6 +75,8 @@ class ArxivSpider(scrapy.Spider):
                               for i in secondary_subjects[2::3]]
         pdf_urls = paper_list.css('dt > span > a:nth-child(2)::attr(href)').getall()
         pdf_urls = ['https://arxiv.org{}'.format(i) for i in pdf_urls]
+        abstract = paper_list.css('dd > div > p.mathjax::text').getall()
+        print(abstract)
 
         # check folders exist or create
         self.check_folder_exist([self.base_save_path, year, month, day])
@@ -89,12 +92,14 @@ class ArxivSpider(scrapy.Spider):
             paper_item['primary_subject'] = primary_subject[idx]
             paper_item['secondary_subjects'] = secondary_subjects[idx]
             paper_item['pdf_url'] = pdf_urls[idx]
-            paper_save_path = '{}{}{}'.format(save_path, arxiv_nums[idx].replace(':', '/').split('/')[-1], '.pdf')
-            paper_item['save_path'] = paper_save_path
+            paper_item['abstract'] = abstract[idx]
 
             # save the pdf to local folder
-            pdf_response = requests.get(pdf_urls[idx])
-            with open(paper_save_path, 'wb') as f:
-                f.write(pdf_response.content)
+            if self.get_pdf:
+                paper_save_path = '{}{}{}'.format(save_path, arxiv_nums[idx].replace(':', '/').split('/')[-1], '.pdf')
+                paper_item['save_path'] = paper_save_path
+                pdf_response = requests.get(pdf_urls[idx])
+                with open(paper_save_path, 'wb') as f:
+                    f.write(pdf_response.content)
 
             yield paper_item

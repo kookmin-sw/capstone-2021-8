@@ -1,6 +1,6 @@
 {
   "ARXIV": {
-    "BASE_URL": "https://arxiv.org/catchup?smonth={}&group=grp_&sday={}&num=50&archive=cs&method=without&syear={}",
+    "BASE_URL": "https://arxiv.org/catchup?smonth={}&group=grp_&sday={}&num=50&archive=cs&method=with&syear={}",
     "START_YEAR": 2018,
     "START_MONTH": 1,
     "START_DAY": 1,
@@ -8,6 +8,7 @@
     "END_MONTH": 1,
     "END_DAY": 30,
     "BASE_SAVE_PATH": "D://capstone_paper",
-    "TEST": true
+    "TEST": true,
+    "GET_PDF": false
   }
 }

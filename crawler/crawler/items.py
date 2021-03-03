@@ -15,3 +15,8 @@ class PaperItem(scrapy.Item):
     secondary_subjects = scrapy.Field()
     pdf_url = scrapy.Field()
     save_path = scrapy.Field()
+    abstract = scrapy.Field()
+
+    def __repr__(self):
+        """only print out attr1 after exiting the Pipeline"""
+        return repr({"title": self['title']})
