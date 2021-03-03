@@ -18,5 +18,4 @@ class PaperItem(scrapy.Item):
     abstract = scrapy.Field()
 
     def __repr__(self):
-        """only print out attr1 after exiting the Pipeline"""
         return repr({"title": self['title']})

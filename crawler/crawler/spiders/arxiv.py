@@ -76,7 +76,6 @@ class ArxivSpider(scrapy.Spider):
         pdf_urls = paper_list.css('dt > span > a:nth-child(2)::attr(href)').getall()
         pdf_urls = ['https://arxiv.org{}'.format(i) for i in pdf_urls]
         abstract = paper_list.css('dd > div > p.mathjax::text').getall()
-        print(abstract)
 
         # check folders exist or create
         self.check_folder_exist([self.base_save_path, year, month, day])
