@@ -1,38 +1,49 @@
 {
   "name": "paperflow-web-v1",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode=development",
+    "prod": "webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.1",
+    "css-loader": "^5.1.1",
+    "file-loader": "^6.2.0",
+    "mobx": "^6.1.8",
+    "mobx-react-lite": "^3.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.0"
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^2.0.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-react": "^7.12.13",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "html-webpack-plugin": "^5.2.0",
+    "path": "^0.12.7",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "airbnb"
     ]
   }
 }
