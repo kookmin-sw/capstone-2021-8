@@ -20,7 +20,7 @@ const App = () => {
     });
     data['links'].push({
       source: 'company', 
-      target: 'region ' + String(i),=
+      target: 'region ' + String(i),
     })
     for(j = 1; j < 6; j++) {
       data['nodes'].push({
