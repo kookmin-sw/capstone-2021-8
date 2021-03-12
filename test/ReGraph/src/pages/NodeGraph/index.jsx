@@ -7,22 +7,24 @@ const App = () => {
       {
         id: 'company', 
         size: 700,
+        color: 'red'
       },
     ],
     links: [],
   };
 
   var i, j;
-  for(i = 1; i < 6; i++) {
+  for(i = 1; i < 5; i++) {
     data['nodes'].push({
       id: 'region ' + String(i),
-      size: 300
+      size: 300,
+      color: 'yellow'
     });
     data['links'].push({
       source: 'company', 
       target: 'region ' + String(i),
     })
-    for(j = 1; j < 6; j++) {
+    for(j = 1; j < 5; j++) {
       data['nodes'].push({
         id: 'office ' + String(i) + ' ' + String(j),
         size: 100
@@ -34,8 +36,8 @@ const App = () => {
     }
   }
 
-  for(i = 1; i < 6; i++) {
-    for(j = 1; j < 6; j++) {
+  for(i = 1; i < 5; i++) {
+    for(j = 1; j < 5; j++) {
       if(i !== j) {
         data['links'].push({
           source: 'region ' + String(i), 
