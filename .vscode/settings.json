@@ -45,5 +45,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "python.venvPath": "${workspaceRoot}/server/paperflow-functions-v1/venv",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "autopep8",
+  "python.linting.pylintPath": "${workspaceRoot}/server/paperflow-functions-v1/venv/bin/pylint",
+  "python.linting.pylintArgs": ["--rcfile", "${workspaceRoot}/server/paperflow-functions-v1/pylint.config"],
   "editor.formatOnSave": true
 }
