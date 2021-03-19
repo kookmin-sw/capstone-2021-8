@@ -7,6 +7,10 @@ import {
   Button,
 } from 'react-bootstrap';
 
+import {
+  HeaderEntireMain,
+} from '../../assets/strings/Menu/Main';
+
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
 
@@ -20,7 +24,11 @@ const NavBar = ({ screenClass }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">메뉴 아이템</Nav.Link>
+          {
+            HeaderEntireMain.map((item) => (
+              <Nav.Link href="/">{item.name}</Nav.Link>
+            ))
+          }
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
