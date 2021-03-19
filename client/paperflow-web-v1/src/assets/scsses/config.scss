@@ -1,0 +1,80 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// Need to sort by name
+$balloon-black: #101010;
+$black: #000000;
+$blue-light-grey1: #f6f8f9;
+$blue-light-grey2: #eff1f4;
+$blue-light-grey3: #e9ecef;
+$blue-light-grey4: #e6e7ee;
+$blue-light-grey5: #dadce5;
+$body-black: #333333;
+$body-grey: #acacac;
+$charcoal: #545454;
+$cool-grey: #949596;
+$dark-charcoal: #4c4c4c;
+$dark-grey: #6d7278;
+$deep-purple: #673ab7;
+$deep-purple2: #b388ff;
+$favourite-yellow: #ffd54f;
+$grey1: #efefef;
+$grey2: #e1e1e1;
+$grey3: #d8d8d8;
+$grey4: #adadad;
+$greysh-white: #fcfcfc;
+$hashtag-purple: #f6f1ff;
+$header-bottom: #ededed;
+$light-green: #13c4a3;
+$light-grey: #f8f8f8;
+$light-purple: #d7c1ff;
+$neon-purple: #7c4dff;
+$placeholder: #b7b7b7;
+$primary-purple: #742dd2;
+$white: #ffffff;
+
+// Need to sort by name
+:export {
+  balloonBlack: $balloon-black;
+  black: $black;
+  blueLightGrey1: $blue-light-grey1;
+  blueLightGrey2: $blue-light-grey2;
+  blueLightGrey3: $blue-light-grey3;
+  blueLightGrey4: $blue-light-grey4;
+  blueLightGrey5: $blue-light-grey5;
+  bodyBlack: $body-black;
+  bodyGrey: $body-grey;
+  charcoal: $charcoal;
+  coolGrey: $cool-grey;
+  darkCharcoal: $dark-charcoal;
+  darkGrey: $dark-grey;
+  deepPurple: $deep-purple;
+  deepPurple2: $deep-purple2;
+  favouriteYellow: $favourite-yellow;
+  grey1: $grey1;
+  grey2: $grey2;
+  grey3: $grey3;
+  grey4: $grey4;
+  greyshWhite: $greysh-white;
+  hashtagPurple: $hashtag-purple;
+  headerBottom: $header-bottom;
+  lightGreen: $light-green;
+  lightGrey: $light-grey;
+  lightPurple: $light-purple;
+  neonPurple: $neon-purple;
+  placeholder: $placeholder;
+  primaryPurple: $primary-purple;
+  white: $white;
+}
