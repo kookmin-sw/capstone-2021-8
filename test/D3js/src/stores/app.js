@@ -1,6 +1,3 @@
-import { observable } from 'mobx'
-
-
 const createStore = () => {
   const store = {
   }

@@ -7,30 +7,7 @@ import { ResponsiveNetwork } from '@nivo/network'
 // website examples showcase many properties,
 // you'll often use just a few of them.
 
-const MyResponsiveNetwork = ({ data /* see data tab */ }) => {
-  const renderNode = node => {
-    console.log('here')
-    return(
-      <svg width="50" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g>
-          <rect
-            x={10}
-            y={10}
-            width={30}
-            height={30}
-            fill={node.color}
-          />
-          <text
-            x={0}
-            y={0}
-            fill="black"
-          >
-            {node.label}
-          </text>
-        </g>
-      </svg>
-    )
-  };
+const MyResponsiveNetwork = ({ data }) => {
 
   return (
     <ResponsiveNetwork
@@ -47,9 +24,7 @@ const MyResponsiveNetwork = ({ data /* see data tab */ }) => {
       motionDamping={12}
       linkDistance={'distance'}
       distanceMin={10}
-      nodeLabel={t => t.id}
       labelVisibility={true}
-      renderNode={t => renderNode(t)}
     />
   )
 }
