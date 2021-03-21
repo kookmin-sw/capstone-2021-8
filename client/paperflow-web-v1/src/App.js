@@ -1,10 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './pages/Landing';
+import NavBar from './components/NavBar';
 
 const App = () => (
   <BrowserRouter>
-    <Route exact path="/" component={Landing} />
+    <NavBar />
+    <Switch>
+      <Route exact path="/" component={Landing} />
+    </Switch>
   </BrowserRouter>
 );
 
