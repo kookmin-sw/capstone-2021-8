@@ -52,8 +52,6 @@ const App = () => {
         
         d3.select(svgRef.current)
           .call(zoomContainer)
-
-        console.log('setting finished');
       }
     }, 100);
     return () => clearTimeout(timer);
