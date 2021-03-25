@@ -15,7 +15,7 @@ const CustomNode = nodeInfo => {
       .attr('fontSize', function(d) {
         return Math.min(2 * nodeInfo.radius, (2 * nodeInfo.radius - 8) / this.getComputedTextLength() * 24) + "px"; 
       })
-  }, [])
+  }, [nodeInfo.radius])
   
   return (
     <g

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Network from './component/Network';
 // import networkMockUp from '../../data/networkMockUp4.json'
 import networkMockUp from '../../data/networkMockUpComplex.json'
