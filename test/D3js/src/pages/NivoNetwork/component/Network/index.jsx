@@ -1,6 +1,7 @@
 // install (please make sure versions match peerDependencies)
 // yarn add @nivo/core @nivo/network
-import { ResponsiveNetwork } from '@nivo/network'
+import { ResponsiveNetwork } from '@nivo/network';
+import CustomNode from '../CustomNode';
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
@@ -25,6 +26,7 @@ const MyResponsiveNetwork = ({ data }) => {
       linkDistance={'distance'}
       distanceMin={10}
       labelVisibility={true}
+      nodeComponent={(t) => CustomNode(t)}
     />
   )
 }
