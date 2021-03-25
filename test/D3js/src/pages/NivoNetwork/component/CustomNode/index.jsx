@@ -1,36 +1,42 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
+import * as d3 from 'd3';
 
-const CustomNode = node => {
-  console.log(node)
-
-  const circleRef = useRef();
+const CustomNode = nodeInfo => {
+  const nodeRef = useRef();
 
   const style = {
-    'font-family': 'sans-serif',
-    'font-size': '20px',
+    'fontFamily': 'sans-serif',
     fill: 'rgb(255, 255, 255)',
   }
+
+  useEffect(() => {
+    const node = d3.select(nodeRef.current);
+    node.select('text')
+      .attr('fontSize', function(d) {
+        return Math.min(2 * nodeInfo.radius, (2 * nodeInfo.radius - 8) / this.getComputedTextLength() * 24) + "px"; 
+      })
+  }, [])
   
   return (
     <g
-      ref={circleRef}
-      transform={'translate(' + [node.x, node.y] + ') scale(1)'}
+      ref={nodeRef}
+      transform={'translate(' + [nodeInfo.x, nodeInfo.y] + ') scale(1)'}
     >
       <circle
-        r={node.radius}
-        fill={node.color}
-        stroke={node.borderColor}
-        strokeWidth={node.borderWidth}
+        r={nodeInfo.radius}
+        fill={nodeInfo.color}
+        stroke={nodeInfo.borderColor}
+        strokeWidth={nodeInfo.borderWidth}
       >
       </circle>
       <text
-        text-anchor="middle"
-        dominant-baseline="central"
-        width={2 * node.radius * Math.cos(Math.PI / 4)}
-        height={2 * node.radius * Math.cos(Math.PI / 4)}
+        textAnchor="middle"
+        dominantBaseline="central"
+        width={2 * nodeInfo.radius * Math.cos(Math.PI / 4)}
+        height={2 * nodeInfo.radius * Math.cos(Math.PI / 4)}
         style={style}
       >
-        {node.node.id}
+        {nodeInfo.node.id}
       </text>
     </g>
   )
