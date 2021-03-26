@@ -19,6 +19,8 @@ const useStoreData = (context, dataSelector) => {
   })
 }
 
-export default (selector) => {
+const useRootData =  (selector) => {
   return useStoreData(context, selector)
 }
+
+export default useRootData
