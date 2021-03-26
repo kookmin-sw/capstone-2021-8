@@ -6,6 +6,7 @@ import NodeGraphTest from './pages/NodeGraphTest';
 import NodeGraph from './pages/NodeGraph';
 import NivoNetwork from './pages/NivoNetwork';
 import NivoBubble from './pages/NivoBubble';
+import NivoVisualization from './pages/NivoVisualization';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Route path='/NodeGraph' component={NodeGraph}/>
       <Route path='/NivoNetwork' component={NivoNetwork}/>
       <Route path='/NivoBubble' component={NivoBubble}/>
+      <Route path='/NivoVisualization' component={NivoVisualization}/>
     </BrowserRouter>
   )
 }
