@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { select, zoom } from 'd3';
+import { Jumbotron } from 'react-bootstrap';
 
 import Network from '../../components/Network';
 import data from '../../assets/strings/MockUp/Network/data.json';
@@ -12,7 +13,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       const parentDiv = select(svgRef.current);
-      console.log(parentDiv.select('g'));
+
       if (parentDiv.node().querySelector('g') !== null) {
         // initial setting
         parentDiv.select('g').attr('transform', 'translate(0,0) scale(1)');
@@ -29,14 +30,16 @@ const App = () => {
   }, []);
 
   return (
-    <div
-      className={styles.container}
-      ref={svgRef}
-    >
-      <Network
-        data={data}
-      />
-    </div>
+    <Jumbotron id={styles.networkContainer}>
+      <div
+        className={styles.network}
+        ref={svgRef}
+      >
+        <Network
+          data={data}
+        />
+      </div>
+    </Jumbotron>
   );
 };
 
