@@ -6,18 +6,24 @@ import {
 } from 'react-bootstrap';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
-import stylesMobileDefault from './MobileDefault.module.scss';
+// import stylesMobileDefault from './MobileDefault.module.scss';
 
 const AchvCounter = ({ screenClass }) => {
   const isDesktop = screenClass === 'xl';
-  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
   return (
-    <Container className="w-100">
-      <Row>
-        <Col className={styles.achvItemCol}>1 of 3</Col>
-        <Col className={styles.achvItemCol}>2 of 3</Col>
-        <Col className={styles.achvItemCol}>3 of 3</Col>
+    <Container className={styles.achvContainer}>
+      <Row className={`align-items-center ${styles.achvItemRow}`}>
+        <Col className={styles.achvItemCol}><h2 className={styles.number}>32K</h2>
+          <span className={styles.description}>Publications</span>
+        </Col>
+        <Col className={styles.achvItemCol}><h2 className={styles.number}>12K</h2>
+          <span className={styles.description}>Connected papers</span>
+        </Col>
+        <Col className={styles.achvItemCol}><h2 className={styles.number}>5K</h2>
+          <span className={styles.description}>Topics</span>
+        </Col>
       </Row>
     </Container>
   );
