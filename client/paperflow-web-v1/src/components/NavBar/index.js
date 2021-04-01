@@ -33,6 +33,7 @@ const NavBar = ({ screenClass }) => {
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           <Button variant="outline-success">Search</Button>
+          <Button variant="outline-primary" style={{ marginLeft: '10px' }}>Login</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
