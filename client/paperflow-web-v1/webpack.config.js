@@ -15,7 +15,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        // node_modules - only babel, no eslint
+        test: /\.(js|jsx)$/,
+        include: [
+          path.resolve(__dirname, 'node_modules'),
+        ],
+        use: ['babel-loader'],
+      }, {
+        // project files - babel + eslint
+        test: /\.(js|jsx)$/,
+        include: [
+          path.resolve(__dirname, './src/'),
+        ],
         use: ['babel-loader', 'eslint-loader'],
       },
       {
