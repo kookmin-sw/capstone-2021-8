@@ -6,15 +6,20 @@ import styles from './Styles.module.scss';
 const CustomNode = (nodeInfo, handleTooltipInfo) => {
   const nodeRef = useRef();
 
+  const handleTooltip = (d, visible) => {
+    handleTooltipInfo({
+      visible,
+      x: d.x,
+      y: d.y,
+      id: nodeInfo.node.id,
+    });
+  };
+
   useEffect(() => {
     select(nodeRef.current)
-      .on('click', () => {
-        handleTooltipInfo({
-          x: nodeInfo.x,
-          y: nodeInfo.y,
-          id: nodeInfo.node.id,
-        });
-      });
+      .on('mouseover', (d) => handleTooltip(d, true))
+      .on('mousemove', (d) => handleTooltip(d, true))
+      .on('mouseout', (d) => handleTooltip(d, false));
   }, []);
 
   return (
