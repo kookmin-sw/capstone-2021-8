@@ -5,13 +5,14 @@ import {
 
 import backgroundImage from '../../assets/images/concept-1868728_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
+import DefaultLayout from '../../layouts/Layouts/Default';
 
 const App = ({ screenClass }) => {
   const isDesktop = screenClass === 'xl';
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
   return (
-    <div>
+    <DefaultLayout>
       <Carousel controls={false}>
         <Carousel.Item>
           <img
@@ -28,7 +29,7 @@ const App = ({ screenClass }) => {
         </Carousel.Item>
       </Carousel>
       Landing Page<br />hello, world!
-    </div>
+    </DefaultLayout>
   );
 };
 
