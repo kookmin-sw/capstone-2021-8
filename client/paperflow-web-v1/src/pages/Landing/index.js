@@ -7,6 +7,7 @@ import backgroundImage from '../../assets/images/concept-1868728_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import AchvCounter from '../../components/AchvCounter';
+import IntroCard from '../../components/IntroCard';
 
 const App = ({ screenClass }) => {
   const isDesktop = screenClass === 'xl';
@@ -30,6 +31,7 @@ const App = ({ screenClass }) => {
         </Carousel.Item>
       </Carousel>
       <AchvCounter />
+      <IntroCard />
     </DefaultLayout>
   );
 };
