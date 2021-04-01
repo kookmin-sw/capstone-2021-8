@@ -1,9 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
+import { select } from 'd3';
 
 import styles from './Styles.module.scss';
 
-const CustomNode = (nodeInfo) => {
+const CustomNode = (nodeInfo, handleTooltipInfo) => {
   const nodeRef = useRef();
+
+  useEffect(() => {
+    select(nodeRef.current)
+      .on('click', () => {
+        handleTooltipInfo({
+          x: nodeInfo.x,
+          y: nodeInfo.y,
+          id: nodeInfo.node.id,
+        });
+      });
+  }, []);
 
   return (
     <g
@@ -15,6 +27,7 @@ const CustomNode = (nodeInfo) => {
         fill={nodeInfo.color}
         stroke={nodeInfo.borderColor}
         strokeWidth={nodeInfo.borderWidth}
+        data-id={nodeInfo.node.id}
       />
       <text
         textAnchor="middle"

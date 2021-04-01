@@ -2,7 +2,7 @@ import React from 'react';
 import { ResponsiveNetwork } from '@nivo/network';
 import CustomNode from './CustomNode';
 
-const MyResponsiveNetwork = ({ data }) => (
+const MyResponsiveNetwork = ({ data, handleTooltipInfo }) => (
   <ResponsiveNetwork
     nodes={data.nodes}
     links={data.links}
@@ -20,7 +20,7 @@ const MyResponsiveNetwork = ({ data }) => (
     linkDistance="distance"
     distanceMin={10}
     labelVisibility
-    nodeComponent={(t) => CustomNode(t)}
+    nodeComponent={(t) => CustomNode(t, handleTooltipInfo)}
   />
 );
 
