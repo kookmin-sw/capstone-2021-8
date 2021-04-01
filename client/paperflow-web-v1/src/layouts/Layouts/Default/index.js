@@ -2,7 +2,7 @@ import React from 'react';
 
 import DefaultDesktopLayout from '../DefaultDesktop';
 
-const App = ({ children, className, screenClass }) => {
+const DefaultLayout = ({ children, className, screenClass }) => {
   const isDesktop = screenClass === 'xl';
 
   return (
@@ -13,4 +13,4 @@ const App = ({ children, className, screenClass }) => {
   );
 };
 
-export default App;
+export default DefaultLayout;
