@@ -6,6 +6,7 @@ import {
 import backgroundImage from '../../assets/images/concept-1868728_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
+import AchvCounter from '../../components/AchvCounter';
 
 const App = ({ screenClass }) => {
   const isDesktop = screenClass === 'xl';
@@ -28,7 +29,7 @@ const App = ({ screenClass }) => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      Landing Page<br />hello, world!
+      <AchvCounter />
     </DefaultLayout>
   );
 };
