@@ -12,40 +12,18 @@ const App = ({ screenClass }) => {
 
   return (
     <div>
-      <Carousel>
+      <Carousel controls={false}>
         <Carousel.Item>
           <img
-            className={styles.carouselImage}
+            className={`d-block ${styles.carouselImage}`}
             src={backgroundImage}
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className={styles.carouselImage}
-            src={backgroundImage}
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className={styles.carouselImage}
-            src={backgroundImage}
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h1>Discover flow of papers with PaperFlow</h1>
+            <p>PaperFlow helps you to catch up recent research flow
+              by gives you &ldquo;paper flow diagram&rdquo;
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
