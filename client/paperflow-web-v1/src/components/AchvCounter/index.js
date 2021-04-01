@@ -10,15 +10,14 @@ import stylesMobileDefault from './MobileDefault.module.scss';
 
 const AchvCounter = ({ screenClass }) => {
   const isDesktop = screenClass === 'xl';
-  // eslint-disable-next-line no-unused-vars
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (
     <Container className="w-100">
       <Row>
-        <Col>1 of 3</Col>
-        <Col>2 of 3</Col>
-        <Col>3 of 3</Col>
+        <Col className={styles.achvItemCol}>1 of 3</Col>
+        <Col className={styles.achvItemCol}>2 of 3</Col>
+        <Col className={styles.achvItemCol}>3 of 3</Col>
       </Row>
     </Container>
   );
