@@ -10,7 +10,7 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import AchvCounter from '../../components/AchvCounter';
 import IntroCard from '../../components/IntroCard';
-import { achvs } from '../../assets/strings/Landing';
+import { achvs, features } from '../../assets/strings/Landing';
 
 const Lading = () => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -54,7 +54,13 @@ const Lading = () => {
 
       <AchvCounter achvs={achvs} />
 
-      <IntroCard />
+      {
+        features.map((item) => {
+          const { image, title, content } = item;
+          return <IntroCard key={title} image={image} title={title} content={content} />;
+        })
+      }
+
     </DefaultLayout>
   );
 };

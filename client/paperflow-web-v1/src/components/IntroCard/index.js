@@ -7,7 +7,7 @@ import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
-const IntroCard = () => {
+const IntroCard = ({ image, title, content }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
   }));
@@ -15,19 +15,18 @@ const IntroCard = () => {
 
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
-  // Todo: 예제를 위한 mockup데이터 string으로 옮기기
   return (
     <Jumbotron fluid>
       <Container className={styles.introCardContainer}>
         <img
           className={styles.cardImage}
-          src="https://cdn.pixabay.com/photo/2021/01/01/16/07/clouds-5879037_1280.jpg"
+          src={image}
           alt=""
         />
         <div className={styles.contentText}>
-          <h2>PaperFlow의 feature 1</h2>
+          <h2>{title}</h2>
           <p>
-            PaperFlow의 feature 1이 들어갈 위치입니다.
+            {content}
           </p>
         </div>
       </Container>
