@@ -5,6 +5,7 @@ import {
 import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
+import PaperItemList from '../../components/PaperListItem';
 
 const Search = () => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -26,6 +27,8 @@ const Search = () => {
           </Form.Text>
         </Form.Group>
       </Form>
+      <hr />
+      <PaperItemList />
     </DefaultLayout>
   );
 };
