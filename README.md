@@ -4,7 +4,19 @@
 
 ## 1. 프로젝트 소개
 
+![intro image](images/intro.png)
+PaperFlow는 각 논문의 참조 (references)를 자동 추출 및 가중치 분석 (각 참조된 논문이 현재 논문에서 얼만큼 중요도를 가지는지)을 통해 사용자가 어떤 논문이 현재 어떤 식으로 연구되고 있는지 **“연구 동향을 쉽고 빠르게 파악할 수 있도록 도와주는 웹 서비스”** 입니다.
+
+### 1.1. 핵심 서비스
+
+- 논문 기본 정보 열람
+- 논문 흐름 서비스
+- 그래프를 통한 시각화 서비스
+- 사용자 취향에 맞는 주요 논문 추천 서비스
+
 ## 2. Abstract
+
+The PaperFlow is a service that helps researchers to catch up current research flow by automatically extracting references from papers and estimating the similarity between those papers.
 
 ## 3. 소개 영상
 
