@@ -41,7 +41,7 @@ The PaperFlow is a service that helps researchers to catch up current research f
   - Role: Back-end, 데이터 크롤링, 데이터 분석
   - Student ID: 20160729
   - E-Mail: tykim75@kookmin.ac.kr
-  - Github: [@gychoics](https://github.com/gychoics)
+  - Github: [@tykim75](https://github.com/tykim75)
 
 ## 5. 사용법
 
