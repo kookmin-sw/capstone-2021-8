@@ -2,6 +2,17 @@
 
 **팀페이지 주소**: https://kookmin-sw.github.io/capstone-2021-3
 
+- [PaperFlow](#PaperFlow)
+  - [1. 프로젝트 소개](#1-프로젝트-소개)
+    - [1.1. 핵심 서비스](#11-핵심-서비스)
+  - [2. Abstract](#2-Abstract)
+  - [3. 소개 영상](#3-소개-영상)
+  - [4. 팀 소개](#4-팀-소개)
+  - [5. 사용법](#5-사용법)
+    - [5.1. client/paperflow-web-v1](#51-client/paperflow-web-v1)
+    - [5.2. server/paperflow-functions-v1](#52-server/paperflow-functions-v1)
+  - [6. 기타](#6-기타)
+
 ## 1. 프로젝트 소개
 
 ![intro image](images/intro.png)
@@ -44,5 +55,24 @@ The PaperFlow is a service that helps researchers to catch up current research f
   - Github: [@tykim75](https://github.com/tykim75)
 
 ## 5. 사용법
+
+### 5.1. client/paperflow-web-v1
+
+```
+cd ./client/paperflow-web-v1
+npm install
+npm run dev
+```
+
+### 5.2. server/paperflow-functions-v1
+
+```
+cd ./server/paperflow-functions-v1
+python3 -m venv ./venv
+source ./venv/bin/activate
+pip3 install -r requirements.txt
+python3 ./paperflowServer/manage.py migrate
+python3 ./paperflowServer/manage.py runserver
+```
 
 ## 6. 기타
