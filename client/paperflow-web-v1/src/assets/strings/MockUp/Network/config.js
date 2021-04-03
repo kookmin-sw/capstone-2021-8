@@ -9,7 +9,7 @@ export const nodeStandard = {
   0: {
     radius: 120,
     color: '#0D01E0',
-    fontSize: 35,
+    fontSize: 45,
   },
   1: {
     radius: 90,
