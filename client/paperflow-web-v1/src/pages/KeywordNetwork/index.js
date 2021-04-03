@@ -4,6 +4,7 @@ import { Jumbotron } from 'react-bootstrap';
 
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
+import DefaultLayout from '../../layouts/Layouts/Default';
 // import data from '../../assets/strings/MockUp/Network/data.json';
 import { data } from '../../assets/strings/MockUp/Network/realData';
 import { nodeStandard, linkStandard } from '../../assets/strings/MockUp/Network/config';
@@ -43,7 +44,7 @@ const App = () => {
           });
         select(svgRef.current).call(container);
       }
-    }, 100);
+    }, 10);
     return () => clearTimeout(timer);
   }, []);
 
@@ -82,18 +83,20 @@ const App = () => {
   }, []);
 
   return (
-    <Jumbotron id={styles.networkContainer}>
-      <div
-        className={styles.network}
-        ref={svgRef}
-      >
-        <Network
-          data={networkData}
-          handleTooltipInfo={handleTooltipInfo}
-        />
-        <Tooltip tooltipRef={tooltipRef} />
-      </div>
-    </Jumbotron>
+    <DefaultLayout>
+      <Jumbotron id={styles.networkContainer}>
+        <div
+          className={styles.network}
+          ref={svgRef}
+        >
+          <Network
+            data={networkData}
+            handleTooltipInfo={handleTooltipInfo}
+          />
+          <Tooltip tooltipRef={tooltipRef} />
+        </div>
+      </Jumbotron>
+    </DefaultLayout>
   );
 };
 

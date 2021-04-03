@@ -7,26 +7,26 @@ export const networkConfig = {
 
 export const nodeStandard = {
   0: {
-    radius: 100,
+    radius: 120,
     color: '#0D01E0',
     fontSize: 35,
   },
   1: {
-    radius: 80,
+    radius: 90,
     color: '#8882FF',
-    fontSize: 26,
+    fontSize: 30,
   },
   2: {
-    radius: 55,
+    radius: 70,
     color: '#AAB9CA',
-    fontSize: 16,
+    fontSize: 22,
   },
 };
 
 export const linkStandard = {
   0: {
-    0: 500,
-    1: 300,
+    0: 170,
+    1: 200,
   },
   1: {
     1: 120,

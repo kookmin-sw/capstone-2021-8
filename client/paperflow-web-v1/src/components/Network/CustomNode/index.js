@@ -43,7 +43,7 @@ const CustomNode = (nodeInfo, handleTooltipInfo) => {
   return (
     <g
       ref={nodeRef}
-      transform={`translate(${[nodeInfo.x, nodeInfo.y]}) scale(1)`}
+      transform={`translate(${[nodeInfo.x, nodeInfo.y]}) scale(0.7)`}
     >
       <circle
         r={nodeInfo.radius}

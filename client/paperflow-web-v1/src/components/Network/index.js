@@ -10,7 +10,7 @@ const MyResponsiveNetwork = ({ data, handleTooltipInfo }) => (
     margin={{
       top: 0, right: 0, bottom: 0, left: 0,
     }}
-    repulsivity={800}
+    repulsivity={750}
     iterations={networkConfig.iterations}
     nodeColor={(e) => e.color}
     linkThickness={networkConfig.linkThickness}
