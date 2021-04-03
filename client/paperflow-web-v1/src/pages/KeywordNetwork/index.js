@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { select, zoom } from 'd3';
 import { Jumbotron } from 'react-bootstrap';
 
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
-import data from '../../assets/strings/MockUp/Network/data.json';
+// import data from '../../assets/strings/MockUp/Network/data.json';
+import { data } from '../../assets/strings/MockUp/Network/realData';
+import { nodeStandard, linkStandard } from '../../assets/strings/MockUp/Network/config';
 
 import styles from './Styles.module.scss';
 
@@ -45,6 +47,40 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // ==========================================================
+  // test code for mock design
+  const [networkData, setNetworkData] = useState({
+    nodes: [],
+    links: [],
+  });
+
+  let i;
+  let j;
+  useEffect(() => {
+    const newData = {
+      nodes: [],
+      links: [],
+    };
+    for (i = 0; i < data.nodes.length; i += 1) {
+      newData.nodes.push({
+        id: data.nodes[i].id,
+        depth: data.nodes[i].depth,
+        radius: nodeStandard[data.nodes[i].depth].radius,
+        color: nodeStandard[data.nodes[i].depth].color,
+      });
+    }
+    for (i = 0; i < data.links.length; i += 1) {
+      for (j = 0; j < data.links[i].target.length; j += 1) {
+        newData.links.push({
+          source: data.links[i].source,
+          target: data.links[i].target[j],
+          distance: linkStandard[data.links[i].depth[0]][data.links[i].depth[1]],
+        });
+      }
+    }
+    setNetworkData(newData);
+  }, []);
+
   return (
     <Jumbotron id={styles.networkContainer}>
       <div
@@ -52,7 +88,7 @@ const App = () => {
         ref={svgRef}
       >
         <Network
-          data={data}
+          data={networkData}
           handleTooltipInfo={handleTooltipInfo}
         />
         <Tooltip tooltipRef={tooltipRef} />
