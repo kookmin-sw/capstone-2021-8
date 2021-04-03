@@ -43,12 +43,10 @@ const App = () => {
           });
         select(svgRef.current).call(container);
       }
-    }, 1000);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
-  // ==========================================================
-  // test code for mock design
   const [networkData, setNetworkData] = useState({
     nodes: [],
     links: [],
@@ -62,12 +60,14 @@ const App = () => {
       links: [],
     };
     for (i = 0; i < data.nodes.length; i += 1) {
-      newData.nodes.push({
-        id: data.nodes[i].id,
-        depth: data.nodes[i].depth,
-        radius: nodeStandard[data.nodes[i].depth].radius,
-        color: nodeStandard[data.nodes[i].depth].color,
-      });
+      for (j = 0; j < data.nodes[i].length; j += 1) {
+        newData.nodes.push({
+          id: data.nodes[i][j],
+          depth: i,
+          radius: nodeStandard[i].radius,
+          color: nodeStandard[i].color,
+        });
+      }
     }
     for (i = 0; i < data.links.length; i += 1) {
       for (j = 0; j < data.links[i].target.length; j += 1) {

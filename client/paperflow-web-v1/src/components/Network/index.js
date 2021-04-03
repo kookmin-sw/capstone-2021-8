@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResponsiveNetwork } from '@nivo/network';
 import CustomNode from './CustomNode';
+import { networkConfig } from '../../assets/strings/MockUp/Network/config';
 
 const MyResponsiveNetwork = ({ data, handleTooltipInfo }) => (
   <ResponsiveNetwork
@@ -9,17 +10,14 @@ const MyResponsiveNetwork = ({ data, handleTooltipInfo }) => (
     margin={{
       top: 0, right: 0, bottom: 0, left: 0,
     }}
-    repulsivity={150}
-    iterations={90}
+    repulsivity={800}
+    iterations={networkConfig.iterations}
     nodeColor={(e) => e.color}
-    nodeBorderWidth={1}
-    nodeBorderColor={{ from: 'color', modifiers: [['darker', 0.8]] }}
-    linkThickness={(e) => 2 * (2 - e.source.depth)}
+    linkThickness={networkConfig.linkThickness}
     motionStiffness={160}
     motionDamping={12}
     linkDistance="distance"
-    distanceMin={10}
-    labelVisibility
+    distanceMin={30}
     nodeComponent={(t) => CustomNode(t, handleTooltipInfo)}
   />
 );
