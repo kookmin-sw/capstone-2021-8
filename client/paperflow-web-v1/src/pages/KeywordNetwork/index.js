@@ -5,8 +5,7 @@ import { Jumbotron } from 'react-bootstrap';
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
 import DefaultLayout from '../../layouts/Layouts/Default';
-// import data from '../../assets/strings/MockUp/Network/data.json';
-import { data } from '../../assets/strings/MockUp/Network/realData';
+import { data } from '../../assets/strings/MockUp/Network/data';
 import { nodeStandard, linkStandard } from '../../assets/strings/MockUp/Network/config';
 
 import styles from './Styles.module.scss';
