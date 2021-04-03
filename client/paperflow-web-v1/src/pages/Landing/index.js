@@ -30,8 +30,11 @@ const Lading = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h1>Discover flow of papers with PaperFlow</h1>
-            <p>PaperFlow helps you to catch up recent research flow
+            <h1>
+              Discover flow of papers with PaperFlow
+            </h1>
+            <p>
+              PaperFlow helps you to catch up recent research flow
               by gives you &ldquo;paper flow diagram&rdquo;
             </p>
           </Carousel.Caption>
@@ -40,7 +43,9 @@ const Lading = () => {
 
       <Jumbotron fluid>
         <Container>
-          <h1>지금 바로 논문을 검색해 보세요!</h1>
+          <h1>
+            지금 바로 논문을 검색해 보세요!
+          </h1>
           <p>
             생소한 분야의 논문이더라도, 흐름을 쉽게 파악할 수 있습니다!
           </p>
