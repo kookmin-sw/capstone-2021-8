@@ -1,10 +1,16 @@
-// import { observable } from 'mobx';
+import { observable } from 'mobx';
 
 const createStore = () => {
-  const store = {
+  const appStore = {
+    screenClass: observable.box(window.screen.width > 750 ? 'xl' : 'xs'),
+
+    // Set screen class
+    changeScreenClass(data) {
+      appStore.screenClass.set(data);
+    },
   };
 
-  return store;
+  return appStore;
 };
 
 const store = createStore();
