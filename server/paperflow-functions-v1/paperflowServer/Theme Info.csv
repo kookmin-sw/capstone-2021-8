@@ -1,0 +1,2046 @@
+﻿ID,PaperID,Theme
+1,1732404,
+2,1732405,
+3,1732406,
+4,1732407,
+5,1732408,
+6,1732409,'Cosmology'
+7,1732409, 'Physical Sciences'
+8,1732409, 'Physical Cosmology'
+9,1732409, 'Cosmic Microwave Background'
+10,1732410,'Physical Sciences'
+11,1732410, 'Theoretical Physics'
+12,1732410, 'Foundations of Quantum Mechanics'
+13,1732410, 'Hamiltonian'
+14,1732411,'Ornithology'
+15,1732411, 'Biological Science'
+16,1732411, 'Zoology'
+17,1732411, 'birds'
+18,1732411, 'Electron'
+19,1732412,'Mathematics'
+20,1732412, 'Graphs'
+21,1732413,'Thin Films Synthesis'
+22,1732413, 'Material Synthesis'
+23,1732413, 'Physics'
+24,1732413, 'Materials Science'
+25,1732413, 'Metallization'
+26,1732414,'Physical Sciences'
+27,1732414, 'Cosmology'
+28,1732414, 'Physical Cosmology'
+29,1732414, 'Cosmic Microwave Background'
+30,1732415,
+31,1732416,'Physical Sciences'
+32,1732416, 'Electromagnetic Phenomena'
+33,1732416, 'Electromagnetism'
+34,1732416, 'Bremsstrahlung'
+35,1732417,'Physical Sciences'
+36,1732417, 'Particle Physics'
+37,1732417, 'Elementary Particle Physics'
+38,1732417, 'High Energy Physics'
+39,1732418,
+40,1732419,'Cosmology'
+41,1732419, 'galaxies'
+42,1732420,
+43,1732421,
+44,1732422,'Physical Sciences'
+45,1732422, 'Plasma Physics'
+46,1732422, 'Magnetohydrodynamics'
+47,1732423,
+48,1732424,'Cosmology'
+49,1732424, 'Physical Sciences'
+50,1732424, 'Physical Cosmology'
+51,1732424, 'Dark Matter'
+52,1732425,
+53,1732426,
+54,1732427,'Physical Sciences'
+55,1732427, 'Cosmology'
+56,1732427, 'Physical Cosmology'
+57,1732427, 'Cosmic Microwave Background'
+58,1732429,
+59,1732430,'Universe'
+60,1732430, 'Galaxy'
+61,1732430, 'Astronomy'
+62,1732430, 'Space Science'
+63,1732430, 'Dust'
+64,1732431,
+65,1732432,
+66,1732433,
+67,1732434,
+68,1732435,
+69,1732436,
+70,1732437,'Sound Studies'
+71,1732437, 'History'
+72,1732437, 'Musicology'
+73,1732437, 'Resonance'
+74,1732438,
+75,1732439,'Cosmology'
+76,1732439, 'galaxies'
+77,1732440,'Cosmology'
+78,1732440, 'Physical Cosmology'
+79,1732440, 'Physics'
+80,1732440, 'Dark Matter'
+81,1732441,'Physics'
+82,1732441, 'Electromagnetism'
+83,1732441, 'Scattering'
+84,1732442,
+85,1732443,
+86,1732444,
+87,1732445,
+88,1732446,'Clinical Psychology'
+89,1732446, 'Psychology'
+90,1732446, 'Power (Psychology)'
+91,1732447,
+92,1732448,
+93,1732449,
+94,1732450,
+95,1732451,'Mathematics'
+96,1732451, 'Algebra'
+97,1732452,'Astrophysics'
+98,1732452, 'Supernovae'
+99,1732452, 'Space Science'
+100,1732452, 'Supernova Remnants'
+101,1732453,'Physics'
+102,1732453, 'Atomic
+103,1732453, Molecular and Optical Physics'
+104,1732453, 'Ionization'
+105,1732454,'Universe'
+106,1732454, 'Astronomy'
+107,1732454, 'Space Science'
+108,1732454, 'Galaxy'
+109,1732455,
+110,1732456,
+111,1732457,
+112,1732458,'Cosmology'
+113,1732458, 'galaxies'
+114,1732460,'Darkness'
+115,1732461,
+116,1732462,
+117,1732463,
+118,1732464,
+119,1732465,
+120,1732466,
+121,1732467,'Optical Devices'
+122,1732467, 'Physics'
+123,1732467, 'Optics'
+124,1732467, 'Lenses'
+125,1732468,'Cosmology'
+126,1732468, 'Physics'
+127,1732468, 'Quantum Cosmology'
+128,1732469,'Planetary Science'
+129,1732469, 'Astronomy'
+130,1732469, 'Space Science'
+131,1732469, 'Pluto'
+132,1732470,
+133,1732471,
+134,1732472,'Astrophysics'
+135,1732472, 'Space Science'
+136,1732472, 'Star Formation'
+137,1732473,'Physics'
+138,1732473, 'Geophysics'
+139,1732473, 'Magnetics'
+140,1732474,'Algebra'
+141,1732474, 'Abstract Algebra'
+142,1732474, 'Mathematics'
+143,1732474, 'Representation Theory'
+144,1732475,
+145,1732476,'Astrophysics'
+146,1732476, 'Space Science'
+147,1732476, 'Gamma-Ray Bursts'
+148,1732477,'Biomedical Instrumentation'
+149,1732477, 'Medical Engineering'
+150,1732477, 'Biomedical Devices'
+151,1732477, 'Engineering'
+152,1732477, 'X-Ray Sources'
+153,1732478,'Celestial Mechanics'
+154,1732478, 'Orbital Mechanics'
+155,1732478, 'Astronomy'
+156,1732478, 'Space Science'
+157,1732478, 'Orbital Dynamics'
+158,1732479,'Celestial Mechanics'
+159,1732479, 'Orbital Mechanics'
+160,1732479, 'Astronomy'
+161,1732479, 'Space Science'
+162,1732479, 'Orbital Dynamics'
+163,1732480,'Space Science'
+164,1732480, 'Astrophysics'
+165,1732481,'Astronomical Objects'
+166,1732481, 'Astronomy'
+167,1732481, 'Space Science'
+168,1732481, 'Black Holes'
+169,1732482,'Physics'
+170,1732482, 'Plasma Physics'
+171,1732482, 'Magnetohydrodynamics'
+172,1732483,
+173,1732484,'Astronomical Objects'
+174,1732484, 'Astronomy'
+175,1732484, 'Space Science'
+176,1732484, 'Quasars'
+177,1732485,
+178,1732486,'Parity'
+179,1732487,'Acceleration'
+180,1732488,
+181,1732489,
+182,1732490,'Astrophysics'
+183,1732490, 'Space Science'
+184,1732490, 'Supernovae'
+185,1732491,'Cosmology'
+186,1732491, 'Physical Cosmology'
+187,1732491, 'Physics'
+188,1732491, 'Cosmic Microwave Background'
+189,1732492,'Planetary Science'
+190,1732492, 'Astronomy'
+191,1732492, 'Space Science'
+192,1732492, 'Planets'
+193,1732493,
+194,1732494,
+195,1732495,
+196,1732496,
+197,1732497,'Eye Anatomy'
+198,1732497, 'Medicine'
+199,1732497, 'Ophthalmology'
+200,1732497, 'Orbit'
+201,1732498,
+202,1732499,
+203,1732500,'Astronomical Objects'
+204,1732500, 'Astronomy'
+205,1732500, 'Space Science'
+206,1732500, 'Quasars'
+207,1732501,'General Surgery'
+208,1732501, 'Operating'
+209,1732502,'Fluid Mechanics'
+210,1732502, 'Thermofluid'
+211,1732502, 'Thermal Engineering'
+212,1732502, 'Engineering'
+213,1732502, 'Fluid Dynamics'
+214,1732502, 'Newtonian Dynamics'
+215,1732502, 'Damping'
+216,1732503,
+217,1732504,'Galaxy'
+218,1732504, 'Universe'
+219,1732504, 'Galactic Center'
+220,1732504, 'Astronomy'
+221,1732504, 'Space Science'
+222,1732504, 'AGN'
+223,1732505,'Universe'
+224,1732505, 'Astronomy'
+225,1732505, 'Space Science'
+226,1732505, 'Stars'
+227,1732506,'Thin Films Synthesis'
+228,1732506, 'Material Synthesis'
+229,1732506, 'Physics'
+230,1732506, 'Materials Science'
+231,1732506, 'Metallization'
+232,1732507,
+233,1732508,
+234,1732509,'Astronomical Objects'
+235,1732509, 'Astronomy'
+236,1732509, 'Space Science'
+237,1732509, 'Black Holes'
+238,1732510,'Radioactivity'
+239,1732510, 'Physics'
+240,1732510, 'Nuclear Physics'
+241,1732510, 'Gamma Rays'
+242,1732511,
+243,1732512,'Cosmology'
+244,1732512, 'Physical Cosmology'
+245,1732512, 'Physics'
+246,1732512, 'Cosmic Microwave Background'
+247,1732513,
+248,1732514,
+249,1732515,'Astronomical Instrumentation'
+250,1732515, 'Astronomy'
+251,1732515, 'Observational Astronomy'
+252,1732515, 'Space Science'
+253,1732515, 'Telescope'
+254,1732516,'Methodology'
+255,1732516, 'Spectrophotometry'
+256,1732516, 'Infrared Spectroscopy'
+257,1732517,'Universe'
+258,1732517, 'Neutron Star'
+259,1732517, 'Astronomy'
+260,1732517, 'Space Science'
+261,1732517, 'Stars'
+262,1732517, 'Pulsars'
+263,1732518,'Cosmology'
+264,1732518, 'Mass'
+265,1732519,'Astrophysics'
+266,1732519, 'Space Science'
+267,1732519, 'Supernovae'
+268,1732520,'Cosmology'
+269,1732520, 'Physical Cosmology'
+270,1732520, 'Physics'
+271,1732520, 'Dark Matter'
+272,1732521,'Stars'
+273,1732521, 'Universe'
+274,1732521, 'Star Clusters'
+275,1732521, 'Astronomy'
+276,1732521, 'Space Science'
+277,1732521, 'Globular Clusters'
+278,1732522,'Apiaceae'
+279,1732522, 'Laser'
+280,1732523,'Universe'
+281,1732523, 'Galaxy'
+282,1732523, 'Astronomy'
+283,1732523, 'Space Science'
+284,1732523, 'Dust'
+285,1732524,'Astronomical Instrumentation'
+286,1732524, 'Astronomy'
+287,1732524, 'Observational Astronomy'
+288,1732524, 'Space Science'
+289,1732524, 'Telescopes'
+290,1732525,
+291,1732526,
+292,1732527,'Universe'
+293,1732527, 'Binary Stars'
+294,1732527, 'Astronomy'
+295,1732527, 'Space Science'
+296,1732527, 'Stars'
+297,1732527, 'X-ray Binaries'
+298,1732528,'Amphibians'
+299,1732528, 'Anura'
+300,1732528, 'Tetrapoda'
+301,1732528, 'Syncope'
+302,1732529,'Econ'
+303,1732529, 'Monetary Economics'
+304,1732529, 'Economic Inflation'
+305,1732530,
+306,1732531,'Econ'
+307,1732531, 'Development Economics'
+308,1732531, 'Transition'
+309,1732532,
+310,1732533,'Experimental Physics'
+311,1732533, 'X-Ray'
+312,1732534,'Optical Devices'
+313,1732534, 'Physics'
+314,1732534, 'Optics'
+315,1732534, 'Lenses'
+316,1732535,'Cosmology'
+317,1732535, 'galaxies'
+318,1732536,'Econ'
+319,1732536, 'Real Estate Economics'
+320,1732536, 'Fees and Charges'
+321,1732537,
+322,1732538,'Universe'
+323,1732538, 'Astronomy'
+324,1732538, 'Space Science'
+325,1732538, 'Stars'
+326,1732539,
+327,1732540,
+328,1732541,
+329,1732542,'Physics'
+330,1732542, 'Atomic
+331,1732542, Molecular and Optical Physics'
+332,1732542, 'Ionization'
+333,1732543,
+334,1732544,'Cosmology'
+335,1732544, 'galaxies'
+336,1732545,'Optical Devices'
+337,1732545, 'Physics'
+338,1732545, 'Optics'
+339,1732545, 'Lenses'
+340,1732546,
+341,1732547,
+342,1732548,'Philosophical Logic'
+343,1732548, 'Philosophy'
+344,1732548, 'Paradox'
+345,1732549,'Experimental Physics'
+346,1732549, 'X-Ray'
+347,1732550,'Space Science'
+348,1732550, 'Astrophysics'
+349,1732551,'Cosmology'
+350,1732551, 'galaxies'
+351,1732552,
+352,1732553,'Universe'
+353,1732553, 'Neutron Star'
+354,1732553, 'Astronomy'
+355,1732553, 'Space Science'
+356,1732553, 'Stars'
+357,1732553, 'Pulsars'
+358,1732554,
+359,1732555,
+360,1732556,
+361,1732557,
+362,1732558,
+363,1732559,'Gynaecology'
+364,1732559, 'Screening'
+365,1732560,
+366,1732561,'Astrophysics'
+367,1732561, 'Space Science'
+368,1732561, 'Gamma-Ray Bursts'
+369,1732562,'Fluid Mechanics'
+370,1732562, 'Thermofluid'
+371,1732562, 'Thermal Engineering'
+372,1732562, 'Engineering'
+373,1732562, 'Fluid Dynamics'
+374,1732562, 'Boundary Layer'
+375,1732563,
+376,1732564,'Composites'
+377,1732564, 'Materials'
+378,1732564, 'Physics'
+379,1732564, 'Materials Science'
+380,1732564, 'Shell'
+381,1732565,
+382,1732566,
+383,1732567,'Scintillations'
+384,1732568,
+385,1732569,'Engineering'
+386,1732569, 'Chemical Engineering'
+387,1732569, 'Mass Transfer'
+388,1732570,
+389,1732571,'Electromagnetic Fields'
+390,1732571, 'Physics'
+391,1732571, 'Electromagnetism'
+392,1732571, 'Electromagnetic Radiation'
+393,1732572,'Space Science'
+394,1732572, 'Astrophysics'
+395,1732573,
+396,1732574,'Space Plasma Physics'
+397,1732574, 'Physics'
+398,1732574, 'Plasma Physics'
+399,1732574, 'Magnetosphere'
+400,1732575,'Universe'
+401,1732575, 'Astronomy'
+402,1732575, 'Space Science'
+403,1732575, 'Stars'
+404,1732575, 'Neutron Star'
+405,1732576,
+406,1732577,'Cosmology'
+407,1732577, 'galaxies'
+408,1732578,'Universe'
+409,1732578, 'Galaxy'
+410,1732578, 'Astronomy'
+411,1732578, 'Space Science'
+412,1732578, 'Dust'
+413,1732579,'Geodesy and Surveying'
+414,1732579, 'Magnetic Fields'
+415,1732580,'Astrophysics'
+416,1732580, 'Space Science'
+417,1732580, 'Planetary Nebulae'
+418,1732581,
+419,1732582,'Universe'
+420,1732582, 'Binary Stars'
+421,1732582, 'Astronomy'
+422,1732582, 'Space Science'
+423,1732582, 'Stars'
+424,1732582, 'X-ray Binaries'
+425,1732583,'Cosmology'
+426,1732583, 'galaxies'
+427,1732584,'Astrophysics'
+428,1732584, 'Space Science'
+429,1732584, 'Star Formation'
+430,1732585,'Cosmology'
+431,1732585, 'galaxies'
+432,1732586,'Accelerator Physics'
+433,1732586, 'Collimators'
+434,1732588,'Physics'
+435,1732588, 'Plasma Physics'
+436,1732588, 'Tokamak'
+437,1732589,
+438,1732590,
+439,1732591,
+440,1732592,
+441,1732593,'Psychological Disorders'
+442,1732593, 'Clinical Psychology'
+443,1732593, 'Psychology'
+444,1732593, 'Post-Traumatic Stress Disorder'
+445,1732593, 'Combat Disorders'
+446,1732594,'Supernovae'
+447,1732594, 'Astrophysics'
+448,1732594, 'Space Science'
+449,1732594, 'Supernova Remnants'
+450,1732595,
+451,1732596,
+452,1732597,'Statistical Analysis'
+453,1732597, 'Biomedical Signal Processing'
+454,1732597, 'Simple Statistical Analysis'
+455,1732597, 'Biosignals'
+456,1732597, 'Physiology'
+457,1732597, 'Probability Distributions'
+458,1732598,
+459,1732599,'Thin Films Synthesis'
+460,1732599, 'Material Synthesis'
+461,1732599, 'Physics'
+462,1732599, 'Materials Science'
+463,1732599, 'Metallization'
+464,1732600,'Cosmology'
+465,1732600, 'galaxies'
+466,1732601,'Cosmology'
+467,1732601, 'galaxies'
+468,1732602,
+469,1732603,'Universe'
+470,1732603, 'Astronomy'
+471,1732603, 'Space Science'
+472,1732603, 'Stars'
+473,1732604,
+474,1732605,'Universe'
+475,1732605, 'Astronomy'
+476,1732605, 'Space Science'
+477,1732605, 'Stars'
+478,1732606,'Cosmology'
+479,1732606, 'Physics'
+480,1732606, 'Galactic Dynamics'
+481,1732606, 'Galaxy Formation'
+482,1732607,
+483,1732608,
+484,1732609,
+485,1732610,
+486,1732611,
+487,1732612,'Optical Devices'
+488,1732612, 'Physics'
+489,1732612, 'Optics'
+490,1732612, 'Photonic Crystals'
+491,1732613,
+492,1732614,
+493,1732615,
+494,1732616,
+495,1732617,'Physics'
+496,1732617, 'Electromagnetism'
+497,1732617, 'Magnetism'
+498,1732618,'Wireless Communications'
+499,1732618, 'Communication Systems'
+500,1732618, 'Digital Communications'
+501,1732618, 'Engineering'
+502,1732618, 'Communication Engineering'
+503,1732618, 'Optical Engineering'
+504,1732618, 'Radio'
+505,1732619,'Stars'
+506,1732619, 'Universe'
+507,1732619, 'Astronomy'
+508,1732619, 'Space Science'
+509,1732619, 'White Dwarfs'
+510,1732620,'Cosmology'
+511,1732620, 'galaxies'
+512,1732621,
+513,1732622,
+514,1732623,
+515,1732625,'Financial Accounting'
+516,1732625, 'Accounting'
+517,1732625, 'Mergers and Acquisitions'
+518,1732625, 'Economics'
+519,1732625, 'Financial Economics'
+520,1732625, 'Mergers'
+521,1732626,'Universe'
+522,1732626, 'Binary Stars'
+523,1732626, 'Astronomy'
+524,1732626, 'Space Science'
+525,1732626, 'Stars'
+526,1732626, 'X-ray Binaries'
+527,1732627,'Probability Theory'
+528,1732627, 'Stochastic'
+529,1732628,
+530,1732629,
+531,1732630,'Accounting'
+532,1732630, 'Economics'
+533,1732630, 'Financial Economics'
+534,1732630, 'Auditing'
+535,1732631,'Cosmology'
+536,1732631, 'galaxies'
+537,1732632,'Stars'
+538,1732632, 'Universe'
+539,1732632, 'Binary Stars'
+540,1732632, 'Astronomy'
+541,1732632, 'Space Science'
+542,1732632, 'X-ray Binaries'
+543,1732633,'Engineering'
+544,1732633, 'Acoustic Engineering'
+545,1732633, 'Noise'
+546,1732634,'Radio Astronomy'
+547,1732634, 'Astronomy'
+548,1732634, 'Observational Astronomy'
+549,1732634, 'Space Science'
+550,1732634, 'VLBI'
+551,1732635,'Physics'
+552,1732635, 'Conservation Laws'
+553,1732636,'Cosmology'
+554,1732636, 'galaxies'
+555,1732637,
+556,1732638,
+557,1732639,'Biological Science'
+558,1732639, 'Anatomy'
+559,1732639, 'Knee'
+560,1732640,
+561,1732641,'Economics'
+562,1732641, 'Business Administration'
+563,1732641, 'PRIME'
+564,1732642,
+565,1732643,
+566,1732644,
+567,1732645,'Universe'
+568,1732645, 'Astronomy'
+569,1732645, 'Space Science'
+570,1732645, 'Stars'
+571,1732646,
+572,1732647,'Vacuum'
+573,1732648,
+574,1732649,'Atmospheric Sciences'
+575,1732649, 'Meteorology'
+576,1732649, 'Geoscience'
+577,1732649, 'Wind'
+578,1732650,'Quantitative Social Research'
+579,1732650, 'Survey'
+580,1732651,
+581,1732652,
+582,1732653,
+583,1732654,
+584,1732655,
+585,1732656,'Universe'
+586,1732656, 'Neutron Star'
+587,1732656, 'Astronomy'
+588,1732656, 'Space Science'
+589,1732656, 'Stars'
+590,1732656, 'Pulsars'
+591,1732657,'Universe'
+592,1732657, 'Astronomy'
+593,1732657, 'Space Science'
+594,1732657, 'Stars'
+595,1732658,
+596,1732659,'Universe'
+597,1732659, 'Galaxy'
+598,1732659, 'Astronomy'
+599,1732659, 'Space Science'
+600,1732659, 'Dust'
+601,1732660,'Blood'
+602,1732660, 'Medicine'
+603,1732660, 'Hematology'
+604,1732660, 'Plasma'
+605,1732661,
+606,1732662,
+607,1732663,'Universe'
+608,1732663, 'Variable Stars'
+609,1732663, 'Astronomy'
+610,1732663, 'Space Science'
+611,1732663, 'Stars'
+612,1732663, 'Cataclysmic Variables'
+613,1732664,'Eye Anatomy'
+614,1732664, 'Medicine'
+615,1732664, 'Ophthalmology'
+616,1732664, 'Orbit'
+617,1732665,'Nuclear Science'
+618,1732665, 'Radioactivity'
+619,1732665, 'Physics'
+620,1732665, 'Gamma Rays'
+621,1732666,'Astrophysics'
+622,1732666, 'Space Science'
+623,1732666, 'Planetary Nebulae'
+624,1732667,
+625,1732668,'Cosmology'
+626,1732668, 'galaxies'
+627,1732669,'Universe'
+628,1732669, 'Astronomy'
+629,1732669, 'Space Science'
+630,1732669, 'Stars'
+631,1732669, 'Neutron Star'
+632,1732670,
+633,1732671,'Atmospheric Sciences'
+634,1732671, 'Meteorology'
+635,1732671, 'Geoscience'
+636,1732671, 'Wind'
+637,1732672,'Malacology'
+638,1732672, 'Invertebrate Zoology'
+639,1732672, 'Mollusca'
+640,1732672, 'Bivalvia'
+641,1732672, 'Faunistics'
+642,1732672, 'Venus'
+643,1732673,'Universe'
+644,1732673, 'Neutron Star'
+645,1732673, 'Astronomy'
+646,1732673, 'Space Science'
+647,1732673, 'Stars'
+648,1732673, 'Pulsars'
+649,1732674,'Numerical Methods'
+650,1732674, 'Applied Mathematics'
+651,1732674, 'Mathematics'
+652,1732674, 'Numerical Modeling'
+653,1732675,'Cosmology'
+654,1732675, 'galaxies'
+655,1732676,
+656,1732677,
+657,1732678,'Stars'
+658,1732678, 'Universe'
+659,1732678, 'Astronomy'
+660,1732678, 'Space Science'
+661,1732678, 'Variable Stars'
+662,1732679,
+663,1732680,'Energy'
+664,1732680, 'Renewable Energy'
+665,1732680, 'Renewable Energy Technologies'
+666,1732680, 'Energy-Generating Resources'
+667,1732680, 'Solar Energy'
+668,1732680, 'Physics'
+669,1732680, 'Solar'
+670,1732681,
+671,1732682,
+672,1732683,
+673,1732684,
+674,1732685,'Physical Sciences'
+675,1732685, 'Cosmology'
+676,1732686,
+677,1732687,'Quantitative Social Research'
+678,1732687, 'Survey'
+679,1732688,'Computing'
+680,1732688, 'Computing Methodologies'
+681,1732688, 'Computer Science and Engineering'
+682,1732688, 'Distributed Computing'
+683,1732688, 'Cloud'
+684,1732689,'Atmospheric Sciences'
+685,1732689, 'Geoscience'
+686,1732689, 'Emission'
+687,1732690,
+688,1732691,
+689,1732692,
+690,1732693,
+691,1732694,'Mixed States'
+692,1732695,'Astrophysics'
+693,1732695, 'Space Science'
+694,1732695, 'Gamma-Ray Bursts'
+695,1732696,
+696,1732697,
+697,1732698,'Supernovae'
+698,1732698, 'Astrophysics'
+699,1732698, 'Space Science'
+700,1732698, 'Supernova Remnants'
+701,1732699,'Space Science'
+702,1732699, 'Astrophysics'
+703,1732700,'Engineering'
+704,1732700, 'Optical Interferometry'
+705,1732700, 'Instrumentation Engineering'
+706,1732700, 'Interferometer'
+707,1732701,'Physical Sciences'
+708,1732701, 'Particle Physics'
+709,1732701, 'Elementary Particles'
+710,1732701, 'Elementary Particle Physics'
+711,1732701, 'Mesons'
+712,1732702,'Fluid Mechanics'
+713,1732702, 'Thermofluid'
+714,1732702, 'Thermal Engineering'
+715,1732702, 'Engineering'
+716,1732702, 'Fluid Dynamics'
+717,1732702, 'Hydrodynamics'
+718,1732703,'Mathematics'
+719,1732703, 'Algebra'
+720,1732704,'Physical Sciences'
+721,1732704, 'Cosmology'
+722,1732705,'Malacology'
+723,1732705, 'Invertebrate Zoology'
+724,1732705, 'Mollusca'
+725,1732705, 'Bivalvia'
+726,1732705, 'Faunistics'
+727,1732705, 'Venus'
+728,1732706,'Universe'
+729,1732706, 'Astronomy'
+730,1732706, 'Space Science'
+731,1732706, 'Stars'
+732,1732706, 'Variable Stars'
+733,1732707,'Astronomical Instrumentation'
+734,1732707, 'Astronomy'
+735,1732707, 'Observational Astronomy'
+736,1732707, 'Space Science'
+737,1732707, 'Charge-coupled Devices'
+738,1732708,'Physical Sciences'
+739,1732708, 'Particle Physics'
+740,1732708, 'Elementary Particles'
+741,1732708, 'Elementary Particle Physics'
+742,1732708, 'Mesons'
+743,1732709,
+744,1732710,'Astronomical Instrumentation'
+745,1732710, 'Astronomy'
+746,1732710, 'Observational Astronomy'
+747,1732710, 'Space Science'
+748,1732710, 'Telescope'
+749,1732711,
+750,1732712,
+751,1732713,'System Software'
+752,1732713, 'Software'
+753,1732713, 'Computer Science and Engineering'
+754,1732713, 'Operating Systems'
+755,1732713, 'Discovery'
+756,1732714,'Universe'
+757,1732714, 'Galaxy'
+758,1732714, 'Astronomy'
+759,1732714, 'Space Science'
+760,1732714, 'Galaxy Clusters'
+761,1732715,'Astrophysics'
+762,1732715, 'Space Science'
+763,1732715, 'Interstellar Medium'
+764,1732716,'Universe'
+765,1732716, 'Astronomy'
+766,1732716, 'Space Science'
+767,1732716, 'Stars'
+768,1732717,'Astrophysics'
+769,1732717, 'Space Science'
+770,1732717, 'Planetary Nebulae'
+771,1732718,'Membrane Biophysics'
+772,1732718, 'Membrane Biology'
+773,1732718, 'Biological Science'
+774,1732718, 'Biophysics'
+775,1732718, 'Fluctuations'
+776,1732719,
+777,1732720,
+778,1732721,'Epi'
+779,1732721, 'Medicine'
+780,1732721, 'Bias (Epidemiology)'
+781,1732722,
+782,1732723,
+783,1732724,
+784,1732725,'Physical Sciences'
+785,1732725, 'Electromagnetism'
+786,1732725, 'Photoemission'
+787,1732726,'Lobosea'
+788,1732726, 'Eukaryota'
+789,1732726, 'Amoebozoa'
+790,1732726, 'Biota'
+791,1732726, 'Biological Science'
+792,1732726, 'Chaos'
+793,1732727,
+794,1732728,
+795,1732729,
+796,1732730,
+797,1732731,
+798,1732732,'Universe'
+799,1732732, 'Astronomy'
+800,1732732, 'Space Science'
+801,1732732, 'Galaxy'
+802,1732733,'Evolutionary Biology'
+803,1732733, 'Scaling'
+804,1732734,
+805,1732735,
+806,1732736,
+807,1732737,'Physical Sciences'
+808,1732737, 'Materials'
+809,1732737, 'Carbon Materials'
+810,1732737, 'Materials Science'
+811,1732737, 'Fullerene'
+812,1732738,'Astrophysics'
+813,1732738, 'Space Science'
+814,1732738, 'Gamma-Ray Bursts'
+815,1732739,'Eye Anatomy'
+816,1732739, 'Biological Science'
+817,1732739, 'Anatomy'
+818,1732739, 'Orbit'
+819,1732740,'Emergency Medicine'
+820,1732740, 'Medicine'
+821,1732740, 'Shock'
+822,1732741,
+823,1732742,
+824,1732743,'Astronomical Objects'
+825,1732743, 'Astronomy'
+826,1732743, 'Space Science'
+827,1732743, 'Black Holes'
+828,1732744,'Stars'
+829,1732744, 'Universe'
+830,1732744, 'Astronomy'
+831,1732744, 'Space Science'
+832,1732744, 'Star Clusters'
+833,1732745,
+834,1732746,'Astronomical Phenomena'
+835,1732746, 'Astronomy'
+836,1732746, 'Space Science'
+837,1732746, 'Gravitational Lensing'
+838,1732747,'Stars'
+839,1732747, 'Universe'
+840,1732747, 'Star Clusters'
+841,1732747, 'Astronomy'
+842,1732747, 'Space Science'
+843,1732747, 'Globular Clusters'
+844,1732748,
+845,1732749,'Astrophysics'
+846,1732749, 'Space Science'
+847,1732749, 'Supernovae'
+848,1732750,'Soft Materials'
+849,1732750, 'Physical Sciences'
+850,1732750, 'Condensed Matter Physics'
+851,1732750, 'Liquids'
+852,1732751,
+853,1732752,
+854,1732753,'Cosmology'
+855,1732753, 'galaxies'
+856,1732754,'Sustainable Agriculture'
+857,1732754, 'Agricultural Science'
+858,1732754, 'Pulse'
+859,1732755,
+860,1732756,'Sorption'
+861,1732756, 'Chemical Processes'
+862,1732756, 'Chemistry'
+863,1732756, 'Absorption'
+864,1732757,'Experimental Particle Physics'
+865,1732757, 'Physical Sciences'
+866,1732757, 'Particle Physics'
+867,1732757, 'Synchrotron'
+868,1732758,
+869,1732759,
+870,1732760,'Parity'
+871,1732761,'Physical Sciences'
+872,1732761, 'Atomic
+873,1732761, Molecular and Optical Physics'
+874,1732761, 'Ionization'
+875,1732762,'Physical Properties'
+876,1732762, 'Material Characteristics'
+877,1732762, 'Physical Sciences'
+878,1732762, 'Thermal Properties'
+879,1732762, 'Entropy'
+880,1732762, 'Materials Science'
+881,1732762, 'Maximum Entropy'
+882,1732763,
+883,1732764,'Sublimation'
+884,1732764, 'Chemistry'
+885,1732764, 'Chemical Thermodynamics'
+886,1732764, 'Phase Transitions'
+887,1732765,'Physical Sciences'
+888,1732765, 'Cosmology'
+889,1732765, 'Galaxy Dynamics'
+890,1732765, 'Galaxy Evolution'
+891,1732766,'Astrophysics'
+892,1732766, 'Space Science'
+893,1732766, 'Star Formation'
+894,1732767,'Astrophysics'
+895,1732767, 'Space Science'
+896,1732767, 'Polarization'
+897,1732768,
+898,1732769,'Astrophysics'
+899,1732769, 'Space Science'
+900,1732769, 'Gamma-Ray Bursts'
+901,1732770,'Engineering'
+902,1732770, 'Telecommunications Engineering'
+903,1732770, 'Frequency Stability'
+904,1732771,'Biomedical Instrumentation'
+905,1732771, 'Biomedical Devices'
+906,1732771, 'Biomedical Engineering'
+907,1732771, 'Engineering'
+908,1732771, 'X-Ray Sources'
+909,1732772,'Gravitation'
+910,1732772, 'General Relativity'
+911,1732772, 'Astronomical Processes'
+912,1732772, 'Astronomy'
+913,1732772, 'Space Science'
+914,1732772, 'Numerical Relativity'
+915,1732773,'Physical Sciences'
+916,1732773, 'Cosmology'
+917,1732773, 'Galaxy Dynamics'
+918,1732773, 'Galaxy Evolution'
+919,1732774,'Quantitative Social Research'
+920,1732774, 'Survey'
+921,1732775,'Universe'
+922,1732775, 'Galaxy'
+923,1732775, 'Astronomy'
+924,1732775, 'Space Science'
+925,1732775, 'Galaxy Clusters'
+926,1732776,
+927,1732777,
+928,1732778,'Econ'
+929,1732778, 'Monetary Economics'
+930,1732778, 'Economic Inflation'
+931,1732779,'Instrumentation Engineering'
+932,1732779, 'Calibration'
+933,1732780,'Optics'
+934,1732780, 'Color'
+935,1732781,
+936,1732782,'Cosmology'
+937,1732782, 'galaxies'
+938,1732783,
+939,1732784,'Alkali Metals'
+940,1732784, 'Chemistry'
+941,1732784, 'Lithium'
+942,1732785,
+943,1732786,
+944,1732787,'Dynamic Systems'
+945,1732787, 'Mathematics'
+946,1732787, 'Discrete Dynamical Systems'
+947,1732787, 'Cellular Automata'
+948,1732788,
+949,1732789,
+950,1732790,
+951,1732791,
+952,1732792,'Universe'
+953,1732792, 'Astronomy'
+954,1732792, 'Space Science'
+955,1732792, 'Galaxy'
+956,1732793,'Quantitative Social Research'
+957,1732793, 'Survey'
+958,1732794,
+959,1732795,
+960,1732796,
+961,1732797,'Cosmology'
+962,1732797, 'galaxies'
+963,1732798,
+964,1732799,
+965,1732800,
+966,1732801,'Thermofluid'
+967,1732801, 'Thermal Engineering'
+968,1732801, 'Engineering'
+969,1732801, 'Heating'
+970,1732802,
+971,1732803,
+972,1732804,'Cosmology'
+973,1732804, 'galaxies'
+974,1732805,'Stars'
+975,1732805, 'Universe'
+976,1732805, 'Variable Stars'
+977,1732805, 'Astronomy'
+978,1732805, 'Space Science'
+979,1732805, 'Cataclysmic Variables'
+980,1732806,
+981,1732807,'Physical Sciences'
+982,1732807, 'Materials'
+983,1732807, 'Materials Science'
+984,1732807, 'Metamaterials'
+985,1732808,
+986,1732809,
+987,1732810,'Cosmology'
+988,1732810, 'Physical Sciences'
+989,1732810, 'Physical Cosmology'
+990,1732810, 'Cosmic Microwave Background'
+991,1732811,'Energy'
+992,1732811, 'Physical Sciences'
+993,1732811, 'Energy Exchange'
+994,1732811, 'Cooling'
+995,1732812,'Physical Sciences'
+996,1732812, 'Cosmology'
+997,1732813,'Astrophysics'
+998,1732813, 'Space Science'
+999,1732813, 'Supernovae'
+1000,1732814,
+1001,1732815,'Experimental Physics'
+1002,1732815, 'X-Ray'
+1003,1732816,'Experimental Physics'
+1004,1732816, 'X-Ray'
+1005,1732817,
+1006,1732818,'Astronomical Instrumentation'
+1007,1732818, 'Astronomy'
+1008,1732818, 'Observational Astronomy'
+1009,1732818, 'Space Science'
+1010,1732818, 'Telescope'
+1011,1732819,
+1012,1732820,
+1013,1732821,
+1014,1732822,
+1015,1732823,
+1016,1732824,
+1017,1732825,
+1018,1732826,'Physical Sciences'
+1019,1732826, 'Quantum Physics'
+1020,1732826, 'Bose-Einstein Condensates'
+1021,1732827,'Universe'
+1022,1732827, 'Galaxy'
+1023,1732827, 'Astronomy'
+1024,1732827, 'Space Science'
+1025,1732827, 'Galactic Center'
+1026,1732828,
+1027,1732829,
+1028,1732830,'Physical Sciences'
+1029,1732830, 'Cosmology'
+1030,1732830, 'Physical Cosmology'
+1031,1732830, 'Dark Matter'
+1032,1732831,'Astrophysics'
+1033,1732831, 'Space Science'
+1034,1732831, 'Supernovae'
+1035,1732833,'Space Science'
+1036,1732833, 'Astrophysics'
+1037,1732834,'Astronomical Phenomena'
+1038,1732834, 'Astronomy'
+1039,1732834, 'Space Science'
+1040,1732834, 'Gravitational Lensing'
+1041,1732835,
+1042,1732836,
+1043,1732837,'Political Science'
+1044,1732837, 'Foundations of Political Theory'
+1045,1732837, 'Representation'
+1046,1732838,
+1047,1732839,
+1048,1732840,
+1049,1732841,
+1050,1732842,
+1051,1732843,'Universe'
+1052,1732843, 'Astronomy'
+1053,1732843, 'Space Science'
+1054,1732843, 'Stars'
+1055,1732844,
+1056,1732845,
+1057,1732846,
+1058,1732847,'Transition Metal'
+1059,1732847, 'Chemistry'
+1060,1732847, 'Iron'
+1061,1732848,
+1062,1732849,'Isotopes'
+1063,1732849, 'Chemistry'
+1064,1732849, 'Hydrogen Isotopes'
+1065,1732849, 'Deuterium'
+1066,1732850,'Cosmology'
+1067,1732850, 'galaxies'
+1068,1732851,'Energy'
+1069,1732851, 'Physical Sciences'
+1070,1732851, 'Renewable Energy'
+1071,1732851, 'Renewable Energy Technologies'
+1072,1732851, 'Energy-Generating Resources'
+1073,1732851, 'Solar Energy'
+1074,1732851, 'Solar'
+1075,1732852,'Astronomy'
+1076,1732852, 'Universe'
+1077,1732852, 'Space Science'
+1078,1732852, 'Stars'
+1079,1732853,
+1080,1732854,'Astrophysics'
+1081,1732854, 'Space Science'
+1082,1732854, 'Cosmic Dust'
+1083,1732855,'Astrophysics'
+1084,1732855, 'Space Science'
+1085,1732855, 'Cosmic Dust'
+1086,1732856,
+1087,1732857,
+1088,1732858,
+1089,1732859,
+1090,1732860,'Physical Sciences'
+1091,1732860, 'Materials'
+1092,1732860, 'Materials Science'
+1093,1732860, 'Silicate'
+1094,1732861,
+1095,1732862,'Astrophysics'
+1096,1732862, 'Space Science'
+1097,1732862, 'Star Formation'
+1098,1732863,'Universe'
+1099,1732863, 'Astronomy'
+1100,1732863, 'Space Science'
+1101,1732863, 'Stars'
+1102,1732863, 'Neutron Star'
+1103,1732864,
+1104,1732865,
+1105,1732866,'Universe'
+1106,1732866, 'Neutron Star'
+1107,1732866, 'Astronomy'
+1108,1732866, 'Space Science'
+1109,1732866, 'Stars'
+1110,1732866, 'Pulsars'
+1111,1732867,'Astronomy'
+1112,1732867, 'Rotation'
+1113,1732868,
+1114,1732869,'Atmospheric Sciences'
+1115,1732869, 'Meteorology'
+1116,1732869, 'Geoscience'
+1117,1732869, 'Clouds'
+1118,1732870,
+1119,1732871,'Astrophysics'
+1120,1732871, 'Space Science'
+1121,1732871, 'Gamma-Ray Bursts'
+1122,1732872,
+1123,1732873,'Physical Sciences'
+1124,1732873, 'Cosmology'
+1125,1732874,'Supernovae'
+1126,1732874, 'Astrophysics'
+1127,1732874, 'Space Science'
+1128,1732874, 'Supernova Remnants'
+1129,1732875,
+1130,1732877,'Universe'
+1131,1732877, 'Astronomy'
+1132,1732877, 'Space Science'
+1133,1732877, 'Stars'
+1134,1732877, 'Neutron Star'
+1135,1732878,'Universe'
+1136,1732878, 'Star Clusters'
+1137,1732878, 'Astronomy'
+1138,1732878, 'Space Science'
+1139,1732878, 'Stars'
+1140,1732878, 'Globular Clusters'
+1141,1732879,'Metrology'
+1142,1732879, 'Optical Metrology'
+1143,1732879, 'Radiometry'
+1144,1732879, 'Engineering'
+1145,1732879, 'Instrumentation Engineering'
+1146,1732879, 'Bolometers'
+1147,1732880,
+1148,1732881,'Cosmology'
+1149,1732881, 'galaxies'
+1150,1732882,
+1151,1732883,
+1152,1732884,'Stars'
+1153,1732884, 'Universe'
+1154,1732884, 'Astronomy'
+1155,1732884, 'Space Science'
+1156,1732884, 'Neutron Star'
+1157,1732885,
+1158,1732886,'Universe'
+1159,1732886, 'Galaxy'
+1160,1732886, 'Galactic Center'
+1161,1732886, 'Astronomy'
+1162,1732886, 'Space Science'
+1163,1732886, 'AGN'
+1164,1732887,'Astronomical Objects'
+1165,1732887, 'Astronomy'
+1166,1732887, 'Space Science'
+1167,1732887, 'Quasars'
+1168,1732888,'Universe'
+1169,1732888, 'Star Clusters'
+1170,1732888, 'Astronomy'
+1171,1732888, 'Space Science'
+1172,1732888, 'Stars'
+1173,1732888, 'Globular Clusters'
+1174,1732889,
+1175,1732900,
+1176,1732901,'Cosmology'
+1177,1732901, 'galaxies'
+1178,1732902,'Astrophysics'
+1179,1732902, 'Interstellar Medium'
+1180,1732902, 'Space Science'
+1181,1732902, 'Molecular Clouds'
+1182,1732903,'Sociocybernetics'
+1183,1732903, 'Systems'
+1184,1732904,
+1185,1732905,'Universe'
+1186,1732905, 'Astronomy'
+1187,1732905, 'Space Science'
+1188,1732905, 'Stars'
+1189,1732905, 'Neutron Star'
+1190,1732906,'Atmospheric Sciences'
+1191,1732906, 'Meteorology'
+1192,1732906, 'Geoscience'
+1193,1732906, 'Wind'
+1194,1732907,'Cosmology'
+1195,1732907, 'galaxies'
+1196,1732908,
+1197,1732909,
+1198,1732910,
+1199,1732911,'Physical Sciences'
+1200,1732911, 'Thin Films Synthesis'
+1201,1732911, 'Material Synthesis'
+1202,1732911, 'Materials Science'
+1203,1732911, 'Metallization'
+1204,1732912,'Economic Geography'
+1205,1732912, 'Regional'
+1206,1732913,
+1207,1732914,
+1208,1732915,
+1209,1732916,
+1210,1732917,
+1211,1732918,
+1212,1732919,
+1213,1732922,'Cosmology'
+1214,1732922, 'galaxies'
+1215,1732923,'Financial Accounting'
+1216,1732923, 'Econ'
+1217,1732923, 'Accounting'
+1218,1732923, 'Mergers and Acquisitions'
+1219,1732923, 'Financial Economics'
+1220,1732923, 'Mergers'
+1221,1732924,
+1222,1732925,'Astrophysics'
+1223,1732925, 'Space Science'
+1224,1732925, 'Supernovae'
+1225,1732926,'Universe'
+1226,1732926, 'Astronomy'
+1227,1732926, 'Space Science'
+1228,1732926, 'Stars'
+1229,1732926, 'Brown Dwarfs'
+1230,1732927,'Planetary Science'
+1231,1732927, 'Astronomy'
+1232,1732927, 'Space Science'
+1233,1732927, 'Exoplanets'
+1234,1732928,
+1235,1732929,
+1236,1732930,'Physical Sciences'
+1237,1732930, 'Cosmology'
+1238,1732930, 'Physical Cosmology'
+1239,1732930, 'Cosmic Microwave Background'
+1240,1732931,
+1241,1732932,'Physical Sciences'
+1242,1732932, 'Electromagnetic Fields'
+1243,1732932, 'Electromagnetic Radiation'
+1244,1732932, 'Electromagnetism'
+1245,1732932, 'Light'
+1246,1732933,
+1247,1732934,'Cosmology'
+1248,1732934, 'galaxies'
+1249,1732935,
+1250,1732936,'Astronomical Objects'
+1251,1732936, 'Astronomy'
+1252,1732936, 'Space Science'
+1253,1732936, 'Quasars'
+1254,1732937,
+1255,1732938,'Universe'
+1256,1732938, 'Astronomy'
+1257,1732938, 'Space Science'
+1258,1732938, 'Galaxy'
+1259,1732939,
+1260,1732940,'Number Theory'
+1261,1732940, 'Mathematics'
+1262,1732940, 'Natural Numbers'
+1263,1732941,
+1264,1732942,
+1265,1732943,
+1266,1732944,'Physical Sciences'
+1267,1732944, 'Optical Devices'
+1268,1732944, 'Optics'
+1269,1732944, 'Lenses'
+1270,1732945,'Physical Sciences'
+1271,1732945, 'Cosmology'
+1272,1732945, 'Physical Cosmology'
+1273,1732945, 'Cosmic Microwave Background'
+1274,1732946,'Unitarity'
+1275,1732947,'Astrophysics'
+1276,1732947, 'Space Science'
+1277,1732947, 'Star Formation'
+1278,1732948,
+1279,1732949,
+1280,1732950,
+1281,1732951,'Econ'
+1282,1732951, 'Business Administration'
+1283,1732951, 'PRIME'
+1284,1732952,'QuaSy'
+1285,1732953,
+1286,1732954,'Physical Sciences'
+1287,1732954, 'Theoretical Physics'
+1288,1732954, 'Quantization'
+1289,1732955,'Cosmology'
+1290,1732955, 'Physical Sciences'
+1291,1732955, 'Physical Cosmology'
+1292,1732955, 'Dark Energy'
+1293,1732956,'Physical Sciences'
+1294,1732956, 'Electromagnetism'
+1295,1732956, 'Scattering'
+1296,1732957,
+1297,1732958,'Quantum Computing'
+1298,1732958, 'Quantum'
+1299,1732959,
+1300,1732960,
+1301,1732961,'Biomedical Instrumentation'
+1302,1732961, 'Biomedical Devices'
+1303,1732961, 'Biomedical Engineering'
+1304,1732961, 'Engineering'
+1305,1732961, 'X-Ray Sources'
+1306,1732962,
+1307,1732963,'Physical Sciences'
+1308,1732963, 'Cosmology'
+1309,1732963, 'Physical Cosmology'
+1310,1732963, 'Cosmic Microwave Background'
+1311,1732964,'Cosmology'
+1312,1732964, 'galaxies'
+1313,1732965,'Universe'
+1314,1732965, 'Astronomy'
+1315,1732965, 'Space Science'
+1316,1732965, 'Stars'
+1317,1732966,'Galaxy'
+1318,1732966, 'Universe'
+1319,1732966, 'Galactic Center'
+1320,1732966, 'Astronomy'
+1321,1732966, 'Space Science'
+1322,1732966, 'Active Galactic Nuclei'
+1323,1732967,
+1324,1732968,'Biological Science'
+1325,1732968, 'Molecular Biology'
+1326,1732968, 'Nucleosomes'
+1327,1732969,
+1328,1732970,
+1329,1732971,
+1330,1732972,'Quantitative Social Research'
+1331,1732972, 'Survey'
+1332,1732973,'Cosmology'
+1333,1732973, 'Physical Sciences'
+1334,1732973, 'Physical Cosmology'
+1335,1732973, 'Dark Energy'
+1336,1732974,
+1337,1732975,'Information Theory'
+1338,1732975, 'Engineering'
+1339,1732975, 'Communication Engineering'
+1340,1732975, 'Optical Engineering'
+1341,1732975, 'Joint Source-Channel Coding'
+1342,1732976,'Physical Sciences'
+1343,1732976, 'Quantum Physics'
+1344,1732976," ""Schrödinger's Equation"""
+1345,1732977,'Gravitation'
+1346,1732977, 'Astronomical Processes'
+1347,1732977, 'Astronomy'
+1348,1732977, 'Space Science'
+1349,1732977, 'Gravity'
+1350,1732978,
+1351,1732979,'Algebra'
+1352,1732979, 'Mathematics'
+1353,1732979, 'Polynomials'
+1354,1732980,
+1355,1732981,'Parallel Computing'
+1356,1732981, 'Message Passing'
+1357,1732982,
+1358,1732983,
+1359,1732984,'Quantum Mechanics'
+1360,1732984, 'Physical Sciences'
+1361,1732984, 'Quantum Physics'
+1362,1732984, 'Coherence'
+1363,1732985,
+1364,1732986,
+1365,1732987,
+1366,1732988,
+1367,1732989,
+1368,1732990,
+1369,1732991,'Vectorization'
+1370,1732992,'Quantum Physics'
+1371,1732992, 'Physical Sciences'
+1372,1732992, 'Bose-Einstein Condensates'
+1373,1732993,'Political Science'
+1374,1732993, 'International History and Politics'
+1375,1732993, 'Globalization'
+1376,1732994,
+1377,1732995,
+1378,1732996,'Sociocybernetics'
+1379,1732996, 'Systems'
+1380,1732997,'Sociocybernetics'
+1381,1732997, 'Systems'
+1382,1732998,'Engineering'
+1383,1732998, 'Petroleum Engineering'
+1384,1732998, 'Gas'
+1385,1732999,
+1386,1733000,
+1387,1733001,'Gravity'
+1388,1733001, 'Gravitation'
+1389,1733001, 'Astronomical Processes'
+1390,1733001, 'Astronomy'
+1391,1733001, 'Space Science'
+1392,1733001, 'Alternative Theory of Gravity'
+1393,1733001, 'Modified Gravity'
+1394,1733002,
+1395,1733003,'Cosmology'
+1396,1733003, 'galaxies'
+1397,1733004,
+1398,1733005,
+1399,1733006,'Physical Sciences'
+1400,1733006, 'Photon Science'
+1401,1733006, 'Quantum Physics'
+1402,1733006, 'Photon Energy'
+1403,1733007,
+1404,1733008,'Physical Sciences'
+1405,1733008, 'Electromagnetism'
+1406,1733008, 'Electromagnetic Fields'
+1407,1733009,'Economic Analysis'
+1408,1733009, 'Econ'
+1409,1733009, 'Economic Valuation'
+1410,1733009, 'Monetary Economics'
+1411,1733009, 'Valuation'
+1412,1733010,
+1413,1733011,
+1414,1733012,'Mathematics'
+1415,1733012, 'Combinatorics'
+1416,1733013,'Wireless Networks'
+1417,1733013, 'Computer Networks'
+1418,1733013, 'Computer Science and Engineering'
+1419,1733013, 'Computer Communications (Networks)'
+1420,1733013, 'Sensor Networks'
+1421,1733014,
+1422,1733015,'Abstract Algebra'
+1423,1733015, 'Algebra'
+1424,1733015, 'Mathematics'
+1425,1733015, 'Galois Theory'
+1426,1733016,'Evolutionary Biology'
+1427,1733016, 'Scaling'
+1428,1733017,'Physical Sciences'
+1429,1733017, 'Particle Physics'
+1430,1733017, 'Elementary Particle Physics'
+1431,1733017, 'Elementary Particles'
+1432,1733018,
+1433,1733019,'Alpha'
+1434,1733020,
+1435,1733021,
+1436,1733022,
+1437,1733023,
+1438,1733024,
+1439,1733025,
+1440,1733026,'Physical Sciences'
+1441,1733026, 'Optics'
+1442,1733026, 'Optical Techniques'
+1443,1733026, 'Diffraction'
+1444,1733027,
+1445,1733029,
+1446,1733030,
+1447,1733031,
+1448,1733032,'Physical Sciences'
+1449,1733032, 'Accelerator Physics'
+1450,1733032, 'Particle Acceleration'
+1451,1733033,
+1452,1733034,
+1453,1733035,'Social Science'
+1454,1733035, 'Communication and Media'
+1455,1733035, 'Conformity'
+1456,1733036,
+1457,1733037,'Condensed Matter Physics'
+1458,1733037, 'Zero'
+1459,1733038,'Physical Sciences'
+1460,1733038, 'Electromagnetism'
+1461,1733038, 'Magnetism'
+1462,1733039,
+1463,1733040,
+1464,1733041,
+1465,1733042,
+1466,1733043,
+1467,1733044,
+1468,1733045,'Universe'
+1469,1733045, 'Astronomy'
+1470,1733045, 'Space Science'
+1471,1733045, 'Stars'
+1472,1733045, 'Neutron Star'
+1473,1733046,'Quantum Computing'
+1474,1733046, 'Quantum'
+1475,1733048,
+1476,1733049,'Bioengineering'
+1477,1733049, 'Scheme'
+1478,1733050,
+1479,1733051,
+1480,1733052,'Vacuum'
+1481,1733053,'Biological Science'
+1482,1733053, 'Physiology'
+1483,1733053, 'Channels'
+1484,1733054,
+1485,1733055,
+1486,1733056,
+1487,1733057,
+1488,1733058,'Physical Sciences'
+1489,1733058, 'Cosmology'
+1490,1733058, 'Quantum Cosmology'
+1491,1733059,
+1492,1733060,'Astronomy'
+1493,1733060, 'Rotation'
+1494,1733061,
+1495,1733062,
+1496,1733063,'Econ'
+1497,1733063, 'Real Estate Economics'
+1498,1733063, 'Fees and Charges'
+1499,1733064,
+1500,1733065,'Physics'
+1501,1733065, 'Fermi Surface'
+1502,1733066,
+1503,1733067,
+1504,1733068,
+1505,1733069,
+1506,1733070,'Blood'
+1507,1733070, 'Medicine'
+1508,1733070, 'Hematology'
+1509,1733070, 'Plasma'
+1510,1733071,
+1511,1733072,'Physical Properties'
+1512,1733072, 'Material Characteristics'
+1513,1733072, 'Physical Sciences'
+1514,1733072, 'Thermal Properties'
+1515,1733072, 'Materials Science'
+1516,1733072, 'Entropy'
+1517,1733073,'Deceleration'
+1518,1733074,'Mathematics'
+1519,1733074, 'Algebra'
+1520,1733074, 'Algebraic Geometry'
+1521,1733075,'Universe'
+1522,1733075, 'Astronomy'
+1523,1733075, 'Space Science'
+1524,1733075, 'Stars'
+1525,1733076,'Statistical Techniques'
+1526,1733076, 'Statistics'
+1527,1733076, 'Mathematics'
+1528,1733076, 'Transformation'
+1529,1733077,'Physical Sciences'
+1530,1733077, 'Atomic
+1531,1733077, Molecular and Optical Physics'
+1532,1733077, 'Ionization'
+1533,1733078,
+1534,1733079,
+1535,1733080,'Mathematics'
+1536,1733080, 'Graphs'
+1537,1733081,
+1538,1733082,'Political Science'
+1539,1733082, 'International History and Politics'
+1540,1733082, 'Globalization'
+1541,1733083,'Computer Science and Engineering'
+1542,1733083, 'Computer Architecture'
+1543,1733083, 'Comp'
+1544,1733084,
+1545,1733085,
+1546,1733086,'Logic'
+1547,1733086, 'Philosophy'
+1548,1733086, 'Rationality'
+1549,1733087,'Redundancy'
+1550,1733088,'Probability'
+1551,1733088, 'Statistics'
+1552,1733088, 'Mathematics'
+1553,1733088, 'Probability Theory'
+1554,1733088, 'Point Processes'
+1555,1733089,
+1556,1733090,
+1557,1733091,
+1558,1733092,
+1559,1733093,
+1560,1733094,'Asia'
+1561,1733094, 'Western Asia'
+1562,1733094, 'Geoscience'
+1563,1733094, 'Jordan'
+1564,1733095,
+1565,1733096,
+1566,1733097,
+1567,1733098,
+1568,1733099,'Animal Physiology'
+1569,1733099, 'Anthropometry'
+1570,1733099, 'Human Physiology'
+1571,1733099, 'Biological Science'
+1572,1733099, 'Physiology'
+1573,1733099, 'Somatotypes'
+1574,1733100,
+1575,1733101,'Physical Sciences'
+1576,1733101, 'Waves'
+1577,1733102,
+1578,1733103,
+1579,1733104,'Mapping'
+1580,1733104, 'Cartography'
+1581,1733104, 'Geoscience'
+1582,1733104, 'Maps'
+1583,1733105,'Psychology'
+1584,1733105, 'Transfer (Psychology)'
+1585,1733106,
+1586,1733107,'Physical Sciences'
+1587,1733107, 'Polarity'
+1588,1733108,
+1589,1733109,
+1590,1733110,
+1591,1733111,
+1592,1733112,'Surface Engineering'
+1593,1733112, 'Engineering'
+1594,1733112, 'Materials Engineering'
+1595,1733112, 'Spark Plasma Sintering'
+1596,1733113,
+1597,1733114,
+1598,1733115,'Computer Science and Engineering'
+1599,1733115, 'Computational Physics'
+1600,1733115, 'Computing in Mathematics
+1601,1733115, Natural Science
+1602,1733115, Engineering and Medicine'
+1603,1733115, 'Hartree-Fock'
+1604,1733116,'Computational Chemistry'
+1605,1733116, 'Computer Science and Engineering'
+1606,1733116, 'Computing in Mathematics
+1607,1733116, Natural Science
+1608,1733116, Engineering and Medicine'
+1609,1733116, 'Gaussian'
+1610,1733117,'Elementary Particle Physics'
+1611,1733117, 'Silicon Photomultipliers'
+1612,1733118,'Geodesy and Surveying'
+1613,1733118, 'Magnetic Fields'
+1614,1733119,
+1615,1733120,'Restriction'
+1616,1733121,
+1617,1733122,
+1618,1733123,
+1619,1733124,
+1620,1733125,'Quantum Physics'
+1621,1733125, 'Quantum Communication'
+1622,1733125, 'Physical Sciences'
+1623,1733125, 'Quantum Memory'
+1624,1733126,
+1625,1733127,
+1626,1733128,'Econ'
+1627,1733128, 'Real Estate Economics'
+1628,1733128, 'Fees and Charges'
+1629,1733129,
+1630,1733131,
+1631,1733132,
+1632,1733133,'Signal Processing'
+1633,1733133, 'Electrical Engineering'
+1634,1733133, 'Engineering'
+1635,1733133, 'Time Reversal'
+1636,1733134,
+1637,1733135,'Biological Science'
+1638,1733135, 'Microbiology'
+1639,1733135, 'Persistence'
+1640,1733136,
+1641,1733137,'Physical Sciences'
+1642,1733137, 'Theoretical Physics'
+1643,1733137, 'Statistical Mechanics'
+1644,1733138,
+1645,1733139,
+1646,1733140,
+1647,1733141,
+1648,1733142,
+1649,1733143,'Cosmology'
+1650,1733143, 'galaxies'
+1651,1733144,
+1652,1733145,
+1653,1733146,
+1654,1733147,'Vectorization'
+1655,1733148,'Soft Materials'
+1656,1733148, 'Physical Sciences'
+1657,1733148, 'Condensed Matter Physics'
+1658,1733148, 'Liquids'
+1659,1733149,
+1660,1733150,'Astronomical Objects'
+1661,1733150, 'Astronomy'
+1662,1733150, 'Space Science'
+1663,1733150, 'Quasars'
+1664,1733151,'Moral Philosophy'
+1665,1733151, 'Philosophy'
+1666,1733151, 'Free Will'
+1667,1733152,
+1668,1733153,
+1669,1733154,'Space Science'
+1670,1733154, 'Astrophysics'
+1671,1733155,
+1672,1733156,'Physical Sciences'
+1673,1733156, 'Theoretical Physics'
+1674,1733156, 'High Energy Physics Theory'
+1675,1733157,
+1676,1733158,
+1677,1733159,'Physics'
+1678,1733159, 'Fermi Surface'
+1679,1733160,
+1680,1733161,
+1681,1733162,
+1682,1733163,'Abstract Algebra'
+1683,1733163, 'Algebra'
+1684,1733163, 'Mathematics'
+1685,1733163, 'Field Theory'
+1686,1733164,
+1687,1733165,
+1688,1733166,'Rheology'
+1689,1733166, 'Engineering'
+1690,1733166, 'Materials Engineering'
+1691,1733166, 'Rheological Properties'
+1692,1733166, 'Viscosity'
+1693,1733167,
+1694,1733168,'Astrophysics'
+1695,1733168, 'Space Science'
+1696,1733168, 'Superfluidity'
+1697,1733169,'Oral Pathology'
+1698,1733169, 'Odontology'
+1699,1733169, 'Periodontal Medicine'
+1700,1733169, 'Medicine'
+1701,1733169, 'Periodontics and Oral Pathology'
+1702,1733169, 'Cleft'
+1703,1733170,
+1704,1733171,'Classical Philology'
+1705,1733171, 'Linguistics'
+1706,1733171, 'Philology'
+1707,1733171, 'Classics'
+1708,1733172,
+1709,1733173,
+1710,1733174,'Physical Sciences'
+1711,1733174, 'Cosmology'
+1712,1733174, 'Physical Cosmology'
+1713,1733174, 'Dark Matter'
+1714,1733175,
+1715,1733176,
+1716,1733177,
+1717,1733178,
+1718,1733179,
+1719,1733180,
+1720,1733181,
+1721,1733182,
+1722,1733183,
+1723,1733184,'Linear Algebra'
+1724,1733184, 'Algebra'
+1725,1733184, 'Mathematics'
+1726,1733184, 'Singular Value Decomposition'
+1727,1733185,'Universe'
+1728,1733185, 'Astronomy'
+1729,1733185, 'Space Science'
+1730,1733185, 'Stars'
+1731,1733185, 'Brown Dwarfs'
+1732,1733186,
+1733,1733187,'Political Science'
+1734,1733187, 'Foundations of Political Theory'
+1735,1733187, 'Representation'
+1736,1733188,
+1737,1733189,
+1738,1733190,
+1739,1733191,
+1740,1733192,
+1741,1733193,'Universe'
+1742,1733193, 'Astronomy'
+1743,1733193, 'Space Science'
+1744,1733193, 'Stars'
+1745,1733194,'Physical Sciences'
+1746,1733194, 'Cosmology'
+1747,1733194, 'Physical Cosmology'
+1748,1733194, 'Dark Energy'
+1749,1733195,
+1750,1733196,
+1751,1733197,
+1752,1733198,
+1753,1733199,
+1754,1733200,'Astrophysics'
+1755,1733200, 'Space Science'
+1756,1733200, 'Gamma-Ray Bursts'
+1757,1733201,'Quantitative Social Research'
+1758,1733201, 'Survey'
+1759,1733202,
+1760,1733203,'Invertebrate Zoology'
+1761,1733203, 'Faunistics'
+1762,1733203, 'Biological Science'
+1763,1733203, 'Crabs'
+1764,1733204,
+1765,1733205,
+1766,1733206,
+1767,1733207,'Biomedical Signal Processing'
+1768,1733207, 'Machine Learning'
+1769,1733207, 'Biosignals'
+1770,1733207, 'Biological Science'
+1771,1733207, 'Physiology'
+1772,1733207, 'Cluster Analysis'
+1773,1733208,'Physics'
+1774,1733208, 'Cosmology'
+1775,1733209,
+1776,1733210,'Atmospheric Sciences'
+1777,1733210, 'Geoscience'
+1778,1733210, 'Atmosphere'
+1779,1733211,'Cosmology'
+1780,1733211, 'galaxies'
+1781,1733212,'Nuclear Science'
+1782,1733212, 'Radioactivity'
+1783,1733212, 'Physics'
+1784,1733212, 'Gamma Rays'
+1785,1733213,
+1786,1733214,'Mathematics'
+1787,1733214, 'Graphs'
+1788,1733215,'Physics'
+1789,1733215, 'Quantum Physics'
+1790,1733215, 'Coherent States'
+1791,1733216,'Political Science'
+1792,1733216, 'International History and Politics'
+1793,1733216, 'Globalization'
+1794,1733217,'Space Time'
+1795,1733217, 'Physics'
+1796,1733217, 'Theoretical Physics'
+1797,1733217, 'Supersymmetry'
+1798,1733218,
+1799,1733219,
+1800,1733220,'Nanotechnology'
+1801,1733220, 'Nanotubes'
+1802,1733220, 'Nanostructures'
+1803,1733220, 'Chemistry'
+1804,1733220, 'Carbon Nanotubes'
+1805,1733221,'Physics'
+1806,1733221, 'Materials Science'
+1807,1733221, 'Plating'
+1808,1733222,
+1809,1733223,
+1810,1733224,'Chemistry'
+1811,1733224, 'Phosphorus'
+1812,1733225,
+1813,1733227,'Internet Architecture'
+1814,1733227, 'Computer Science'
+1815,1733227, 'Computer Communications (Networks)'
+1816,1733227, 'Multicast'
+1817,1733228,'Wireless Communications'
+1818,1733228, 'Communication Systems'
+1819,1733228, 'Digital Communications'
+1820,1733228, 'Engineering'
+1821,1733228, 'Communication Engineering'
+1822,1733228, 'Optical Engineering'
+1823,1733228, 'Cooperative transmission'
+1824,1733229,
+1825,1733230,
+1826,1733231,'Mechanical Engineering'
+1827,1733231, 'Thermal'
+1828,1733232,
+1829,1733233,
+1830,1733234,'Sound Studies'
+1831,1733234, 'History'
+1832,1733234, 'Musicology'
+1833,1733234, 'Resonance'
+1834,1733235,'Mathematics'
+1835,1733235, 'Graphs'
+1836,1733236,
+1837,1733237,
+1838,1733238,'Universe'
+1839,1733238, 'Binary Stars'
+1840,1733238, 'Astronomy'
+1841,1733238, 'Space Science'
+1842,1733238, 'Stars'
+1843,1733238, 'X-ray Binaries'
+1844,1733239,
+1845,1733240,'Atomic
+1846,1733240, Molecular and Optical Physics'
+1847,1733240, 'Atomic'
+1848,1733241,'Physics'
+1849,1733241, 'Condensed Matter Physics'
+1850,1733241, 'Multiferroics'
+1851,1733242,'Universe'
+1852,1733242, 'Solar System'
+1853,1733242, 'Astronomy'
+1854,1733242, 'Space Science'
+1855,1733242, 'Moon'
+1856,1733243,'Cosmology'
+1857,1733243, 'galaxies'
+1858,1733244,'Econ'
+1859,1733244, 'Monetary Economics'
+1860,1733244, 'Economic Inflation'
+1861,1733245,'Elementary Particle Physics'
+1862,1733245, 'Triggers'
+1863,1733246,'Nuclear Physics'
+1864,1733246, 'Nuclear'
+1865,1733247,'Physics'
+1866,1733247, 'Cosmology'
+1867,1733248,'Astrochemistry'
+1868,1733248, 'Primordial Matter'
+1869,1733249,'Mathematics'
+1870,1733249, 'Abstract Algebra'
+1871,1733249, 'Algebra'
+1872,1733249, 'Representation Theory'
+1873,1733250,
+1874,1733251,
+1875,1733252,
+1876,1733253,
+1877,1733254,'Mathematics'
+1878,1733254, 'Algebra'
+1879,1733254, 'Algebraic Geometry'
+1880,1733255,'Physics'
+1881,1733255, 'Theoretical Physics'
+1882,1733255, 'Quantum Field Theory'
+1883,1733256,
+1884,1733257,'Medicine'
+1885,1733257, 'Physiology'
+1886,1733257, 'Channels'
+1887,1733258,'Astronomical Instrumentation'
+1888,1733258, 'Astronomy'
+1889,1733258, 'Observational Astronomy'
+1890,1733258, 'Space Science'
+1891,1733258, 'Telescopes'
+1892,1733259,
+1893,1733260,
+1894,1733261,'Mathematics'
+1895,1733261, 'Mathematical Analysis'
+1896,1733261, 'Functional Analysis'
+1897,1733262,
+1898,1733263,
+1899,1733264,
+1900,1733265,'Chemicals'
+1901,1733265, 'Colloids'
+1902,1733265, 'Chemistry'
+1903,1733265, 'Foams'
+1904,1733266,
+1905,1733267,'Mathematics'
+1906,1733267, 'Random Graphs'
+1907,1733268,
+1908,1733269,'Astronomical Objects'
+1909,1733269, 'Astronomy'
+1910,1733269, 'Space Science'
+1911,1733269, 'Black Holes'
+1912,1733270,
+1913,1733271,
+1914,1733272,
+1915,1733273,
+1916,1733274,
+1917,1733275,
+1918,1733276,'Atmospheric Sciences'
+1919,1733276, 'Geoscience'
+1920,1733276, 'Emission'
+1921,1733277,'Atmospheric Sciences'
+1922,1733277, 'Meteorology'
+1923,1733277, 'Atmospheric Chemistry'
+1924,1733277, 'Geoscience'
+1925,1733277, 'Carbon Monoxide'
+1926,1733278,'Supernovae'
+1927,1733278, 'Astrophysics'
+1928,1733278, 'Space Science'
+1929,1733278, 'Supernova Remnants'
+1930,1733279,
+1931,1733280,'Artificial Intelligence'
+1932,1733280, 'Classifier'
+1933,1733281,'Econ'
+1934,1733281, 'Real Estate Economics'
+1935,1733281, 'Fees and Charges'
+1936,1733282,
+1937,1733283,'Physics'
+1938,1733283, 'Materials Physics'
+1939,1733283, 'Epitaxy'
+1940,1733284,'Apiaceae'
+1941,1733284, 'Laser'
+1942,1733285,
+1943,1733286,'Physics'
+1944,1733286, 'Condensed Matter Physics'
+1945,1733286, 'Condensation'
+1946,1733287,'Wave Propagation'
+1947,1733287, 'Physics'
+1948,1733287, 'Electromagnetism'
+1949,1733287, 'Polarimetry'
+1950,1733288,
+1951,1733289,
+1952,1733290,'Financial Accounting'
+1953,1733290, 'Econ'
+1954,1733290, 'Accounting'
+1955,1733290, 'Mergers and Acquisitions'
+1956,1733290, 'Financial Economics'
+1957,1733290, 'Mergers'
+1958,1733291,'Mathematics'
+1959,1733291, 'Algebra'
+1960,1733292,'Electromagnetic Fields'
+1961,1733292, 'Electromagnetic Radiation'
+1962,1733292, 'Physics'
+1963,1733292, 'Electromagnetism'
+1964,1733292, 'Light'
+1965,1733293,'Laser Technology'
+1966,1733293, 'Engineering'
+1967,1733293, 'Optical Engineering'
+1968,1733293, 'Microcavities'
+1969,1733294,'Physics'
+1970,1733294, 'Mathematical Physics'
+1971,1733295,'Physiotherapy'
+1972,1733295, 'Balance'
+1973,1733296,
+1974,1733297,'Physics'
+1975,1733297, 'Theoretical Physics'
+1976,1733297, 'Quantum Gravity'
+1977,1733297, 'Loop Quantum Gravity'
+1978,1733298,
+1979,1733299,
+1980,1733300,'Superconductivity'
+1981,1733300, 'Physics'
+1982,1733300, 'Solid State Physics'
+1983,1733300, 'Condensed Matter Physics'
+1984,1733300, 'Superconductors'
+1985,1733301,
+1986,1733302,'Nuclear Science'
+1987,1733302, 'Radioactivity'
+1988,1733302, 'Physics'
+1989,1733302, 'Gamma Rays'
+1990,1733303,
+1991,1733304,'Astronomical Instrumentation'
+1992,1733304, 'Astronomy'
+1993,1733304, 'Observational Astronomy'
+1994,1733304, 'Space Science'
+1995,1733304, 'Telescopes'
+1996,1733305,
+1997,1733306,
+1998,1733307,'Physical Sciences'
+1999,1733307, 'Magnetism'
+2000,1733307, 'Electromagnetism'
+2001,1733307, 'Micromagnetism'
+2002,1733307, 'Micromagnetic Simulation'
+2003,1733308,'Physical Sciences'
+2004,1733308, 'Waves'
+2005,1733309,'Integrability'
+2006,1733310,'Translocation'
+2007,1733311,
+2008,1733312,
+2009,1733313,'Engineering'
+2010,1733313, 'Acoustic Engineering'
+2011,1733313, 'Noise'
+2012,1733314,
+2013,1733315,'Wireless Communications'
+2014,1733315, 'Communication Systems'
+2015,1733315, 'Digital Communications'
+2016,1733315, 'Engineering'
+2017,1733315, 'Communication Engineering'
+2018,1733315, 'Optical Engineering'
+2019,1733315, 'Radio'
+2020,1733316,
+2021,1733317,
+2022,1733318,
+2023,1733319,
+2024,1733320,'Astronomical Objects'
+2025,1733320, 'Astronomy'
+2026,1733320, 'Space Science'
+2027,1733320, 'Black Holes'
+2028,1733321,
+2029,1733322,
+2030,1733323,'Astrophysics'
+2031,1733323, 'Space Science'
+2032,1733323, 'Solar Activity'
+2033,1733324,'Engineering'
+2034,1733324, 'Materials Engineering'
+2035,1733324, 'Ferroelectrics'
+2036,1733325,
+2037,1733326,'Cosmology'
+2038,1733326, 'Mass'
+2039,1733327,
+2040,1733328,
+2041,1733329,
+2042,1733330,'Social Theory'
+2043,1733330, 'Work'
+2044,1733331,'Physical Sciences'
+2045,1733331, 'Polarity'
