@@ -4,10 +4,15 @@ import {
   Container,
   NavbarBrand,
 } from 'react-bootstrap';
+import useRootData from '../../hooks/useRootData';
 
-const Footer = ({ screenClass }) => {
+const Footer = () => {
+  const { screenClass } = useRootData(({ appStore }) => ({
+    screenClass: appStore.screenClass.get(),
+  }));
   // eslint-disable-next-line no-unused-vars
   const isDesktop = screenClass === 'xl';
+
   // const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (

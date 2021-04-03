@@ -6,16 +6,19 @@ import {
   FormControl,
   Button,
 } from 'react-bootstrap';
-
 import {
   HeaderEntireMain,
 } from '../../assets/strings/Menu/Main';
-
+import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
 
-const NavBar = ({ screenClass }) => {
+const NavBar = () => {
+  const { screenClass } = useRootData(({ appStore }) => ({
+    screenClass: appStore.screenClass.get(),
+  }));
   const isDesktop = screenClass === 'xl';
+
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (

@@ -3,12 +3,16 @@ import {
   Container,
   Jumbotron,
 } from 'react-bootstrap';
-
+import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
-const IntroCard = ({ screenClass }) => {
+const IntroCard = () => {
+  const { screenClass } = useRootData(({ appStore }) => ({
+    screenClass: appStore.screenClass.get(),
+  }));
   const isDesktop = screenClass === 'xl';
+
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
   // Todo: 예제를 위한 mockup데이터 string으로 옮기기

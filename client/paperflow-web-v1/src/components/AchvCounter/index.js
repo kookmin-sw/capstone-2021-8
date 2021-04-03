@@ -4,12 +4,16 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
-
+import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
-const AchvCounter = ({ screenClass }) => {
+const AchvCounter = () => {
+  const { screenClass } = useRootData(({ appStore }) => ({
+    screenClass: appStore.screenClass.get(),
+  }));
   const isDesktop = screenClass === 'xl';
+
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
   return (

@@ -4,15 +4,19 @@ import {
   Container,
   Carousel,
 } from 'react-bootstrap';
-
+import useRootData from '../../hooks/useRootData';
 import backgroundImage from '../../assets/images/concept-1868728_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import AchvCounter from '../../components/AchvCounter';
 import IntroCard from '../../components/IntroCard';
 
-const App = ({ screenClass }) => {
+const Lading = () => {
+  const { screenClass } = useRootData(({ appStore }) => ({
+    screenClass: appStore.screenClass.get(),
+  }));
   const isDesktop = screenClass === 'xl';
+
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
   return (
@@ -54,4 +58,4 @@ const App = ({ screenClass }) => {
   );
 };
 
-export default App;
+export default Lading;
