@@ -26,7 +26,7 @@ const NavBar = ({ screenClass }) => {
         <Nav className="mr-auto">
           {
             HeaderEntireMain.map((item) => (
-              <Nav.Link href="/">{item.name}</Nav.Link>
+              <Nav.Link key={item.name} href="/">{item.name}</Nav.Link>
             ))
           }
         </Nav>

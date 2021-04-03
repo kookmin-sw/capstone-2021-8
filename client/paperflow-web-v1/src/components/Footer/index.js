@@ -11,7 +11,7 @@ const Footer = ({ screenClass }) => {
   // const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (
-    <Navbar color="dark" dark>
+    <Navbar>
       <Container>
         <NavbarBrand>PaperFlow</NavbarBrand>
         <p>Copyright © 2021 by Team 8. All Rights Reserved</p>
