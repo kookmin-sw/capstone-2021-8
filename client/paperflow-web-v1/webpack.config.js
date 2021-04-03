@@ -15,7 +15,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        // node_modules - only babel, no eslint
+        test: /\.(js|jsx)$/,
+        include: [
+          path.resolve(__dirname, 'node_modules'),
+        ],
+        use: ['babel-loader'],
+      }, {
+        // project files - babel + eslint
+        test: /\.(js|jsx)$/,
+        include: [
+          path.resolve(__dirname, './src/'),
+        ],
         use: ['babel-loader', 'eslint-loader'],
       },
       {
@@ -27,8 +38,8 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|j?g|svg|gif)?$/,
-        use: 'file-loader',
+        test: /\.(png|jpg|svg|gif)?$/,
+        use: ['file-loader'],
       },
     ],
   },

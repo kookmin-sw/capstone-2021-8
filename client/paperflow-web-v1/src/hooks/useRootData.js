@@ -1,7 +1,7 @@
 import { useObserver, useLocalStore } from 'mobx-react-lite';
 import React, { useContext, createContext } from 'react';
 
-import createRootStore from './root';
+import createRootStore from '../stores/root';
 
 const context = createContext(null);
 

@@ -1,0 +1,14 @@
+@import '../../assets/scsses/config';
+
+.introCardContainer {
+  display: flex;
+
+  .cardImage {
+    width: 300px;
+    height: 300px;
+  }
+
+  .contentText {
+    margin-left: 60px;
+  }
+}

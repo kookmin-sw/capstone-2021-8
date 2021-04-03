@@ -6,16 +6,19 @@ import {
   FormControl,
   Button,
 } from 'react-bootstrap';
-
 import {
   HeaderEntireMain,
 } from '../../assets/strings/Menu/Main';
-
+import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
 
-const NavBar = ({ screenClass }) => {
+const NavBar = () => {
+  const { screenClass } = useRootData(({ appStore }) => ({
+    screenClass: appStore.screenClass.get(),
+  }));
   const isDesktop = screenClass === 'xl';
+
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (
@@ -26,13 +29,14 @@ const NavBar = ({ screenClass }) => {
         <Nav className="mr-auto">
           {
             HeaderEntireMain.map((item) => (
-              <Nav.Link href="/">{item.name}</Nav.Link>
+              <Nav.Link key={item.name} href="/">{item.name}</Nav.Link>
             ))
           }
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           <Button variant="outline-success">Search</Button>
+          <Button variant="outline-primary" style={{ marginLeft: '10px' }}>Login</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
