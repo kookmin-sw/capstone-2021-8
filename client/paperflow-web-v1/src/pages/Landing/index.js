@@ -10,6 +10,7 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import AchvCounter from '../../components/AchvCounter';
 import IntroCard from '../../components/IntroCard';
+import { achvs } from '../../assets/strings/Landing';
 
 const Lading = () => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -51,7 +52,7 @@ const Lading = () => {
         </Container>
       </Jumbotron>
 
-      <AchvCounter />
+      <AchvCounter achvs={achvs} />
 
       <IntroCard />
     </DefaultLayout>

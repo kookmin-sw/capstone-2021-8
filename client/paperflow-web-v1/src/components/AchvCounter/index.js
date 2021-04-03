@@ -8,7 +8,7 @@ import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
-const AchvCounter = () => {
+const AchvCounter = ({ achvs = [] }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
   }));
@@ -19,15 +19,14 @@ const AchvCounter = () => {
   return (
     <Container className={styles.achvContainer}>
       <Row className={`align-items-center ${styles.achvItemRow}`}>
-        <Col className={styles.achvItemCol}><h2 className={styles.number}>32K</h2>
-          <span className={styles.description}>Publications</span>
-        </Col>
-        <Col className={styles.achvItemCol}><h2 className={styles.number}>12K</h2>
-          <span className={styles.description}>Connected papers</span>
-        </Col>
-        <Col className={styles.achvItemCol}><h2 className={styles.number}>5K</h2>
-          <span className={styles.description}>Topics</span>
-        </Col>
+        {
+          achvs.map((item) => (
+            <Col key={item.description} className={styles.achvItemCol}>
+              <h2 className={styles.number}>{item.number}</h2>
+              <span className={styles.description}>{item.description}</span>
+            </Col>
+          ))
+        }
       </Row>
     </Container>
   );
