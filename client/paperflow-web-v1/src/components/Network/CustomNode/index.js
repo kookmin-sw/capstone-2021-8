@@ -2,9 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import { select } from 'd3';
 import { nodeStandard } from '../../../assets/strings/MockUp/Network/config';
 
-import styles from './Styles.module.scss';
+import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const CustomNode = (nodeInfo, handleTooltipInfo) => {
+  const styles = stylesDesktopDefault;
+
   const nodeRef = useRef();
 
   const handleTooltip = (d, visible) => {

@@ -3,7 +3,7 @@ import { ResponsiveNetwork } from '@nivo/network';
 import CustomNode from './CustomNode';
 import { networkConfig } from '../../assets/strings/MockUp/Network/config';
 
-const MyResponsiveNetwork = ({ data, handleTooltipInfo }) => (
+const Network = ({ data, handleTooltipInfo }) => (
   <ResponsiveNetwork
     nodes={data.nodes}
     links={data.links}
@@ -22,4 +22,4 @@ const MyResponsiveNetwork = ({ data, handleTooltipInfo }) => (
   />
 );
 
-export default MyResponsiveNetwork;
+export default Network;

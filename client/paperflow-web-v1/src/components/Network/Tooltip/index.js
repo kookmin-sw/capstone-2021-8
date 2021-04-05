@@ -1,11 +1,19 @@
 import React from 'react';
 
-import styles from './Styles.module.scss';
+import stylesDesktopDefault from './DesktopDefault.module.scss';
 
-const App = ({ tooltipRef }) => (
-  <div
-    className={styles.tooltip}
-    ref={tooltipRef}
-  />
-);
-export default App;
+const NetworkTooltip = ({ tooltipRef }) => {
+  const styles = stylesDesktopDefault;
+
+  return (
+    <div
+      className={styles.tooltip}
+      ref={tooltipRef}
+    >
+      <div
+        className={styles.tooltipID}
+      />
+    </div>
+  );
+};
+export default NetworkTooltip;
