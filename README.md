@@ -1,6 +1,6 @@
 # PaperFlow
 
-**팀페이지 주소**: https://kookmin-sw.github.io/capstone-2021-3
+**팀페이지 주소**: https://kookmin-sw.github.io/capstone-2021-8
 
 - [PaperFlow](#PaperFlow)
   - [1. 프로젝트 소개](#1-프로젝트-소개)
