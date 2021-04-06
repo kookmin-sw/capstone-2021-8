@@ -35,7 +35,7 @@ const KeywordNetwork = () => {
 
       if (parentDiv.node() !== null) {
         if (parentDiv.node().querySelector('g') !== null) {
-        // initial setting
+          // initial setting
           parentDiv.select('g')
             .attr('transform', 'translate(0,0) scale(1)');
 
