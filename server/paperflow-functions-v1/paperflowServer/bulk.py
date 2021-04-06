@@ -7,7 +7,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'paperflowServer.settings')
 django.setup()
 
 from backendApp.models import PaperInfo, AbstractInfo, AuthorsInfo, ThemeInfo, ReferenceInfo, ReferenceNotInfo, RealErrorInfo
-df1 = pd.read_csv('./Paper Info.csv', encoding='utf-8')
+df1 = pd.read_csv('./paper/Paper Info.csv', encoding='utf-8')
 ss1 = []
 for i in range(len(df1)):
     st1 = (df1['PaperID'][i], df1['PaperTitle'][i], df1['PublicationDate'][i], df1['PaperLocated'][i], df1['DOI']
@@ -20,7 +20,7 @@ for i in range(len(df1)):
             4], numCitation=ss1[i][5], numReference=ss1[i][6], numExistedReference=ss1[i][7], numNotinRGReference=ss1[i][8]
     )
 
-df2 = pd.read_csv('./Abstract Info.csv', encoding='utf-8')
+df2 = pd.read_csv('./paper/Abstract Info.csv', encoding='utf-8')
 ss2 = []
 
 for i in range(len(df2)):
@@ -32,7 +32,7 @@ for i in range(len(df2)):
         paperID=ss2[i][0], abstract=ss2[i][1]
     )
 
-df3 = pd.read_csv('./Authors Info.csv', encoding='utf-8')
+df3 = pd.read_csv('./paper/Authors Info.csv', encoding='utf-8')
 ss3 = []
 
 for i in range(len(df3)):
@@ -40,11 +40,14 @@ for i in range(len(df3)):
     ss3.append(st3)
 
 for i in range(len(df3)):
-    AuthorsInfo.objects.create(
-        id=ss3[i][0], paperID=ss3[i][1], author=ss3[i][2]
-    )
+    id = ss3[i][0]
+    paperidTmp = PaperInfo.objects.get(paperID=ss3[i][1])
+    paperID = paperidTmp
+    author = ss3[i][2]
+    temp = AuthorsInfo.objects.create(id=id, paperID=paperID,author=author)
+    temp.save()
 
-df4 = pd.read_csv('./Reference Info.csv', encoding='utf-8')
+df4 = pd.read_csv('./paper/Reference Info.csv', encoding='utf-8')
 ss4 = []
 
 for i in range(len(df4)):
@@ -52,11 +55,14 @@ for i in range(len(df4)):
     ss4.append(st4)
 
 for i in range(len(df4)):
-    ReferenceInfo.objects.create(
-        id=ss4[i][0], paperID=ss4[i][1], referenceIdx=ss4[i][2]
-    )
+    id = ss4[i][0]
+    paperidTmp = PaperInfo.objects.get(paperID=ss4[i][1])
+    paperID = paperidTmp
+    idx = ss4[i][2]
+    temp = ReferenceInfo.objects.create(id=id, paperID=paperID,referenceIdx=idx)
+    temp.save()
 
-df5 = pd.read_csv('./Theme Info.csv', encoding='utf-8')
+df5 = pd.read_csv('./paper/Theme Info.csv', encoding='utf-8')
 ss5 = []
 
 for i in range(len(df5)):
@@ -64,11 +70,14 @@ for i in range(len(df5)):
     ss5.append(st5)
 
 for i in range(len(df5)):
-    ThemeInfo.objects.create(
-        id=ss5[i][0], paperID=ss5[i][1], theme=ss5[i][2]
-    )
+    id = ss5[i][0]
+    paperidTmp = PaperInfo.objects.get(paperID=ss5[i][1])
+    paperID = paperidTmp
+    theme = ss5[i][2]
+    temp = ThemeInfo.objects.create(id=id, paperID=paperID,theme=theme)
+    temp.save()
 
-df6 = pd.read_csv('./Reference Not in RG Info.csv', encoding='utf-8')
+df6 = pd.read_csv('./paper/Reference Not in RG Info.csv', encoding='utf-8')
 ss6 = []
 
 for i in range(len(df6)):
@@ -76,11 +85,14 @@ for i in range(len(df6)):
     ss6.append(st6)
 
 for i in range(len(df6)):
-    ReferenceNotInfo.objects.create(
-        id=ss6[i][0], paperID=ss6[i][1], notReference=ss6[i][2]
-    )
+    id = ss6[i][0]
+    paperidTmp = PaperInfo.objects.get(paperID=ss6[i][1])
+    paperID = paperidTmp
+    notRef = ss6[i][2]
+    temp = ReferenceNotInfo.objects.create(id=id, paperID=paperID,notReference=notRef)
+    temp.save()
 
-df7 = pd.read_csv('./Real Error.csv', encoding='utf-8')
+df7 = pd.read_csv('./paper/Real Error.csv', encoding='utf-8')
 ss7 = []
 
 for i in range(len(df7)):
@@ -88,6 +100,9 @@ for i in range(len(df7)):
     ss7.append(st7)
 
 for i in range(len(df7)):
-    RealErrorInfo.objects.create(
-        id=ss7[i][0], paperID=ss7[i][1], errCnt=ss7[i][2]
-    )
+    id = ss7[i][0]
+    paperidTmp = PaperInfo.objects.get(paperID=ss7[i][1])
+    paperID = paperidTmp
+    cnt = ss7[i][2]
+    temp = RealErrorInfo.objects.create(id=id, paperID=paperID,errCnt=cnt)
+    temp.save()

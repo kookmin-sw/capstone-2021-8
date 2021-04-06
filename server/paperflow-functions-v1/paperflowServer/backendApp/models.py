@@ -14,6 +14,8 @@ class PaperInfo(models.Model):
     numExistedReference = models.IntegerField()
     numNotinRGReference = models.IntegerField()
 
+    def __str__(self):
+        return str(self.paperID)
 
 class AbstractInfo(models.Model):
     paperID = models.CharField(max_length=9)
@@ -22,29 +24,29 @@ class AbstractInfo(models.Model):
 
 class AuthorsInfo(models.Model):
     id = models.IntegerField(primary_key=True)
-    paperID = models.CharField(max_length=9)
+    paperID= models.ForeignKey('PaperInfo', db_column='paperID' ,on_delete=models.CASCADE, default=1)
     author = models.TextField()
 
 
 class ThemeInfo(models.Model):
     id = models.IntegerField(primary_key=True)
-    paperID = models.CharField(max_length=9)
+    paperID = models.ForeignKey('PaperInfo', on_delete=models.CASCADE, default=1)
     theme = models.TextField(null=True)
 
 
 class ReferenceInfo(models.Model):
     id = models.IntegerField(primary_key=True)
-    paperID = models.CharField(max_length=9)
+    paperID = models.ForeignKey('PaperInfo', on_delete=models.CASCADE, default=1)
     referenceIdx = models.TextField()
 
 
 class ReferenceNotInfo(models.Model):
     id = models.IntegerField(primary_key=True)
-    paperID = models.CharField(max_length=9)
+    paperID = models.ForeignKey('PaperInfo', on_delete=models.CASCADE, default=1)
     notReference = models.TextField()
 
 
 class RealErrorInfo(models.Model):
     id = models.IntegerField(primary_key=True)
-    paperID = models.CharField(max_length=9)
+    paperID = models.ForeignKey('PaperInfo', on_delete=models.CASCADE, default=1)
     errCnt = models.IntegerField()
