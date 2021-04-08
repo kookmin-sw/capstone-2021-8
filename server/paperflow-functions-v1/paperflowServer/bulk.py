@@ -6,8 +6,8 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'paperflowServer.settings')
 django.setup()
 
-from backendApp.models import PaperInfo, AbstractInfo, AuthorsInfo, ThemeInfo, ReferenceInfo, ReferenceNotInfo, RealErrorInfo
-df1 = pd.read_csv('./paper/Paper Info.csv', encoding='utf-8')
+from paper.models import PaperInfo, AbstractInfo, AuthorsInfo, ThemeInfo, ReferenceInfo, ReferenceNotInfo, RealErrorInfo
+df1 = pd.read_csv('C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\paper\\Paper Info.csv', encoding='utf-8')
 ss1 = []
 for i in range(len(df1)):
     st1 = (df1['PaperID'][i], df1['PaperTitle'][i], df1['PublicationDate'][i], df1['PaperLocated'][i], df1['DOI']
@@ -20,7 +20,7 @@ for i in range(len(df1)):
             4], numCitation=ss1[i][5], numReference=ss1[i][6], numExistedReference=ss1[i][7], numNotinRGReference=ss1[i][8]
     )
 
-df2 = pd.read_csv('./paper/Abstract Info.csv', encoding='utf-8')
+df2 = pd.read_csv('C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\paper\\Abstract Info.csv', encoding='utf-8')
 ss2 = []
 
 for i in range(len(df2)):
@@ -32,7 +32,7 @@ for i in range(len(df2)):
         paperID=ss2[i][0], abstract=ss2[i][1]
     )
 
-df3 = pd.read_csv('./paper/Authors Info.csv', encoding='utf-8')
+df3 = pd.read_csv('C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\paper\\Authors Info.csv', encoding='utf-8')
 ss3 = []
 
 for i in range(len(df3)):
@@ -47,7 +47,7 @@ for i in range(len(df3)):
     temp = AuthorsInfo.objects.create(id=id, paperID=paperID,author=author)
     temp.save()
 
-df4 = pd.read_csv('./paper/Reference Info.csv', encoding='utf-8')
+df4 = pd.read_csv('C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\paper\\Reference Info.csv', encoding='utf-8')
 ss4 = []
 
 for i in range(len(df4)):
@@ -62,7 +62,7 @@ for i in range(len(df4)):
     temp = ReferenceInfo.objects.create(id=id, paperID=paperID,referenceIdx=idx)
     temp.save()
 
-df5 = pd.read_csv('./paper/Theme Info.csv', encoding='utf-8')
+df5 = pd.read_csv('C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\paper\\Theme Info.csv', encoding='utf-8')
 ss5 = []
 
 for i in range(len(df5)):
@@ -77,7 +77,7 @@ for i in range(len(df5)):
     temp = ThemeInfo.objects.create(id=id, paperID=paperID,theme=theme)
     temp.save()
 
-df6 = pd.read_csv('./paper/Reference Not in RG Info.csv', encoding='utf-8')
+df6 = pd.read_csv('C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\paper\\Reference Not in RG Info.csv', encoding='utf-8')
 ss6 = []
 
 for i in range(len(df6)):
@@ -92,7 +92,7 @@ for i in range(len(df6)):
     temp = ReferenceNotInfo.objects.create(id=id, paperID=paperID,notReference=notRef)
     temp.save()
 
-df7 = pd.read_csv('./paper/Real Error.csv', encoding='utf-8')
+df7 = pd.read_csv('C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\paper\\Real Error.csv', encoding='utf-8')
 ss7 = []
 
 for i in range(len(df7)):
