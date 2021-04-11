@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResponsiveNetwork } from '@nivo/network';
 import CustomNode from './CustomNode';
-import { networkConfig } from '../../assets/strings/MockUp/Network/config';
+import { networkConfig } from '../../assets/strings/Network/config';
 
 const Network = ({ data, handleTooltipInfo }) => (
   <ResponsiveNetwork
