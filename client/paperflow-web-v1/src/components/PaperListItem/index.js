@@ -8,7 +8,7 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
 const PaperListItem = ({
-  title, date, author, abstract,
+  title, date, author, abstract, heightKeywords, keywords,
 }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
@@ -33,12 +33,20 @@ const PaperListItem = ({
           {abstract}
         </p>
         <div className={styles.keywordContainer}>
-          <div className={styles.heightKeyword}>
-            Math.AC
-          </div>
-          <div className={styles.keyword}>
-            Math.RA
-          </div>
+          {
+            heightKeywords && heightKeywords.map((item) => (
+              <div className={styles.heightKeyword}>
+                {item}
+              </div>
+            ))
+          }
+          {
+            keywords && keywords.map((item) => (
+              <div className={styles.keyword}>
+                {item}
+              </div>
+            ))
+          }
         </div>
       </Card.Body>
     </Card>
