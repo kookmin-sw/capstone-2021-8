@@ -8,7 +8,7 @@ import Footer from '../../../components/Footer';
 const DefaultDesktopLayout = ({ children, className }) => (
   <div className={className}>
     <NavBar />
-    <Container fluid="lg">
+    <Container style={{ marginTop: '20px' }} fluid="lg">
       {children}
     </Container>
     <Footer />
