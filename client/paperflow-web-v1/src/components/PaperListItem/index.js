@@ -7,7 +7,7 @@ import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
-const PaperItemList = ({
+const PaperListItem = ({
   title, date, author, abstract,
 }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -18,19 +18,31 @@ const PaperItemList = ({
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
   return (
-    <Card>
+    <Card className={styles.paperListItem}>
       <Card.Body>
-        <h4>
-          Scaling of Magnetic Dissipation and Particle Acceleration in ABC Fields
-        </h4>
-        <p>Nov 2021 by Qiang Chen, Krzysztof Nalewajko, Bhupendra Mishra</p>
-        <p>
-          Automatic abstractive summaries are found to often distort or fabricate facts in the
-          article. This inconsistency between summary and original text has seriously…
+        <div className={styles.paperTitle}>
+          {title}
+        </div>
+        <div className={styles.basicInfo}>
+          <span className={styles.publishDate}>{date}</span>
+          <span className={styles.authors}>&nbsp;by&nbsp;
+            {author}
+          </span>
+        </div>
+        <p className={styles.abstract}>
+          {abstract}
         </p>
+        <div className={styles.keywordContainer}>
+          <div className={styles.heightKeyword}>
+            Math.AC
+          </div>
+          <div className={styles.keyword}>
+            Math.RA
+          </div>
+        </div>
       </Card.Body>
     </Card>
   );
 };
 
-export default PaperItemList;
+export default PaperListItem;

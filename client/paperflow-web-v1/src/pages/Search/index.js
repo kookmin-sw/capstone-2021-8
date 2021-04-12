@@ -5,7 +5,7 @@ import {
 import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
-import PaperItemList from '../../components/PaperListItem';
+import PaperListItem from '../../components/PaperListItem';
 
 const Search = () => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -28,7 +28,13 @@ const Search = () => {
         </Form.Group>
       </Form>
       <hr />
-      <PaperItemList />
+      <PaperListItem
+        title="Scaling of Magnetic Dissipation and Particle Acceleration in ABC Fields"
+        date="Nov 2021"
+        author="Qiang Chen, Krzysztof Nalewajko, Bhupendra Mishra"
+        abstract="Automatic abstractive summaries are found to often distort or fabricate facts in the
+          article. This inconsistency between summary and original text has seriously…"
+      />
     </DefaultLayout>
   );
 };
