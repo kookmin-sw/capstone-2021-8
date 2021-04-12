@@ -35,14 +35,14 @@ const PaperListItem = ({
         <div className={styles.keywordContainer}>
           {
             heightKeywords && heightKeywords.map((item) => (
-              <div className={styles.heightKeyword}>
+              <div key={item} className={styles.heightKeyword}>
                 {item}
               </div>
             ))
           }
           {
             keywords && keywords.map((item) => (
-              <div className={styles.keyword}>
+              <div key={item} className={styles.keyword}>
                 {item}
               </div>
             ))
