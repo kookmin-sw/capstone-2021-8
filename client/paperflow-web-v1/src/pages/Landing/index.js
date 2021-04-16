@@ -7,7 +7,7 @@ import {
 import useRootData from '../../hooks/useRootData';
 import backgroundImage from '../../assets/images/concept-1868728_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
-import DefaultLayout from '../../layouts/Layouts/Default';
+import FullWidthLayout from '../../layouts/Layouts/FullWidth';
 import AchvCounter from '../../components/AchvCounter';
 import IntroCard from '../../components/IntroCard';
 import { achvs, features } from '../../assets/strings/Landing';
@@ -21,7 +21,7 @@ const Lading = () => {
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
   return (
-    <DefaultLayout>
+    <FullWidthLayout>
       <Carousel controls={false}>
         <Carousel.Item>
           <img
@@ -66,7 +66,7 @@ const Lading = () => {
         })
       }
 
-    </DefaultLayout>
+    </FullWidthLayout>
   );
 };
 
