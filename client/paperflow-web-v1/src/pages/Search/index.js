@@ -31,9 +31,9 @@ const Search = () => {
       <PaperListItem
         title="Scaling of Magnetic Dissipation and Particle Acceleration in ABC Fields"
         date="Nov 2021"
-        author="Qiang Chen, Krzysztof Nalewajko, Bhupendra Mishra"
+        authors={['Qiang Chen', 'Krzysztof Nalewajko', 'Bhupendra Mishra']}
         abstract="Automatic abstractive summaries are found to often distort or fabricate facts in the
-          article. This inconsistency between summary and original text has seriously…"
+          article. This inconsistency between summary and original text has seriously"
         heightKeywords={['Math.AC']}
         keywords={['Math.RA']}
       />

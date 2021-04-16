@@ -8,7 +8,7 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
 const PaperListItem = ({
-  title, date, author, abstract, heightKeywords, keywords,
+  title, date, authors, abstract, heightKeywords, keywords, abstractMaxLength = 300,
 }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
@@ -26,11 +26,11 @@ const PaperListItem = ({
         <div className={styles.basicInfo}>
           <span className={styles.publishDate}>{date}</span>
           <span className={styles.authors}>&nbsp;by&nbsp;
-            {author}
+            {(authors.length > 3 ? [...authors.slice(0, 3), 'et al.'] : authors).join(', ')}
           </span>
         </div>
         <p className={styles.abstract}>
-          {abstract}
+          {abstract.length > abstractMaxLength ? `${abstract.slice(0, abstractMaxLength)} ...` : abstract}
         </p>
         <div className={styles.keywordContainer}>
           {
