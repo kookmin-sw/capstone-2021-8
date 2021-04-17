@@ -97,6 +97,7 @@ const PaperDetail = () => {
 
         <div className={styles.relatedPapersSection}>
           <h3>Related Papers</h3>
+          {/* Todo: 추천 기능 적용 후 useState 적용 */}
           <PaperListItem
             title="Scaling of Magnetic Dissipation and Particle Acceleration in ABC Fields"
             date="Nov 2021"
