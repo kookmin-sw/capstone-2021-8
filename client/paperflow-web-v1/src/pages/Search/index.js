@@ -34,7 +34,7 @@ const Search = () => {
         authors={['Qiang Chen', 'Krzysztof Nalewajko', 'Bhupendra Mishra']}
         abstract="Automatic abstractive summaries are found to often distort or fabricate facts in the
           article. This inconsistency between summary and original text has seriously"
-        heightKeywords={['Math.AC']}
+        highlightKeywords={['Math.AC']}
         keywords={['Math.RA']}
       />
     </DefaultLayout>
