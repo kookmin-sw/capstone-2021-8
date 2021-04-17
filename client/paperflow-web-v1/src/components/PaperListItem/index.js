@@ -4,11 +4,12 @@ import {
   Card,
 } from 'react-bootstrap';
 import useRootData from '../../hooks/useRootData';
+import KeywordBadge from '../KeywordBadge';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 // import stylesMobileDefault from './MobileDefault.module.scss';
 
 const PaperListItem = ({
-  title, date, authors, abstract, heightKeywords, keywords, abstractMaxLength = 300,
+  title, date, authors, abstract, highlightKeywords, keywords, abstractMaxLength = 300,
 }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
@@ -34,17 +35,13 @@ const PaperListItem = ({
         </p>
         <div className={styles.keywordContainer}>
           {
-            heightKeywords && heightKeywords.map((item) => (
-              <div key={item} className={styles.heightKeyword}>
-                {item}
-              </div>
+            highlightKeywords && highlightKeywords.map((item) => (
+              <KeywordBadge key={item} keyword={item} highlight />
             ))
           }
           {
             keywords && keywords.map((item) => (
-              <div key={item} className={styles.keyword}>
-                {item}
-              </div>
+              <KeywordBadge key={item} keyword={item} />
             ))
           }
         </div>
