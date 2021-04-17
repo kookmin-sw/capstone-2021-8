@@ -48,7 +48,7 @@ class ArxivSpider(scrapy.Spider):
                                                    'month': self.curr_date.month,
                                                    'day': self.curr_date.day
                                                }))
-            self.curr_date += dt.timedelta(days=1)
+            self.curr_date -= dt.timedelta(days=1)
         return request_list
 
 
