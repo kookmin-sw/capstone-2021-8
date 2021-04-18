@@ -91,7 +91,7 @@ const PaperDetail = () => {
         <div className={styles.topicSection}>
           <h3>Paper Topics</h3>
           {paperTopics && paperTopics.map((item) => (
-            <KeywordBadge key={item} keyword={item.keyword} highlight={item.highlight} />
+            <KeywordBadge key={item.keyword} keyword={item.keyword} highlight={item.highlight} />
           ))}
         </div>
 
