@@ -7,6 +7,9 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 import KeywordBadge from '../../components/KeywordBadge';
 import PaperListItem from '../../components/PaperListItem';
 import DefaultLayout from '../../layouts/Layouts/Default';
+import {
+  parseQueryString,
+} from '../../utils/utility';
 
 const PaperDetail = () => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -16,6 +19,9 @@ const PaperDetail = () => {
 
   // eslint-disable-next-line no-unused-vars
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
+
+  // eslint-disable-next-line no-unused-vars
+  const { id } = parseQueryString();
 
   const [paperTitle, setPaperTitle] = useState('');
   const [publishDate, setPublishDate] = useState('');
@@ -29,6 +35,8 @@ const PaperDetail = () => {
   const [paperTopics, setPaperTopics] = useState(null);
 
   useEffect(() => {
+    // Todo: use id to query to get paper info
+
     setPaperTitle('Dynamically Updatable Ternary Segmented Aging Bloom Filter for OpenFlow-Compliant Low-Power Packet Processing');
     setPublishDate('2018');
     setPaperPublisher('IEEE');
