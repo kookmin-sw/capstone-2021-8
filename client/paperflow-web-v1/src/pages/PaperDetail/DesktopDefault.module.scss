@@ -1,0 +1,36 @@
+@import '../../assets/scsses/config';
+
+.container {
+  .paperTitle {
+  }
+  .basicInfo {
+    font-weight: normal;
+    color: dimgray;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+  .infoWithIcon {
+    margin: -20px 0 0 0;
+    .icon {
+      font-size: 40px;
+    }
+    .number {
+      margin: 0 5px 0 5px;
+      font-size: 30px;
+    }
+    .content {
+      font-size: 20px;
+    }
+  }
+  .abstract {
+    background-color: gainsboro;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .topicSection {
+    margin: 10px 0 30px 0;
+  }
+  .relatedPapersSection {
+    margin: 10px 0 30px 0;
+  }
+}
