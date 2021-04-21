@@ -42,7 +42,17 @@ const Search = () => {
     <DefaultLayout>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Search Papers</Form.Label>
-        <Form.Control type="text" placeholder="논문 이름으로 검색" value={searchKeyword} />
+        <Form.Control
+          type="text"
+          placeholder="논문 이름으로 검색"
+          value={searchKeyword}
+          onChange={(e) => setSearchKeyword(e.target.value)}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              console.log('hi');
+            }
+          }}
+        />
         <Form.Text className="text-muted">
           논문 이름으로 검색할 수 있습니다.
         </Form.Text>
