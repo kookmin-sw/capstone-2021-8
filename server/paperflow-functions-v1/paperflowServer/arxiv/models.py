@@ -6,17 +6,17 @@ class PaperInfo(models.Model):
     title = models.TextField()
     arxiv_num = models.CharField(max_length=20)
     pdf_url = models.CharField(max_length=50)
-    publicationYear = models.CharField(max_length=4)
-    publicationMonth = models.CharField(max_length=2)
+    publication_year = models.CharField(max_length=4)
+    publication_month = models.CharField(max_length=2)
 
 class AbstractInfo(models.Model):
-    paperID = models.ForeignKey('PaperInfo', on_delete=models.CASCADE)
+    paperID_abstract = models.ForeignKey('PaperInfo', on_delete=models.CASCADE)
     abstract = models.TextField()
 
 class AuthorsInfo(models.Model):
-    paperID = models.ForeignKey('PaperInfo', on_delete=models.CASCADE)
+    paperID_authors = models.ForeignKey('PaperInfo', on_delete=models.CASCADE)
     author = models.CharField(max_length=100)
 
 class ThemeInfo(models.Model):
-    paperID = models.ForeignKey('PaperInfo', on_delete=models.CASCADE)
+    paperID_theme = models.ForeignKey('PaperInfo', on_delete=models.CASCADE)
     theme = models.CharField(max_length=100)
