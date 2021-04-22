@@ -17,9 +17,7 @@ const AlertModal = () => {
 
   return (
     <Modal show={alertModalVisibility} onHide={() => changeAlertModalVisibility(false)}>
-      <Modal.Header closeButton>
-        <Modal.Title>Alert Modal</Modal.Title>
-      </Modal.Header>
+      <Modal.Header closeButton />
       <Modal.Body>{alertModalContent}</Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={() => changeAlertModalVisibility(false)}>
