@@ -18,7 +18,7 @@ def insert_paperinfo():
         for row in data_reader:
             print(row['\ufeffID'])
             PaperInfo.objects.create(
-                paperID = row['\ufeffID'], title= row['Title'], arxiv_num=row['Arxiv_num'], pdf_url=row['PDF_URL'], publication_year=row['Publication_year'], publication_month=row['Publication_month']
+                paper_id = row['\ufeffID'], title= row['Title'], arxiv_num=row['Arxiv_num'], pdf_url=row['PDF_URL'], publication_year=row['Publication_year'], publication_month=row['Publication_month']
             )
     print('PaperInfo DATA UPLOADED SUCCESSFULY!')    
 
@@ -27,7 +27,7 @@ def insert_abstractinfo():
         data_reader = csv.DictReader(csvfile)
         for row in data_reader:
             print(row['\ufeffID'])
-            AbstractInfo.objects.create(paperID_abstract=PaperInfo.objects.get(paperID=row['\ufeffID']), abstract=row['Abstract'])
+            AbstractInfo.objects.create(paper=PaperInfo.objects.get(paper_id=row['\ufeffID']), abstract=row['Abstract'])
     print('Abstract DATA UPLOADED SUCCESSFULY!')    
 
 def insert_authorsinfo():    
@@ -35,7 +35,7 @@ def insert_authorsinfo():
         data_reader = csv.DictReader(csvfile)
         for row in data_reader:
             print(row['\ufeffID'])
-            AuthorsInfo.objects.create(paperID_authors=PaperInfo.objects.get(paperID=row['\ufeffID']), author=row['Author'])
+            AuthorsInfo.objects.create(paper=PaperInfo.objects.get(paper_id=row['\ufeffID']), author=row['Author'])
         print('Author DATA UPLOADED SUCCESSFULY!')
 
 def insert_themeinfo():
@@ -43,7 +43,7 @@ def insert_themeinfo():
         data_reader = csv.DictReader(csvfile)
         for row in data_reader:
             print(row['\ufeffID'])
-            ThemeInfo.objects.create(paperID_theme=PaperInfo.objects.get(paperID=row['\ufeffID']), theme=row['Theme'])
+            ThemeInfo.objects.create(paper=PaperInfo.objects.get(paper_id=row['\ufeffID']), theme=row['Theme'])
         print('Theme DATA UPLOADED SUCCESSFULY!')
 
 
