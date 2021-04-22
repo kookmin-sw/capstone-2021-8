@@ -1,8 +1,10 @@
 import { observable } from 'mobx';
+import history from '../utils/history';
 
 const createStore = () => {
   const appStore = {
     screenClass: observable.box(window.screen.width > 750 ? 'xl' : 'xs'),
+    currentMainMenu: observable.box(''),
 
     alertModalVisibility: observable.box(false),
     alertModalContent: observable.box(''),
@@ -10,6 +12,11 @@ const createStore = () => {
     // Set screen class
     changeScreenClass(data) {
       appStore.screenClass.set(data);
+    },
+
+    changeMainMenu(data) {
+      appStore.currentMainMenu.set(data);
+      history.push(data);
     },
 
     changeAlertModalVisibility(data) {
