@@ -28,7 +28,7 @@ const Search = () => {
   const [searchedPapers, setSearchedPapers] = useState([]);
 
   useEffect(() => {
-    (async function () {
+    (async () => {
       setSearchKeyword(search);
 
       try {
@@ -39,7 +39,7 @@ const Search = () => {
       } catch (err) {
         changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
       }
-    }());
+    })();
   }, []);
 
   return (
