@@ -5,8 +5,8 @@ import { Jumbotron } from 'react-bootstrap';
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
 import DefaultLayout from '../../layouts/Layouts/Default';
-import { data } from '../../assets/strings/MockUp/Network/data';
-import { nodeStandard, linkStandard } from '../../assets/strings/MockUp/Network/config';
+import { data } from '../../assets/strings/Network/MockUp/data';
+import { nodeStandard, linkStandard } from '../../assets/strings/Network/config';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
