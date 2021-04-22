@@ -21,18 +21,32 @@ export const nodeStandard = {
     color: '#AAB9CA',
     fontSize: 22,
   },
+  3: {
+    radius: 70,
+    color: '#AAB9CA',
+    fontSize: 22,
+  },
 };
 
 export const linkStandard = {
   0: {
     0: 170,
     1: 200,
+    2: 200,
+    3: 200,
   },
   1: {
     1: 120,
     2: 170,
+    3: 170,
   },
   2: {
     2: 60,
   },
+  3: {
+    2: 60,
+  },
 };
+
+export const month = Array.from({ length: 12 }, (_, i) => i + 1);
+export const year = [2017, 2018, 2019, 2020];

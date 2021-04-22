@@ -5,8 +5,10 @@ import { Jumbotron } from 'react-bootstrap';
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
 import DefaultLayout from '../../layouts/Layouts/Default';
-import { data } from '../../assets/strings/Network/MockUp/data';
-import { nodeStandard, linkStandard } from '../../assets/strings/Network/config';
+import data from '../../assets/strings/Network/MockUp/2020-12-data.json';
+import {
+  nodeStandard, linkStandard, month, year,
+} from '../../assets/strings/Network/config';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
@@ -15,6 +17,11 @@ const KeywordNetwork = () => {
 
   const svgRef = useRef();
   const tooltipRef = useRef();
+
+  const [networkData, setNetworkData] = useState({
+    nodes: [],
+    links: [],
+  });
 
   // tooltip functions
   const handleTooltipInfo = (next) => {
@@ -27,6 +34,10 @@ const KeywordNetwork = () => {
     } else {
       tooltip.style('display', 'none');
     }
+  };
+
+  const handleSelect = (e) => {
+    console.log(e);
   };
 
   useEffect(() => {
@@ -51,33 +62,57 @@ const KeywordNetwork = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const [networkData, setNetworkData] = useState({
-    nodes: [],
-    links: [],
-  });
-
   // Set network data
   useEffect(() => {
-    const nodes = data.nodes.map((nodeList, idx) => (nodeList.map((node) => ({
+    const testNodes = data.node.map((nodeList, idx) => (nodeList.map((node) => ({
       id: node,
       depth: idx,
       radius: nodeStandard[idx].radius,
       color: nodeStandard[idx].color,
     }))));
-    const links = data.links.map((linkList) => linkList.target.map((target) => ({
-      source: linkList.source,
-      target,
-      distance: linkStandard[linkList.depth[0]][linkList.depth[1]],
-    })));
-
+    const testLinks = data.link.map((link) => ({
+      source: link.source,
+      target: link.target,
+      distance: linkStandard[link.depth[0]][link.depth[1]],
+    }));
     setNetworkData({
-      nodes: nodes.flat(),
-      links: links.flat(2),
+      nodes: testNodes.flat(),
+      links: testLinks,
     });
   }, []);
 
   return (
     <DefaultLayout>
+      <div>
+        <div>
+          <div>
+            Year
+          </div>
+          <select
+            as="Select"
+            onChange={handleSelect}
+          >
+            <option value="" selected>선택하세요</option>
+            {year.map((y) => (
+              <option value={y} key={y}>{y}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <div>
+            Month
+          </div>
+          <select
+            as="Select"
+            onChange={handleSelect}
+          >
+            <option value="">선택하세요</option>
+            {month.map((m) => (
+              <option value={m} key={m}>{m}</option>
+            ))}
+          </select>
+        </div>
+      </div>
       <Jumbotron id={styles.networkContainer}>
         <div
           className={styles.network}
