@@ -1,3 +1,3 @@
 export default {
-  backendEndPoint: '',
+  backendEndPoint: 'http://127.0.0.1:8000',
 };

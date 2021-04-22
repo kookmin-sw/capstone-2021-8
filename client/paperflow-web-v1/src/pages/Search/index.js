@@ -23,17 +23,19 @@ const Search = () => {
 
   const { search } = parseQueryString();
   const [searchKeyword, setSearchKeyword] = useState('');
+  const [searchedPapers, setSearchedPapers] = useState([]);
 
   useEffect(() => {
     (async function () {
       setSearchKeyword(search);
 
       try {
-        await axios.get(`${config.backendEndPoint}/search-paper`, {
+        const { data: { papers } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
           params: { searchKeyword: search },
         });
-      } catch {
-        console.log('hi');
+        setSearchedPapers(papers);
+      } catch (err) {
+        console.log('hi', err);
       }
     }());
   }, []);
@@ -58,15 +60,22 @@ const Search = () => {
         </Form.Text>
       </Form.Group>
       <hr />
-      <PaperListItem
-        title="Scaling of Magnetic Dissipation and Particle Acceleration in ABC Fields"
-        date="Nov 2021"
-        authors={['Qiang Chen', 'Krzysztof Nalewajko', 'Bhupendra Mishra']}
-        abstract="Automatic abstractive summaries are found to often distort or fabricate facts in the
-          article. This inconsistency between summary and original text has seriously"
-        highlightKeywords={['Math.AC']}
-        keywords={['Math.RA']}
-      />
+      {
+        searchedPapers.map(({
+          title, date, authors, abstract, highlightKeywords, keywords,
+        }) => (
+          <PaperListItem
+            key={title}
+            title={title}
+            date={date}
+            authors={authors}
+            abstract={abstract}
+            highlightKeywords={highlightKeywords}
+            keywords={keywords}
+          />
+        ))
+      }
+
     </DefaultLayout>
   );
 };
