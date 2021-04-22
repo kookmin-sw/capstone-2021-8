@@ -17,6 +17,7 @@ const createStore = () => {
     },
     changeAlertModalContent(data) {
       appStore.alertModalContent.set(data);
+      appStore.alertModalVisibility.set(!!data);
     },
   };
 

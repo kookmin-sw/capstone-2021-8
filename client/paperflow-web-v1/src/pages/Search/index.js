@@ -13,8 +13,10 @@ import {
 import config from '../../config';
 
 const Search = () => {
-  const { screenClass } = useRootData(({ appStore }) => ({
+  const { screenClass, changeAlertModalContent } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
+
+    changeAlertModalContent: appStore.changeAlertModalContent,
   }));
   const isDesktop = screenClass === 'xl';
 
@@ -35,7 +37,7 @@ const Search = () => {
         });
         setSearchedPapers(papers);
       } catch (err) {
-        console.log('hi', err);
+        changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
       }
     }());
   }, []);
@@ -51,7 +53,7 @@ const Search = () => {
           onChange={(e) => setSearchKeyword(e.target.value)}
           onKeyPress={(e) => {
             if (e.key === 'Enter') {
-              console.log('hi');
+              changeAlertModalContent(searchKeyword);
             }
           }}
         />
