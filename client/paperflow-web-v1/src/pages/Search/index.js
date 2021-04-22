@@ -27,18 +27,22 @@ const Search = () => {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [searchedPapers, setSearchedPapers] = useState([]);
 
+  const searchHandler = async () => {
+    try {
+      const { data: { papers } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
+        params: { searchKeyword },
+      });
+      setSearchedPapers(papers);
+    } catch (err) {
+      changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
+    }
+  };
+
   useEffect(() => {
     (async () => {
-      setSearchKeyword(search);
+      setSearchKeyword(search || '');
 
-      try {
-        const { data: { papers } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
-          params: { searchKeyword: search },
-        });
-        setSearchedPapers(papers);
-      } catch (err) {
-        changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
-      }
+      await searchHandler();
     })();
   }, []);
 
@@ -53,7 +57,7 @@ const Search = () => {
           onChange={(e) => setSearchKeyword(e.target.value)}
           onKeyPress={(e) => {
             if (e.key === 'Enter') {
-              changeAlertModalContent(searchKeyword);
+              searchHandler();
             }
           }}
         />
