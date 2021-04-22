@@ -12,3 +12,4 @@ sqlparse==0.4.1
 toml==0.10.2
 typed-ast==1.4.2
 wrapt==1.12.1
+mysqlclient==2.0.3
