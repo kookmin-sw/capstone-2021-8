@@ -83,11 +83,11 @@ const KeywordNetwork = () => {
 
   return (
     <FullWith>
-      <div>
+      <div className="filterContainer">
         <div>
-          <div>
+          <span className="filterTitle">
             Year
-          </div>
+          </span>
           <select
             as="Select"
             onChange={handleSelect}
@@ -99,9 +99,9 @@ const KeywordNetwork = () => {
           </select>
         </div>
         <div>
-          <div>
+          <span>
             Month
-          </div>
+          </span>
           <select
             as="Select"
             onChange={handleSelect}
