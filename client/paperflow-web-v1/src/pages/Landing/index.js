@@ -57,7 +57,7 @@ const Lading = () => {
             placeholder="논문 이름으로 검색"
             onKeyPress={(e) => {
               if (e.key === 'Enter') {
-                changeMainMenu('/search');
+                changeMainMenu(`/search?search=${e.target.value}`);
               }
             }}
           />

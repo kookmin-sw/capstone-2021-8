@@ -14,8 +14,9 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
 
 const NavBar = () => {
-  const { screenClass } = useRootData(({ appStore }) => ({
+  const { screenClass, changeMainMenu } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
+    changeMainMenu: appStore.changeMainMenu,
   }));
   const isDesktop = screenClass === 'xl';
 
@@ -34,8 +35,16 @@ const NavBar = () => {
           }
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
+          <FormControl
+            type="text"
+            placeholder="Search"
+            className="mr-sm-2"
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') {
+                changeMainMenu(`/search?search=${e.target.value}`);
+              }
+            }}
+          />
           <Button variant="outline-primary" style={{ marginLeft: '10px' }}>Login</Button>
         </Form>
       </Navbar.Collapse>
