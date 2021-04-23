@@ -5,9 +5,8 @@ import { Jumbotron } from 'react-bootstrap';
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
 import FullWith from '../../layouts/Layouts/FullWidth';
-import data from '../../assets/strings/Network/MockUp/2020-12-data.json';
 import {
-  nodeStandard, linkStandard, month, year,
+  nodeStandard, linkStandard, months, years,
 } from '../../assets/strings/Network/config';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
@@ -21,6 +20,12 @@ const KeywordNetwork = () => {
   const [networkData, setNetworkData] = useState({
     nodes: [],
     links: [],
+  });
+
+  // eslint-disable-next-line no-unused-vars
+  const [range, setRange] = useState({
+    year: '20',
+    month: '03',
   });
 
   // tooltip functions
@@ -62,8 +67,7 @@ const KeywordNetwork = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Set network data
-  useEffect(() => {
+  const setNetwork = (data) => {
     const testNodes = data.node.map((nodeList, idx) => (nodeList.map((node) => ({
       id: node,
       depth: idx,
@@ -79,35 +83,42 @@ const KeywordNetwork = () => {
       nodes: testNodes.flat(),
       links: testLinks,
     });
-  }, []);
+  };
+
+  // Set network data
+  useEffect(() => {
+    console.log(range.year, range.month);
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    setNetwork(require(`../../assets/strings/Network/Data/${range.year}${range.month}.json`));
+  }, [range]);
 
   return (
     <FullWith>
-      <div className="filterContainer">
-        <div>
-          <span className="filterTitle">
-            Year
-          </span>
+      <div className={styles.filterContainer}>
+        <div className={styles.filter}>
+          <div className={styles.filterTitle}>
+            Year :
+          </div>
           <select
-            as="Select"
             onChange={handleSelect}
+            className={styles.filterBox}
           >
-            <option value="" selected>선택하세요</option>
-            {year.map((y) => (
+            <option value="">선택하세요</option>
+            {years.map((y) => (
               <option value={y} key={y}>{y}</option>
             ))}
           </select>
         </div>
-        <div>
-          <span>
-            Month
-          </span>
+        <div className={styles.filter}>
+          <div className={styles.filterTitle}>
+            Month :
+          </div>
           <select
-            as="Select"
             onChange={handleSelect}
+            className={styles.filterBox}
           >
             <option value="">선택하세요</option>
-            {month.map((m) => (
+            {months.map((m) => (
               <option value={m} key={m}>{m}</option>
             ))}
           </select>
