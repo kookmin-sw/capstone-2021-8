@@ -50,3 +50,15 @@ export const linkStandard = {
 
 export const month = Array.from({ length: 12 }, (_, i) => i + 1);
 export const year = [2017, 2018, 2019, 2020];
+/*
+const dataFiles = require.context('./Data', true, /.json$/);
+export data = dataFiles.keys().map(key => {
+  const fileName = key.replace('./', '');
+  const resource = require(`../Assets/${fileName}`);
+  const namespace = fileName.replace('.json', '');
+
+  return (
+    JSON.parse(JSON.stringify(resource));
+  )
+})
+*/

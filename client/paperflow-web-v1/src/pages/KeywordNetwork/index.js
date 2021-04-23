@@ -4,7 +4,7 @@ import { Jumbotron } from 'react-bootstrap';
 
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
-import DefaultLayout from '../../layouts/Layouts/Default';
+import FullWith from '../../layouts/Layouts/FullWidth';
 import data from '../../assets/strings/Network/MockUp/2020-12-data.json';
 import {
   nodeStandard, linkStandard, month, year,
@@ -82,7 +82,7 @@ const KeywordNetwork = () => {
   }, []);
 
   return (
-    <DefaultLayout>
+    <FullWith>
       <div>
         <div>
           <div>
@@ -125,7 +125,7 @@ const KeywordNetwork = () => {
           <Tooltip tooltipRef={tooltipRef} />
         </div>
       </Jumbotron>
-    </DefaultLayout>
+    </FullWith>
   );
 };
 
