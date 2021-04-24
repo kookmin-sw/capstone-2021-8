@@ -24,7 +24,7 @@ const KeywordNetwork = () => {
 
   // eslint-disable-next-line no-unused-vars
   const [range, setRange] = useState({
-    year: '20',
+    year: '21',
     month: '03',
   });
 
@@ -102,10 +102,10 @@ const KeywordNetwork = () => {
           <select
             onChange={handleSelect}
             className={styles.filterBox}
+            defaultValue={range.year}
           >
-            <option value="">선택하세요</option>
             {years.map((y) => (
-              <option value={y} key={y}>{y}</option>
+              <option value={y.slice(-2)} key={y}>{y}</option>
             ))}
           </select>
         </div>
@@ -116,8 +116,8 @@ const KeywordNetwork = () => {
           <select
             onChange={handleSelect}
             className={styles.filterBox}
+            defaultValue={range.month}
           >
-            <option value="">선택하세요</option>
             {months.map((m) => (
               <option value={m} key={m}>{m}</option>
             ))}

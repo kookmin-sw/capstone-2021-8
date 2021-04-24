@@ -8,11 +8,15 @@ base_path = "./papers"
 save_base_path = './keywords'
 file_list = os.listdir(base_path)
 
-
 def filter_keywords(keywords):
+    check_list = ['robotic', 'analytic', 'biase', 'los', 'acces', 'clas', 'les', 'nes', 'ou', 'si']
     filtered_keywords = []
     for keyword in keywords:
         curr = singularize(keyword)
+        for last_word in check_list:
+            if curr.endswith(last_word):
+                curr += 's'
+                break
         tagged_curr = nltk.tag.pos_tag([curr])
         if tagged_curr[0][1] in ['RB', 'RBR', 'RBS', 'JJ', 'JJR', 'JJS']: # 형용사이거나 부사일 경우 (다른 키워드의 일부분일 가능성이 있음)
             if [i for i in keywords if curr in i and curr != i]: # 현재 키워드가 다른 키워드의 일부분일 때

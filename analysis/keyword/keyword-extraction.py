@@ -21,8 +21,7 @@ papers = {}
 columns = ['arxiv_num', 'authors', 'pdf_url', 'primary_subject',
            'publication_date', 'secondary_subjects', 'title', 'keywords']
 
-#for f_name in ['2018', '2019', '2020']:
-for f_name in ['2017']:
+for f_name in ['2017', '2018', '2019', '2020', '2021']:
     f = open('{}.csv'.format(f_name), 'r', encoding='utf-8')
     csv_reader = csv.reader(f)
     next(csv_reader) # skip header
