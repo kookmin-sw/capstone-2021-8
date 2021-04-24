@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'arxiv.apps.ArxivConfig'
+    'rest_framework',
+    'arxiv.apps.ArxivConfig',
+    'newsletter',
 ]
 
 MIDDLEWARE = [
