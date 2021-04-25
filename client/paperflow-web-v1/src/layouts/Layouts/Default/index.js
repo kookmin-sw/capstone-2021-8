@@ -1,6 +1,7 @@
 import React from 'react';
 import useRootData from '../../../hooks/useRootData';
 import DefaultDesktopLayout from '../DefaultDesktop';
+import AlertModal from '../../../components/AlertModal';
 
 const DefaultLayout = ({ children, className }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -10,6 +11,7 @@ const DefaultLayout = ({ children, className }) => {
 
   return (
     <div>
+      <AlertModal />
       {isDesktop ? (<DefaultDesktopLayout className={className}>{children}</DefaultDesktopLayout>)
         : (<DefaultDesktopLayout className={className}>{children}</DefaultDesktopLayout>)}
     </div>
