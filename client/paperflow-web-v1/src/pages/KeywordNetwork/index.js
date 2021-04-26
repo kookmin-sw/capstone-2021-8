@@ -42,7 +42,18 @@ const KeywordNetwork = () => {
   };
 
   const handleSelect = (e) => {
-    console.log(e);
+    if (e.target.name === 'year' && e.target.value === '21' && Number(range.month) > 3) {
+      outOfData();
+    } else if (e.target.name === 'month' && Number(e.target.value) > 3 && range.year === '21') {
+      outOfData();
+    } else {
+      setRange({ ...range, [e.target.name]: e.target.value });
+    }
+  };
+
+  const outOfData = () => {
+    // eslint-disable-next-line no-alert
+    alert('Chose wrong date.');
   };
 
   useEffect(() => {
@@ -87,7 +98,6 @@ const KeywordNetwork = () => {
 
   // Set network data
   useEffect(() => {
-    console.log(range.year, range.month);
     // eslint-disable-next-line import/no-dynamic-require, global-require
     setNetwork(require(`../../assets/strings/Network/Data/${range.year}${range.month}.json`));
   }, [range]);
@@ -100,9 +110,10 @@ const KeywordNetwork = () => {
             Year :
           </div>
           <select
+            name="year"
             onChange={handleSelect}
             className={styles.filterBox}
-            defaultValue={range.year}
+            value={range.year}
           >
             {years.map((y) => (
               <option value={y.slice(-2)} key={y}>{y}</option>
@@ -114,9 +125,10 @@ const KeywordNetwork = () => {
             Month :
           </div>
           <select
+            name="month"
             onChange={handleSelect}
             className={styles.filterBox}
-            defaultValue={range.month}
+            value={range.month}
           >
             {months.map((m) => (
               <option value={m} key={m}>{m}</option>
