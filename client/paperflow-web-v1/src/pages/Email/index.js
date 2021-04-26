@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
-const Email = () => {
+const EmailInputPage = () => {
   const styles = stylesDesktopDefault;
+
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = () => {
+    if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/.test(email)) {
+      console.log('submit : ', email);
+    } else {
+      // eslint-disable-next-line no-alert
+      alert('Not validate email. Check your input.');
+    }
+  };
 
   return (
     <DefaultDesktopLayout>
@@ -27,8 +38,10 @@ const Email = () => {
             <input
               className={styles.emailInput}
               placeholder="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <Button>
+            <Button onClick={handleSubmit}>
               Submit
             </Button>
           </div>
@@ -38,4 +51,4 @@ const Email = () => {
   );
 };
 
-export default Email;
+export default EmailInputPage;
