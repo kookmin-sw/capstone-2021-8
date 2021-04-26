@@ -1,6 +1,6 @@
 export const networkConfig = {
   repulsive: 100,
-  iterations: 90,
+  iterations: 60,
   linkThickness: (e) => 2 * (2 - e.source.depth),
   distanceMin: 100,
 };
