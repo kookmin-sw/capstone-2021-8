@@ -13,8 +13,10 @@ import IntroCard from '../../components/IntroCard';
 import { achvs, features } from '../../assets/strings/Landing';
 
 const Lading = () => {
-  const { screenClass } = useRootData(({ appStore }) => ({
+  const { screenClass, changeMainMenu } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
+
+    changeMainMenu: appStore.changeMainMenu,
   }));
   const isDesktop = screenClass === 'xl';
 
@@ -53,6 +55,11 @@ const Lading = () => {
             type="text"
             className="form-control"
             placeholder="논문 이름으로 검색"
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') {
+                changeMainMenu(`/search?search=${e.target.value}`);
+              }
+            }}
           />
         </Container>
       </Jumbotron>
