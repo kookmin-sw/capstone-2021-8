@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 
@@ -11,7 +12,18 @@ const EmailInputPage = () => {
 
   const handleSubmit = () => {
     if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/.test(email)) {
-      console.log('submit : ', email);
+      axios.post('http://127.0.0.1:8000/newsletter/email/', {
+        email,
+      })
+        .then(() => {
+          // eslint-disable-next-line no-alert
+          alert('Created successfully');
+          setEmail('');
+        })
+        .catch(() => {
+          // eslint-disable-next-line no-alert
+          alert('There is an error. Try again.');
+        });
     } else {
       // eslint-disable-next-line no-alert
       alert('Not validate email. Check your input.');
