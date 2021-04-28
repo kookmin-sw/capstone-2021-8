@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import NewsletterEmail
 
-# Register your models here.
+class NewsletterEmailAdmin(admin.ModelAdmin):
+    fields = ['email']
+
+admin.site.register(NewsletterEmail, NewsletterEmailAdmin)
