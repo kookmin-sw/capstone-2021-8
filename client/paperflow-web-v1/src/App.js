@@ -4,7 +4,7 @@ import Landing from './pages/Landing';
 import Search from './pages/Search';
 import PaperDetail from './pages/PaperDetail';
 import KeywordNetwork from './pages/KeywordNetwork';
-import EmailInputPage from './pages/Email';
+import EmailInputPage from './pages/EmailInput';
 
 const App = () => (
 
