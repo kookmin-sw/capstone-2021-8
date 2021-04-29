@@ -7,10 +7,10 @@ django.setup()
 
 from arxiv.models import PaperInfo, AbstractInfo, AuthorsInfo, ThemeInfo
 
-PAPERINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\Paper Info.csv'
-ABSTRACTINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\Abstract Info.csv'
-AUTHORSINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\Authors Info.csv'
-THEMEINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\Theme Info.csv'
+PAPERINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\2021 Paper Info.csv'
+ABSTRACTINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\2021 Abstract Info.csv'
+AUTHORSINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\2021 Authors Info.csv'
+THEMEINFO_CSV_PATH = 'C:\\Users\\tykim\\OneDrive\\바탕 화면\\KTY\\국민대학교\\국민대 과제 및 공부 자료\\2021-1학기\\캡스톤프로젝트\\Code\\arxiv\\2021 Theme Info.csv'
 
 def insert_paperinfo():    
     with open(PAPERINFO_CSV_PATH, newline='', encoding='utf8') as csvfile:
