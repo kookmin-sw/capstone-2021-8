@@ -1,6 +1,7 @@
 // Header Menu
 export const HeaderEntireMain = [
   {
-    name: '메뉴 아이템',
+    name: '키워드 그래프',
+    link: '/keyword-network',
   },
 ];

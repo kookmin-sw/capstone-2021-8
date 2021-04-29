@@ -4,7 +4,7 @@ import { Jumbotron } from 'react-bootstrap';
 
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
-import FullWidth from '../../layouts/Layouts/FullWidth';
+import FullWidthNoWidthLayout from '../../layouts/Layouts/FullWidthNoFooter';
 import {
   nodeStandard, linkStandard, months, years,
 } from '../../assets/strings/Network/config';
@@ -109,7 +109,7 @@ const KeywordNetwork = () => {
   }, [range]);
 
   return (
-    <FullWidth>
+    <FullWidthNoWidthLayout>
       <AlertModal />
       <div className={styles.filterContainer}>
         <div className={styles.filter}>
@@ -155,7 +155,7 @@ const KeywordNetwork = () => {
           <Tooltip tooltipRef={tooltipRef} />
         </div>
       </Jumbotron>
-    </FullWidth>
+    </FullWidthNoWidthLayout>
   );
 };
 
