@@ -15,9 +15,8 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const KeywordNetwork = () => {
   const {
-    changeAlertModalVisibility, changeAlertModalContent,
+    changeAlertModalContent,
   } = useRootData(({ appStore }) => ({
-    changeAlertModalVisibility: appStore.changeAlertModalVisibility,
     changeAlertModalContent: appStore.changeAlertModalContent,
   }));
 
@@ -60,8 +59,7 @@ const KeywordNetwork = () => {
   };
 
   const outOfData = () => {
-    changeAlertModalVisibility(true);
-    changeAlertModalContent('Chose wrong date.');
+    changeAlertModalContent('잘못된 범위를 선택했습니다.');
   };
 
   useEffect(() => {
