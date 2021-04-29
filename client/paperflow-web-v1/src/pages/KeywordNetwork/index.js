@@ -22,7 +22,6 @@ const KeywordNetwork = () => {
     links: [],
   });
 
-  // eslint-disable-next-line no-unused-vars
   const [range, setRange] = useState({
     year: '21',
     month: '03',
