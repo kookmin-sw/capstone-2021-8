@@ -30,7 +30,7 @@ const NavBar = () => {
         <Nav className="mr-auto">
           {
             HeaderEntireMain.map((item) => (
-              <Nav.Link key={item.name} href="/">{item.name}</Nav.Link>
+              <Nav.Link key={item.name} href={item.link}>{item.name}</Nav.Link>
             ))
           }
         </Nav>
