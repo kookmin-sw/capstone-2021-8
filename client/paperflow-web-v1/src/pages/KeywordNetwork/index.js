@@ -4,14 +4,23 @@ import { Jumbotron } from 'react-bootstrap';
 
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
-import FullWith from '../../layouts/Layouts/FullWidth';
+import FullWidth from '../../layouts/Layouts/FullWidth';
 import {
   nodeStandard, linkStandard, months, years,
 } from '../../assets/strings/Network/config';
+import AlertModal from '../../components/AlertModal';
+import useRootData from '../../hooks/useRootData';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const KeywordNetwork = () => {
+  const {
+    changeAlertModalVisibility, changeAlertModalContent,
+  } = useRootData(({ appStore }) => ({
+    changeAlertModalVisibility: appStore.changeAlertModalVisibility,
+    changeAlertModalContent: appStore.changeAlertModalContent,
+  }));
+
   const styles = stylesDesktopDefault;
 
   const svgRef = useRef();
@@ -22,7 +31,6 @@ const KeywordNetwork = () => {
     links: [],
   });
 
-  // eslint-disable-next-line no-unused-vars
   const [range, setRange] = useState({
     year: '21',
     month: '03',
@@ -52,8 +60,8 @@ const KeywordNetwork = () => {
   };
 
   const outOfData = () => {
-    // eslint-disable-next-line no-alert
-    alert('Chose wrong date.');
+    changeAlertModalVisibility(true);
+    changeAlertModalContent('Chose wrong date.');
   };
 
   useEffect(() => {
@@ -103,7 +111,8 @@ const KeywordNetwork = () => {
   }, [range]);
 
   return (
-    <FullWith>
+    <FullWidth>
+      <AlertModal />
       <div className={styles.filterContainer}>
         <div className={styles.filter}>
           <div className={styles.filterTitle}>
@@ -148,7 +157,7 @@ const KeywordNetwork = () => {
           <Tooltip tooltipRef={tooltipRef} />
         </div>
       </Jumbotron>
-    </FullWith>
+    </FullWidth>
   );
 };
 
