@@ -79,9 +79,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'arxivdb',
         'USER' : 'root',
-        'PASSWORD' : '979775aabb',
-        'HOST' : 'localhost',
-        'PORT' : ''
+        'PASSWORD' : 'aaaa',
+        'HOST' : '192.168.43.245',
+        'PORT' : '3306'
     }
 }
 
