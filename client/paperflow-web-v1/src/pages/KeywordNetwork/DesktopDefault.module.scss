@@ -5,9 +5,32 @@
   margin: 10px;
 }
 
+.filterContainer {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.filter {
+  display: inline-block;
+}
+
+.filterTitle {
+  display: inline-block;
+  margin: 0 15px 0 30px;
+}
+
+.filterBox {
+  width: 130px;
+  height: 30px;
+  padding-right: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
 .network {
   width: 100%;
-  height: 600px;
+  height: 700px;
 }
 
 .tooltip {

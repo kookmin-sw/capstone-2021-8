@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { select } from 'd3';
-import { nodeStandard } from '../../../assets/strings/MockUp/Network/config';
+import { nodeStandard } from '../../../assets/strings/Network/config';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 

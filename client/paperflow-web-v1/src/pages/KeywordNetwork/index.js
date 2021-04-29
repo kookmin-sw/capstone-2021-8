@@ -4,17 +4,36 @@ import { Jumbotron } from 'react-bootstrap';
 
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
-import DefaultLayout from '../../layouts/Layouts/Default';
-import { data } from '../../assets/strings/MockUp/Network/data';
-import { nodeStandard, linkStandard } from '../../assets/strings/MockUp/Network/config';
+import FullWidthNoWidthLayout from '../../layouts/Layouts/FullWidthNoFooter';
+import {
+  nodeStandard, linkStandard, months, years,
+} from '../../assets/strings/Network/config';
+import AlertModal from '../../components/AlertModal';
+import useRootData from '../../hooks/useRootData';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const KeywordNetwork = () => {
+  const {
+    changeAlertModalContent,
+  } = useRootData(({ appStore }) => ({
+    changeAlertModalContent: appStore.changeAlertModalContent,
+  }));
+
   const styles = stylesDesktopDefault;
 
   const svgRef = useRef();
   const tooltipRef = useRef();
+
+  const [networkData, setNetworkData] = useState({
+    nodes: [],
+    links: [],
+  });
+
+  const [range, setRange] = useState({
+    year: '21',
+    month: '03',
+  });
 
   // tooltip functions
   const handleTooltipInfo = (next) => {
@@ -27,6 +46,20 @@ const KeywordNetwork = () => {
     } else {
       tooltip.style('display', 'none');
     }
+  };
+
+  const handleSelect = (e) => {
+    if (e.target.name === 'year' && e.target.value === '21' && Number(range.month) > 3) {
+      outOfData();
+    } else if (e.target.name === 'month' && Number(e.target.value) > 3 && range.year === '21') {
+      outOfData();
+    } else {
+      setRange({ ...range, [e.target.name]: e.target.value });
+    }
+  };
+
+  const outOfData = () => {
+    changeAlertModalContent('잘못된 범위를 선택했습니다.');
   };
 
   useEffect(() => {
@@ -51,33 +84,65 @@ const KeywordNetwork = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const [networkData, setNetworkData] = useState({
-    nodes: [],
-    links: [],
-  });
-
-  // Set network data
-  useEffect(() => {
-    const nodes = data.nodes.map((nodeList, idx) => (nodeList.map((node) => ({
+  const setNetwork = (data) => {
+    const testNodes = data.node.map((nodeList, idx) => (nodeList.map((node) => ({
       id: node,
       depth: idx,
       radius: nodeStandard[idx].radius,
       color: nodeStandard[idx].color,
     }))));
-    const links = data.links.map((linkList) => linkList.target.map((target) => ({
-      source: linkList.source,
-      target,
-      distance: linkStandard[linkList.depth[0]][linkList.depth[1]],
-    })));
-
+    const testLinks = data.link.map((link) => ({
+      source: link.source,
+      target: link.target,
+      distance: linkStandard[link.depth[0]][link.depth[1]],
+    }));
     setNetworkData({
-      nodes: nodes.flat(),
-      links: links.flat(2),
+      nodes: testNodes.flat(),
+      links: testLinks,
     });
-  }, []);
+  };
+
+  // Set network data
+  useEffect(() => {
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    setNetwork(require(`../../assets/strings/Network/Data/${range.year}${range.month}.json`));
+  }, [range]);
 
   return (
-    <DefaultLayout>
+    <FullWidthNoWidthLayout>
+      <AlertModal />
+      <div className={styles.filterContainer}>
+        <div className={styles.filter}>
+          <div className={styles.filterTitle}>
+            Year :
+          </div>
+          <select
+            name="year"
+            onChange={handleSelect}
+            className={styles.filterBox}
+            value={range.year}
+          >
+            {years.map((y) => (
+              <option value={y.slice(-2)} key={y}>{y}</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.filter}>
+          <div className={styles.filterTitle}>
+            Month :
+          </div>
+          <select
+            name="month"
+            onChange={handleSelect}
+            className={styles.filterBox}
+            value={range.month}
+          >
+            {months.map((m) => (
+              <option value={m} key={m}>{m}</option>
+            ))}
+          </select>
+        </div>
+      </div>
       <Jumbotron id={styles.networkContainer}>
         <div
           className={styles.network}
@@ -90,7 +155,7 @@ const KeywordNetwork = () => {
           <Tooltip tooltipRef={tooltipRef} />
         </div>
       </Jumbotron>
-    </DefaultLayout>
+    </FullWidthNoWidthLayout>
   );
 };
 
