@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path('backend/', include('backendApp.urls')),
     path('admin/', admin.site.urls),
+    path('newsletter/', include('newsletter.urls')),
 ]

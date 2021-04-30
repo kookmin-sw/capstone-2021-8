@@ -1,0 +1,32 @@
+@import '../../assets/scsses/config';
+
+.container {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+  border: 0;
+  border-radius: 2px;
+}
+
+.emailContainer {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  border: 0;
+  border-radius: 2px;
+}
+
+.emailInputContainer {
+  display: inline-flex;
+  padding: 20px 0;
+}
+
+.emailInput {
+  width: 300px;
+  height: 38px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 0;
+  border: 1px solid #c9c9c9;
+  border-radius: 2px;
+}
