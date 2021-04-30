@@ -1,6 +1,8 @@
 import json
 
+# directory path where semantic scholar data stored
 PATH = '/Volumes/PSSD/sementicscholar_data/'
+# directory path to store json formatted data
 PATH_TO = '/Volumes/PSSD/sementicscholar_data_processed/'
 
 START_IDX = 0
