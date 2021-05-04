@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'paperData.apps.PaperdataConfig',
-    'newsletter.apps.NewsletterConfig',
+    'newsletter',
 ]
 
 MIDDLEWARE = [
