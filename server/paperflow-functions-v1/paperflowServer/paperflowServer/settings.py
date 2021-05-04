@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'arxiv.apps.ArxivConfig',
+    'paperData.apps.PaperdataConfig',
     'newsletter',
 ]
 
@@ -81,12 +81,13 @@ WSGI_APPLICATION = 'paperflowServer.wsgi.application'
 
 DATABASES = {
     'default': {
+        'NAME': 'backend',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'arxiv',
         'USER' : 'root',
-        'PASSWORD' : '1234',
+        'PASSWORD' : '979775aabb',
         'HOST' : 'localhost',
-        'PORT' : '3306'
+        'PORT' : '3306',
+        'OPTIONS' : {'charset': 'utf8mb4'}
     }
 }
 
