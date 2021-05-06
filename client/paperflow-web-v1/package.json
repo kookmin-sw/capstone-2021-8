@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode=development",
+    "dev": "webpack serve --mode=development --host 0.0.0.0 --port 8080",
     "prod": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npx patch-package"
