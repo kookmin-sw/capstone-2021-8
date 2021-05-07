@@ -13,8 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nivo/bar": "^0.69.1",
     "@nivo/core": "^0.67.0",
     "@nivo/network": "^0.67.0",
+    "@nivo/pie": "^0.69.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "css-loader": "^5.1.1",
