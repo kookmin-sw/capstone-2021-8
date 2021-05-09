@@ -3,7 +3,9 @@ import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
 import Pie from '../../components/Statistics/Pie';
+import Bar from '../../components/Statistics/Bar';
 import pieTest from '../../components/Statistics/Pie/testData.json';
+import barTest from '../../components/Statistics/Bar/testData.json';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
@@ -37,7 +39,7 @@ const Statictics = () => {
   return (
     <DefaultDesktopLayout>
       <AlertModal />
-      <div className={styles.filterContainer}>
+      <div className={styles.container}>
         <div className={styles.filter}>
           <div className={styles.filterTitle}>
             Year :
@@ -68,8 +70,13 @@ const Statictics = () => {
             ))}
           </select>
         </div>
-        <div className={styles.pieContainer}>
-          <Pie data={pieTest} />
+        <div className={styles.statisticsContainer}>
+          <div className={styles.pieContainer}>
+            <Pie data={pieTest} />
+          </div>
+          <div className={styles.pieContainer}>
+            <Bar data={barTest} />
+          </div>
         </div>
       </div>
     </DefaultDesktopLayout>

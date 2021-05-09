@@ -1,8 +1,9 @@
 @import '../../assets/scsses/config';
 
-.filterContainer {
+.container {
   display: inline-block;
-  margin: 50px 0 0 15px;
+  margin-top: 50px;
+  width: 100%;
 }
 
 .filter {
@@ -23,6 +24,11 @@
   border-radius: 4px;
 }
 
+.statisticsContainer {
+  margin-top: 50px;
+}
+
 .pieContainer {
-  height: 300px;
+  height: 700px;
+  margin-bottom: 100px;
 }

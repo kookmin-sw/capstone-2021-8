@@ -1,0 +1,37 @@
+[
+  {
+    "key": "AD",
+    "value": 89,
+    "color": "hsl(210, 100%, 90%)"
+  },
+  {
+    "key": "AE",
+    "value": 192,
+    "color": "hsl(210, 100%, 85%)"
+  },
+  {
+    "key": "AF",
+    "value": 54,
+    "color": "hsl(210, 100%, 80%)"
+  },
+  {
+    "key": "AG",
+    "value": 55,
+    "color": "hsl(210, 100%, 75%)"
+  },
+  {
+    "key": "AI",
+    "value": 38,
+    "color": "hsl(210, 100%, 70%)"
+  },
+  {
+    "key": "AL",
+    "value": 30,
+    "color": "hsl(210, 100%, 65%)"
+  },
+  {
+    "key": "AM",
+    "value": 62,
+    "color": "hsl(210, 100%, 60%)"
+  }
+]

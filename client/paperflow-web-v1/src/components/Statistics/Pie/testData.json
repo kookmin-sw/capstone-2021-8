@@ -1,32 +1,22 @@
 [
   {
     "id": "java",
-    "label": "java",
-    "value": 465,
-    "color": "hsl(347, 70%, 50%)"
+    "value": 465
   },
   {
     "id": "css",
-    "label": "css",
-    "value": 123,
-    "color": "hsl(358, 70%, 50%)"
+    "value": 123
   },
   {
     "id": "erlang",
-    "label": "erlang",
-    "value": 180,
-    "color": "hsl(153, 70%, 50%)"
+    "value": 180
   },
   {
     "id": "ruby",
-    "label": "ruby",
-    "value": 263,
-    "color": "hsl(16, 70%, 50%)"
+    "value": 263
   },
   {
     "id": "rust",
-    "label": "rust",
-    "value": 576,
-    "color": "hsl(103, 70%, 50%)"
+    "value": 576
   }
 ]
