@@ -1,3 +1,8 @@
+import searchFeatureImage from '../../images/philatelist-1844080_1920.jpg';
+import paperFlowFeatureImage from '../../images/whiteboard-849811_1920.jpg';
+import keywordGraphFeatureImage from '../../images/keyword-network.png';
+import subscriptionFeatureImage from '../../images/financial-2860753_1920.jpg';
+
 export const achvs = [
   {
     description: 'CS분야 출판물',
@@ -15,8 +20,23 @@ export const achvs = [
 
 export const features = [
   {
-    image: 'https://cdn.pixabay.com/photo/2021/01/01/16/07/clouds-5879037_1280.jpg',
-    title: 'PaperFlow의 feature 1',
+    image: searchFeatureImage,
+    title: '검색 피쳐',
+    content: 'PaperFlow의 feature 1이 들어갈 위치입니다.',
+  },
+  {
+    image: paperFlowFeatureImage,
+    title: '논문 흐름 피쳐',
+    content: 'PaperFlow의 feature 1이 들어갈 위치입니다.',
+  },
+  {
+    image: keywordGraphFeatureImage,
+    title: '키워드 그래프 피쳐',
+    content: 'PaperFlow의 feature 1이 들어갈 위치입니다.',
+  },
+  {
+    image: subscriptionFeatureImage,
+    title: '구독 피쳐',
     content: 'PaperFlow의 feature 1이 들어갈 위치입니다.',
   },
 ];
