@@ -3,9 +3,9 @@ import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
 import Pie from '../../components/Statistics/Pie';
-import Bar from '../../components/Statistics/Bar';
+import Bar1D from '../../components/Statistics/Bar1D';
 import pieTest from '../../components/Statistics/Pie/testData.json';
-import barTest from '../../components/Statistics/Bar/testData.json';
+import bar1DTest from '../../components/Statistics/Bar1D/testData.json';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
@@ -75,7 +75,7 @@ const Statictics = () => {
             <Pie data={pieTest} />
           </div>
           <div className={styles.pieContainer}>
-            <Bar data={barTest} />
+            <Bar1D data={bar1DTest.data} config={bar1DTest.config} />
           </div>
         </div>
       </div>

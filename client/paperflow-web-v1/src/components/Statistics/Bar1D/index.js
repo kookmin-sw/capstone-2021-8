@@ -1,11 +1,11 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 
-const Bar = ({ data }) => (
+const Bar = ({ config, data }) => (
   <ResponsiveBar
     data={data}
-    keys={['value']}
-    indexBy="key"
+    keys={[config.key]}
+    indexBy={config.index}
     margin={{
       top: 50, right: 130, bottom: 50, left: 60,
     }}
@@ -20,7 +20,7 @@ const Bar = ({ data }) => (
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: 'country',
+      legend: config.index,
       legendPosition: 'middle',
       legendOffset: 32,
     }}
@@ -28,7 +28,7 @@ const Bar = ({ data }) => (
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: 'food',
+      legend: config.key,
       legendPosition: 'middle',
       legendOffset: -40,
     }}

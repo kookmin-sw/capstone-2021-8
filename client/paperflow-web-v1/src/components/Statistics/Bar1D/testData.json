@@ -1,0 +1,43 @@
+{
+  "config": {
+    "index": "name",
+    "key": "frequency"
+  },
+  "data": [
+    {
+      "name": "AD",
+      "frequency": 89,
+      "color": "hsl(210, 100%, 90%)"
+    },
+    {
+      "name": "AE",
+      "frequency": 192,
+      "color": "hsl(210, 100%, 85%)"
+    },
+    {
+      "name": "AF",
+      "frequency": 54,
+      "color": "hsl(210, 100%, 80%)"
+    },
+    {
+      "name": "AG",
+      "frequency": 55,
+      "color": "hsl(210, 100%, 75%)"
+    },
+    {
+      "name": "AI",
+      "frequency": 38,
+      "color": "hsl(210, 100%, 70%)"
+    },
+    {
+      "name": "AL",
+      "frequency": 30,
+      "color": "hsl(210, 100%, 65%)"
+    },
+    {
+      "name": "AM",
+      "frequency": 62,
+      "color": "hsl(210, 100%, 60%)"
+    }
+  ]
+}
