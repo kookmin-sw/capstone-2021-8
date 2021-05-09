@@ -1,15 +1,15 @@
 export const achvs = [
   {
-    description: 'Publications',
-    number: '32K',
+    description: 'CS분야 출판물',
+    number: '14,116,789',
   },
   {
-    description: 'Connected papers',
-    number: '12K',
+    description: '유사도가 계산된 논문 쌍',
+    number: '175,831,702',
   },
   {
-    description: 'Topics',
-    number: '5K',
+    description: '논문 분야',
+    number: '19',
   },
 ];
 
