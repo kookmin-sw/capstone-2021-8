@@ -3,9 +3,11 @@ import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
 import Pie from '../../components/Statistics/Pie';
-import Bar1D from '../../components/Statistics/Bar1D';
+import VertBar1D from '../../components/Statistics/VertBar1D';
+import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import pieTest from '../../components/Statistics/Pie/testData.json';
-import bar1DTest from '../../components/Statistics/Bar1D/testData.json';
+import vertbar1DTest from '../../components/Statistics/VertBar1D/testData.json';
+import horizBar1DTest from '../../components/Statistics/HorizBar1D/testData.json';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
@@ -71,11 +73,14 @@ const Statictics = () => {
           </select>
         </div>
         <div className={styles.statisticsContainer}>
-          <div className={styles.pieContainer}>
+          <div className={styles.graphContainer}>
             <Pie data={pieTest} />
           </div>
-          <div className={styles.pieContainer}>
-            <Bar1D data={bar1DTest.data} config={bar1DTest.config} />
+          <div className={styles.graphContainer}>
+            <VertBar1D data={vertbar1DTest.data} config={vertbar1DTest.config} />
+          </div>
+          <div className={styles.graphContainer}>
+            <HorizBar1D data={horizBar1DTest.data} config={horizBar1DTest.config} />
           </div>
         </div>
       </div>
