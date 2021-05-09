@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
+import Pie from '../../components/Statistics/Pie';
+import pieTest from '../../components/Statistics/Pie/testData.json';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
@@ -65,6 +67,9 @@ const Statictics = () => {
               <option value={m} key={m}>{m}</option>
             ))}
           </select>
+        </div>
+        <div className={styles.pieContainer}>
+          <Pie data={pieTest} />
         </div>
       </div>
     </DefaultDesktopLayout>
