@@ -1,7 +1,8 @@
 {
   "config": {
     "index": "name",
-    "key": "frequency"
+    "key": "frequency",
+    "color": "blue"
   },
   "data": [
     {

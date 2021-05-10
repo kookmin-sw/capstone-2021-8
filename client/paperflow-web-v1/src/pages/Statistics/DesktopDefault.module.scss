@@ -24,11 +24,25 @@
   border-radius: 4px;
 }
 
+.titleContainer {
+  text-align: center;
+  font-size: 37px;
+  font-weight: bold;
+  padding-top: 60px;
+}
+
 .statisticsContainer {
   margin-top: 50px;
 }
 
 .graphContainer {
   height: 700px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
+}
+
+.graphTextContainer {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
