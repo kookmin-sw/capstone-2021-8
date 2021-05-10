@@ -3,11 +3,13 @@ import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
 import Pie from '../../components/Statistics/Pie';
+import Circle from '../../components/Statistics/Circle';
 import VertBar1D from '../../components/Statistics/VertBar1D';
 import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
 import HorizBar2D from '../../components/Statistics/HorizBar2D';
 import pieTest from '../../components/Statistics/Pie/testData.json';
+import circleTest from '../../components/Statistics/Circle/testData.json';
 import vertbar1DTest from '../../components/Statistics/VertBar1D/testData.json';
 import horizBar1DTest from '../../components/Statistics/HorizBar1D/testData.json';
 import vertbar2DTest from '../../components/Statistics/VertBar2D/testData.json';
@@ -85,6 +87,9 @@ const Statictics = () => {
         <div className={styles.statisticsContainer}>
           <div className={styles.graphContainer}>
             <Pie data={pieTest} />
+          </div>
+          <div className={styles.graphContainer}>
+            <Circle data={circleTest} />
           </div>
           <div className={styles.graphContainer}>
             <VertBar1D data={getColor(vertbar1DTest.data, 'green')} config={vertbar1DTest.config} />
