@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 
-const Bar = ({ config, data }) => (
+const VertBar2D = ({ config, data }) => (
   <ResponsiveBar
     data={data}
     keys={config.key}
@@ -65,4 +65,4 @@ const Bar = ({ config, data }) => (
   />
 );
 
-export default Bar;
+export default VertBar2D;
