@@ -8,6 +8,7 @@ import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import pieTest from '../../components/Statistics/Pie/testData.json';
 import vertbar1DTest from '../../components/Statistics/VertBar1D/testData.json';
 import horizBar1DTest from '../../components/Statistics/HorizBar1D/testData.json';
+import { COLORS } from '../../assets/strings/Statistics/config';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
@@ -36,6 +37,11 @@ const Statictics = () => {
     } else {
       setRange({ ...range, [e.target.name]: e.target.value });
     }
+  };
+
+  const getColor = (data, color) => {
+    const colorBase = COLORS[color];
+    return data.map((d, idx) => ({ ...d, color: `${colorBase + (90 - (40 / data.length) * idx)}%)` }));
   };
 
   return (
@@ -77,10 +83,10 @@ const Statictics = () => {
             <Pie data={pieTest} />
           </div>
           <div className={styles.graphContainer}>
-            <VertBar1D data={vertbar1DTest.data} config={vertbar1DTest.config} />
+            <VertBar1D data={getColor(vertbar1DTest.data, 'green')} config={vertbar1DTest.config} />
           </div>
           <div className={styles.graphContainer}>
-            <HorizBar1D data={horizBar1DTest.data} config={horizBar1DTest.config} />
+            <HorizBar1D data={getColor(vertbar1DTest.data, 'yellow')} config={horizBar1DTest.config} />
           </div>
         </div>
       </div>
