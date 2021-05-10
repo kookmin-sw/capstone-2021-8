@@ -6,10 +6,12 @@ import Pie from '../../components/Statistics/Pie';
 import VertBar1D from '../../components/Statistics/VertBar1D';
 import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
+import HorizBar2D from '../../components/Statistics/HorizBar2D';
 import pieTest from '../../components/Statistics/Pie/testData.json';
 import vertbar1DTest from '../../components/Statistics/VertBar1D/testData.json';
 import horizBar1DTest from '../../components/Statistics/HorizBar1D/testData.json';
 import vertbar2DTest from '../../components/Statistics/VertBar2D/testData.json';
+import horizBar2DTest from '../../components/Statistics/HorizBar2D/testData.json';
 import { COLORS } from '../../assets/strings/Statistics/config';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
@@ -92,6 +94,9 @@ const Statictics = () => {
           </div>
           <div className={styles.graphContainer}>
             <VertBar2D data={vertbar2DTest.data} config={vertbar2DTest.config} />
+          </div>
+          <div className={styles.graphContainer}>
+            <HorizBar2D data={horizBar2DTest.data} config={horizBar2DTest.config} />
           </div>
         </div>
       </div>
