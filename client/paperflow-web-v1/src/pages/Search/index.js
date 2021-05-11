@@ -68,16 +68,17 @@ const Search = () => {
       <hr />
       {
         searchedPapers.map(({
-          title, publication_year: publicationYear, authors, abstract, field_list: fieldList,
+          paper_id: paperId, title, publication_year: publicationYear,
+          authors, abstract, field_list: fieldList,
         }) => (
           <PaperListItem
-            key={title}
+            key={paperId}
             title={title}
             date={publicationYear}
-            authors={authors}
+            authors={JSON.parse(authors).map((item) => item.name)}
             abstract={abstract}
-            highlightKeywords={JSON.parse(fieldList)}
-            keywords={JSON.parse(fieldList)}
+            highlightKeywords={JSON.parse(fieldList).filter((item) => item === 'Computer Science')}
+            keywords={JSON.parse(fieldList).filter((item) => item !== 'Computer Science')}
           />
         ))
       }
