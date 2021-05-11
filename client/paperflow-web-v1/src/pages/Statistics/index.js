@@ -8,14 +8,7 @@ import VertBar1D from '../../components/Statistics/VertBar1D';
 import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
 import HorizBar2D from '../../components/Statistics/HorizBar2D';
-/*
-import pieTest from '../../components/Statistics/Pie/testData.json';
-import circleTest from '../../components/Statistics/Circle/testData.json';
-import vertbar1DTest from '../../components/Statistics/VertBar1D/testData.json';
-import horizBar1DTest from '../../components/Statistics/HorizBar1D/testData.json';
-import vertbar2DTest from '../../components/Statistics/VertBar2D/testData.json';
-import horizBar2DTest from '../../components/Statistics/HorizBar2D/testData.json';
-*/
+
 import mergedTestData from '../../assets/strings/Statistics/mergedTestData.json';
 import { COLORS } from '../../assets/strings/Statistics/config';
 
@@ -35,6 +28,8 @@ const Statictics = () => {
     month: '03',
   });
 
+  const [statisticsData, SetStatisticsData] = useState(mergedTestData);
+
   const months = Array.from({ length: 12 }, (_, i) => (`0${String(i + 1)}`).slice(-2));
   const years = ['2017', '2018', '2019', '2020', '2021'];
 
@@ -45,6 +40,7 @@ const Statictics = () => {
       changeAlertModalContent('잘못된 범위를 선택했습니다.');
     } else {
       setRange({ ...range, [e.target.name]: e.target.value });
+      SetStatisticsData(mergedTestData);
     }
   };
 
@@ -94,14 +90,14 @@ const Statictics = () => {
         <hr />
         <br />
         <div className={styles.statisticsContainer}>
-          { mergedTestData.map((data) => {
+          { statisticsData.map((data) => {
             if (data.type === 'Pie') {
               return (
                 <div className={styles.graphContainer}>
                   <div className={styles.graphTextContainer}>
-                    {mergedTestData[0].title}
+                    {data.title}
                   </div>
-                  <Pie data={mergedTestData[0].data} />
+                  <Pie data={data.data} />
                 </div>
               );
             }
@@ -109,9 +105,9 @@ const Statictics = () => {
               return (
                 <div className={styles.graphContainer}>
                   <div className={styles.graphTextContainer}>
-                    {mergedTestData[1].title}
+                    {data.title}
                   </div>
-                  <Circle data={mergedTestData[1].data} />
+                  <Circle data={data.data} />
                 </div>
               );
             }
@@ -119,11 +115,11 @@ const Statictics = () => {
               return (
                 <div className={styles.graphContainer}>
                   <div className={styles.graphTextContainer}>
-                    {mergedTestData[2].title}
+                    {data.title}
                   </div>
                   <VertBar1D
-                    data={getColor(mergedTestData[2].data, mergedTestData[2].config.color)}
-                    config={mergedTestData[2].config}
+                    data={getColor(data.data, data.config.color)}
+                    config={data.config}
                   />
                 </div>
               );
@@ -132,11 +128,11 @@ const Statictics = () => {
               return (
                 <div className={styles.graphContainer}>
                   <div className={styles.graphTextContainer}>
-                    {mergedTestData[3].title}
+                    {data.title}
                   </div>
                   <HorizBar1D
-                    data={getColor(mergedTestData[3].data, mergedTestData[3].config.color)}
-                    config={mergedTestData[3].config}
+                    data={getColor(data.data, data.config.color)}
+                    config={data.config}
                   />
                 </div>
               );
@@ -145,9 +141,9 @@ const Statictics = () => {
               return (
                 <div className={styles.graphContainer}>
                   <div className={styles.graphTextContainer}>
-                    {mergedTestData[4].title}
+                    {data.title}
                   </div>
-                  <VertBar2D data={mergedTestData[4].data} config={mergedTestData[4].config} />
+                  <VertBar2D data={data.data} config={data.config} />
                 </div>
               );
             }
@@ -155,9 +151,9 @@ const Statictics = () => {
               return (
                 <div className={styles.graphContainer}>
                   <div className={styles.graphTextContainer}>
-                    {mergedTestData[5].title}
+                    {data.title}
                   </div>
-                  <HorizBar2D data={mergedTestData[5].data} config={mergedTestData[5].config} />
+                  <HorizBar2D data={data.data} config={data.config} />
                 </div>
               );
             }
