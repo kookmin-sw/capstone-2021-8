@@ -39,12 +39,12 @@ const Search = () => {
   };
 
   useEffect(() => {
-    (async () => {
-      setSearchKeyword(search || '');
-
-      await searchHandler();
-    })();
+    setSearchKeyword(search || '');
   }, []);
+
+  useEffect(() => {
+    searchHandler();
+  }, [searchKeyword]);
 
   return (
     <DefaultLayout>
@@ -68,16 +68,16 @@ const Search = () => {
       <hr />
       {
         searchedPapers.map(({
-          title, date, authors, abstract, highlightKeywords, keywords,
+          title, publication_year: publicationYear, authors, abstract, field_list: fieldList,
         }) => (
           <PaperListItem
             key={title}
             title={title}
-            date={date}
+            date={publicationYear}
             authors={authors}
             abstract={abstract}
-            highlightKeywords={highlightKeywords}
-            keywords={keywords}
+            highlightKeywords={JSON.parse(fieldList)}
+            keywords={JSON.parse(fieldList)}
           />
         ))
       }
