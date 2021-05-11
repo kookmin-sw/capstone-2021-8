@@ -1,4 +1,6 @@
 {
+  "title": "한 달 동안 만들어진 논문의 수",
+  "type": "VertBar1D",
   "config": {
     "index": "name",
     "key": "frequency",
@@ -7,38 +9,31 @@
   "data": [
     {
       "name": "AD",
-      "frequency": 89,
-      "color": "hsl(210, 100%, 90%)"
+      "frequency": 89
     },
     {
       "name": "AE",
-      "frequency": 192,
-      "color": "hsl(210, 100%, 85%)"
+      "frequency": 192
     },
     {
       "name": "AF",
-      "frequency": 54,
-      "color": "hsl(210, 100%, 80%)"
+      "frequency": 54
     },
     {
       "name": "AG",
-      "frequency": 55,
-      "color": "hsl(210, 100%, 75%)"
+      "frequency": 55
     },
     {
       "name": "AI",
-      "frequency": 38,
-      "color": "hsl(210, 100%, 70%)"
+      "frequency": 38
     },
     {
       "name": "AL",
-      "frequency": 30,
-      "color": "hsl(210, 100%, 65%)"
+      "frequency": 30
     },
     {
       "name": "AM",
-      "frequency": 62,
-      "color": "hsl(210, 100%, 60%)"
+      "frequency": 62
     }
   ]
 }

@@ -8,13 +8,15 @@ import VertBar1D from '../../components/Statistics/VertBar1D';
 import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
 import HorizBar2D from '../../components/Statistics/HorizBar2D';
-
+/*
 import pieTest from '../../components/Statistics/Pie/testData.json';
 import circleTest from '../../components/Statistics/Circle/testData.json';
 import vertbar1DTest from '../../components/Statistics/VertBar1D/testData.json';
 import horizBar1DTest from '../../components/Statistics/HorizBar1D/testData.json';
 import vertbar2DTest from '../../components/Statistics/VertBar2D/testData.json';
 import horizBar2DTest from '../../components/Statistics/HorizBar2D/testData.json';
+*/
+import mergedTestData from '../../assets/strings/Statistics/mergedTestData.json';
 import { COLORS } from '../../assets/strings/Statistics/config';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
@@ -92,48 +94,77 @@ const Statictics = () => {
         <hr />
         <br />
         <div className={styles.statisticsContainer}>
-          <div className={styles.graphContainer}>
-            <div className={styles.graphTextContainer}>
-              한 달 동안 만들어진 논문의 수
-            </div>
-            <Pie data={pieTest} />
-          </div>
-          <div className={styles.graphContainer}>
-            <div className={styles.graphTextContainer}>
-              한 달 동안 만들어진 논문의 수
-            </div>
-            <Circle data={circleTest} />
-          </div>
-          <div className={styles.graphContainer}>
-            <div className={styles.graphTextContainer}>
-              한 달 동안 만들어진 논문의 수
-            </div>
-            <VertBar1D
-              data={getColor(vertbar1DTest.data, vertbar1DTest.config.color)}
-              config={vertbar1DTest.config}
-            />
-          </div>
-          <div className={styles.graphContainer}>
-            <div className={styles.graphTextContainer}>
-              한 달 동안 만들어진 논문의 수
-            </div>
-            <HorizBar1D
-              data={getColor(horizBar1DTest.data, horizBar1DTest.config.color)}
-              config={horizBar1DTest.config}
-            />
-          </div>
-          <div className={styles.graphContainer}>
-            <div className={styles.graphTextContainer}>
-              한 달 동안 만들어진 논문의 수
-            </div>
-            <VertBar2D data={vertbar2DTest.data} config={vertbar2DTest.config} />
-          </div>
-          <div className={styles.graphContainer}>
-            <div className={styles.graphTextContainer}>
-              한 달 동안 만들어진 논문의 수
-            </div>
-            <HorizBar2D data={horizBar2DTest.data} config={horizBar2DTest.config} />
-          </div>
+          { mergedTestData.map((data) => {
+            if (data.type === 'Pie') {
+              return (
+                <div className={styles.graphContainer}>
+                  <div className={styles.graphTextContainer}>
+                    {mergedTestData[0].title}
+                  </div>
+                  <Pie data={mergedTestData[0].data} />
+                </div>
+              );
+            }
+            if (data.type === 'Circle') {
+              return (
+                <div className={styles.graphContainer}>
+                  <div className={styles.graphTextContainer}>
+                    {mergedTestData[1].title}
+                  </div>
+                  <Circle data={mergedTestData[1].data} />
+                </div>
+              );
+            }
+            if (data.type === 'VertBar1D') {
+              return (
+                <div className={styles.graphContainer}>
+                  <div className={styles.graphTextContainer}>
+                    {mergedTestData[2].title}
+                  </div>
+                  <VertBar1D
+                    data={getColor(mergedTestData[2].data, mergedTestData[2].config.color)}
+                    config={mergedTestData[2].config}
+                  />
+                </div>
+              );
+            }
+            if (data.type === 'HorizBar1D') {
+              return (
+                <div className={styles.graphContainer}>
+                  <div className={styles.graphTextContainer}>
+                    {mergedTestData[3].title}
+                  </div>
+                  <HorizBar1D
+                    data={getColor(mergedTestData[3].data, mergedTestData[3].config.color)}
+                    config={mergedTestData[3].config}
+                  />
+                </div>
+              );
+            }
+            if (data.type === 'VertBard2D') {
+              return (
+                <div className={styles.graphContainer}>
+                  <div className={styles.graphTextContainer}>
+                    {mergedTestData[4].title}
+                  </div>
+                  <VertBar2D data={mergedTestData[4].data} config={mergedTestData[4].config} />
+                </div>
+              );
+            }
+            if (data.type === 'HorizBar2D') {
+              return (
+                <div className={styles.graphContainer}>
+                  <div className={styles.graphTextContainer}>
+                    {mergedTestData[5].title}
+                  </div>
+                  <HorizBar2D data={mergedTestData[5].data} config={mergedTestData[5].config} />
+                </div>
+              );
+            }
+            return (
+              <div />
+            );
+          })}
         </div>
       </div>
     </DefaultDesktopLayout>

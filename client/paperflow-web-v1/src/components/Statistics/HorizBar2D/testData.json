@@ -1,4 +1,6 @@
 {
+  "title": "한 달 동안 만들어진 논문의 수",
+  "type": "HorizBar2D",
   "config": {
     "index": "country",
     "key": ["hot dog", "burger", "sandwich", "kebab", "fries", "donut"],
