@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import json
+import os
+
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.dirname(SETTINGS_DIR))
+
+with open('{}/../config.json'.format(PROJECT_ROOT), 'r') as f:
+    CONFIG = json.load(f)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,13 +89,13 @@ WSGI_APPLICATION = 'paperflowServer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'backend',
         'ENGINE': 'django.db.backends.mysql',
-        'USER' : 'root',
-        'PASSWORD' : '979775aabb',
-        'HOST' : 'localhost',
-        'PORT' : '3306',
-        'OPTIONS' : {'charset': 'utf8mb4'}
+        'NAME': CONFIG['DATABASE']['NAME'],
+        'USER': CONFIG['DATABASE']['USER'],
+        'PASSWORD': CONFIG['DATABASE']['PASSWORD'],
+        'HOST': CONFIG['DATABASE']['HOST'],
+        'PORT': CONFIG['DATABASE']['PORT'],
+        'OPTIONS': {'charset': 'utf8mb4'}
     }
 }
 
