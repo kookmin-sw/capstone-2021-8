@@ -5,6 +5,10 @@ export const HeaderEntireMain = [
     link: '/keyword-network',
   },
   {
+    name: '통계',
+    link: '/statistics',
+  },
+  {
     name: '구독',
     link: '/email-input',
   },
