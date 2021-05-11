@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'paperData.apps.PaperdataConfig',
     'newsletter',
+    'searchApp.apps.SearchappConfig'
 ]
 
 MIDDLEWARE = [

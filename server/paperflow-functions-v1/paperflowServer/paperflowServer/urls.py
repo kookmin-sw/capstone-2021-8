@@ -23,5 +23,6 @@ urlpatterns = [
     path('backend/', include('backendApp.urls')),
     path('admin/', admin.site.urls),
     path('newsletter/', include('newsletter.urls')),
-    url(r"^paper/(?P<paper_id>.+)", PaperInfoView.get)
+    url(r"^paper/(?P<paper_id>.+)", PaperInfoView.get),
+    path('', include('searchApp.urls'))
 ]
