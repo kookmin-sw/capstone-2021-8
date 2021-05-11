@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@c1l1h88291cl8m3-e$z9(9@b$0bw^*p21h)b%h7d9l90yga+g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("PYTHON_ENV") != 'production'
 
 ALLOWED_HOSTS = ['*']
 
