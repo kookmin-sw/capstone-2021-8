@@ -1,5 +1,8 @@
 FROM node:12.19.0
 
+# development || production
+ENV NODE_ENV production
+
 RUN mkdir /paperflow_web
 WORKDIR /paperflow_web
 
