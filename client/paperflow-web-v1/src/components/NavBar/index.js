@@ -4,7 +4,6 @@ import {
   Nav,
   Form,
   FormControl,
-  Button,
 } from 'react-bootstrap';
 import {
   HeaderEntireMain,
@@ -45,7 +44,6 @@ const NavBar = () => {
               }
             }}
           />
-          <Button variant="outline-primary" style={{ marginLeft: '10px' }}>Login</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
