@@ -2,4 +2,4 @@
 
 cd /paperflow_web
 
-[ "$NODE_ENV" == "development" ] && (npm run dev) || (npm run prod)
+npm run prod
