@@ -1,5 +1,9 @@
 FROM python:3.6
 
+# development || production
+ENV PYTHON_ENV production
+RUN export PYTHON_ENV
+
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /paperflow_server

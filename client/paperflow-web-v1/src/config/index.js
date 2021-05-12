@@ -1,3 +1,4 @@
-export default {
-  backendEndPoint: 'http://127.0.0.1:8000',
-};
+import Development from './development';
+import Production from './production';
+
+export default process.env.NODE_ENV === 'development' ? Development : Production;
