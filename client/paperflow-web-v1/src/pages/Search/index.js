@@ -73,6 +73,7 @@ const Search = () => {
         }) => (
           <PaperListItem
             key={paperId}
+            paperId={paperId}
             title={title}
             date={publicationYear}
             authors={JSON.parse(authors).map((item) => item.name)}
