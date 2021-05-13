@@ -1,5 +1,22 @@
 @import '../../assets/scsses/config';
 
-.achvItemCol {
-  text-align: center;
+.achvContainer {
+  width: 100%;
+
+  .achvItemRow {
+    height: 150px;
+
+    .achvItemCol {
+      text-align: center;
+
+      .number {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
 }
