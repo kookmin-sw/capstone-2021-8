@@ -7,6 +7,7 @@ import {
 import useRootData from '../../hooks/useRootData';
 import backgroundImage from '../../assets/images/books-1245690_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
+import stylesMobileDefault from './MobileDefault.module.scss';
 import FullWidthLayout from '../../layouts/Layouts/FullWidth';
 import AchvCounter from '../../components/AchvCounter';
 import IntroCard from '../../components/IntroCard';
@@ -20,7 +21,7 @@ const Lading = () => {
   }));
   const isDesktop = screenClass === 'xl';
 
-  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (
     <FullWidthLayout>
