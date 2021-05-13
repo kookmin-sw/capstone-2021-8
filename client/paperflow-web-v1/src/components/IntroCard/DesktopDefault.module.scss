@@ -12,5 +12,13 @@
 
   .contentText {
     margin-left: 60px;
+
+    .title {
+      font-size: 30px;
+      font-weight: 500;
+    }
+    .content {
+      font-size: 20px;
+    }
   }
 }
