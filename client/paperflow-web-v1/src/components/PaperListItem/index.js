@@ -7,7 +7,7 @@ import {
 import useRootData from '../../hooks/useRootData';
 import KeywordBadge from '../KeywordBadge';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
-// import stylesMobileDefault from './MobileDefault.module.scss';
+import stylesMobileDefault from './MobileDefault.module.scss';
 
 const PaperListItem = ({
   paperId, title, date, authors, abstract, highlightKeywords, keywords, abstractMaxLength = 300,
@@ -18,7 +18,7 @@ const PaperListItem = ({
   }));
   const isDesktop = screenClass === 'xl';
 
-  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (
     <Card className={styles.paperListItem}>
