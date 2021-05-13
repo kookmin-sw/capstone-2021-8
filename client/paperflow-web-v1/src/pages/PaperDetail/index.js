@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
+  Button,
 } from 'react-bootstrap';
 import axios from 'axios';
 import * as Icon from 'react-bootstrap-icons';
@@ -24,7 +25,6 @@ const PaperDetail = () => {
   // eslint-disable-next-line no-unused-vars
   const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
 
-  // eslint-disable-next-line no-unused-vars
   const { id: paperId } = parseQueryString();
 
   const [paperTitle, setPaperTitle] = useState('');
@@ -37,6 +37,7 @@ const PaperDetail = () => {
   const [references, setReferences] = useState('');
   const [abstract, setAbstract] = useState('');
   const [paperTopics, setPaperTopics] = useState(null);
+  const [pdfUrls, setPdfUrls] = useState(null);
 
   const retrievePaperInfo = async () => {
     try {
@@ -47,7 +48,6 @@ const PaperDetail = () => {
       const {
         title,
         abstract,
-        // eslint-disable-next-line no-unused-vars
         pdf_urls: pdfUrls,
         authors,
         citation_list: citationList,
@@ -78,6 +78,7 @@ const PaperDetail = () => {
         keyword: item,
         highlight: item === 'Computer Science',
       })));
+      setPdfUrls(JSON.parse(pdfUrls));
     } catch (err) {
       changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
     }
@@ -126,6 +127,17 @@ const PaperDetail = () => {
           {paperTopics && paperTopics.map((item) => (
             <KeywordBadge key={item.keyword} keyword={item.keyword} highlight={item.highlight} />
           ))}
+        </div>
+
+        <div className={styles.topicSection}>
+          <h3>PDFs</h3>
+          <ul>
+            {pdfUrls && pdfUrls.map((url) => (
+              <li>
+                <Button key={url} variant="link" className={styles.paperTitle} href={url} target="_blank">{url}</Button>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className={styles.relatedPapersSection}>
