@@ -45,11 +45,11 @@ const Lading = () => {
       </Carousel>
 
       <Jumbotron fluid>
-        <Container>
-          <h1>
+        <Container className={styles.paperSearchSection}>
+          <div className={styles.mainPhrase}>
             지금 바로 논문을 검색해 보세요!
-          </h1>
-          <p>
+          </div>
+          <p className={styles.subPhrase}>
             생소한 분야의 논문이더라도, 흐름을 쉽게 파악할 수 있습니다!
           </p>
           <input
