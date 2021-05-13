@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'backendApp.apps.BackendappConfig',
     'paperData.apps.PaperdataConfig',
     'newsletter',
 ]
