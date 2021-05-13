@@ -5,6 +5,7 @@ import {
 import axios from 'axios';
 import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
+import stylesMobileDefault from './MobileDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import PaperListItem from '../../components/PaperListItem';
 import {
@@ -21,7 +22,7 @@ const Search = () => {
   const isDesktop = screenClass === 'xl';
 
   // eslint-disable-next-line no-unused-vars
-  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   const { search } = parseQueryString();
   const [searchKeyword, setSearchKeyword] = useState('');
