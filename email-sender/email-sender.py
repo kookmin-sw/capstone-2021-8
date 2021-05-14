@@ -1,4 +1,5 @@
 import json
+import csv
 import smtplib
 import codecs
 from email.mime.multipart import MIMEMultipart
@@ -9,6 +10,18 @@ from email.mime.image import MIMEImage
 def read_html(html_file):
     f = codecs.open(html_file, 'r', encoding='UTF-8')
     return f.read()
+
+
+def get_receivers():
+    f = open('receivers.csv', 'r', encoding='utf-8')
+    rdr = csv.reader(f)
+
+    receivers = []
+    for line in rdr:
+        receivers.append(line['email'])
+
+    f.close()
+    return receivers
 
 
 def send_mail(s, sender, receiver, subject, html_file, images):
