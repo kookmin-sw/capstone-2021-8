@@ -73,12 +73,13 @@ def searchPaper(request):
             }
         }, size=size, from_=from_)
 
+    took = docs['took']
     total = docs['hits']['total']['value']
 
     papers = []
     for data in docs['hits']['hits']:
         papers.append(data.get('_source'))
 
-    resp = JsonResponse({'papers': papers, 'total': total})
+    resp = JsonResponse({'papers': papers, 'total': total, 'took': took})
     resp['Access-Control-Allow-Origin'] = '*'
     return resp
