@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Form,
   ButtonGroup,
@@ -25,19 +25,27 @@ const Search = () => {
 
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
+  const paginationSize = 10;
+  const paginationRadius = 5;
+
   const { search } = parseQueryString();
   const [searchKeyword, setSearchKeyword] = useState('');
   const [fromIndex, setFromIndex] = useState(0);
   const [searchedPapers, setSearchedPapers] = useState([]);
+  const [totalPapers, setTotalPapers] = useState(0);
 
-  const searchRef = useRef(null);
+  const pagination = (pageNum) => {
+    setFromIndex((pageNum - 1) * paginationSize);
+    window.scrollTo(0, 0);
+  };
 
   const searchHandler = async () => {
     try {
-      const { data: { papers } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
-        params: { searchKeyword, from: fromIndex },
+      const { data: { papers, total } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
+        params: { searchKeyword, from: fromIndex, size: paginationSize },
       });
       setSearchedPapers(papers);
+      setTotalPapers(total);
     } catch (err) {
       changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
     }
@@ -53,7 +61,7 @@ const Search = () => {
 
   return (
     <DefaultLayout>
-      <Form.Group controlId="formBasicEmail" ref={searchRef}>
+      <Form.Group controlId="formBasicEmail">
         <Form.Label>Search Papers</Form.Label>
         <Form.Control
           type="text"
@@ -91,19 +99,24 @@ const Search = () => {
 
       <div className={styles.paginationButtons}>
         <ButtonGroup size="md" className="mb-2">
-          <Button onClick={() => {
-            setFromIndex(fromIndex - 10);
-            searchRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }}
-          >이전
+          {Math.floor(1 + fromIndex / paginationSize) !== 1 && (
+          <Button onClick={() => pagination(1)}>처음
           </Button>
-          <Button>Middle</Button>
-          <Button onClick={() => {
-            setFromIndex(fromIndex + 10);
-            searchRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }}
-          >다음
+          )}
+          {totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+            .map((_, index) => (_ - paginationRadius + index))
+            .filter((pageNum) => pageNum > 0)
+            .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
+          <Button variant="secondary">{Math.floor(1 + fromIndex / paginationSize)}</Button>
+          {totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+            .map((_, index) => (_ + index + 1))
+            .filter((pageNum) => pageNum <= Math.floor(1 + totalPapers / paginationSize))
+            .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
+          {Math.floor(1 + fromIndex / paginationSize)
+          !== Math.floor(1 + totalPapers / paginationSize) && (
+          <Button onClick={() => pagination(Math.floor(1 + totalPapers / paginationSize))}>마지막
           </Button>
+          )}
         </ButtonGroup>
       </div>
 
