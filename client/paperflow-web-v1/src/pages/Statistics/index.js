@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
@@ -28,7 +28,7 @@ const Statictics = () => {
     month: '03',
   });
 
-  const [statisticsData, SetStatisticsData] = useState(mergedTestData);
+  const [statisticsData, setStatisticsData] = useState(mergedTestData);
 
   const months = Array.from({ length: 12 }, (_, i) => (`0${String(i + 1)}`).slice(-2));
   const years = ['2017', '2018', '2019', '2020', '2021'];
@@ -40,9 +40,14 @@ const Statictics = () => {
       changeAlertModalContent('잘못된 범위를 선택했습니다.');
     } else {
       setRange({ ...range, [e.target.name]: e.target.value });
-      SetStatisticsData(mergedTestData);
+      setStatisticsData(mergedTestData);
     }
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    setStatisticsData(require(`../../assets/strings/Statistics/Data/${range.year}${range.month}.json`));
+  }, [range]);
 
   const getColor = (data, color) => {
     const colorBase = COLORS[color];
