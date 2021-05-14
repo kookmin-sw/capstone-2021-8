@@ -18,23 +18,23 @@
 
   .mainPhrase {
     display: inline-block;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
   }
 
   .submainPhrase {
-    font-size: 30px;
+    font-size: 15px;
     color: white;
   }
 }
 
 .paperSearchSection {
   .mainPhrase {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 25px;
   }
   .subPhrase {
-    font-size: 20px;
+    font-size: 15px;
+    word-break: keep-all;
   }
 }
