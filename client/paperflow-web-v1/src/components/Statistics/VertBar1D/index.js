@@ -29,7 +29,7 @@ const getTspanGroups = (value, maxLineLength, maxLines = 2) => {
 
   lines.forEach((lineText, i) => {
     children.push(
-      <tspan x={0} dy={dy}>
+      <tspan x={0} dy={dy} key={lineText}>
         {(i === 1 && allLines.length > 2)
           ? `${lineText.slice(0, maxLineLength - 3)}...`
           : lineText}
