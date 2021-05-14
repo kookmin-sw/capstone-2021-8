@@ -33,6 +33,7 @@ const Search = () => {
   const [fromIndex, setFromIndex] = useState(0);
   const [searchedPapers, setSearchedPapers] = useState([]);
   const [totalPapers, setTotalPapers] = useState(0);
+  const [searchTook, setSearchTook] = useState(0);
 
   const pagination = (pageNum) => {
     setFromIndex((pageNum - 1) * paginationSize);
@@ -41,11 +42,12 @@ const Search = () => {
 
   const searchHandler = async () => {
     try {
-      const { data: { papers, total } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
+      const { data: { papers, total, took } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
         params: { searchKeyword, from: fromIndex, size: paginationSize },
       });
       setSearchedPapers(papers);
       setTotalPapers(total);
+      setSearchTook(took);
     } catch (err) {
       changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
     }
@@ -79,7 +81,9 @@ const Search = () => {
         </Form.Text>
       </Form.Group>
       <hr />
-      <div className={styles.searchResultSummary}>검색 결과: {totalPapers}개</div>
+      <div className={styles.searchResultSummary}>검색 결과: {totalPapers.toLocaleString()}개
+        ({searchTook / 1000} 초)
+      </div>
       {
         searchedPapers.map(({
           paper_id: paperId, title, publication_year: publicationYear,
