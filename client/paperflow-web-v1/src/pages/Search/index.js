@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {
   Form,
+  ButtonGroup,
+  Button,
 } from 'react-bootstrap';
 import axios from 'axios';
 import useRootData from '../../hooks/useRootData';
@@ -26,12 +28,15 @@ const Search = () => {
 
   const { search } = parseQueryString();
   const [searchKeyword, setSearchKeyword] = useState('');
+  const [fromIndex, setFromIndex] = useState(0);
   const [searchedPapers, setSearchedPapers] = useState([]);
+
+  const searchRef = useRef(null);
 
   const searchHandler = async () => {
     try {
       const { data: { papers } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
-        params: { searchKeyword },
+        params: { searchKeyword, from: fromIndex },
       });
       setSearchedPapers(papers);
     } catch (err) {
@@ -45,11 +50,11 @@ const Search = () => {
 
   useEffect(() => {
     searchHandler();
-  }, [searchKeyword]);
+  }, [searchKeyword, fromIndex]);
 
   return (
     <DefaultLayout>
-      <Form.Group controlId="formBasicEmail">
+      <Form.Group controlId="formBasicEmail" ref={searchRef}>
         <Form.Label>Search Papers</Form.Label>
         <Form.Control
           type="text"
@@ -84,6 +89,24 @@ const Search = () => {
           />
         ))
       }
+
+      <div className={styles.paginationButtons}>
+        <ButtonGroup size="md" className="mb-2">
+          <Button onClick={() => {
+            setFromIndex(fromIndex - 10);
+            searchRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
+          >이전
+          </Button>
+          <Button>Middle</Button>
+          <Button onClick={() => {
+            setFromIndex(fromIndex + 10);
+            searchRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
+          >다음
+          </Button>
+        </ButtonGroup>
+      </div>
 
     </DefaultLayout>
   );
