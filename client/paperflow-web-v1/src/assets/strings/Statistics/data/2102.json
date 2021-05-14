@@ -1,0 +1,166 @@
+[
+  {
+    "title": "Monthly_Top_First Subject",
+    "type": "Pie",
+    "data": [
+      { "first_theme_name": "Machine Learning (cs.LG)", "frequency": 1119 },
+      { "first_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 587 },
+      { "first_theme_name": "Computation and Language (cs.CL)", "frequency": 296 },
+      { "first_theme_name": "Information Theory (cs.IT)", "frequency": 246 },
+      { "first_theme_name": "Numerical Analysis (math.NA)", "frequency": 201 },
+      { "first_theme_name": "Robotics (cs.RO)", "frequency": 188 },
+      { "first_theme_name": "Systems and Control (eess.SY)", "frequency": 186 },
+      { "first_theme_name": "Cryptography and Security (cs.CR)", "frequency": 180 },
+      { "first_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 163 },
+      { "first_theme_name": "Software Engineering (cs.SE)", "frequency": 156 }
+    ]
+  },
+  {
+    "title": "Monthly_Top_Second Subject",
+    "type": "HorizBar1D",
+    "config": { "index": "second_theme_name", "key": "frequency", "color": "blue" },
+    "data": [
+      { "second_theme_name": "Machine Learning (cs.LG)", "frequency": 907 },
+      { "second_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 688 },
+      { "second_theme_name": "Machine Learning (stat.ML)", "frequency": 356 },
+      { "second_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 273 },
+      { "second_theme_name": "Optimization and Control (math.OC)", "frequency": 151 },
+      { "second_theme_name": "Systems and Control (eess.SY)", "frequency": 133 },
+      { "second_theme_name": "Audio and Speech Processing (eess.AS)", "frequency": 117 },
+      { "second_theme_name": "Signal Processing (eess.SP)", "frequency": 111 },
+      { "second_theme_name": "Cryptography and Security (cs.CR)", "frequency": 103 },
+      { "second_theme_name": "Image and Video Processing (eess.IV)", "frequency": 92 }
+    ]
+  },
+  {
+    "title": "Monthly_Top_Relation",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "Data Structures and Algorithms (cs.DS)",
+        "Networking and Internet Architecture (cs.NI)",
+        "Performance (cs.PF)",
+        "Machine Learning (cs.LG)",
+        "Artificial Intelligence (cs.AI)"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "Machine Learning (cs.LG)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Cryptography and Security (cs.CR)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Artificial Intelligence (cs.AI)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Numerical Analysis (math.NA)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Computer Vision and Pattern Recognition (cs.CV)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Systems and Control (eess.SY)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Information Theory (cs.IT)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Optimization and Control (math.OC)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Robotics (cs.RO)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      },
+      {
+        "primary_subject": "Distributed, Parallel, and Cluster Computing (cs.DC)",
+        "Performance (cs.PF)": 7,
+        "Data Structures and Algorithms (cs.DS)": 7,
+        "Artificial Intelligence (cs.AI)": 6,
+        "Machine Learning (cs.LG)": 5,
+        "Networking and Internet Architecture (cs.NI)": 3
+      }
+    ]
+  },
+  {
+    "title": "Monthly_Top_Author",
+    "type": "HorizBar1D",
+    "config": { "index": "author_name", "key": "frequency", "color": "blue" },
+    "data": {
+      "Stephen G. MacDonell": 13,
+      "Gang Niu": 9,
+      "Shie Mannor": 9,
+      "Alexander Felfernig": 9,
+      "Pin-Yu Chen": 8,
+      "Masashi Sugiyama": 8,
+      "Bo Yang": 8,
+      "Pan Pan": 8,
+      "Peter Richtárik": 8,
+      "Muneer Ahmad": 8
+    }
+  },
+  {
+    "title": "Monthly_Top_Keyword",
+    "type": "HorizBar1D",
+    "config": { "index": "keyword", "key": "frequency", "color": "blue" },
+    "data": [
+      { "keyword": "learning", "frequency": 231 },
+      { "keyword": "neural networks", "frequency": 211 },
+      { "keyword": "reinforcement learning", "frequency": 201 },
+      { "keyword": "deep learning", "frequency": 127 },
+      { "keyword": "networks", "frequency": 109 },
+      { "keyword": "machine learning", "frequency": 90 },
+      { "keyword": "neural network", "frequency": 72 },
+      { "keyword": "systems", "frequency": 67 },
+      { "keyword": "federated learning", "frequency": 62 },
+      { "keyword": "deep reinforcement learning", "frequency": 53 }
+    ]
+  }
+]

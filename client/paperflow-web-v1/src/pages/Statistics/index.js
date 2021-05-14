@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
@@ -142,7 +142,7 @@ const Statictics = () => {
                 </div>
               );
             }
-            if (data.type === 'VertBard2D') {
+            if (data.type === 'VertBar2D') {
               return (
                 <div className={styles.graphContainer}>
                   <div className={styles.graphTextContainer}>

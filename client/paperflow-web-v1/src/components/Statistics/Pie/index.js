@@ -21,31 +21,6 @@ const Pie = ({ data }) => (
     arcLinkLabelsColor={{ from: 'color' }}
     arcLabelsSkipAngle={10}
     arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
-    legends={[
-      {
-        anchor: 'top-right',
-        direction: 'column',
-        justify: false,
-        translateX: 0,
-        translateY: 0,
-        itemsSpacing: 25,
-        itemWidth: 10,
-        itemHeight: 10,
-        itemTextColor: '#999',
-        itemDirection: 'left-to-right',
-        itemOpacity: 1,
-        symbolSize: 25,
-        symbolShape: 'circle',
-        effects: [
-          {
-            on: 'hover',
-            style: {
-              itemTextColor: '#000',
-            },
-          },
-        ],
-      },
-    ]}
     theme={{
       legends: {
         text: {

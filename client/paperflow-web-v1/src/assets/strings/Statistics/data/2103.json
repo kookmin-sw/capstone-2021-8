@@ -1,0 +1,166 @@
+[
+  {
+    "title": "Monthly_Top_First Subject",
+    "type": "Pie",
+    "data": [
+      { "id": "Computer Vision and Pattern Recognition (cs.CV)", "value": 1297 },
+      { "id": "Machine Learning (cs.LG)", "value": 913 },
+      { "id": "Robotics (cs.RO)", "value": 427 },
+      { "id": "Computation and Language (cs.CL)", "value": 378 },
+      { "id": "Software Engineering (cs.SE)", "value": 299 },
+      { "id": "Systems and Control (eess.SY)", "value": 277 },
+      { "id": "Numerical Analysis (math.NA)", "value": 277 },
+      { "id": "Cryptography and Security (cs.CR)", "value": 245 },
+      { "id": "Information Theory (cs.IT)", "value": 203 },
+      { "id": "Artificial Intelligence (cs.AI)", "value": 165 }
+    ]
+  },
+  {
+    "title": "Monthly_Top_Second Subject",
+    "type": "HorizBar1D",
+    "config": { "index": "second_theme_name", "key": "frequency", "color": "blue" },
+    "data": [
+      { "second_theme_name": "Machine Learning (cs.LG)", "frequency": 1050 },
+      { "second_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 732 },
+      { "second_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 375 },
+      { "second_theme_name": "Systems and Control (eess.SY)", "frequency": 247 },
+      { "second_theme_name": "Machine Learning (stat.ML)", "frequency": 234 },
+      { "second_theme_name": "Robotics (cs.RO)", "frequency": 154 },
+      { "second_theme_name": "Optimization and Control (math.OC)", "frequency": 134 },
+      { "second_theme_name": "Image and Video Processing (eess.IV)", "frequency": 119 },
+      { "second_theme_name": "Signal Processing (eess.SP)", "frequency": 111 },
+      { "second_theme_name": "Cryptography and Security (cs.CR)", "frequency": 108 }
+    ]
+  },
+  {
+    "title": "Monthly_Top_Relation",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "Robotics (cs.RO)",
+        "Computer Science and Game Theory (cs.GT)",
+        "Multiagent Systems (cs.MA)",
+        "Optimization and Control (math.OC)",
+        "Machine Learning (cs.LG)"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "Machine Learning (cs.LG)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Machine Learning (stat.ML)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Numerical Analysis (math.NA)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Computer Vision and Pattern Recognition (cs.CV)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Distributed, Parallel, and Cluster Computing (cs.DC)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Cryptography and Security (cs.CR)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Optimization and Control (math.OC)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Artificial Intelligence (cs.AI)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Social and Information Networks (cs.SI)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      },
+      {
+        "primary_subject": "Systems and Control (eess.SY)",
+        "Optimization and Control (math.OC)": 32,
+        "Machine Learning (cs.LG)": 21,
+        "Robotics (cs.RO)": 14,
+        "Computer Science and Game Theory (cs.GT)": 10,
+        "Multiagent Systems (cs.MA)": 6
+      }
+    ]
+  },
+  {
+    "title": "Monthly_Top_Author",
+    "type": "HorizBar1D",
+    "config": { "index": "author_name", "key": "frequency", "color": "blue" },
+    "data": {
+      "Jun Wang": 14,
+      "Yang Liu": 13,
+      "Erkan Kayacan": 12,
+      "Lei Zhang": 11,
+      "Mark Stamp": 11,
+      "Hao Chen": 10,
+      "Nassir Navab": 10,
+      "Stephen G. MacDonell": 10,
+      "Yu Wang": 10,
+      "Chang Liu": 10
+    }
+  },
+  {
+    "title": "Monthly_Top_Keyword",
+    "type": "HorizBar1D",
+    "config": { "index": "keyword", "key": "frequency", "color": "blue" },
+    "data": [
+      { "keyword": "learning", "frequency": 232 },
+      { "keyword": "neural networks", "frequency": 201 },
+      { "keyword": "reinforcement learning", "frequency": 160 },
+      { "keyword": "deep learning", "frequency": 131 },
+      { "keyword": "machine learning", "frequency": 99 },
+      { "keyword": "systems", "frequency": 83 },
+      { "keyword": "neural network", "frequency": 77 },
+      { "keyword": "networks", "frequency": 73 },
+      { "keyword": "domain adaptation", "frequency": 67 },
+      { "keyword": "detection", "frequency": 65 }
+    ]
+  }
+]
