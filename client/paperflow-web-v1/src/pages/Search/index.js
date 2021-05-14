@@ -26,7 +26,7 @@ const Search = () => {
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   const paginationSize = 10;
-  const paginationRadius = 5;
+  const paginationRadius = isDesktop ? 5 : 2;
 
   const { search } = parseQueryString();
   const [searchKeyword, setSearchKeyword] = useState('');
