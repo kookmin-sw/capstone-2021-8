@@ -165,6 +165,32 @@ const Statictics = () => {
                 </div>
               );
             }
+            if (data.type === 'paper') {
+              return (
+                <div className={styles.paperContainer}>
+                  <div className={styles.paperContainerTitle}>
+                    {data.title}
+                  </div>
+                  {data.data.map((paper, idx) => (
+                    <div>
+                      <span className={styles.paperIndex}>
+                        {idx + 1}.
+                      </span>
+                      <span className={styles.paperTitle}>
+                        {paper.title}
+                      </span>
+                      <span className={styles.paperCitationTitle}>
+                        citation:
+                      </span>
+                      <span className={styles.paperCitation}>
+                        {paper.citation}
+                      </span>
+                    </div>
+                  ))}
+                  <hr />
+                </div>
+              );
+            }
             return (
               <div />
             );
