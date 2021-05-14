@@ -79,6 +79,7 @@ const Search = () => {
         </Form.Text>
       </Form.Group>
       <hr />
+      <div className={styles.searchResultSummary}>검색 결과: {totalPapers}개</div>
       {
         searchedPapers.map(({
           paper_id: paperId, title, publication_year: publicationYear,
