@@ -23,7 +23,6 @@ const Search = () => {
   }));
   const isDesktop = screenClass === 'xl';
 
-  // eslint-disable-next-line no-unused-vars
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   const { search } = parseQueryString();
