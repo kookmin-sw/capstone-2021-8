@@ -95,7 +95,7 @@ const Statictics = () => {
         <div className={styles.statisticsContainer}>
           { statisticsData.map((data) => {
             if (data.title === 'Monthly_Top_Author') {
-              return (<div />);
+              return (<div key={data.title} />);
             }
             if (data.type === 'Pie') {
               return (
