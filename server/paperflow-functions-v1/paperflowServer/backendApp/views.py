@@ -56,6 +56,7 @@ def paper(request):
 @csrf_exempt
 def searchPaper(request):
     searchKeyword = request.GET.get('searchKeyword', '')
+    size = request.GET.get('size', 10)
     from_ = request.GET.get('from', 0)
 
     docs = ES.search(
@@ -70,7 +71,7 @@ def searchPaper(request):
                     ]
                 }
             }
-        }, size=10, from_=from_)
+        }, size=size, from_=from_)
 
     total = docs['hits']['total']['value']
 
