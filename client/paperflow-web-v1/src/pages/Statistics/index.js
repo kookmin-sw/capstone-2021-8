@@ -94,7 +94,6 @@ const Statictics = () => {
         <br />
         <div className={styles.statisticsContainer}>
           { statisticsData.map((data) => {
-            console.log(data.type);
             if (data.type === 'Pie') {
               return (
                 <div key={data.title} className={styles.graphContainer}>
