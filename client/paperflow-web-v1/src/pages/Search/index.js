@@ -108,12 +108,12 @@ const Search = () => {
           <Button onClick={() => pagination(1)}>처음
           </Button>
           )}
-          {totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+          {!!totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
             .map((_, index) => (_ - paginationRadius + index))
             .filter((pageNum) => pageNum > 0)
             .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
           <Button variant="secondary">{Math.floor(1 + fromIndex / paginationSize)}</Button>
-          {totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+          {!!totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
             .map((_, index) => (_ + index + 1))
             .filter((pageNum) => pageNum <= Math.floor(1 + totalPapers / paginationSize))
             .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
