@@ -2,4 +2,4 @@
 
 cd /paperflow_web
 
-npm run dev
+npm run prod

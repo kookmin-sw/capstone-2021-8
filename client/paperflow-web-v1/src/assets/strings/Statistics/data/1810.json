@@ -1,0 +1,311 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Sanity Checks for Saliency Maps",
+        "citation": 415
+      },
+      {
+        "title": "DropBlock: A regularization method for convolutional networks",
+        "citation": 267
+      },
+      {
+        "title": "3D MRI brain tumor segmentation using autoencoder regularization",
+        "citation": 262
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2018-07",
+        "frequency": 3533
+      },
+      {
+        "primary subject": "2018-08",
+        "frequency": 3048
+      },
+      {
+        "primary subject": "2018-09",
+        "frequency": 3403
+      },
+      {
+        "primary subject": "2018-10",
+        "frequency": 3927
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 601
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 571
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 272
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 184
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 160
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 159
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 146
+      },
+      {
+        "id": "Networking and Internet Architecture (cs.NI)",
+        "value": 137
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 128
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 116
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 776
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 656
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 298
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 137
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 79
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 71
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 67
+      },
+      {
+        "id": "Social and Information Networks (cs.SI)",
+        "value": 64
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 63
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 59
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "cs.CR",
+        "cs.NE",
+        "cs.LG",
+        "stat.ME",
+        "stat.CO",
+        "math.ST",
+        "cs.RO",
+        "eess.IV",
+        "cs.IR",
+        "cs.SD",
+        "cs.CL"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 574,
+        "cs.AI": 117,
+        "cs.CV": 66,
+        "cs.CR": 28,
+        "cs.NE": 25
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 184,
+        "stat.ME": 13,
+        "cs.AI": 12,
+        "stat.CO": 10,
+        "math.ST": 7
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 99,
+        "stat.ML": 41,
+        "cs.AI": 31,
+        "cs.RO": 12,
+        "eess.IV": 11
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.LG": 54,
+        "cs.AI": 36,
+        "stat.ML": 21,
+        "cs.IR": 13,
+        "cs.SD": 8
+      },
+      {
+        "primary_subject": "cs.AI",
+        "cs.LG": 28,
+        "cs.CL": 15,
+        "cs.RO": 9,
+        "cs.CV": 7,
+        "stat.ML": 7
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 776
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 79
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 57
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 54
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 47
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 39
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 37
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 31
+      },
+      {
+        "subject": "stat.AP",
+        "frequency": 21
+      },
+      {
+        "subject": "q-bio.NC",
+        "frequency": 20
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 140
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 85
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 64
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 49
+      },
+      {
+        "keyword": "convolutional neural networks",
+        "frequency": 41
+      },
+      {
+        "keyword": "deep neural",
+        "frequency": 37
+      },
+      {
+        "keyword": "convolutional neural",
+        "frequency": 36
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 36
+      },
+      {
+        "keyword": "deep reinforcement learning",
+        "frequency": 32
+      },
+      {
+        "keyword": "graphs",
+        "frequency": 27
+      },
+      {
+        "keyword": "systems",
+        "frequency": 26
+      }
+    ]
+  }
+]

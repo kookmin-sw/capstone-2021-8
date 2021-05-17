@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
@@ -8,10 +8,7 @@ import VertBar1D from '../../components/Statistics/VertBar1D';
 import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
 import HorizBar2D from '../../components/Statistics/HorizBar2D';
-
-import mergedTestData from '../../assets/strings/Statistics/mergedTestData.json';
 import { COLORS } from '../../assets/strings/Statistics/config';
-
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const Statictics = () => {
@@ -28,7 +25,7 @@ const Statictics = () => {
     month: '03',
   });
 
-  const [statisticsData, setStatisticsData] = useState(mergedTestData);
+  const [statisticsData, setStatisticsData] = useState([]);
 
   const months = Array.from({ length: 12 }, (_, i) => (`0${String(i + 1)}`).slice(-2));
   const years = ['2017', '2018', '2019', '2020', '2021'];
@@ -40,7 +37,6 @@ const Statictics = () => {
       changeAlertModalContent('잘못된 범위를 선택했습니다.');
     } else {
       setRange({ ...range, [e.target.name]: e.target.value });
-      setStatisticsData(mergedTestData);
     }
   };
 
@@ -98,8 +94,8 @@ const Statictics = () => {
           { statisticsData.map((data) => {
             if (data.type === 'Pie') {
               return (
-                <div className={styles.graphContainer}>
-                  <div className={styles.graphTextContainer}>
+                <div key={data.title} className={styles.graphContainer}>
+                  <div key={data.title} className={styles.graphTextContainer}>
                     {data.title}
                   </div>
                   <Pie data={data.data} />
@@ -108,8 +104,8 @@ const Statictics = () => {
             }
             if (data.type === 'Circle') {
               return (
-                <div className={styles.graphContainer}>
-                  <div className={styles.graphTextContainer}>
+                <div key={data.title} className={styles.graphContainer}>
+                  <div key={data.title} className={styles.graphTextContainer}>
                     {data.title}
                   </div>
                   <Circle data={data.data} />
@@ -118,8 +114,8 @@ const Statictics = () => {
             }
             if (data.type === 'VertBar1D') {
               return (
-                <div className={styles.graphContainer}>
-                  <div className={styles.graphTextContainer}>
+                <div key={data.title} className={styles.graphContainer}>
+                  <div key={data.title} className={styles.graphTextContainer}>
                     {data.title}
                   </div>
                   <VertBar1D
@@ -131,8 +127,8 @@ const Statictics = () => {
             }
             if (data.type === 'HorizBar1D') {
               return (
-                <div className={styles.graphContainer}>
-                  <div className={styles.graphTextContainer}>
+                <div key={data.title} className={styles.graphContainer}>
+                  <div key={data.title} className={styles.graphTextContainer}>
                     {data.title}
                   </div>
                   <HorizBar1D
@@ -142,10 +138,10 @@ const Statictics = () => {
                 </div>
               );
             }
-            if (data.type === 'VertBard2D') {
+            if (data.type === 'VertBar2D') {
               return (
-                <div className={styles.graphContainer}>
-                  <div className={styles.graphTextContainer}>
+                <div key={data.title} className={styles.graphContainer}>
+                  <div key={data.title} className={styles.graphTextContainer}>
                     {data.title}
                   </div>
                   <VertBar2D data={data.data} config={data.config} />
@@ -154,11 +150,37 @@ const Statictics = () => {
             }
             if (data.type === 'HorizBar2D') {
               return (
-                <div className={styles.graphContainer}>
-                  <div className={styles.graphTextContainer}>
+                <div key={data.title} className={styles.graphContainer}>
+                  <div key={data.title} className={styles.graphTextContainer}>
                     {data.title}
                   </div>
                   <HorizBar2D data={data.data} config={data.config} />
+                </div>
+              );
+            }
+            if (data.type === 'Paper') {
+              return (
+                <div key={data.title} className={styles.paperContainer}>
+                  <div key={data.title} className={styles.paperContainerTitle}>
+                    {data.title}
+                  </div>
+                  {data.data.map((paper, idx) => (
+                    <div key={paper.title}>
+                      <span className={styles.paperIndex}>
+                        {idx + 1}.
+                      </span>
+                      <span className={styles.paperTitle}>
+                        {paper.title}
+                      </span>
+                      <span className={styles.paperCitationTitle}>
+                        citation:
+                      </span>
+                      <span className={styles.paperCitation}>
+                        {paper.citation}
+                      </span>
+                    </div>
+                  ))}
+                  <hr />
                 </div>
               );
             }

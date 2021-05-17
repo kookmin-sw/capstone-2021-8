@@ -1,0 +1,303 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Language Models as Knowledge Bases?",
+        "citation": 238
+      },
+      {
+        "title": "A Comparative Study on Transformer vs RNN in Speech Applications",
+        "citation": 192
+      },
+      {
+        "title": "Knowledge Enhanced Contextual Word Representations",
+        "citation": 139
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2019-06",
+        "frequency": 4704
+      },
+      {
+        "primary subject": "2019-07",
+        "frequency": 4867
+      },
+      {
+        "primary subject": "2019-08",
+        "frequency": 4213
+      },
+      {
+        "primary subject": "2019-09",
+        "frequency": 5115
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 752
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 693
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 592
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 287
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 201
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 186
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 167
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 164
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 163
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 146
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 973
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 927
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 400
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 360
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 134
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 129
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 128
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 115
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 114
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 111
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "cs.CL",
+        "cs.NE",
+        "cs.LG",
+        "eess.IV",
+        "cs.RO",
+        "cs.IR",
+        "eess.AS",
+        "q-bio.QM",
+        "eess.SP",
+        "eess.SY",
+        "cs.HC"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 673,
+        "cs.AI": 139,
+        "cs.CV": 105,
+        "cs.CL": 38,
+        "cs.NE": 37
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 163,
+        "eess.IV": 79,
+        "cs.RO": 40,
+        "stat.ML": 32,
+        "cs.AI": 32
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.LG": 174,
+        "cs.AI": 93,
+        "stat.ML": 45,
+        "cs.IR": 35,
+        "eess.AS": 20
+      },
+      {
+        "primary_subject": "eess.IV",
+        "cs.CV": 141,
+        "cs.LG": 60,
+        "stat.ML": 25,
+        "q-bio.QM": 10,
+        "eess.SP": 6
+      },
+      {
+        "primary_subject": "cs.RO",
+        "cs.LG": 48,
+        "cs.CV": 45,
+        "cs.AI": 37,
+        "eess.SY": 18,
+        "cs.HC": 18
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 927
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 129
+      },
+      {
+        "subject": "eess.IV",
+        "frequency": 128
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 114
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 111
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 83
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 63
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 62
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 54
+      },
+      {
+        "subject": "physics.comp-ph",
+        "frequency": 38
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 140
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 99
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 86
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 69
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 43
+      },
+      {
+        "keyword": "systems",
+        "frequency": 40
+      },
+      {
+        "keyword": "deep reinforcement learning",
+        "frequency": 38
+      },
+      {
+        "keyword": "machine translation",
+        "frequency": 33
+      },
+      {
+        "keyword": "object detection",
+        "frequency": 31
+      }
+    ]
+  }
+]

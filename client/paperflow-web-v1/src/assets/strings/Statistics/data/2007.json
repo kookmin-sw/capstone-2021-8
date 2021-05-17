@@ -1,0 +1,313 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Intelligent Reflecting Surface Aided Wireless Communications: A Tutorial",
+        "citation": 76
+      },
+      {
+        "title": "Big Bird: Transformers for Longer Sequences",
+        "citation": 70
+      },
+      {
+        "title": "NVAE: A Deep Hierarchical Variational Autoencoder",
+        "citation": 52
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2020-04",
+        "frequency": 5789
+      },
+      {
+        "primary subject": "2020-05",
+        "frequency": 5370
+      },
+      {
+        "primary subject": "2020-06",
+        "frequency": 6157
+      },
+      {
+        "primary subject": "2020-07",
+        "frequency": 6078
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 1163
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 979
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 270
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 231
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 226
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 192
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 191
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 181
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 171
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 165
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 1259
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 1078
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 408
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 325
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 201
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 148
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 140
+      },
+      {
+        "id": "Sound (cs.SD)",
+        "value": 127
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 127
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 119
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "math.OC",
+        "cs.CR",
+        "cs.LG",
+        "eess.IV",
+        "cs.RO",
+        "cs.CL",
+        "cs.MM",
+        "physics.optics",
+        "stat.CO",
+        "stat.AP",
+        "stat.ME",
+        "math.ST",
+        "cs.IR"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 892,
+        "cs.AI": 134,
+        "cs.CV": 124,
+        "math.OC": 49,
+        "cs.CR": 48
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 319,
+        "eess.IV": 152,
+        "cs.RO": 57,
+        "stat.ML": 34,
+        "cs.CL": 25
+      },
+      {
+        "primary_subject": "eess.IV",
+        "cs.CV": 178,
+        "cs.LG": 67,
+        "stat.ML": 7,
+        "cs.MM": 5,
+        "physics.optics": 4
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 171,
+        "stat.CO": 12,
+        "stat.AP": 11,
+        "stat.ME": 10,
+        "math.ST": 10
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.LG": 101,
+        "cs.AI": 40,
+        "cs.IR": 34,
+        "stat.ML": 14,
+        "cs.CV": 9
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 1078
+      },
+      {
+        "subject": "eess.IV",
+        "frequency": 201
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 148
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 140
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 127
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 88
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 82
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 48
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 47
+      },
+      {
+        "subject": "stat.AP",
+        "frequency": 36
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 186
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 117
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 106
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 79
+      },
+      {
+        "keyword": "object detection",
+        "frequency": 54
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 47
+      },
+      {
+        "keyword": "federated learning",
+        "frequency": 40
+      },
+      {
+        "keyword": "domain adaptation",
+        "frequency": 38
+      },
+      {
+        "keyword": "systems",
+        "frequency": 36
+      },
+      {
+        "keyword": "deep reinforcement learning",
+        "frequency": 36
+      },
+      {
+        "keyword": "deep neural",
+        "frequency": 34
+      }
+    ]
+  }
+]
