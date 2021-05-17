@@ -56,6 +56,8 @@ def paper(request):
 @csrf_exempt
 def searchPaper(request):
     searchKeyword = request.GET.get('searchKeyword', '')
+    size = request.GET.get('size', 10)
+    from_ = request.GET.get('from', 0)
 
     docs = ES.search(
         index='paperinfo',
@@ -69,12 +71,15 @@ def searchPaper(request):
                     ]
                 }
             }
-        }, size=10, from_=0)
+        }, size=size, from_=from_)
+
+    took = docs['took']
+    total = docs['hits']['total']['value']
 
     papers = []
     for data in docs['hits']['hits']:
         papers.append(data.get('_source'))
 
-    resp = JsonResponse({'papers': papers})
+    resp = JsonResponse({'papers': papers, 'total': total, 'took': took})
     resp['Access-Control-Allow-Origin'] = '*'
     return resp
