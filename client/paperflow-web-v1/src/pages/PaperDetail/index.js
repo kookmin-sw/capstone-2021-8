@@ -182,6 +182,7 @@ const PaperDetail = () => {
 
         <div className={styles.relatedPapersSection}>
           <h3>References</h3>
+          <p>Computer Science 분야가 포함된 논문만 보여집니다.</p>
           {
             references
             && (
@@ -203,6 +204,7 @@ const PaperDetail = () => {
             )
           }
           <h3>Citations</h3>
+          <p>Computer Science 분야가 포함된 논문만 보여집니다.</p>
           {
             citations && (
               <PaperList
