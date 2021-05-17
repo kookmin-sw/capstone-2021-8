@@ -8,9 +8,7 @@ import VertBar1D from '../../components/Statistics/VertBar1D';
 import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
 import HorizBar2D from '../../components/Statistics/HorizBar2D';
-
 import { COLORS } from '../../assets/strings/Statistics/config';
-
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const Statictics = () => {
