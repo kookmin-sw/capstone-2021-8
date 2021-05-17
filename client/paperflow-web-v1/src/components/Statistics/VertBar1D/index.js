@@ -70,7 +70,6 @@ const VertBar1D = ({ config, data }) => (
         textBaseline,
         textX,
         textY,
-        theme,
         value,
         x,
         y,
@@ -81,7 +80,6 @@ const VertBar1D = ({ config, data }) => (
         >
           <text
             alignmentBaseline={textBaseline}
-            style={theme.axis.ticks.text}
             textAnchor={textAnchor}
             transform={`translate(${textX},${textY})`}
             fontSize="13px"
