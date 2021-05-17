@@ -191,6 +191,7 @@ const PaperDetail = () => {
                 abstract={reference.abstract}
                 highlightKeywords={JSON.parse(reference.fieldList).filter((item) => item === 'Computer Science')}
                 keywords={JSON.parse(reference.fieldList).filter((item) => item !== 'Computer Science')}
+                compact
               />
             ))
           }
@@ -205,6 +206,7 @@ const PaperDetail = () => {
                 abstract={citation.abstract}
                 highlightKeywords={JSON.parse(citation.fieldList).filter((item) => item === 'Computer Science')}
                 keywords={JSON.parse(citation.fieldList).filter((item) => item !== 'Computer Science')}
+                compact
               />
             ))
           }
