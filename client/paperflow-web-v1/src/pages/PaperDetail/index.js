@@ -8,7 +8,7 @@ import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
 import KeywordBadge from '../../components/KeywordBadge';
-import PaperListItem from '../../components/PaperListItem';
+import PaperList from '../../components/PaperList';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import {
   parseQueryString,
@@ -181,33 +181,44 @@ const PaperDetail = () => {
         <div className={styles.relatedPapersSection}>
           <h3>References</h3>
           {
-            references && references.filter((reference) => reference).map((reference) => (
-              <PaperListItem
-                key={reference.id}
-                title={reference.title}
-                date={reference.publicationYear}
-                authors={JSON.parse(reference.authors).map((item) => item.name)}
-                abstract={reference.abstract}
-                highlightKeywords={JSON.parse(reference.fieldList).filter((item) => item === 'Computer Science')}
-                keywords={JSON.parse(reference.fieldList).filter((item) => item !== 'Computer Science')}
-                compact
+            references
+            && (
+              <PaperList
+                papers={references.filter((reference) => reference).map(({
+                  id, title, publicationYear, authors, abstract, fieldList,
+                }) => (
+                  {
+                    id,
+                    title,
+                    date: publicationYear,
+                    authors: JSON.parse(authors).map((item) => item.name),
+                    abstract,
+                    highlightKeywords: JSON.parse(fieldList).filter((item) => item === 'Computer Science'),
+                    keywords: JSON.parse(fieldList).filter((item) => item !== 'Computer Science'),
+                  }
+                ))}
               />
-            ))
+            )
           }
           <h3>Citations</h3>
           {
-            citations && citations.filter((citation) => citation).map((citation) => (
-              <PaperListItem
-                key={citation.id}
-                title={citation.title}
-                date={citation.publicationYear}
-                authors={JSON.parse(citation.authors).map((item) => item.name)}
-                abstract={citation.abstract}
-                highlightKeywords={JSON.parse(citation.fieldList).filter((item) => item === 'Computer Science')}
-                keywords={JSON.parse(citation.fieldList).filter((item) => item !== 'Computer Science')}
-                compact
+            citations && (
+              <PaperList
+                papers={citations.filter((citation) => citation).map(({
+                  id, title, publicationYear, authors, abstract, fieldList,
+                }) => (
+                  {
+                    id,
+                    title,
+                    date: publicationYear,
+                    authors: JSON.parse(authors).map((item) => item.name),
+                    abstract,
+                    highlightKeywords: JSON.parse(fieldList).filter((item) => item === 'Computer Science'),
+                    keywords: JSON.parse(fieldList).filter((item) => item !== 'Computer Science'),
+                  }
+                ))}
               />
-            ))
+            )
           }
         </div>
       </div>
