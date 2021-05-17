@@ -33,37 +33,67 @@ const PaperDetail = () => {
   const [paperPublishedConference, setPaperPublishedConference] = useState('');
   const [authors, setAuthors] = useState('');
   const [paperDOI, setPaperDOI] = useState('');
-  const [citations, setCitations] = useState('');
-  const [references, setReferences] = useState('');
+  const [citations, setCitations] = useState(null);
+  const [references, setReferences] = useState(null);
   const [abstract, setAbstract] = useState('');
   const [paperTopics, setPaperTopics] = useState(null);
   const [pdfUrls, setPdfUrls] = useState(null);
 
+  const fetchPaper = async (id) => {
+    const { data: { paper } } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
+      params: { paperId: id },
+    });
+
+    const {
+      title,
+      abstract,
+      pdf_urls: pdfUrls,
+      authors,
+      citation_list: citationList,
+      reference_list: referenceList,
+      field_list: fieldList,
+      publication_year: publicationYear,
+      venue,
+      journal_name: journalName,
+      journal_volume: journalVolume,
+      journal_pages: journalPages,
+      doi,
+      mag_id: magId,
+    } = paper;
+
+    return {
+      title,
+      abstract,
+      pdfUrls,
+      authors,
+      citationList,
+      referenceList,
+      fieldList,
+      publicationYear,
+      venue,
+      journalName,
+      journalVolume,
+      journalPages,
+      doi,
+      magId,
+    };
+  };
+
   const retrievePaperInfo = async () => {
     try {
-      const { data: { paper } } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
-        params: { paperId },
-      });
-
       const {
         title,
         abstract,
-        pdf_urls: pdfUrls,
+        pdfUrls,
         authors,
-        citation_list: citationList,
-        reference_list: referenceList,
-        field_list: fieldList,
-        publication_year: publicationYear,
+        citationList,
+        referenceList,
+        fieldList,
+        publicationYear,
         venue,
-        journal_name: journalName,
-        // eslint-disable-next-line no-unused-vars
-        journal_volume: journalVolume,
-        // eslint-disable-next-line no-unused-vars
-        journal_pages: journalPages,
+        journalName,
         doi,
-        // eslint-disable-next-line no-unused-vars
-        mag_id: magId,
-      } = paper;
+      } = await fetchPaper(paperId);
 
       setPaperTitle(title);
       setPublishDate(publicationYear);
@@ -71,8 +101,20 @@ const PaperDetail = () => {
       setPaperPublishedConference(journalName);
       setAuthors(JSON.parse(authors).map((item) => item.name));
       setPaperDOI(doi);
-      setCitations(JSON.parse(citationList).length);
-      setReferences(JSON.parse(referenceList).length);
+      setCitations(JSON.parse(citationList));
+      const referencePapers = await Promise.all(
+        JSON.parse(referenceList).map((refPaperId) => (async () => {
+          const { data: { paper } } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
+            params: { paperId: refPaperId },
+          });
+          return {
+            id: refPaperId,
+            ...paper,
+          };
+        })),
+      );
+      console.log(referencePapers);
+      setReferences(referencePapers);
       setAbstract(abstract);
       setPaperTopics(JSON.parse(fieldList).map((item) => ({
         keyword: item,
@@ -108,12 +150,12 @@ const PaperDetail = () => {
         </p>
         <div className={styles.infoWithIcon}>
           <span className={styles.icon}><Icon.BlockquoteLeft /></span>
-          <span className={styles.number}>{citations}</span>
+          <span className={styles.number}>{citations ? citations.length : 0}</span>
           <span className={styles.content}>Citations</span>
         </div>
         <div className={styles.infoWithIcon}>
           <span className={styles.icon}><Icon.People /></span>
-          <span className={styles.number}>{references}</span>
+          <span className={styles.number}>{references ? references.length : 0}</span>
           <span className={styles.content}>References</span>
         </div>
 
@@ -141,17 +183,20 @@ const PaperDetail = () => {
         </div>
 
         <div className={styles.relatedPapersSection}>
-          <h3>Related Papers</h3>
-          {/* Todo: 추천 기능 적용 후 useState 적용 */}
-          <PaperListItem
-            title="Scaling of Magnetic Dissipation and Particle Acceleration in ABC Fields"
-            date="Nov 2021"
-            authors={['Qiang Chen', 'Krzysztof Nalewajko', 'Bhupendra Mishra']}
-            abstract="Automatic abstractive summaries are found to often distort or fabricate facts in the
-          article. This inconsistency between summary and original text has seriously"
-            highlightKeywords={['Math.AC']}
-            keywords={['Math.RA']}
-          />
+          <h3>References</h3>
+          {
+            references && references.map((reference) => (
+              <PaperListItem
+                key={reference.id}
+                title={reference.title}
+                date={reference.publicationYear}
+                authors={JSON.parse(reference.authors).map((item) => item.name)}
+                abstract={reference.abstract}
+                highlightKeywords={JSON.parse(reference.field_list).filter((item) => item === 'Computer Science')}
+                keywords={JSON.parse(reference.field_list).filter((item) => item !== 'Computer Science')}
+              />
+            ))
+          }
         </div>
       </div>
 
