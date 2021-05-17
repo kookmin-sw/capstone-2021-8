@@ -145,15 +145,25 @@ const PaperDetail = () => {
           <br />
           DOI: {paperDOI}
         </p>
-        <div className={styles.infoWithIcon}>
-          <span className={styles.icon}><Icon.BlockquoteLeft /></span>
-          <span className={styles.number}>{citations ? citations.length : 0}</span>
-          <span className={styles.content}>Citations</span>
-        </div>
-        <div className={styles.infoWithIcon}>
-          <span className={styles.icon}><Icon.People /></span>
-          <span className={styles.number}>{references ? references.length : 0}</span>
-          <span className={styles.content}>References</span>
+
+        {pdfUrls && pdfUrls.map((url) => (
+          <Button key={url} variant="primary" size="sm" href={url} target="_blank">
+            {(new URL(url)).hostname}
+            {' '}<Icon.BoxArrowInUpRight />
+          </Button>
+        ))}
+
+        <div className={styles.infoWithIconSection}>
+          <div className={styles.infoWithIcon}>
+            <span className={styles.icon}><Icon.BlockquoteLeft /></span>
+            <span className={styles.number}>{citations ? citations.length : 0}</span>
+            <span className={styles.content}>Citations</span>
+          </div>
+          <div className={styles.infoWithIcon}>
+            <span className={styles.icon}><Icon.People /></span>
+            <span className={styles.number}>{references ? references.length : 0}</span>
+            <span className={styles.content}>References</span>
+          </div>
         </div>
 
         <div className={styles.abstract}>
@@ -166,17 +176,6 @@ const PaperDetail = () => {
           {paperTopics && paperTopics.map((item) => (
             <KeywordBadge key={item.keyword} keyword={item.keyword} highlight={item.highlight} />
           ))}
-        </div>
-
-        <div className={styles.topicSection}>
-          <h3>PDFs</h3>
-          <ul>
-            {pdfUrls && pdfUrls.map((url) => (
-              <li key={url}>
-                <Button variant="link" className={styles.paperTitle} href={url} target="_blank">{url}</Button>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div className={styles.relatedPapersSection}>
