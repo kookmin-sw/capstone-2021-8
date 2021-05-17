@@ -40,9 +40,13 @@ const PaperDetail = () => {
   const [pdfUrls, setPdfUrls] = useState(null);
 
   const fetchPaper = async (id) => {
-    const { data: { paper } } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
+    const { data } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
       params: { paperId: id },
     });
+
+    if (data.error) {
+      return null;
+    }
 
     const {
       title,
@@ -59,9 +63,10 @@ const PaperDetail = () => {
       journal_pages: journalPages,
       doi,
       mag_id: magId,
-    } = paper;
+    } = data.paper;
 
     return {
+      id,
       title,
       abstract,
       pdfUrls,
@@ -101,20 +106,12 @@ const PaperDetail = () => {
       setPaperPublishedConference(journalName);
       setAuthors(JSON.parse(authors).map((item) => item.name));
       setPaperDOI(doi);
-      setCitations(JSON.parse(citationList));
-      const referencePapers = await Promise.all(
-        JSON.parse(referenceList).map((refPaperId) => (async () => {
-          const { data: { paper } } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
-            params: { paperId: refPaperId },
-          });
-          return {
-            id: refPaperId,
-            ...paper,
-          };
-        })),
-      );
-      console.log(referencePapers);
-      setReferences(referencePapers);
+      setCitations(await Promise.all(
+        JSON.parse(citationList).map((citPaperId) => fetchPaper(citPaperId)),
+      ));
+      setReferences(await Promise.all(
+        JSON.parse(referenceList).map((refPaperId) => fetchPaper(refPaperId)),
+      ));
       setAbstract(abstract);
       setPaperTopics(JSON.parse(fieldList).map((item) => ({
         keyword: item,
@@ -167,7 +164,7 @@ const PaperDetail = () => {
         <div className={styles.topicSection}>
           <h3>Paper Topics</h3>
           {paperTopics && paperTopics.map((item) => (
-            <KeywordBadge key={item.keyword} keyword={item.keyword} highlight={item.highlight} />
+            <KeywordBadge key={`currentPaperTopic_${item.keyword}`} keyword={item.keyword} highlight={item.highlight} />
           ))}
         </div>
 
@@ -175,8 +172,8 @@ const PaperDetail = () => {
           <h3>PDFs</h3>
           <ul>
             {pdfUrls && pdfUrls.map((url) => (
-              <li>
-                <Button key={url} variant="link" className={styles.paperTitle} href={url} target="_blank">{url}</Button>
+              <li key={url}>
+                <Button variant="link" className={styles.paperTitle} href={url} target="_blank">{url}</Button>
               </li>
             ))}
           </ul>
@@ -185,15 +182,29 @@ const PaperDetail = () => {
         <div className={styles.relatedPapersSection}>
           <h3>References</h3>
           {
-            references && references.map((reference) => (
+            references && references.filter((reference) => reference).map((reference) => (
               <PaperListItem
                 key={reference.id}
                 title={reference.title}
                 date={reference.publicationYear}
                 authors={JSON.parse(reference.authors).map((item) => item.name)}
                 abstract={reference.abstract}
-                highlightKeywords={JSON.parse(reference.field_list).filter((item) => item === 'Computer Science')}
-                keywords={JSON.parse(reference.field_list).filter((item) => item !== 'Computer Science')}
+                highlightKeywords={JSON.parse(reference.fieldList).filter((item) => item === 'Computer Science')}
+                keywords={JSON.parse(reference.fieldList).filter((item) => item !== 'Computer Science')}
+              />
+            ))
+          }
+          <h3>Citations</h3>
+          {
+            citations && citations.filter((citation) => citation).map((citation) => (
+              <PaperListItem
+                key={citation.id}
+                title={citation.title}
+                date={citation.publicationYear}
+                authors={JSON.parse(citation.authors).map((item) => item.name)}
+                abstract={citation.abstract}
+                highlightKeywords={JSON.parse(citation.fieldList).filter((item) => item === 'Computer Science')}
+                keywords={JSON.parse(citation.fieldList).filter((item) => item !== 'Computer Science')}
               />
             ))
           }
