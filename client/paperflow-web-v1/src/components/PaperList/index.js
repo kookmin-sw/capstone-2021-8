@@ -5,9 +5,10 @@ const PaperList = ({
   papers,
 }) => (
   papers.map(({
-    paperId, title, date, authors, abstract, highlightKeywords, keywords,
+    id, paperId, title, date, authors, abstract, highlightKeywords, keywords,
   }) => (
     <PaperListItem
+      key={id}
       paperId={paperId}
       title={title}
       date={date}
