@@ -97,13 +97,15 @@ const PaperDetail = () => {
         publicationYear,
         venue,
         journalName,
+        journalVolume,
+        journalPages,
         doi,
       } = await fetchPaper(paperId);
 
       setPaperTitle(title);
       setPublishDate(publicationYear);
       setPaperPublisher(venue);
-      setPaperPublishedConference(journalName);
+      setPaperPublishedConference([journalName, journalVolume, journalPages].filter((str) => str).join(' • '));
       setAuthors(JSON.parse(authors).map((item) => item.name));
       setPaperDOI(doi);
       setCitations(await Promise.all(
