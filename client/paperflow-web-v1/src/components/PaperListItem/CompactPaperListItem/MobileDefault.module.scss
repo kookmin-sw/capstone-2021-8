@@ -3,26 +3,59 @@
 .paperListItem {
   margin-bottom: 10px;
 
-  .paperTitle {
-    font-weight: bold;
-    font-size: 26px;
-    text-align: left;
-    cursor: pointer;
-    padding-left: 0px;
-    color: black;
-  }
-  .basicInfo {
-    .publishDate {
-      font-weight: normal;
+  .paperListItemBody {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .paperTitle {
+      padding: 0px;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: left;
+      cursor: pointer;
+      padding-left: 0px;
+      color: #1857b6;
     }
-    .authors {
-      font-weight: normal;
-      color: gray;
+    .basicInfo {
+      margin-top: -5px;
+      .publishDate {
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .authors {
+        font-size: 14px;
+        font-weight: normal;
+        color: gray;
+      }
     }
-  }
-  .abstract {
-    font-size: 18px;
-  }
-  .keywordContainer {
+    .abstract {
+      font-size: 12px;
+      margin: 0px;
+    }
+    .keywordContainer {
+      ul {
+        padding: 0px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 500;
+
+        li {
+          list-style: none;
+          display: inline;
+        }
+        li:after {
+          color: black;
+          content: '\0020\00b7\0020';
+        }
+        li:last-child:after {
+          content: none;
+        }
+
+        .highlight {
+          color: #dc710f;
+        }
+      }
+    }
   }
 }
