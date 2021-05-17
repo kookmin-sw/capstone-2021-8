@@ -1,7 +1,306 @@
 [
-{"title": "Monthly_Top_First Subject", "type": "Pie", "data": [{"first_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 414}, {"first_theme_name": "Information Theory (cs.IT)", "frequency": 226}, {"first_theme_name": "Computation and Language (cs.CL)", "frequency": 193}, {"first_theme_name": "Machine Learning (cs.LG)", "frequency": 126}, {"first_theme_name": "Data Structures and Algorithms (cs.DS)", "frequency": 112}, {"first_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 93}, {"first_theme_name": "Networking and Internet Architecture (cs.NI)", "frequency": 73}, {"first_theme_name": "Distributed, Parallel, and Cluster Computing (cs.DC)", "frequency": 67}, {"first_theme_name": "Machine Learning (stat.ML)", "frequency": 67}, {"first_theme_name": "Systems and Control (eess.SY)", "frequency": 64}]},
-{"title": "Monthly_Top_Second Subject", "type": "HorizBar1D", "config": {"index": "second_theme_name", "key": "frequency", "color": "blue"}, "data": [{"second_theme_name": "Machine Learning (cs.LG)", "frequency": 216}, {"second_theme_name": "Machine Learning (stat.ML)", "frequency": 128}, {"second_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 111}, {"second_theme_name": "Information Theory (cs.IT)", "frequency": 51}, {"second_theme_name": "Neural and Evolutionary Computing (cs.NE)", "frequency": 50}, {"second_theme_name": "Social and Information Networks (cs.SI)", "frequency": 49}, {"second_theme_name": "Data Structures and Algorithms (cs.DS)", "frequency": 49}, {"second_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 46}, {"second_theme_name": "Computational Complexity (cs.CC)", "frequency": 39}, {"second_theme_name": "Discrete Mathematics (cs.DM)", "frequency": 35}]},
-{"title": "Monthly_Top_Relation", "type": "VertBar2D", "config": {"index": "primary_subject", "key": ["Social and Information Networks (cs.SI)", "Disordered Systems and Neural Networks (cond-mat.dis-nn)", "Statistical Mechanics (cond-mat.stat-mech)", "Machine Learning (cs.LG)", "Digital Libraries (cs.DL)"], "axis": "frequency"}, "data": [{"primary_subject": "Computer Vision and Pattern Recognition (cs.CV)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Data Structures and Algorithms (cs.DS)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Machine Learning (cs.LG)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Information Theory (cs.IT)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Artificial Intelligence (cs.AI)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Machine Learning (stat.ML)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Distributed, Parallel, and Cluster Computing (cs.DC)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Optimization and Control (math.OC)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Cryptography and Security (cs.CR)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}, {"primary_subject": "Physics and Society (physics.soc-ph)", "Social and Information Networks (cs.SI)": 17, "Digital Libraries (cs.DL)": 4, "Disordered Systems and Neural Networks (cond-mat.dis-nn)": 3, "Statistical Mechanics (cond-mat.stat-mech)": 2, "Machine Learning (cs.LG)": 2}]},
-{"title": "Monthly_Top_Author", "type": "HorizBar1D", "config": {"index": "author_name", "key": "frequency", "color": "blue"}, "data": {"Jifeng Xuan": 9, "He Jiang": 9, "Nhien-An Le-Khac": 9, "Parag S. Chandakkar": 8, "Baoxin Li": 8, "Ming Li": 7, "Fabio D'Andreagiovanni": 7, "Zhilei Ren": 7, "Jiaya Jia": 6, "Kuk-Jin Yoon": 6}},
-{"title": "Monthly_Top_Keyword", "type": "HorizBar1D", "config": {"index": "keyword", "key": "frequency", "color": "blue"}, "data": [{"keyword": "learning", "frequency": 85}, {"keyword": "networks", "frequency": 72}, {"keyword": "neural networks", "frequency": 59}, {"keyword": "convolutional neural", "frequency": 30}, {"keyword": "algorithms", "frequency": 28}, {"keyword": "reinforcement learning", "frequency": 27}, {"keyword": "graphs", "frequency": 26}, {"keyword": "neural network", "frequency": 26}, {"keyword": "data", "frequency": 24}, {"keyword": "network", "frequency": 24}]}
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Improved Training of Wasserstein GANs",
+        "citation": 3978
+      },
+      {
+        "title": "Neural Message Passing for Quantum Chemistry",
+        "citation": 1728
+      },
+      {
+        "title": "Get To The Point: Summarization with Pointer-Generator Networks",
+        "citation": 1613
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2017-01",
+        "frequency": 2036
+      },
+      {
+        "primary subject": "2017-02",
+        "frequency": 2209
+      },
+      {
+        "primary subject": "2017-03",
+        "frequency": 2714
+      },
+      {
+        "primary subject": "2017-04",
+        "frequency": 2284
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 414
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 226
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 193
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 126
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 112
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 93
+      },
+      {
+        "id": "Networking and Internet Architecture (cs.NI)",
+        "value": 73
+      },
+      {
+        "id": "Distributed, Parallel, and Cluster Computing (cs.DC)",
+        "value": 67
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 67
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 216
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 128
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 111
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 51
+      },
+      {
+        "id": "Neural and Evolutionary Computing (cs.NE)",
+        "value": 50
+      },
+      {
+        "id": "Social and Information Networks (cs.SI)",
+        "value": 49
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 49
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 46
+      },
+      {
+        "id": "Computational Complexity (cs.CC)",
+        "value": 39
+      },
+      {
+        "id": "Discrete Mathematics (cs.DM)",
+        "value": 35
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML",
+        "cs.NE",
+        "cs.MM",
+        "cs.CV",
+        "math.OC",
+        "cs.CL",
+        "math.ST",
+        "cs.IR",
+        "cs.CY",
+        "cs.RO",
+        "cs.MA"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 36,
+        "cs.AI": 21,
+        "stat.ML": 19,
+        "cs.NE": 9,
+        "cs.MM": 8
+      },
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 46,
+        "cs.AI": 13,
+        "cs.NE": 10,
+        "cs.CV": 8,
+        "math.OC": 6
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 60,
+        "cs.AI": 10,
+        "cs.CV": 7,
+        "cs.CL": 4,
+        "math.ST": 4
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.AI": 30,
+        "cs.LG": 26,
+        "stat.ML": 12,
+        "cs.NE": 9,
+        "cs.IR": 9
+      },
+      {
+        "primary_subject": "cs.AI",
+        "cs.LG": 17,
+        "stat.ML": 11,
+        "cs.CY": 7,
+        "cs.RO": 6,
+        "cs.MA": 5
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 128
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 29
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 27
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 27
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 24
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 23
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 22
+      },
+      {
+        "subject": "math.PR",
+        "frequency": 14
+      },
+      {
+        "subject": "math.ST",
+        "frequency": 12
+      },
+      {
+        "subject": "quant-ph",
+        "frequency": 10
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 49
+      },
+      {
+        "keyword": "convolutional neural",
+        "frequency": 24
+      },
+      {
+        "keyword": "convolutional neural networks",
+        "frequency": 22
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 20
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 19
+      },
+      {
+        "keyword": "machine translation",
+        "frequency": 17
+      },
+      {
+        "keyword": "network",
+        "frequency": 16
+      },
+      {
+        "keyword": "graphs",
+        "frequency": 16
+      },
+      {
+        "keyword": "analysis",
+        "frequency": 16
+      },
+      {
+        "keyword": "clustering",
+        "frequency": 15
+      }
+    ]
+  }
 ]

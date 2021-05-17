@@ -1,7 +1,310 @@
 [
-{"title": "Monthly_Top_First Subject", "type": "Pie", "data": [{"first_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 923}, {"first_theme_name": "Machine Learning (cs.LG)", "frequency": 857}, {"first_theme_name": "Computation and Language (cs.CL)", "frequency": 414}, {"first_theme_name": "Robotics (cs.RO)", "frequency": 404}, {"first_theme_name": "Numerical Analysis (math.NA)", "frequency": 233}, {"first_theme_name": "Systems and Control (eess.SY)", "frequency": 212}, {"first_theme_name": "Cryptography and Security (cs.CR)", "frequency": 186}, {"first_theme_name": "Information Theory (cs.IT)", "frequency": 169}, {"first_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 159}, {"first_theme_name": "Image and Video Processing (eess.IV)", "frequency": 150}]},
-{"title": "Monthly_Top_Second Subject", "type": "HorizBar1D", "config": {"index": "second_theme_name", "key": "frequency", "color": "blue"}, "data": [{"second_theme_name": "Machine Learning (cs.LG)", "frequency": 1057}, {"second_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 594}, {"second_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 361}, {"second_theme_name": "Machine Learning (stat.ML)", "frequency": 263}, {"second_theme_name": "Systems and Control (eess.SY)", "frequency": 180}, {"second_theme_name": "Optimization and Control (math.OC)", "frequency": 126}, {"second_theme_name": "Robotics (cs.RO)", "frequency": 123}, {"second_theme_name": "Signal Processing (eess.SP)", "frequency": 114}, {"second_theme_name": "Image and Video Processing (eess.IV)", "frequency": 107}, {"second_theme_name": "Audio and Speech Processing (eess.AS)", "frequency": 97}]},
-{"title": "Monthly_Top_Relation", "type": "VertBar2D", "config": {"index": "primary_subject", "key": ["Robotics (cs.RO)", "Computation and Language (cs.CL)", "Human-Computer Interaction (cs.HC)", "Computer Vision and Pattern Recognition (cs.CV)", "Machine Learning (cs.LG)"], "axis": "frequency"}, "data": [{"primary_subject": "Machine Learning (cs.LG)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Numerical Analysis (math.NA)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Cryptography and Security (cs.CR)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Computer Vision and Pattern Recognition (cs.CV)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Optimization and Control (math.OC)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Robotics (cs.RO)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Signal Processing (eess.SP)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Machine Learning (stat.ML)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Distributed, Parallel, and Cluster Computing (cs.DC)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}, {"primary_subject": "Artificial Intelligence (cs.AI)", "Machine Learning (cs.LG)": 40, "Robotics (cs.RO)": 9, "Computation and Language (cs.CL)": 8, "Computer Vision and Pattern Recognition (cs.CV)": 7, "Human-Computer Interaction (cs.HC)": 6}]},
-{"title": "Monthly_Top_Author", "type": "HorizBar1D", "config": {"index": "author_name", "key": "frequency", "color": "blue"}, "data": {"A. Leitao": 17, "Lei Xie": 13, "Yang Liu": 12, "Chunhua Shen": 11, "Dimos V. Dimarogonas": 11, "Uwe Aickelin": 10, "Aaron D. Ames": 10, "Rui Zhang": 9, "Wei Chen": 9, "Yu Zhang": 8}},
-{"title": "Monthly_Top_Keyword", "type": "HorizBar1D", "config": {"index": "keyword", "key": "frequency", "color": "blue"}, "data": [{"keyword": "learning", "frequency": 243}, {"keyword": "neural networks", "frequency": 204}, {"keyword": "deep learning", "frequency": 176}, {"keyword": "reinforcement learning", "frequency": 176}, {"keyword": "networks", "frequency": 88}, {"keyword": "machine learning", "frequency": 87}, {"keyword": "neural network", "frequency": 82}, {"keyword": "deep reinforcement learning", "frequency": 67}, {"keyword": "detection", "frequency": 58}, {"keyword": "object detection", "frequency": 54}]}
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Exploring Simple Siamese Representation Learning",
+        "citation": 36
+      },
+      {
+        "title": "ActBERT: Learning Global-Local Video-Text Representations",
+        "citation": 22
+      },
+      {
+        "title": "Fighting an Infodemic: COVID-19 Fake News Dataset",
+        "citation": 21
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2020-08",
+        "frequency": 5272
+      },
+      {
+        "primary subject": "2020-09",
+        "frequency": 5361
+      },
+      {
+        "primary subject": "2020-10",
+        "frequency": 6307
+      },
+      {
+        "primary subject": "2020-11",
+        "frequency": 5537
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 923
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 857
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 414
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 404
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 233
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 212
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 186
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 169
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 159
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 150
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 1057
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 594
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 361
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 263
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 180
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 126
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 123
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 114
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 107
+      },
+      {
+        "id": "Audio and Speech Processing (eess.AS)",
+        "value": 97
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "cs.AI",
+        "stat.ML",
+        "cs.CV",
+        "cs.CR",
+        "cs.NE",
+        "cs.LG",
+        "eess.IV",
+        "cs.RO",
+        "cs.GR",
+        "eess.SY",
+        "cs.MA",
+        "cs.IR",
+        "eess.AS",
+        "cs.SD",
+        "eess.SP",
+        "physics.med-ph",
+        "q-bio.QM"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "cs.AI": 199,
+        "stat.ML": 191,
+        "cs.CV": 95,
+        "cs.CR": 43,
+        "cs.NE": 39
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 234,
+        "cs.AI": 104,
+        "eess.IV": 76,
+        "cs.RO": 55,
+        "cs.GR": 23
+      },
+      {
+        "primary_subject": "cs.RO",
+        "cs.AI": 80,
+        "cs.LG": 75,
+        "cs.CV": 48,
+        "eess.SY": 48,
+        "cs.MA": 19
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.LG": 101,
+        "cs.AI": 82,
+        "cs.IR": 18,
+        "eess.AS": 17,
+        "cs.SD": 15
+      },
+      {
+        "primary_subject": "eess.IV",
+        "cs.CV": 144,
+        "cs.LG": 44,
+        "eess.SP": 3,
+        "physics.med-ph": 2,
+        "q-bio.QM": 2
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 263
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 180
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 126
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 114
+      },
+      {
+        "subject": "eess.IV",
+        "frequency": 107
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 97
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 78
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 73
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 46
+      },
+      {
+        "subject": "stat.AP",
+        "frequency": 37
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 152
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 129
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 124
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 64
+      },
+      {
+        "keyword": "deep reinforcement learning",
+        "frequency": 43
+      },
+      {
+        "keyword": "object detection",
+        "frequency": 37
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 36
+      },
+      {
+        "keyword": "federated learning",
+        "frequency": 34
+      },
+      {
+        "keyword": "systems",
+        "frequency": 33
+      },
+      {
+        "keyword": "representation learning",
+        "frequency": 33
+      }
+    ]
+  }
 ]

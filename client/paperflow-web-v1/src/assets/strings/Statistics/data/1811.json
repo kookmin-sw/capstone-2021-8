@@ -1,7 +1,313 @@
 [
-{"title": "Monthly_Top_First Subject", "type": "Pie", "data": [{"first_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 860}, {"first_theme_name": "Machine Learning (cs.LG)", "frequency": 629}, {"first_theme_name": "Computation and Language (cs.CL)", "frequency": 320}, {"first_theme_name": "Cryptography and Security (cs.CR)", "frequency": 167}, {"first_theme_name": "Information Theory (cs.IT)", "frequency": 166}, {"first_theme_name": "Data Structures and Algorithms (cs.DS)", "frequency": 142}, {"first_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 139}, {"first_theme_name": "Machine Learning (stat.ML)", "frequency": 138}, {"first_theme_name": "Robotics (cs.RO)", "frequency": 106}, {"first_theme_name": "Systems and Control (eess.SY)", "frequency": 93}]},
-{"title": "Monthly_Top_Second Subject", "type": "HorizBar1D", "config": {"index": "second_theme_name", "key": "frequency", "color": "blue"}, "data": [{"second_theme_name": "Machine Learning (stat.ML)", "frequency": 794}, {"second_theme_name": "Machine Learning (cs.LG)", "frequency": 685}, {"second_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 327}, {"second_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 120}, {"second_theme_name": "Audio and Speech Processing (eess.AS)", "frequency": 107}, {"second_theme_name": "Computation and Language (cs.CL)", "frequency": 106}, {"second_theme_name": "Sound (cs.SD)", "frequency": 88}, {"second_theme_name": "Cryptography and Security (cs.CR)", "frequency": 83}, {"second_theme_name": "Neural and Evolutionary Computing (cs.NE)", "frequency": 64}, {"second_theme_name": "Signal Processing (eess.SP)", "frequency": 63}]},
-{"title": "Monthly_Top_Relation", "type": "VertBar2D", "config": {"index": "primary_subject", "key": ["Distributed", "Computational Complexity (cs.CC)", "Machine Learning (stat.ML)", "Machine Learning (cs.LG)", "Systems and Control (eess.SY)"], "axis": "frequency"}, "data": [{"primary_subject": "Machine Learning (cs.LG)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Computer Vision and Pattern Recognition (cs.CV)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Machine Learning (stat.ML)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Cryptography and Security (cs.CR)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Data Structures and Algorithms (cs.DS)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Computation and Language (cs.CL)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Artificial Intelligence (cs.AI)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Social and Information Networks (cs.SI)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Information Theory (cs.IT)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}, {"primary_subject": "Optimization and Control (math.OC)", "Systems and Control (eess.SY)": 12, "Machine Learning (cs.LG)": 12, "Machine Learning (stat.ML)": 5, "Distributed": 4, "Computational Complexity (cs.CC)": 4}]},
-{"title": "Monthly_Top_Author", "type": "HorizBar1D", "config": {"index": "author_name", "key": "frequency", "color": "blue"}, "data": {"Giovanni Abramo": 29, "Ciriaco Andrea D'Angelo": 27, "Xiaojiang Du": 15, "Shinji Watanabe": 13, "Felix G. Hamza-Lup": 11, "Philip S. Yu": 11, "Dogancan Temel": 11, "Ghassan AlRegib": 11, "Sajjad Arshad": 10, "William Yang Wang": 9}},
-{"title": "Monthly_Top_Keyword", "type": "HorizBar1D", "config": {"index": "keyword", "key": "frequency", "color": "blue"}, "data": [{"keyword": "neural networks", "frequency": 216}, {"keyword": "learning", "frequency": 184}, {"keyword": "deep learning", "frequency": 126}, {"keyword": "networks", "frequency": 109}, {"keyword": "reinforcement learning", "frequency": 96}, {"keyword": "neural network", "frequency": 79}, {"keyword": "convolutional neural", "frequency": 59}, {"keyword": "convolutional neural networks", "frequency": 59}, {"keyword": "machine learning", "frequency": 59}, {"keyword": "deep neural networks", "frequency": 57}]}
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Federated Learning for Mobile Keyboard Prediction",
+        "citation": 252
+      },
+      {
+        "title": "An Introduction to Deep Reinforcement Learning",
+        "citation": 235
+      },
+      {
+        "title": "An Algorithmic Perspective on Imitation Learning",
+        "citation": 212
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2018-08",
+        "frequency": 3048
+      },
+      {
+        "primary subject": "2018-09",
+        "frequency": 3403
+      },
+      {
+        "primary subject": "2018-10",
+        "frequency": 3927
+      },
+      {
+        "primary subject": "2018-11",
+        "frequency": 4153
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 865
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 633
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 323
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 170
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 168
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 143
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 140
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 139
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 109
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 93
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 801
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 694
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 328
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 121
+      },
+      {
+        "id": "Audio and Speech Processing (eess.AS)",
+        "value": 111
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 106
+      },
+      {
+        "id": "Sound (cs.SD)",
+        "value": 90
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 85
+      },
+      {
+        "id": "Neural and Evolutionary Computing (cs.NE)",
+        "value": 64
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 63
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "cs.CR",
+        "cs.NE",
+        "cs.LG",
+        "cs.RO",
+        "cs.GR",
+        "eess.AS",
+        "cs.SD",
+        "stat.ME",
+        "math.ST",
+        "Data Analysis",
+        "cs.CL",
+        "cs.CY",
+        "cs.LO"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 583,
+        "cs.AI": 137,
+        "cs.CV": 58,
+        "cs.CR": 42,
+        "cs.NE": 21
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 137,
+        "stat.ML": 49,
+        "cs.AI": 46,
+        "cs.RO": 22,
+        "cs.GR": 16
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.LG": 79,
+        "cs.AI": 57,
+        "eess.AS": 22,
+        "stat.ML": 21,
+        "cs.SD": 19
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 140,
+        "cs.AI": 8,
+        "stat.ME": 7,
+        "math.ST": 4,
+        "Data Analysis": 3
+      },
+      {
+        "primary_subject": "cs.AI",
+        "cs.LG": 23,
+        "cs.CL": 20,
+        "cs.RO": 6,
+        "cs.CY": 6,
+        "cs.LO": 5
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 801
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 111
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 63
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 57
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 50
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 45
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 30
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 26
+      },
+      {
+        "subject": "q-bio.NC",
+        "frequency": 24
+      },
+      {
+        "subject": "math.DS",
+        "frequency": 19
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 145
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 88
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 69
+      },
+      {
+        "keyword": "convolutional neural",
+        "frequency": 43
+      },
+      {
+        "keyword": "convolutional neural networks",
+        "frequency": 43
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 43
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 43
+      },
+      {
+        "keyword": "deep",
+        "frequency": 36
+      },
+      {
+        "keyword": "deep neural",
+        "frequency": 34
+      },
+      {
+        "keyword": "analysis",
+        "frequency": 32
+      },
+      {
+        "keyword": "model",
+        "frequency": 31
+      }
+    ]
+  }
 ]

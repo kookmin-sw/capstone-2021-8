@@ -1,166 +1,308 @@
 [
   {
-    "title": "Monthly_Top_First Subject",
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "citation": 26
+      },
+      {
+        "title": "On cumulative residual (past) inaccuracy for truncated random variables",
+        "citation": 19
+      },
+      {
+        "title": "Pushing the Limits of Capsule Networks",
+        "citation": 16
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2020-12",
+        "frequency": 5743
+      },
+      {
+        "primary subject": "2021-01",
+        "frequency": 4610
+      },
+      {
+        "primary subject": "2021-02",
+        "frequency": 5308
+      },
+      {
+        "primary subject": "2021-03",
+        "frequency": 6523
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
     "type": "Pie",
     "data": [
-      { "id": "Computer Vision and Pattern Recognition (cs.CV)", "value": 1297 },
-      { "id": "Machine Learning (cs.LG)", "value": 913 },
-      { "id": "Robotics (cs.RO)", "value": 427 },
-      { "id": "Computation and Language (cs.CL)", "value": 378 },
-      { "id": "Software Engineering (cs.SE)", "value": 299 },
-      { "id": "Systems and Control (eess.SY)", "value": 277 },
-      { "id": "Numerical Analysis (math.NA)", "value": 277 },
-      { "id": "Cryptography and Security (cs.CR)", "value": 245 },
-      { "id": "Information Theory (cs.IT)", "value": 203 },
-      { "id": "Artificial Intelligence (cs.AI)", "value": 165 }
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 1297
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 913
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 427
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 378
+      },
+      {
+        "id": "Software Engineering (cs.SE)",
+        "value": 299
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 277
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 277
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 245
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 203
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 165
+      }
     ]
   },
   {
-    "title": "Monthly_Top_Second Subject",
-    "type": "HorizBar1D",
-    "config": { "index": "second_theme_name", "key": "frequency", "color": "blue" },
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
     "data": [
-      { "second_theme_name": "Machine Learning (cs.LG)", "frequency": 1050 },
-      { "second_theme_name": "Artificial Intelligence (cs.AI)", "frequency": 732 },
-      { "second_theme_name": "Computer Vision and Pattern Recognition (cs.CV)", "frequency": 375 },
-      { "second_theme_name": "Systems and Control (eess.SY)", "frequency": 247 },
-      { "second_theme_name": "Machine Learning (stat.ML)", "frequency": 234 },
-      { "second_theme_name": "Robotics (cs.RO)", "frequency": 154 },
-      { "second_theme_name": "Optimization and Control (math.OC)", "frequency": 134 },
-      { "second_theme_name": "Image and Video Processing (eess.IV)", "frequency": 119 },
-      { "second_theme_name": "Signal Processing (eess.SP)", "frequency": 111 },
-      { "second_theme_name": "Cryptography and Security (cs.CR)", "frequency": 108 }
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 1051
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 732
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 375
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 247
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 234
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 154
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 134
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 119
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 111
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 108
+      }
     ]
   },
   {
-    "title": "Monthly_Top_Relation",
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
     "type": "VertBar2D",
     "config": {
       "index": "primary_subject",
       "key": [
-        "Robotics (cs.RO)",
-        "Computer Science and Game Theory (cs.GT)",
-        "Multiagent Systems (cs.MA)",
-        "Optimization and Control (math.OC)",
-        "Machine Learning (cs.LG)"
+        "cs.AI",
+        "stat.ML",
+        "cs.CV",
+        "math.OC",
+        "cs.CR",
+        "cs.LG",
+        "eess.IV",
+        "cs.RO",
+        "cs.GR",
+        "eess.SY",
+        "cs.MA",
+        "cs.HC",
+        "eess.AS",
+        "cs.SI",
+        "cs.MM"
       ],
       "axis": "frequency"
     },
     "data": [
       {
-        "primary_subject": "Machine Learning (cs.LG)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
+        "primary_subject": "cs.LG",
+        "cs.AI": 235,
+        "stat.ML": 155,
+        "cs.CV": 106,
+        "math.OC": 51,
+        "cs.CR": 42
       },
       {
-        "primary_subject": "Machine Learning (stat.ML)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
+        "primary_subject": "cs.CV",
+        "cs.LG": 252,
+        "cs.AI": 175,
+        "eess.IV": 91,
+        "cs.RO": 78,
+        "cs.GR": 34
       },
       {
-        "primary_subject": "Numerical Analysis (math.NA)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
+        "primary_subject": "cs.RO",
+        "cs.AI": 67,
+        "eess.SY": 66,
+        "cs.LG": 56,
+        "cs.CV": 45,
+        "cs.MA": 18
       },
       {
-        "primary_subject": "Computer Vision and Pattern Recognition (cs.CV)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
+        "primary_subject": "cs.CL",
+        "cs.AI": 90,
+        "cs.LG": 89,
+        "cs.HC": 12,
+        "eess.AS": 7,
+        "cs.SI": 6
       },
       {
-        "primary_subject": "Distributed, Parallel, and Cluster Computing (cs.DC)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
-      },
-      {
-        "primary_subject": "Cryptography and Security (cs.CR)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
-      },
-      {
-        "primary_subject": "Optimization and Control (math.OC)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
-      },
-      {
-        "primary_subject": "Artificial Intelligence (cs.AI)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
-      },
-      {
-        "primary_subject": "Social and Information Networks (cs.SI)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
-      },
-      {
-        "primary_subject": "Systems and Control (eess.SY)",
-        "Optimization and Control (math.OC)": 32,
-        "Machine Learning (cs.LG)": 21,
-        "Robotics (cs.RO)": 14,
-        "Computer Science and Game Theory (cs.GT)": 10,
-        "Multiagent Systems (cs.MA)": 6
+        "primary_subject": "eess.IV",
+        "cs.CV": 152,
+        "cs.LG": 68,
+        "cs.AI": 5,
+        "cs.MM": 5,
+        "stat.ML": 4
       }
     ]
   },
   {
-    "title": "Monthly_Top_Author",
-    "type": "HorizBar1D",
-    "config": { "index": "author_name", "key": "frequency", "color": "blue" },
-    "data": {
-      "Jun Wang": 14,
-      "Yang Liu": 13,
-      "Erkan Kayacan": 12,
-      "Lei Zhang": 11,
-      "Mark Stamp": 11,
-      "Hao Chen": 10,
-      "Nassir Navab": 10,
-      "Stephen G. MacDonell": 10,
-      "Yu Wang": 10,
-      "Chang Liu": 10
-    }
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "eess.SY",
+        "frequency": 247
+      },
+      {
+        "subject": "stat.ML",
+        "frequency": 234
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 134
+      },
+      {
+        "subject": "eess.IV",
+        "frequency": 119
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 111
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 91
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 86
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 63
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 41
+      },
+      {
+        "subject": "stat.AP",
+        "frequency": 39
+      }
+    ]
   },
   {
-    "title": "Monthly_Top_Keyword",
-    "type": "HorizBar1D",
-    "config": { "index": "keyword", "key": "frequency", "color": "blue" },
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
     "data": [
-      { "keyword": "learning", "frequency": 232 },
-      { "keyword": "neural networks", "frequency": 201 },
-      { "keyword": "reinforcement learning", "frequency": 160 },
-      { "keyword": "deep learning", "frequency": 131 },
-      { "keyword": "machine learning", "frequency": 99 },
-      { "keyword": "systems", "frequency": 83 },
-      { "keyword": "neural network", "frequency": 77 },
-      { "keyword": "networks", "frequency": 73 },
-      { "keyword": "domain adaptation", "frequency": 67 },
-      { "keyword": "detection", "frequency": 65 }
+      {
+        "keyword": "neural networks",
+        "frequency": 150
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 124
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 103
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 75
+      },
+      {
+        "keyword": "systems",
+        "frequency": 56
+      },
+      {
+        "keyword": "object detection",
+        "frequency": 52
+      },
+      {
+        "keyword": "representation learning",
+        "frequency": 47
+      },
+      {
+        "keyword": "domain adaptation",
+        "frequency": 44
+      },
+      {
+        "keyword": "semantic segmentation",
+        "frequency": 43
+      },
+      {
+        "keyword": "deep reinforcement learning",
+        "frequency": 40
+      }
     ]
   }
 ]
