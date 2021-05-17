@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {
   Form,
+  ButtonGroup,
+  Button,
 } from 'react-bootstrap';
 import axios from 'axios';
 import useRootData from '../../hooks/useRootData';
@@ -21,19 +23,31 @@ const Search = () => {
   }));
   const isDesktop = screenClass === 'xl';
 
-  // eslint-disable-next-line no-unused-vars
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
+
+  const paginationSize = 10;
+  const paginationRadius = isDesktop ? 5 : 2;
 
   const { search } = parseQueryString();
   const [searchKeyword, setSearchKeyword] = useState('');
+  const [fromIndex, setFromIndex] = useState(0);
   const [searchedPapers, setSearchedPapers] = useState([]);
+  const [totalPapers, setTotalPapers] = useState(0);
+  const [searchTook, setSearchTook] = useState(0);
+
+  const pagination = (pageNum) => {
+    setFromIndex((pageNum - 1) * paginationSize);
+    window.scrollTo(0, 0);
+  };
 
   const searchHandler = async () => {
     try {
-      const { data: { papers } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
-        params: { searchKeyword },
+      const { data: { papers, total, took } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
+        params: { searchKeyword, from: fromIndex, size: paginationSize },
       });
       setSearchedPapers(papers);
+      setTotalPapers(total);
+      setSearchTook(took);
     } catch (err) {
       changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
     }
@@ -45,7 +59,7 @@ const Search = () => {
 
   useEffect(() => {
     searchHandler();
-  }, [searchKeyword]);
+  }, [searchKeyword, fromIndex]);
 
   return (
     <DefaultLayout>
@@ -67,6 +81,9 @@ const Search = () => {
         </Form.Text>
       </Form.Group>
       <hr />
+      <div className={styles.searchResultSummary}>검색 결과: {totalPapers.toLocaleString()}개
+        ({searchTook / 1000} 초)
+      </div>
       {
         searchedPapers.map(({
           paper_id: paperId, title, publication_year: publicationYear,
@@ -84,6 +101,29 @@ const Search = () => {
           />
         ))
       }
+
+      <div className={styles.paginationButtons}>
+        <ButtonGroup size="md" className="mb-2">
+          {Math.floor(1 + fromIndex / paginationSize) !== 1 && (
+          <Button onClick={() => pagination(1)}>처음
+          </Button>
+          )}
+          {!!totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+            .map((_, index) => (_ - paginationRadius + index))
+            .filter((pageNum) => pageNum > 0)
+            .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
+          <Button variant="secondary">{Math.floor(1 + fromIndex / paginationSize)}</Button>
+          {!!totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+            .map((_, index) => (_ + index + 1))
+            .filter((pageNum) => pageNum <= Math.floor(1 + totalPapers / paginationSize))
+            .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
+          {Math.floor(1 + fromIndex / paginationSize)
+          !== Math.floor(1 + totalPapers / paginationSize) && (
+          <Button onClick={() => pagination(Math.floor(1 + totalPapers / paginationSize))}>마지막
+          </Button>
+          )}
+        </ButtonGroup>
+      </div>
 
     </DefaultLayout>
   );
