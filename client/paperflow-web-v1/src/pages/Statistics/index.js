@@ -168,16 +168,16 @@ const Statictics = () => {
                   </div>
                   {data.data.map((paper, idx) => (
                     <div key={paper.title}>
-                      <span key={paper.title} className={styles.paperIndex}>
+                      <span className={styles.paperIndex}>
                         {idx + 1}.
                       </span>
-                      <span key={paper.title} className={styles.paperTitle}>
+                      <span className={styles.paperTitle}>
                         {paper.title}
                       </span>
-                      <span key={paper.title} className={styles.paperCitationTitle}>
+                      <span className={styles.paperCitationTitle}>
                         citation:
                       </span>
-                      <span key={paper.title} className={styles.paperCitation}>
+                      <span className={styles.paperCitation}>
                         {paper.citation}
                       </span>
                     </div>
