@@ -44,9 +44,7 @@ const PaperDetail = () => {
       params: { paperId: id },
     });
 
-    if (data.error) {
-      return null;
-    }
+    if (data.error) { return; }
 
     console.log(data.paperflow);
   };
