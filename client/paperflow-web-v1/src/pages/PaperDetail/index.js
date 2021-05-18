@@ -10,6 +10,7 @@ import stylesMobileDefault from './MobileDefault.module.scss';
 import KeywordBadge from '../../components/KeywordBadge';
 import PaperList from '../../components/PaperList';
 import TimeLine from '../../components/TimeLine';
+import PaperListItem from '../../components/PaperListItem';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import {
   parseQueryString,
@@ -49,9 +50,9 @@ const PaperDetail = () => {
 
     if (data.error) { return; }
 
-    setPaperflowArray(data.paperflow);
-
     console.log(data.paperflow);
+
+    setPaperflowArray(data.paperflow);
   };
 
   const fetchPaper = async (id) => {
@@ -241,8 +242,25 @@ const PaperDetail = () => {
               />
             )
           }
-          <h3>PaperFlow</h3>
-          <TimeLine timeLineElements={} />
+          <h3>Paper Flow</h3>
+          {paperflowArray && (
+          <TimeLine timeLineElements={paperflowArray.map((paperflow) => ({
+            date: paperflow.publication_year,
+            content: (
+              <PaperListItem
+                paperId={paperflow.paper_id}
+                title={paperflow.title}
+                date={paperflow.publication_year}
+                authors={JSON.parse(paperflow.authors).map((item) => item.name)}
+                abstract={paperflow.abstract}
+                highlightKeywords={JSON.parse(paperflow.field_list).filter((item) => item === 'Computer Science')}
+                keywords={JSON.parse(paperflow.field_list).filter((item) => item !== 'Computer Science')}
+                compact
+              />
+            ),
+          }))}
+          />
+          )}
         </div>
       </div>
 
