@@ -203,6 +203,7 @@ const PaperDetail = () => {
                 paperflowArray.map((paperflow) => ({
                   key: paperflow.paper_id,
                   date: paperflow.publication_year,
+                  sim: paperflow.sim,
                   content: (
                     <PaperListItem
                       paperId={paperflow.paper_id}
