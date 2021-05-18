@@ -27,7 +27,7 @@ const PaperDetail = () => {
 
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
-  const { id: paperId } = parseQueryString();
+  const { id } = parseQueryString();
 
   const [paperTitle, setPaperTitle] = useState('');
   const [publishDate, setPublishDate] = useState('');
@@ -43,9 +43,9 @@ const PaperDetail = () => {
 
   const [paperflowArray, setPaperflowArray] = useState(null);
 
-  const fetchPaperFlow = async (id) => {
+  const fetchPaperFlow = async (paperId) => {
     const { data } = await axios.get(`${config.backendEndPoint}/backend/paper-flow`, {
-      params: { paperId: id },
+      params: { paperId },
     });
 
     if (data.error) { return; }
@@ -53,9 +53,9 @@ const PaperDetail = () => {
     setPaperflowArray(data.paperflow);
   };
 
-  const fetchPaper = async (id) => {
+  const fetchPaper = async (paperId) => {
     const { data } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
-      params: { paperId: id },
+      params: { paperId },
     });
 
     if (data.error) {
@@ -80,7 +80,7 @@ const PaperDetail = () => {
     } = data.paper;
 
     return {
-      id,
+      paperId,
       title,
       abstract,
       pdfUrls,
@@ -114,9 +114,9 @@ const PaperDetail = () => {
         journalVolume,
         journalPages,
         doi,
-      } = await fetchPaper(paperId);
+      } = await fetchPaper(id);
 
-      fetchPaperFlow(paperId);
+      fetchPaperFlow(id);
 
       setPaperTitle(title);
       setPublishDate(publicationYear);
@@ -204,10 +204,10 @@ const PaperDetail = () => {
             && (
               <PaperList
                 papers={references.filter((reference) => reference).map(({
-                  id, title, publicationYear, authors, abstract, fieldList,
+                  paperId, title, publicationYear, authors, abstract, fieldList,
                 }) => (
                   {
-                    id,
+                    paperId,
                     title,
                     date: publicationYear,
                     authors: JSON.parse(authors).map((item) => item.name),
@@ -225,10 +225,10 @@ const PaperDetail = () => {
             citations && (
               <PaperList
                 papers={citations.filter((citation) => citation).map(({
-                  id, title, publicationYear, authors, abstract, fieldList,
+                  paperId, title, publicationYear, authors, abstract, fieldList,
                 }) => (
                   {
-                    id,
+                    paperId,
                     title,
                     date: publicationYear,
                     authors: JSON.parse(authors).map((item) => item.name),
