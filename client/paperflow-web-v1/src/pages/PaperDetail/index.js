@@ -14,6 +14,7 @@ import PaperListItem from '../../components/PaperListItem';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import {
   parseQueryString,
+  fetchPaper,
 } from '../../utils/utility';
 import config from '../../config';
 
@@ -53,51 +54,6 @@ const PaperDetail = () => {
     setPaperflowArray(data.paperflow);
   };
 
-  const fetchPaper = async (paperId) => {
-    const { data } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
-      params: { paperId },
-    });
-
-    if (data.error) {
-      return null;
-    }
-
-    const {
-      title,
-      abstract,
-      pdf_urls: pdfUrls,
-      authors,
-      citation_list: citationList,
-      reference_list: referenceList,
-      field_list: fieldList,
-      publication_year: publicationYear,
-      venue,
-      journal_name: journalName,
-      journal_volume: journalVolume,
-      journal_pages: journalPages,
-      doi,
-      mag_id: magId,
-    } = data.paper;
-
-    return {
-      paperId,
-      title,
-      abstract,
-      pdfUrls,
-      authors,
-      citationList,
-      referenceList,
-      fieldList,
-      publicationYear,
-      venue,
-      journalName,
-      journalVolume,
-      journalPages,
-      doi,
-      magId,
-    };
-  };
-
   const retrievePaperInfo = async () => {
     try {
       const {
@@ -122,20 +78,16 @@ const PaperDetail = () => {
       setPublishDate(publicationYear);
       setPaperPublisher(venue);
       setPaperPublishedConference([journalName, journalVolume, journalPages].filter((str) => str).join(' • '));
-      setAuthors(JSON.parse(authors).map((item) => item.name));
+      setAuthors(authors.map((item) => item.name));
       setPaperDOI(doi);
-      setCitations(await Promise.all(
-        JSON.parse(citationList).map((citPaperId) => fetchPaper(citPaperId)),
-      ));
-      setReferences(await Promise.all(
-        JSON.parse(referenceList).map((refPaperId) => fetchPaper(refPaperId)),
-      ));
+      setCitations(citationList);
+      setReferences(referenceList);
       setAbstract(abstract);
-      setPaperTopics(JSON.parse(fieldList).map((item) => ({
+      setPaperTopics(fieldList.map((item) => ({
         keyword: item,
         highlight: item === 'Computer Science',
       })));
-      setPdfUrls(JSON.parse(pdfUrls));
+      setPdfUrls(pdfUrls);
     } catch (err) {
       changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
     }
@@ -224,42 +176,14 @@ const PaperDetail = () => {
           <p>Computer Science 분야가 포함된 논문만 보여집니다.</p>
           {
             references && (
-              <PaperList
-                papers={references.filter((reference) => reference).map(({
-                  paperId, title, publicationYear, authors, abstract, fieldList,
-                }) => (
-                  {
-                    paperId,
-                    title,
-                    date: publicationYear,
-                    authors: JSON.parse(authors).map((item) => item.name),
-                    abstract,
-                    highlightKeywords: JSON.parse(fieldList).filter((item) => item === 'Computer Science'),
-                    keywords: JSON.parse(fieldList).filter((item) => item !== 'Computer Science'),
-                  }
-                ))}
-              />
+              <PaperList paperIds={references} />
             )
           }
           <h3>Citations</h3>
           <p>Computer Science 분야가 포함된 논문만 보여집니다.</p>
           {
             citations && (
-              <PaperList
-                papers={citations.filter((citation) => citation).map(({
-                  paperId, title, publicationYear, authors, abstract, fieldList,
-                }) => (
-                  {
-                    paperId,
-                    title,
-                    date: publicationYear,
-                    authors: JSON.parse(authors).map((item) => item.name),
-                    abstract,
-                    highlightKeywords: JSON.parse(fieldList).filter((item) => item === 'Computer Science'),
-                    keywords: JSON.parse(fieldList).filter((item) => item !== 'Computer Science'),
-                  }
-                ))}
-              />
+              <PaperList paperIds={citations} />
             )
           }
         </div>
