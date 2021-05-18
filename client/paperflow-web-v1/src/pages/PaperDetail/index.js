@@ -116,12 +116,14 @@ const PaperDetail = () => {
           DOI: {paperDOI}
         </p>
 
-        {pdfUrls && pdfUrls.map((url) => (
-          <Button key={url} variant="primary" size="sm" href={url} target="_blank">
-            {(new URL(url)).hostname}
-            {' '}<Icon.BoxArrowInUpRight />
-          </Button>
-        ))}
+        <div className={styles.pdfUrlsSection}>
+          {pdfUrls && pdfUrls.map((url) => (
+            <Button key={url} className={styles.pdfUrlButton} variant="primary" size="sm" href={url} target="_blank">
+              {(new URL(url)).hostname}
+              {' '}<Icon.BoxArrowInUpRight />
+            </Button>
+          ))}
+        </div>
 
         <div className={styles.infoWithIconSection}>
           <div className={styles.infoWithIcon}>
