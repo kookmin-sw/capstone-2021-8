@@ -50,8 +50,6 @@ const PaperDetail = () => {
 
     if (data.error) { return; }
 
-    console.log(data.paperflow);
-
     setPaperflowArray(data.paperflow);
   };
 
