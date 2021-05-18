@@ -16,10 +16,13 @@ const PaperList = ({
   const fetchPageSizePapers = async () => {
     setFetchedPapers([
       ...fetchedPapers,
-      ...await Promise.all(
+      ...(await Promise.all(
         paperIds.slice(currentPageSize - pageSize, currentPageSize)
-          .map((paperId) => fetchPaper(paperId)),
-      ),
+          .map((paperId) => (async () => ({
+            paperId,
+            fetchedPaper: await fetchPaper(paperId),
+          }))()),
+      )),
     ]);
   };
 
@@ -30,10 +33,11 @@ const PaperList = ({
   return (
     <div style={{ marginBottom: '20px' }}>
       {
-        fetchedPapers && fetchedPapers.map((paper) => {
-          if (!paper) {
+        fetchedPapers && fetchedPapers.map(({ paperId, fetchedPaper }) => {
+          if (!fetchedPaper) {
             return (
               <div
+                key={paperId}
                 style={{ marginBottom: '10px' }}
               >
                 <BlankListItem content="Computer Science 분야의 논문이 아닙니다!" />
@@ -42,8 +46,8 @@ const PaperList = ({
           }
 
           const {
-            paperId, title, date, authors, abstract, highlightKeywords, keywords,
-          } = paper;
+            title, date, authors, abstract, highlightKeywords, keywords,
+          } = fetchedPaper;
 
           return (
             <div
