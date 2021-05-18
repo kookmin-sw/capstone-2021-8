@@ -32,7 +32,7 @@ def getJaccardSimilarity(corpus1, corpus2):
     return 0
 
 
-def getPaperFlow_(currentPaper, rem):
+def getPastPaperFlow_(currentPaper, rem):
     if rem <= 0:
         return []
 
@@ -52,7 +52,35 @@ def getPaperFlow_(currentPaper, rem):
     if selectedPaperIndex == -1:
         return []
 
-    return getPaperFlow_(refPapers[selectedPaperIndex], rem - 1) + [{'sim': selectedSim, **PaperInfoSerializer(refPapers[selectedPaperIndex]).data}]
+    return getPastPaperFlow_(refPapers[selectedPaperIndex], rem - 1) + [{'sim': selectedSim, **PaperInfoSerializer(refPapers[selectedPaperIndex]).data}]
+
+
+def getFuturePaperFlow_(currentPaper, rem):
+    if rem <= 0:
+        return []
+
+    citPaperIds = json.loads(currentPaper.citation_list)
+
+    citPapers = PaperInfo.objects.filter(paper_id__in=citPaperIds)
+
+    selectedPaperIndex, selectedSim = -1, 0
+
+    for idx, refPaper in enumerate(citPapers):
+        sim = getJaccardSimilarity(currentPaper.abstract, refPaper.abstract)
+
+        if selectedPaperIndex == -1 or sim > selectedSim:
+            selectedPaperIndex = idx
+            selectedSim = sim
+
+    if selectedPaperIndex == -1:
+        return []
+
+    return [{'sim': selectedSim, **PaperInfoSerializer(citPapers[selectedPaperIndex]).data}] + getFuturePaperFlow_(citPapers[selectedPaperIndex], rem - 1)
+
+
+def getPaperFlow_(currentPaper):
+
+    return getPastPaperFlow_(currentPaper, 5) + [PaperInfoSerializer(currentPaper).data] + getFuturePaperFlow_(currentPaper, 5)
 
 
 @csrf_exempt
@@ -61,7 +89,7 @@ def getPaperFlow(request):
 
     try:
         result = PaperInfo.objects.filter(paper_id=paperId)[0]
-        resp = JsonResponse({'paperflow': getPaperFlow_(result, 5)})
+        resp = JsonResponse({'paperflow': getPaperFlow_(result)})
         resp['Access-Control-Allow-Origin'] = '*'
 
         return resp
