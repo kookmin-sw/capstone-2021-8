@@ -9,6 +9,8 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
 import KeywordBadge from '../../components/KeywordBadge';
 import PaperList from '../../components/PaperList';
+import TimeLine from '../../components/TimeLine';
+import PaperListItem from '../../components/PaperListItem';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import {
   parseQueryString,
@@ -25,7 +27,7 @@ const PaperDetail = () => {
 
   const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
-  const { id: paperId } = parseQueryString();
+  const { id } = parseQueryString();
 
   const [paperTitle, setPaperTitle] = useState('');
   const [publishDate, setPublishDate] = useState('');
@@ -39,9 +41,21 @@ const PaperDetail = () => {
   const [paperTopics, setPaperTopics] = useState(null);
   const [pdfUrls, setPdfUrls] = useState(null);
 
-  const fetchPaper = async (id) => {
+  const [paperflowArray, setPaperflowArray] = useState(null);
+
+  const fetchPaperFlow = async (paperId) => {
+    const { data } = await axios.get(`${config.backendEndPoint}/backend/paper-flow`, {
+      params: { paperId },
+    });
+
+    if (data.error) { return; }
+
+    setPaperflowArray(data.paperflow);
+  };
+
+  const fetchPaper = async (paperId) => {
     const { data } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
-      params: { paperId: id },
+      params: { paperId },
     });
 
     if (data.error) {
@@ -66,7 +80,7 @@ const PaperDetail = () => {
     } = data.paper;
 
     return {
-      id,
+      paperId,
       title,
       abstract,
       pdfUrls,
@@ -100,7 +114,9 @@ const PaperDetail = () => {
         journalVolume,
         journalPages,
         doi,
-      } = await fetchPaper(paperId);
+      } = await fetchPaper(id);
+
+      fetchPaperFlow(id);
 
       setPaperTitle(title);
       setPublishDate(publicationYear);
@@ -127,7 +143,7 @@ const PaperDetail = () => {
 
   useEffect(() => {
     retrievePaperInfo();
-  }, []);
+  }, [id]);
 
   return (
     <DefaultLayout>
@@ -181,17 +197,39 @@ const PaperDetail = () => {
         </div>
 
         <div className={styles.relatedPapersSection}>
+          <h3>Paper Flow</h3>
+          {paperflowArray && (
+            <TimeLine timeLineElements={
+                paperflowArray.map((paperflow) => ({
+                  key: paperflow.paper_id,
+                  date: paperflow.publication_year,
+                  sim: paperflow.sim,
+                  content: (
+                    <PaperListItem
+                      paperId={paperflow.paper_id}
+                      title={paperflow.title}
+                      date={paperflow.publication_year}
+                      authors={JSON.parse(paperflow.authors).map((item) => item.name)}
+                      abstract={paperflow.abstract}
+                      highlightKeywords={JSON.parse(paperflow.field_list).filter((item) => item === 'Computer Science')}
+                      keywords={JSON.parse(paperflow.field_list).filter((item) => item !== 'Computer Science')}
+                      compact
+                    />
+                  ),
+                }))
+              }
+            />
+          )}
           <h3>References</h3>
           <p>Computer Science 분야가 포함된 논문만 보여집니다.</p>
           {
-            references
-            && (
+            references && (
               <PaperList
                 papers={references.filter((reference) => reference).map(({
-                  id, title, publicationYear, authors, abstract, fieldList,
+                  paperId, title, publicationYear, authors, abstract, fieldList,
                 }) => (
                   {
-                    id,
+                    paperId,
                     title,
                     date: publicationYear,
                     authors: JSON.parse(authors).map((item) => item.name),
@@ -209,10 +247,10 @@ const PaperDetail = () => {
             citations && (
               <PaperList
                 papers={citations.filter((citation) => citation).map(({
-                  id, title, publicationYear, authors, abstract, fieldList,
+                  paperId, title, publicationYear, authors, abstract, fieldList,
                 }) => (
                   {
-                    id,
+                    paperId,
                     title,
                     date: publicationYear,
                     authors: JSON.parse(authors).map((item) => item.name),

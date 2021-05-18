@@ -14,19 +14,23 @@ const PaperList = ({
     <div style={{ marginBottom: '20px' }}>
       {
         papers.slice(0, currentPageSize).map(({
-          id, paperId, title, date, authors, abstract, highlightKeywords, keywords,
+          paperId, title, date, authors, abstract, highlightKeywords, keywords,
         }) => (
-          <PaperListItem
-            key={id}
-            paperId={paperId}
-            title={title}
-            date={date}
-            authors={authors}
-            abstract={abstract}
-            highlightKeywords={highlightKeywords}
-            keywords={keywords}
-            compact
-          />
+          <div
+            key={paperId}
+            style={{ marginBottom: '10px' }}
+          >
+            <PaperListItem
+              paperId={paperId}
+              title={title}
+              date={date}
+              authors={authors}
+              abstract={abstract}
+              highlightKeywords={highlightKeywords}
+              keywords={keywords}
+              compact
+            />
+          </div>
         ))
       }
       {

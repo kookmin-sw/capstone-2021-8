@@ -3,8 +3,10 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 from paperData.models import PaperInfo
+from paperData.serializers import PaperInfoSerializer
 from elasticsearch import Elasticsearch, RequestsHttpConnection
 
+import json
 
 HOST = settings.CONFIG['ELASTICSEARCH']['HOST']
 USER = settings.CONFIG['ELASTICSEARCH']['USER']
@@ -22,30 +24,87 @@ def index(request):
     return HttpResponse("Hello, world!")
 
 
+def getJaccardSimilarity(corpus1, corpus2):
+    tokens1, tokens2 = corpus1.split(), corpus2.split()
+    set1, set2 = set(tokens1), set(tokens2)
+    if len(set1 | set2):
+        return len(set1 & set2) / len(set1 | set2)
+    return 0
+
+
+def getPastPaperFlow_(currentPaper, rem):
+    if rem <= 0:
+        return []
+
+    refPaperIds = json.loads(currentPaper.reference_list)
+
+    refPapers = PaperInfo.objects.filter(paper_id__in=refPaperIds)
+
+    selectedPaperIndex, selectedSim = -1, 0
+
+    for idx, refPaper in enumerate(refPapers):
+        sim = getJaccardSimilarity(currentPaper.abstract, refPaper.abstract)
+
+        if selectedPaperIndex == -1 or sim > selectedSim:
+            selectedPaperIndex = idx
+            selectedSim = sim
+
+    if selectedPaperIndex == -1:
+        return []
+
+    return getPastPaperFlow_(refPapers[selectedPaperIndex], rem - 1) + [{'sim': selectedSim, **PaperInfoSerializer(refPapers[selectedPaperIndex]).data}]
+
+
+def getFuturePaperFlow_(currentPaper, rem):
+    if rem <= 0:
+        return []
+
+    citPaperIds = json.loads(currentPaper.citation_list)
+
+    citPapers = PaperInfo.objects.filter(paper_id__in=citPaperIds)
+
+    selectedPaperIndex, selectedSim = -1, 0
+
+    for idx, refPaper in enumerate(citPapers):
+        sim = getJaccardSimilarity(currentPaper.abstract, refPaper.abstract)
+
+        if selectedPaperIndex == -1 or sim > selectedSim:
+            selectedPaperIndex = idx
+            selectedSim = sim
+
+    if selectedPaperIndex == -1:
+        return []
+
+    return [{'sim': selectedSim, **PaperInfoSerializer(citPapers[selectedPaperIndex]).data}] + getFuturePaperFlow_(citPapers[selectedPaperIndex], rem - 1)
+
+
+def getPaperFlow_(currentPaper):
+
+    return getPastPaperFlow_(currentPaper, 5) + [PaperInfoSerializer(currentPaper).data] + getFuturePaperFlow_(currentPaper, 5)
+
+
+@csrf_exempt
+def getPaperFlow(request):
+    paperId = request.GET.get('paperId', '')
+
+    try:
+        result = PaperInfo.objects.filter(paper_id=paperId)[0]
+        resp = JsonResponse({'paperflow': getPaperFlow_(result)})
+        resp['Access-Control-Allow-Origin'] = '*'
+
+        return resp
+    except Exception as err:
+        return JsonResponse({'error': str(err)})
+
+
 @csrf_exempt
 def paper(request):
     paperId = request.GET.get('paperId', '')
 
     try:
         result = PaperInfo.objects.filter(paper_id=paperId)[0]
-        paperInfo = {
-            "paperId": result.paper_id,
-            "title": result.title,
-            "abstract": result.abstract,
-            "pdf_urls": result.pdf_urls,
-            "authors": result.authors,
-            "citation_list": result.citation_list,
-            "reference_list": result.reference_list,
-            "field_list": result.field_list,
-            "publication_year": result.publication_year,
-            "venue": result.venue,
-            "journal_name": result.journal_name,
-            "journal_volume": result.journal_volume,
-            "journal_pages": result.journal_pages,
-            "doi": result.doi,
-            "mag_id": result.mag_id,
-        }
-        resp = JsonResponse({'paper': paperInfo})
+        serializer = PaperInfoSerializer(result)
+        resp = JsonResponse({'paper': serializer.data})
         resp['Access-Control-Allow-Origin'] = '*'
 
         return resp

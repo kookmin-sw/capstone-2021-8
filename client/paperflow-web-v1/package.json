@@ -29,6 +29,7 @@
     "react-bootstrap-icons": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
+    "react-vertical-timeline-component": "^3.3.3",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1"
   },
