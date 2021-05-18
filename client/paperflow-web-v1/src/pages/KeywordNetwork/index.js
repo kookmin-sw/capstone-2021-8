@@ -50,16 +50,12 @@ const KeywordNetwork = () => {
 
   const handleSelect = (e) => {
     if (e.target.name === 'year' && e.target.value === '21' && Number(range.month) > 3) {
-      outOfData();
+      changeAlertModalContent('잘못된 범위를 선택했습니다.');
     } else if (e.target.name === 'month' && Number(e.target.value) > 3 && range.year === '21') {
-      outOfData();
+      changeAlertModalContent('잘못된 범위를 선택했습니다.');
     } else {
       setRange({ ...range, [e.target.name]: e.target.value });
     }
-  };
-
-  const outOfData = () => {
-    changeAlertModalContent('잘못된 범위를 선택했습니다.');
   };
 
   useEffect(() => {

@@ -1,0 +1,301 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+        "citation": 2946
+      },
+      {
+        "title": "Prototypical Networks for Few-shot Learning",
+        "citation": 1962
+      },
+      {
+        "title": "Deformable Convolutional Networks",
+        "citation": 1438
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2017-01",
+        "frequency": 2036
+      },
+      {
+        "primary subject": "2017-02",
+        "frequency": 2209
+      },
+      {
+        "primary subject": "2017-03",
+        "frequency": 2714
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 450
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 242
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 239
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 124
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 119
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 97
+      },
+      {
+        "id": "Software Engineering (cs.SE)",
+        "value": 91
+      },
+      {
+        "id": "Networking and Internet Architecture (cs.NI)",
+        "value": 89
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 88
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 86
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 222
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 180
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 140
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 69
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 65
+      },
+      {
+        "id": "Neural and Evolutionary Computing (cs.NE)",
+        "value": 59
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 54
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 51
+      },
+      {
+        "id": "Social and Information Networks (cs.SI)",
+        "value": 48
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 48
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "cs.NE",
+        "cs.DS",
+        "cs.LG",
+        "cs.RO",
+        "cs.IT",
+        "physics.soc-ph",
+        "cs.IR",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 108,
+        "cs.AI": 35,
+        "cs.CV": 21,
+        "cs.NE": 18,
+        "cs.DS": 8
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 44,
+        "cs.AI": 24,
+        "stat.ML": 19,
+        "cs.NE": 9,
+        "cs.RO": 7
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 67,
+        "cs.IT": 11,
+        "cs.CV": 9,
+        "cs.AI": 8,
+        "cs.DS": 7
+      },
+      {
+        "primary_subject": "cs.SI",
+        "physics.soc-ph": 31,
+        "stat.ML": 5,
+        "cs.IR": 5,
+        "cs.CL": 5,
+        "cs.CY": 5
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.AI": 21,
+        "cs.LG": 18,
+        "cs.NE": 9,
+        "stat.ML": 6,
+        "cs.IR": 5
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 180
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 54
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 45
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 42
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 37
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 27
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 18
+      },
+      {
+        "subject": "quant-ph",
+        "frequency": 17
+      },
+      {
+        "subject": "Computational Engineering",
+        "frequency": 15
+      },
+      {
+        "subject": " Finance",
+        "frequency": 15
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 79
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 37
+      },
+      {
+        "keyword": "convolutional neural networks",
+        "frequency": 33
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 32
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 26
+      },
+      {
+        "keyword": "convolutional neural",
+        "frequency": 24
+      },
+      {
+        "keyword": "deep",
+        "frequency": 21
+      },
+      {
+        "keyword": "systems",
+        "frequency": 20
+      },
+      {
+        "keyword": "graphs",
+        "frequency": 20
+      },
+      {
+        "keyword": "codes",
+        "frequency": 17
+      }
+    ]
+  }
+]
