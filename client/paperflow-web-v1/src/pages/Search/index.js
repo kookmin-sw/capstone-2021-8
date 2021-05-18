@@ -35,6 +35,10 @@ const Search = () => {
   const [totalPapers, setTotalPapers] = useState(0);
   const [searchTook, setSearchTook] = useState(0);
 
+  const [titleFilter, setTitleFilter] = useState(true);
+  const [abstractFilter, setAbstractFilter] = useState(true);
+  const [authorFilter, setAuthorFilter] = useState(false);
+
   const pagination = (pageNum) => {
     setFromIndex((pageNum - 1) * paginationSize);
     window.scrollTo(0, 0);
@@ -43,7 +47,16 @@ const Search = () => {
   const searchHandler = async () => {
     try {
       const { data: { papers, total, took } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
-        params: { searchKeyword, from: fromIndex, size: paginationSize },
+        params: {
+          searchKeyword,
+          from: fromIndex,
+          size: paginationSize,
+          filters: {
+            title: titleFilter,
+            abstract: abstractFilter,
+            authors: authorFilter,
+          },
+        },
       });
       setSearchedPapers(papers);
       setTotalPapers(total);
@@ -67,7 +80,7 @@ const Search = () => {
         <Form.Label>Search Papers</Form.Label>
         <Form.Control
           type="text"
-          placeholder="논문 이름으로 검색"
+          placeholder="논문 검색"
           value={searchKeyword}
           onChange={(e) => setSearchKeyword(e.target.value)}
           onKeyPress={(e) => {
@@ -76,9 +89,36 @@ const Search = () => {
             }
           }}
         />
-        <Form.Text className="text-muted">
-          논문 이름으로 검색할 수 있습니다.
+        <Form.Text>
+          검색 옵션
         </Form.Text>
+        <Form.Text className="text-muted">
+          검색 가중치
+        </Form.Text>
+        <Form.Check
+          type="switch"
+          id="paper_name"
+          label="논문 이름"
+          inline
+          checked={titleFilter}
+          onChange={(e) => setTitleFilter(e.target.checked)}
+        />
+        <Form.Check
+          type="switch"
+          id="paper_abstract"
+          label="논문 Abstract"
+          inline
+          checked={abstractFilter}
+          onChange={(e) => setAbstractFilter(e.target.checked)}
+        />
+        <Form.Check
+          type="switch"
+          id="paper_author"
+          label="논문 저자"
+          inline
+          checked={authorFilter}
+          onChange={(e) => setAuthorFilter(e.target.checked)}
+        />
       </Form.Group>
       <hr />
       <div className={styles.searchResultSummary}>검색 결과: {totalPapers.toLocaleString()}개

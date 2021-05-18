@@ -117,6 +117,17 @@ def searchPaper(request):
     searchKeyword = request.GET.get('searchKeyword', '')
     size = request.GET.get('size', 10)
     from_ = request.GET.get('from', 0)
+    filters = request.GET.get('filters', None)
+    if filters is None:
+        filters = {
+            'title': True,
+            'abstract': True,
+            'authors': False,
+        }
+    else:
+        filters = json.loads(filters)
+
+    fields = ['title', 'abstract', 'authors']
 
     docs = ES.search(
         index='paperinfo',
@@ -124,10 +135,7 @@ def searchPaper(request):
             "query": {
                 "multi_match": {
                     "query": searchKeyword,
-                    "fields": [
-                        "title",
-                        "abstract"
-                    ]
+                    "fields": [field for field in fields if filters[field]]
                 }
             }
         }, size=size, from_=from_)
