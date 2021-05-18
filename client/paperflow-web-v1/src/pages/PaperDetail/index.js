@@ -143,7 +143,7 @@ const PaperDetail = () => {
 
   useEffect(() => {
     retrievePaperInfo();
-  }, []);
+  }, [id]);
 
   return (
     <DefaultLayout>
