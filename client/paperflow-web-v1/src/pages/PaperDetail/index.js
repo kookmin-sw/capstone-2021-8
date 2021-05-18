@@ -197,6 +197,28 @@ const PaperDetail = () => {
         </div>
 
         <div className={styles.relatedPapersSection}>
+          <h3>Paper Flow</h3>
+          {paperflowArray && (
+            <TimeLine timeLineElements={
+                paperflowArray.map((paperflow) => ({
+                  key: paperflow.paper_id,
+                  date: paperflow.publication_year,
+                  content: (
+                    <PaperListItem
+                      paperId={paperflow.paper_id}
+                      title={paperflow.title}
+                      date={paperflow.publication_year}
+                      authors={JSON.parse(paperflow.authors).map((item) => item.name)}
+                      abstract={paperflow.abstract}
+                      highlightKeywords={JSON.parse(paperflow.field_list).filter((item) => item === 'Computer Science')}
+                      keywords={JSON.parse(paperflow.field_list).filter((item) => item !== 'Computer Science')}
+                      compact
+                    />
+                  ),
+                }))
+              }
+            />
+          )}
           <h3>References</h3>
           <p>Computer Science 분야가 포함된 논문만 보여집니다.</p>
           {
@@ -239,28 +261,6 @@ const PaperDetail = () => {
               />
             )
           }
-          <h3>Paper Flow</h3>
-          {paperflowArray && (
-            <TimeLine timeLineElements={
-                paperflowArray.map((paperflow) => ({
-                  key: paperflow.paper_id,
-                  date: paperflow.publication_year,
-                  content: (
-                    <PaperListItem
-                      paperId={paperflow.paper_id}
-                      title={paperflow.title}
-                      date={paperflow.publication_year}
-                      authors={JSON.parse(paperflow.authors).map((item) => item.name)}
-                      abstract={paperflow.abstract}
-                      highlightKeywords={JSON.parse(paperflow.field_list).filter((item) => item === 'Computer Science')}
-                      keywords={JSON.parse(paperflow.field_list).filter((item) => item !== 'Computer Science')}
-                      compact
-                    />
-                  ),
-                }))
-              }
-            />
-          )}
         </div>
       </div>
 
