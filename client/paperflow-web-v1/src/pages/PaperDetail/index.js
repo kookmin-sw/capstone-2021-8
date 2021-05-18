@@ -128,12 +128,16 @@ const PaperDetail = () => {
         <div className={styles.infoWithIconSection}>
           <div className={styles.infoWithIcon}>
             <span className={styles.icon}><Icon.BlockquoteLeft /></span>
-            <span className={styles.number}>{citations ? citations.length : 0}</span>
+            <span className={styles.number}>
+              {citations ? citations.length.toLocaleString() : 0}
+            </span>
             <span className={styles.content}>Citations</span>
           </div>
           <div className={styles.infoWithIcon}>
             <span className={styles.icon}><Icon.People /></span>
-            <span className={styles.number}>{references ? references.length : 0}</span>
+            <span className={styles.number}>
+              {references ? references.length.toLocaleString() : 0}
+            </span>
             <span className={styles.content}>References</span>
           </div>
         </div>
