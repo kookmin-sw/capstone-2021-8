@@ -39,6 +39,18 @@ const PaperDetail = () => {
   const [paperTopics, setPaperTopics] = useState(null);
   const [pdfUrls, setPdfUrls] = useState(null);
 
+  const fetchPaperFlow = async (id) => {
+    const { data } = await axios.get(`${config.backendEndPoint}/backend/paper-flow`, {
+      params: { paperId: id },
+    });
+
+    if (data.error) {
+      return null;
+    }
+
+    console.log(data.paperflow);
+  };
+
   const fetchPaper = async (id) => {
     const { data } = await axios.get(`${config.backendEndPoint}/backend/paper`, {
       params: { paperId: id },
@@ -101,6 +113,8 @@ const PaperDetail = () => {
         journalPages,
         doi,
       } = await fetchPaper(paperId);
+
+      fetchPaperFlow(paperId);
 
       setPaperTitle(title);
       setPublishDate(publicationYear);
