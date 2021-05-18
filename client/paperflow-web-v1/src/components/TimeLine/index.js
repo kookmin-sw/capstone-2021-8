@@ -13,44 +13,22 @@ const TimeLine = ({ timeLineElements }) => {
 
   // const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
   return (
-    <VerticalTimeline className="vertical-timeline-custom-line">
+    <VerticalTimeline
+      className="vertical-timeline-custom-line"
+      layout="2-columns"
+    >
       {
         timeLineElements && timeLineElements.map(({ date, content }) => (
           <VerticalTimelineElement
             className="vertical-timeline-element"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+            contentArrowStyle={{ borderRight: '7px solid  rgba(0, 0, 0, 0.08)' }}
+            iconStyle={{ background: 'white', color: 'white' }}
             date={date}
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           >
             {content}
           </VerticalTimelineElement>
         ))
       }
-      <VerticalTimelineElement
-        className="vertical-timeline-element"
-        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-        date="2011 - present"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      >
-        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element"
-        date="2010 - 2011"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      >
-        <h3 className="vertical-timeline-element-title">Art Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-        </p>
-      </VerticalTimelineElement>
     </VerticalTimeline>
   );
 };
