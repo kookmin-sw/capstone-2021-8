@@ -56,13 +56,12 @@ def getPaperFlow_(currentPaper, rem):
 
 
 @csrf_exempt
-def paper(request):
+def getPaperFlow(request):
     paperId = request.GET.get('paperId', '')
 
     try:
         result = PaperInfo.objects.filter(paper_id=paperId)[0]
-        serializer = PaperInfoSerializer(result)
-        resp = JsonResponse({'paper': serializer.data})
+        resp = JsonResponse({'paperflow': getPaperFlow_(result, 5)})
         resp['Access-Control-Allow-Origin'] = '*'
 
         return resp
@@ -71,12 +70,13 @@ def paper(request):
 
 
 @csrf_exempt
-def getPaperFlow(request):
+def paper(request):
     paperId = request.GET.get('paperId', '')
 
     try:
         result = PaperInfo.objects.filter(paper_id=paperId)[0]
-        resp = JsonResponse({'paperflow': getPaperFlow_(result, 5)})
+        serializer = PaperInfoSerializer(result)
+        resp = JsonResponse({'paper': serializer.data})
         resp['Access-Control-Allow-Origin'] = '*'
 
         return resp
