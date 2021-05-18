@@ -16,9 +16,11 @@ const PaperList = ({
         papers.slice(0, currentPageSize).map(({
           paperId, title, date, authors, abstract, highlightKeywords, keywords,
         }) => (
-          <div style={{ marginBottom: '10px' }}>
+          <div
+            key={paperId}
+            style={{ marginBottom: '10px' }}
+          >
             <PaperListItem
-              key={paperId}
               paperId={paperId}
               title={title}
               date={date}

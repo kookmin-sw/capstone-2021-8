@@ -18,8 +18,9 @@ const TimeLine = ({ timeLineElements }) => {
       layout="2-columns"
     >
       {
-        timeLineElements && timeLineElements.map(({ date, content }) => (
+        timeLineElements && timeLineElements.map(({ key, date, content }) => (
           <VerticalTimelineElement
+            key={key}
             className="vertical-timeline-element"
             contentArrowStyle={{ borderRight: '7px solid  rgba(0, 0, 0, 0.08)' }}
             iconStyle={{ background: 'white', color: 'white' }}
