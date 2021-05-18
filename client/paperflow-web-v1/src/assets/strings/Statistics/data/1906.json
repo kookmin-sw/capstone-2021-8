@@ -290,18 +290,6 @@
       {
         "keyword": "deep neural networks",
         "frequency": 37
-      },
-      {
-        "keyword": "deep neural",
-        "frequency": 35
-      },
-      {
-        "keyword": "machine translation",
-        "frequency": 34
-      },
-      {
-        "keyword": "convolutional neural networks",
-        "frequency": 33
       }
     ]
   }

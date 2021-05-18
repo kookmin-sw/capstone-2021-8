@@ -287,18 +287,6 @@
       {
         "keyword": "neural machine translation",
         "frequency": 26
-      },
-      {
-        "keyword": "graphs",
-        "frequency": 25
-      },
-      {
-        "keyword": "reinforcement learning",
-        "frequency": 24
-      },
-      {
-        "keyword": "deep neural networks",
-        "frequency": 23
       }
     ]
   }

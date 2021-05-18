@@ -292,18 +292,6 @@
       {
         "keyword": "optimization",
         "frequency": 41
-      },
-      {
-        "keyword": "deep neural networks",
-        "frequency": 38
-      },
-      {
-        "keyword": "graph neural",
-        "frequency": 37
-      },
-      {
-        "keyword": "deep",
-        "frequency": 37
       }
     ]
   }

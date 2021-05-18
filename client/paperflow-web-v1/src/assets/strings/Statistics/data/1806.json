@@ -289,26 +289,6 @@
       {
         "keyword": "convolutional neural",
         "frequency": 32
-      },
-      {
-        "keyword": "deep neural networks",
-        "frequency": 30
-      },
-      {
-        "keyword": "graphs",
-        "frequency": 29
-      },
-      {
-        "keyword": "analysis",
-        "frequency": 27
-      },
-      {
-        "keyword": "deep neural",
-        "frequency": 26
-      },
-      {
-        "keyword": "classification",
-        "frequency": 26
       }
     ]
   }

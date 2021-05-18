@@ -285,22 +285,6 @@
       {
         "keyword": "deep",
         "frequency": 22
-      },
-      {
-        "keyword": "systems",
-        "frequency": 21
-      },
-      {
-        "keyword": "applications",
-        "frequency": 20
-      },
-      {
-        "keyword": "graphs",
-        "frequency": 19
-      },
-      {
-        "keyword": "machine learning",
-        "frequency": 18
       }
     ]
   }

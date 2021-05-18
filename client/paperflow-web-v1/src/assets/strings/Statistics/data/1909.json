@@ -289,14 +289,6 @@
       {
         "keyword": "deep reinforcement learning",
         "frequency": 38
-      },
-      {
-        "keyword": "machine translation",
-        "frequency": 33
-      },
-      {
-        "keyword": "object detection",
-        "frequency": 31
       }
     ]
   }

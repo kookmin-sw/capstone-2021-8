@@ -289,22 +289,6 @@
       {
         "keyword": "systems",
         "frequency": 38
-      },
-      {
-        "keyword": "convolutional neural networks",
-        "frequency": 37
-      },
-      {
-        "keyword": "analysis",
-        "frequency": 36
-      },
-      {
-        "keyword": "deep reinforcement learning",
-        "frequency": 34
-      },
-      {
-        "keyword": "optimization",
-        "frequency": 34
       }
     ]
   }

@@ -42,7 +42,7 @@ const Statictics = () => {
 
   useEffect(() => {
     // eslint-disable-next-line import/no-dynamic-require, global-require
-    setStatisticsData(require(`../../assets/strings/Statistics/Data/${range.year}${range.month}.json`));
+    setStatisticsData(require(`../../assets/strings/Statistics/data/${range.year}${range.month}.json`));
   }, [range]);
 
   const getColor = (data, color) => {

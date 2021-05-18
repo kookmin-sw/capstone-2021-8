@@ -280,18 +280,6 @@
       {
         "keyword": "network",
         "frequency": 13
-      },
-      {
-        "keyword": "extended version",
-        "frequency": 13
-      },
-      {
-        "keyword": "problem",
-        "frequency": 13
-      },
-      {
-        "keyword": "convolutional neural networks",
-        "frequency": 13
       }
     ]
   }

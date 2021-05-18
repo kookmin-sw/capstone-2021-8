@@ -288,18 +288,6 @@
       {
         "keyword": "deep neural",
         "frequency": 20
-      },
-      {
-        "keyword": "systems",
-        "frequency": 20
-      },
-      {
-        "keyword": "reinforcement learning",
-        "frequency": 20
-      },
-      {
-        "keyword": "deep neural networks",
-        "frequency": 18
       }
     ]
   }

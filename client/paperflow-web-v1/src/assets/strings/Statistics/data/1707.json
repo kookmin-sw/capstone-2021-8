@@ -288,22 +288,6 @@
       {
         "keyword": "machine learning",
         "frequency": 22
-      },
-      {
-        "keyword": "graphs",
-        "frequency": 20
-      },
-      {
-        "keyword": "convolutional neural",
-        "frequency": 20
-      },
-      {
-        "keyword": "classification",
-        "frequency": 18
-      },
-      {
-        "keyword": "machine translation",
-        "frequency": 17
       }
     ]
   }

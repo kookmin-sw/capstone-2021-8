@@ -291,22 +291,6 @@
       {
         "keyword": "deep",
         "frequency": 32
-      },
-      {
-        "keyword": "analysis",
-        "frequency": 30
-      },
-      {
-        "keyword": "convolutional neural networks",
-        "frequency": 29
-      },
-      {
-        "keyword": "deep neural networks",
-        "frequency": 28
-      },
-      {
-        "keyword": "object detection",
-        "frequency": 27
       }
     ]
   }

@@ -285,26 +285,6 @@
       {
         "keyword": "machine learning",
         "frequency": 25
-      },
-      {
-        "keyword": "convolutional neural",
-        "frequency": 25
-      },
-      {
-        "keyword": "generative adversarial",
-        "frequency": 25
-      },
-      {
-        "keyword": "analysis",
-        "frequency": 24
-      },
-      {
-        "keyword": "adversarial networks",
-        "frequency": 24
-      },
-      {
-        "keyword": "systems",
-        "frequency": 24
       }
     ]
   }

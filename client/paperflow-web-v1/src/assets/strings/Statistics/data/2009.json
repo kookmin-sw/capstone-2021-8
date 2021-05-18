@@ -290,18 +290,6 @@
       {
         "keyword": "deep neural networks",
         "frequency": 41
-      },
-      {
-        "keyword": "deep neural",
-        "frequency": 38
-      },
-      {
-        "keyword": "deep reinforcement learning",
-        "frequency": 36
-      },
-      {
-        "keyword": "object detection",
-        "frequency": 35
       }
     ]
   }

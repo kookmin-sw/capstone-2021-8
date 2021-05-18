@@ -289,18 +289,6 @@
       {
         "keyword": "systems",
         "frequency": 38
-      },
-      {
-        "keyword": "network",
-        "frequency": 37
-      },
-      {
-        "keyword": "analysis",
-        "frequency": 37
-      },
-      {
-        "keyword": "federated learning",
-        "frequency": 30
       }
     ]
   }

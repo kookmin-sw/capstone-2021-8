@@ -292,18 +292,6 @@
       {
         "keyword": "deep neural networks",
         "frequency": 36
-      },
-      {
-        "keyword": "federated learning",
-        "frequency": 34
-      },
-      {
-        "keyword": "systems",
-        "frequency": 33
-      },
-      {
-        "keyword": "representation learning",
-        "frequency": 33
       }
     ]
   }

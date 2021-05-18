@@ -290,18 +290,6 @@
       {
         "keyword": "systems",
         "frequency": 38
-      },
-      {
-        "keyword": "neural machine translation",
-        "frequency": 36
-      },
-      {
-        "keyword": "object detection",
-        "frequency": 35
-      },
-      {
-        "keyword": "domain adaptation",
-        "frequency": 34
       }
     ]
   }

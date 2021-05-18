@@ -292,18 +292,6 @@
       {
         "keyword": "deep neural",
         "frequency": 27
-      },
-      {
-        "keyword": "adversarial networks",
-        "frequency": 23
-      },
-      {
-        "keyword": "network",
-        "frequency": 22
-      },
-      {
-        "keyword": "generative adversarial",
-        "frequency": 22
       }
     ]
   }

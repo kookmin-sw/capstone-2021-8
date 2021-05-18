@@ -288,18 +288,6 @@
       {
         "keyword": "network",
         "frequency": 16
-      },
-      {
-        "keyword": "graphs",
-        "frequency": 16
-      },
-      {
-        "keyword": "analysis",
-        "frequency": 16
-      },
-      {
-        "keyword": "clustering",
-        "frequency": 15
       }
     ]
   }

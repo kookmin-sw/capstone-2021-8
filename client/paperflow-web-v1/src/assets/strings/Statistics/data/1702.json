@@ -283,18 +283,6 @@
       {
         "keyword": "complexity",
         "frequency": 17
-      },
-      {
-        "keyword": "convolutional neural",
-        "frequency": 15
-      },
-      {
-        "keyword": "convolutional neural networks",
-        "frequency": 15
-      },
-      {
-        "keyword": "deep neural networks",
-        "frequency": 15
       }
     ]
   }

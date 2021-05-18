@@ -290,18 +290,6 @@
       {
         "keyword": "analysis",
         "frequency": 27
-      },
-      {
-        "keyword": "deep neural",
-        "frequency": 24
-      },
-      {
-        "keyword": "model",
-        "frequency": 23
-      },
-      {
-        "keyword": "network",
-        "frequency": 20
       }
     ]
   }

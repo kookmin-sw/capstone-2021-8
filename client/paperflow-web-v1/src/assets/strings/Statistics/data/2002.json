@@ -290,18 +290,6 @@
       {
         "keyword": "deep neural networks",
         "frequency": 34
-      },
-      {
-        "keyword": "deep reinforcement learning",
-        "frequency": 32
-      },
-      {
-        "keyword": "convolutional neural networks",
-        "frequency": 31
-      },
-      {
-        "keyword": "graphs",
-        "frequency": 30
       }
     ]
   }

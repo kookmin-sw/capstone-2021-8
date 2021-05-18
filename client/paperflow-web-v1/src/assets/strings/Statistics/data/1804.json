@@ -289,26 +289,6 @@
       {
         "keyword": "analysis",
         "frequency": 26
-      },
-      {
-        "keyword": "convolutional neural",
-        "frequency": 24
-      },
-      {
-        "keyword": "systems",
-        "frequency": 24
-      },
-      {
-        "keyword": "graphs",
-        "frequency": 24
-      },
-      {
-        "keyword": "deep",
-        "frequency": 22
-      },
-      {
-        "keyword": "network",
-        "frequency": 22
       }
     ]
   }

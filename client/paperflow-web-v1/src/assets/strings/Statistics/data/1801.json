@@ -293,22 +293,6 @@
       {
         "keyword": "convolutional neural",
         "frequency": 22
-      },
-      {
-        "keyword": "systems",
-        "frequency": 20
-      },
-      {
-        "keyword": "applications",
-        "frequency": 19
-      },
-      {
-        "keyword": "deep reinforcement learning",
-        "frequency": 18
-      },
-      {
-        "keyword": "codes",
-        "frequency": 18
       }
     ]
   }

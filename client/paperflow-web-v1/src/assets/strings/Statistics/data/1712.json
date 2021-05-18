@@ -288,26 +288,6 @@
       {
         "keyword": "machine learning",
         "frequency": 21
-      },
-      {
-        "keyword": "convolutional neural network",
-        "frequency": 21
-      },
-      {
-        "keyword": "deep neural networks",
-        "frequency": 21
-      },
-      {
-        "keyword": "deep neural",
-        "frequency": 19
-      },
-      {
-        "keyword": "wsdm cup",
-        "frequency": 19
-      },
-      {
-        "keyword": "classification",
-        "frequency": 19
       }
     ]
   }

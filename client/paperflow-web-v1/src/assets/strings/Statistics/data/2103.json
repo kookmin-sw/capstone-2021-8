@@ -290,18 +290,6 @@
       {
         "keyword": "representation learning",
         "frequency": 47
-      },
-      {
-        "keyword": "domain adaptation",
-        "frequency": 44
-      },
-      {
-        "keyword": "semantic segmentation",
-        "frequency": 43
-      },
-      {
-        "keyword": "deep reinforcement learning",
-        "frequency": 40
       }
     ]
   }
