@@ -1,0 +1,310 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Big Self-Supervised Models are Strong Semi-Supervised Learners",
+        "citation": 146
+      },
+      {
+        "title": "COVID-19 Image Data Collection: Prospective Predictions Are the Future",
+        "citation": 104
+      },
+      {
+        "title": "A Survey of COVID-19 Contact Tracing Apps",
+        "citation": 80
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2020-03",
+        "frequency": 5438
+      },
+      {
+        "primary subject": "2020-04",
+        "frequency": 5789
+      },
+      {
+        "primary subject": "2020-05",
+        "frequency": 5370
+      },
+      {
+        "primary subject": "2020-06",
+        "frequency": 6157
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 1365
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 867
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 316
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 315
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 202
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 199
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 194
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 166
+      },
+      {
+        "id": "Computers and Society (cs.CY)",
+        "value": 165
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 154
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 1531
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 1503
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 370
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 361
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 195
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 188
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 147
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 139
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 128
+      },
+      {
+        "id": "Sound (cs.SD)",
+        "value": 119
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "math.OC",
+        "cs.NE",
+        "cs.LG",
+        "eess.IV",
+        "cs.RO",
+        "cs.GR",
+        "math.ST",
+        "stat.ME",
+        "stat.CO",
+        "cs.IR",
+        "cs.SD",
+        "eess.AS",
+        "cs.MM",
+        "q-bio.QM"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 1293,
+        "cs.AI": 161,
+        "cs.CV": 131,
+        "math.OC": 78,
+        "cs.NE": 55
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 304,
+        "eess.IV": 136,
+        "cs.RO": 41,
+        "stat.ML": 39,
+        "cs.GR": 26
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 316,
+        "math.ST": 28,
+        "stat.ME": 23,
+        "stat.CO": 17,
+        "math.OC": 14
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.LG": 115,
+        "cs.AI": 30,
+        "cs.IR": 22,
+        "cs.SD": 13,
+        "eess.AS": 13
+      },
+      {
+        "primary_subject": "eess.IV",
+        "cs.CV": 140,
+        "cs.LG": 83,
+        "stat.ML": 7,
+        "cs.MM": 7,
+        "q-bio.QM": 6
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 1531
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 195
+      },
+      {
+        "subject": "eess.IV",
+        "frequency": 188
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 147
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 128
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 101
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 74
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 58
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 57
+      },
+      {
+        "subject": "math.ST",
+        "frequency": 55
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 237
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 129
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 103
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 76
+      },
+      {
+        "keyword": "graph neural networks",
+        "frequency": 42
+      },
+      {
+        "keyword": "systems",
+        "frequency": 42
+      },
+      {
+        "keyword": "optimization",
+        "frequency": 41
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 38
+      },
+      {
+        "keyword": "graph neural",
+        "frequency": 37
+      },
+      {
+        "keyword": "deep",
+        "frequency": 37
+      }
+    ]
+  }
+]

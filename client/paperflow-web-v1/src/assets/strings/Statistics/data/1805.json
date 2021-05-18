@@ -1,0 +1,309 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "AutoAugment: Learning Augmentation Policies from Data",
+        "citation": 553
+      },
+      {
+        "title": "How Does Batch Normalization Help Optimization?",
+        "citation": 435
+      },
+      {
+        "title": "TADAM: Task dependent adaptive metric for improved few-shot learning",
+        "citation": 385
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2018-02",
+        "frequency": 3100
+      },
+      {
+        "primary subject": "2018-03",
+        "frequency": 3221
+      },
+      {
+        "primary subject": "2018-04",
+        "frequency": 3424
+      },
+      {
+        "primary subject": "2018-05",
+        "frequency": 3912
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 649
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 418
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 370
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 265
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 245
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 140
+      },
+      {
+        "id": "Distributed, Parallel, and Cluster Computing (cs.DC)",
+        "value": 134
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 126
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 112
+      },
+      {
+        "id": "Networking and Internet Architecture (cs.NI)",
+        "value": 100
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 562
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 537
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 307
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 119
+      },
+      {
+        "id": "Neural and Evolutionary Computing (cs.NE)",
+        "value": 81
+      },
+      {
+        "id": "Distributed",
+        "value": 70
+      },
+      {
+        "id": " Parallel",
+        "value": 70
+      },
+      {
+        "id": " and Cluster Computing (cs.DC)",
+        "value": 70
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 70
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 69
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "cs.NE",
+        "math.OC",
+        "cs.LG",
+        "stat.ME",
+        "cs.RO",
+        "cs.CL",
+        "cs.CY",
+        "Distributed",
+        " Parallel"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 414,
+        "cs.AI": 101,
+        "cs.CV": 43,
+        "cs.NE": 26,
+        "math.OC": 15
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 265,
+        "cs.AI": 24,
+        "cs.CV": 16,
+        "math.OC": 14,
+        "stat.ME": 13
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 77,
+        "stat.ML": 38,
+        "cs.AI": 36,
+        "cs.RO": 10,
+        "cs.CL": 10
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.AI": 64,
+        "cs.LG": 41,
+        "stat.ML": 19,
+        "cs.NE": 16,
+        "cs.CV": 7
+      },
+      {
+        "primary_subject": "cs.CR",
+        "cs.LG": 12,
+        "cs.AI": 8,
+        "cs.CY": 7,
+        "Distributed": 5,
+        " Parallel": 5
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 562
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 70
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 62
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 47
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 43
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 41
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 35
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 26
+      },
+      {
+        "subject": "stat.AP",
+        "frequency": 22
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 21
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 140
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 72
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 50
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 42
+      },
+      {
+        "keyword": "convolutional neural",
+        "frequency": 40
+      },
+      {
+        "keyword": "convolutional neural networks",
+        "frequency": 37
+      },
+      {
+        "keyword": "deep neural",
+        "frequency": 35
+      },
+      {
+        "keyword": "network",
+        "frequency": 32
+      },
+      {
+        "keyword": "convolutional neural network",
+        "frequency": 32
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 32
+      },
+      {
+        "keyword": "machine translation",
+        "frequency": 31
+      }
+    ]
+  }
+]

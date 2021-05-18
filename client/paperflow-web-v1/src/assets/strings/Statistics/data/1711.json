@@ -1,0 +1,311 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "CARLA: An Open Urban Driving Simulator",
+        "citation": 1014
+      },
+      {
+        "title": "Learning Spatio-Temporal Representation with Pseudo-3D Residual Networks",
+        "citation": 649
+      },
+      {
+        "title": "Toward Multimodal Image-to-Image Translation",
+        "citation": 639
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2017-08",
+        "frequency": 2487
+      },
+      {
+        "primary subject": "2017-09",
+        "frequency": 2742
+      },
+      {
+        "primary subject": "2017-10",
+        "frequency": 2637
+      },
+      {
+        "primary subject": "2017-11",
+        "frequency": 3017
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 562
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 302
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 197
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 190
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 133
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 131
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 117
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 103
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 86
+      },
+      {
+        "id": "Networking and Internet Architecture (cs.NI)",
+        "value": 79
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 344
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 288
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 209
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 88
+      },
+      {
+        "id": "Neural and Evolutionary Computing (cs.NE)",
+        "value": 79
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 68
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 60
+      },
+      {
+        "id": "Social and Information Networks (cs.SI)",
+        "value": 57
+      },
+      {
+        "id": "Data Structures and Algorithms (cs.DS)",
+        "value": 56
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 54
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "cs.NE",
+        "math.OC",
+        "cs.LG",
+        "cs.IT",
+        "cs.CL",
+        "cs.RO",
+        "cs.IR"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 162,
+        "cs.AI": 56,
+        "cs.CV": 34,
+        "cs.NE": 18,
+        "math.OC": 17
+      },
+      {
+        "primary_subject": "stat.ML",
+        "cs.LG": 116,
+        "cs.AI": 18,
+        "cs.CV": 14,
+        "cs.NE": 9,
+        "cs.IT": 7
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 49,
+        "cs.AI": 28,
+        "stat.ML": 28,
+        "cs.NE": 18,
+        "cs.CL": 12
+      },
+      {
+        "primary_subject": "cs.AI",
+        "cs.LG": 32,
+        "stat.ML": 21,
+        "cs.RO": 9,
+        "cs.CL": 7,
+        "cs.CV": 6
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.AI": 29,
+        "cs.LG": 21,
+        "cs.IR": 12,
+        "stat.ML": 6,
+        "cs.NE": 4
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 288
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 60
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 49
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 47
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 33
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 30
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 26
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 25
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 22
+      },
+      {
+        "subject": "math.PR",
+        "frequency": 17
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 98
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 59
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 36
+      },
+      {
+        "keyword": "deep neural networks",
+        "frequency": 33
+      },
+      {
+        "keyword": "convolutional neural networks",
+        "frequency": 30
+      },
+      {
+        "keyword": "deep neural",
+        "frequency": 29
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 25
+      },
+      {
+        "keyword": "convolutional neural",
+        "frequency": 25
+      },
+      {
+        "keyword": "generative adversarial",
+        "frequency": 25
+      },
+      {
+        "keyword": "analysis",
+        "frequency": 24
+      },
+      {
+        "keyword": "adversarial networks",
+        "frequency": 24
+      },
+      {
+        "keyword": "systems",
+        "frequency": 24
+      }
+    ]
+  }
+]

@@ -1,0 +1,305 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "A Novel Method",
+        "citation": 282
+      },
+      {
+        "title": "Deep Visual Domain Adaptation",
+        "citation": 42
+      },
+      {
+        "title": "Deep Learning-Based Human Pose Estimation: A Survey",
+        "citation": 27
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2020-09",
+        "frequency": 5361
+      },
+      {
+        "primary subject": "2020-10",
+        "frequency": 6307
+      },
+      {
+        "primary subject": "2020-11",
+        "frequency": 5537
+      },
+      {
+        "primary subject": "2020-12",
+        "frequency": 5743
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 1052
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 989
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 429
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 233
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 221
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 191
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 188
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 187
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 186
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 160
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 1009
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 709
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 357
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 293
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 145
+      },
+      {
+        "id": "Optimization and Control (math.OC)",
+        "value": 115
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 114
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 105
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 98
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 98
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "cs.AI",
+        "stat.ML",
+        "cs.CV",
+        "cs.CR",
+        "math.OC",
+        "cs.LG",
+        "eess.IV",
+        "cs.RO",
+        "cs.GR",
+        "cs.IR",
+        "eess.AS",
+        "cs.SI",
+        "cs.MM",
+        "q-bio.QM",
+        "eess.SY",
+        "cs.MA"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "cs.AI": 247,
+        "stat.ML": 220,
+        "cs.CV": 113,
+        "cs.CR": 41,
+        "math.OC": 39
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 216,
+        "cs.AI": 122,
+        "eess.IV": 69,
+        "cs.RO": 50,
+        "cs.GR": 35
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.AI": 117,
+        "cs.LG": 102,
+        "cs.IR": 28,
+        "eess.AS": 15,
+        "cs.SI": 11
+      },
+      {
+        "primary_subject": "eess.IV",
+        "cs.CV": 154,
+        "cs.LG": 64,
+        "cs.MM": 3,
+        "stat.ML": 2,
+        "q-bio.QM": 2
+      },
+      {
+        "primary_subject": "cs.RO",
+        "cs.LG": 50,
+        "cs.AI": 41,
+        "eess.SY": 28,
+        "cs.CV": 16,
+        "cs.MA": 11
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 293
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 145
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 115
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 105
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 98
+      },
+      {
+        "subject": "eess.IV",
+        "frequency": 94
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 86
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 73
+      },
+      {
+        "subject": "stat.AP",
+        "frequency": 43
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 34
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 161
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 103
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 88
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 84
+      },
+      {
+        "keyword": "object detection",
+        "frequency": 51
+      },
+      {
+        "keyword": "federated learning",
+        "frequency": 41
+      },
+      {
+        "keyword": "systems",
+        "frequency": 40
+      },
+      {
+        "keyword": "deep neural",
+        "frequency": 34
+      },
+      {
+        "keyword": "representation learning",
+        "frequency": 33
+      }
+    ]
+  }
+]

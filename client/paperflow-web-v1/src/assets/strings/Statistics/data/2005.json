@@ -1,0 +1,303 @@
+[
+  {
+    "title": "citation이 가장 많은 논문",
+    "type": "Paper",
+    "data": [
+      {
+        "title": "Language Models are Few-Shot Learners",
+        "citation": 786
+      },
+      {
+        "title": "End-to-End Object Detection with Transformers",
+        "citation": 214
+      },
+      {
+        "title": "Decentralized Privacy-Preserving Proximity Tracing",
+        "citation": 129
+      }
+    ]
+  },
+  {
+    "title": "최근 투고된 논문 개수 변화",
+    "type": "VertBar1D",
+    "config": {
+      "index": "primary subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "primary subject": "2020-02",
+        "frequency": 5089
+      },
+      {
+        "primary subject": "2020-03",
+        "frequency": 5438
+      },
+      {
+        "primary subject": "2020-04",
+        "frequency": 5789
+      },
+      {
+        "primary subject": "2020-05",
+        "frequency": 5370
+      }
+    ]
+  },
+  {
+    "title": "Primary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 641
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 606
+      },
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 590
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 222
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 205
+      },
+      {
+        "id": "Information Theory (cs.IT)",
+        "value": 199
+      },
+      {
+        "id": "Numerical Analysis (math.NA)",
+        "value": 176
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 164
+      },
+      {
+        "id": "Robotics (cs.RO)",
+        "value": 156
+      },
+      {
+        "id": "Audio and Speech Processing (eess.AS)",
+        "value": 149
+      }
+    ]
+  },
+  {
+    "title": "Secondary Subject 빈도",
+    "type": "Pie",
+    "data": [
+      {
+        "id": "Machine Learning (cs.LG)",
+        "value": 1157
+      },
+      {
+        "id": "Machine Learning (stat.ML)",
+        "value": 737
+      },
+      {
+        "id": "Computer Vision and Pattern Recognition (cs.CV)",
+        "value": 319
+      },
+      {
+        "id": "Artificial Intelligence (cs.AI)",
+        "value": 314
+      },
+      {
+        "id": "Computation and Language (cs.CL)",
+        "value": 184
+      },
+      {
+        "id": "Sound (cs.SD)",
+        "value": 165
+      },
+      {
+        "id": "Image and Video Processing (eess.IV)",
+        "value": 164
+      },
+      {
+        "id": "Signal Processing (eess.SP)",
+        "value": 164
+      },
+      {
+        "id": "Systems and Control (eess.SY)",
+        "value": 134
+      },
+      {
+        "id": "Cryptography and Security (cs.CR)",
+        "value": 115
+      }
+    ]
+  },
+  {
+    "title": "Primary - Secondary 연구 분야 쌍 빈도",
+    "type": "VertBar2D",
+    "config": {
+      "index": "primary_subject",
+      "key": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CV",
+        "cs.CR",
+        "math.OC",
+        "cs.LG",
+        "eess.IV",
+        "cs.RO",
+        "cs.IR",
+        "eess.AS",
+        "cs.SD",
+        "eess.SP",
+        "physics.med-ph",
+        "cs.CL"
+      ],
+      "axis": "frequency"
+    },
+    "data": [
+      {
+        "primary_subject": "cs.LG",
+        "stat.ML": 516,
+        "cs.AI": 87,
+        "cs.CV": 69,
+        "cs.CR": 32,
+        "math.OC": 23
+      },
+      {
+        "primary_subject": "cs.CV",
+        "cs.LG": 191,
+        "eess.IV": 119,
+        "stat.ML": 25,
+        "cs.RO": 24,
+        "cs.AI": 19
+      },
+      {
+        "primary_subject": "cs.CL",
+        "cs.LG": 201,
+        "cs.AI": 65,
+        "cs.IR": 37,
+        "eess.AS": 21,
+        "cs.SD": 19
+      },
+      {
+        "primary_subject": "eess.IV",
+        "cs.CV": 145,
+        "cs.LG": 69,
+        "stat.ML": 12,
+        "eess.SP": 5,
+        "physics.med-ph": 3
+      },
+      {
+        "primary_subject": "eess.AS",
+        "cs.SD": 129,
+        "cs.LG": 62,
+        "cs.CL": 60,
+        "stat.ML": 21,
+        "eess.SP": 7
+      }
+    ]
+  },
+  {
+    "title": "CS와 같이 연구된 분야",
+    "type": "VertBar1D",
+    "config": {
+      "index": "subject",
+      "key": "frequency",
+      "color": "blue"
+    },
+    "data": [
+      {
+        "subject": "stat.ML",
+        "frequency": 737
+      },
+      {
+        "subject": "eess.IV",
+        "frequency": 164
+      },
+      {
+        "subject": "eess.SP",
+        "frequency": 164
+      },
+      {
+        "subject": "eess.SY",
+        "frequency": 134
+      },
+      {
+        "subject": "math.OC",
+        "frequency": 107
+      },
+      {
+        "subject": "math.NA",
+        "frequency": 85
+      },
+      {
+        "subject": "eess.AS",
+        "frequency": 74
+      },
+      {
+        "subject": "Distributed Parallel",
+        "frequency": 55
+      },
+      {
+        "subject": "math.CO",
+        "frequency": 37
+      },
+      {
+        "subject": "physics.soc-ph",
+        "frequency": 37
+      }
+    ]
+  },
+  {
+    "title": "가장 많이 등장한 keyword",
+    "type": "VertBar1D",
+    "config": {
+      "index": "keyword",
+      "key": "frequency",
+      "color": "red"
+    },
+    "data": [
+      {
+        "keyword": "neural networks",
+        "frequency": 128
+      },
+      {
+        "keyword": "deep learning",
+        "frequency": 92
+      },
+      {
+        "keyword": "reinforcement learning",
+        "frequency": 84
+      },
+      {
+        "keyword": "machine learning",
+        "frequency": 70
+      },
+      {
+        "keyword": "systems",
+        "frequency": 35
+      },
+      {
+        "keyword": "speech recognition",
+        "frequency": 34
+      },
+      {
+        "keyword": "neural",
+        "frequency": 30
+      },
+      {
+        "keyword": "network",
+        "frequency": 29
+      },
+      {
+        "keyword": "analysis",
+        "frequency": 29
+      }
+    ]
+  }
+]
