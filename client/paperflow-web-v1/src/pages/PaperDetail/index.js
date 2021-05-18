@@ -9,6 +9,7 @@ import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
 import KeywordBadge from '../../components/KeywordBadge';
 import PaperList from '../../components/PaperList';
+import TimeLine from '../../components/TimeLine';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import {
   parseQueryString,
@@ -236,6 +237,8 @@ const PaperDetail = () => {
               />
             )
           }
+          <h3>PaperFlow</h3>
+          <TimeLine />
         </div>
       </div>
 
