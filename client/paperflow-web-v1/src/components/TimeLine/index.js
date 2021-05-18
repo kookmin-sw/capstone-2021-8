@@ -4,7 +4,7 @@ import useRootData from '../../hooks/useRootData';
 import 'react-vertical-timeline-component/style.min.css';
 import './customVerticalTimeLine.css';
 
-const TimeLine = () => {
+const TimeLine = ({ timeLineElements }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
     screenClass: appStore.screenClass.get(),
   }));
@@ -14,6 +14,19 @@ const TimeLine = () => {
   // const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
   return (
     <VerticalTimeline className="vertical-timeline-custom-line">
+      {
+        timeLineElements && timeLineElements.map(({ date, content }) => (
+          <VerticalTimelineElement
+            className="vertical-timeline-element"
+            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+            date={date}
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          >
+            {content}
+          </VerticalTimelineElement>
+        ))
+      }
       <VerticalTimelineElement
         className="vertical-timeline-element"
         contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
