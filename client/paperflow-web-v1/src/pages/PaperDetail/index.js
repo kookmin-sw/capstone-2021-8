@@ -40,12 +40,16 @@ const PaperDetail = () => {
   const [paperTopics, setPaperTopics] = useState(null);
   const [pdfUrls, setPdfUrls] = useState(null);
 
+  const [paperflowArray, setPaperflowArray] = useState(null);
+
   const fetchPaperFlow = async (id) => {
     const { data } = await axios.get(`${config.backendEndPoint}/backend/paper-flow`, {
       params: { paperId: id },
     });
 
     if (data.error) { return; }
+
+    setPaperflowArray(data.paperflow);
 
     console.log(data.paperflow);
   };
@@ -238,7 +242,7 @@ const PaperDetail = () => {
             )
           }
           <h3>PaperFlow</h3>
-          <TimeLine />
+          <TimeLine timeLineElements={} />
         </div>
       </div>
 
