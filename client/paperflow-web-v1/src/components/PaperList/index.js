@@ -78,7 +78,7 @@ const PaperList = ({
             }}
             block
           >
-            더보기{` (${Math.min(currentPageSize, paperIds.length)}/${paperIds.length})`}
+            더보기{` (${Math.min(currentPageSize, paperIds.length)} / ${paperIds.length.toLocaleString()})`}
           </Button>
         )
       }
