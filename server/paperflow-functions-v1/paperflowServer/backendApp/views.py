@@ -47,12 +47,12 @@ def getPaperFlow_(currentPaper, rem):
 
         if selectedPaperIndex == -1 or sim > selectedSim:
             selectedPaperIndex = idx
-            sim = selectedSim
+            selectedSim = sim
 
     if selectedPaperIndex == -1:
         return []
 
-    return [PaperInfoSerializer(refPapers[selectedPaperIndex]).data] + getPaperFlow(refPapers[selectedPaperIndex], rem - 1)
+    return [{'sim': selectedSim, **PaperInfoSerializer(refPapers[selectedPaperIndex]).data}] + getPaperFlow_(refPapers[selectedPaperIndex], rem - 1)
 
 
 @csrf_exempt
