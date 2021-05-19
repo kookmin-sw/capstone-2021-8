@@ -9,7 +9,7 @@ import FullWidthNoWidthLayout from '../../layouts/Layouts/FullWidthNoFooter';
 import {
   nodeStandard, linkStandard, months, years,
 } from '../../assets/strings/Network/config';
-import statistics from '../../assets/strings/Network/total.json';
+import statistics from '../../assets/strings/Network/statistics.json';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const KeywordNetwork = () => {
