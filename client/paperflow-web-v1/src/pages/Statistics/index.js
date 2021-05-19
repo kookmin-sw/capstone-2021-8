@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
@@ -9,6 +9,7 @@ import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
 import HorizBar2D from '../../components/Statistics/HorizBar2D';
 import { COLORS } from '../../assets/strings/Statistics/config';
+import statistics from '../../assets/strings/Statistics/total.json';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const Statictics = () => {
@@ -25,8 +26,6 @@ const Statictics = () => {
     month: '03',
   });
 
-  const [statisticsData, setStatisticsData] = useState([]);
-
   const months = Array.from({ length: 12 }, (_, i) => (`0${String(i + 1)}`).slice(-2));
   const years = ['2017', '2018', '2019', '2020', '2021'];
 
@@ -39,11 +38,6 @@ const Statictics = () => {
       setRange({ ...range, [e.target.name]: e.target.value });
     }
   };
-
-  useEffect(() => {
-    // eslint-disable-next-line import/no-dynamic-require, global-require
-    setStatisticsData(require(`../../assets/strings/Statistics/data/${range.year}${range.month}.json`));
-  }, [range]);
 
   const getColor = (data, color) => {
     const colorBase = COLORS[color];
@@ -91,7 +85,7 @@ const Statictics = () => {
         <hr />
         <br />
         <div className={styles.statisticsContainer}>
-          { statisticsData.map((data) => {
+          { statistics[range.year + range.month].map((data) => {
             if (data.type === 'Pie') {
               return (
                 <div key={data.title} className={styles.graphContainer}>
