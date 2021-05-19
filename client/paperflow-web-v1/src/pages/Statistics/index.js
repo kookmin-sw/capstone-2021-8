@@ -9,7 +9,7 @@ import HorizBar1D from '../../components/Statistics/HorizBar1D';
 import VertBar2D from '../../components/Statistics/VertBar2D';
 import HorizBar2D from '../../components/Statistics/HorizBar2D';
 import { COLORS } from '../../assets/strings/Statistics/config';
-import statistics from '../../assets/strings/Statistics/total.json';
+import statistics from '../../assets/strings/Statistics/statistics.json';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const Statictics = () => {
