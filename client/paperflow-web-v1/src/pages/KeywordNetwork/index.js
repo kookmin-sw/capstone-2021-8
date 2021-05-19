@@ -1,16 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { select, zoom } from 'd3';
 import { Jumbotron } from 'react-bootstrap';
-
+import AlertModal from '../../components/AlertModal';
+import useRootData from '../../hooks/useRootData';
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
 import FullWidthNoWidthLayout from '../../layouts/Layouts/FullWidthNoFooter';
 import {
   nodeStandard, linkStandard, months, years,
 } from '../../assets/strings/Network/config';
-import AlertModal from '../../components/AlertModal';
-import useRootData from '../../hooks/useRootData';
-
+import statistics from '../../assets/strings/Network/total.json';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const KeywordNetwork = () => {
@@ -24,11 +23,6 @@ const KeywordNetwork = () => {
 
   const svgRef = useRef();
   const tooltipRef = useRef();
-
-  const [networkData, setNetworkData] = useState({
-    nodes: [],
-    links: [],
-  });
 
   const [range, setRange] = useState({
     year: '21',
@@ -81,28 +75,22 @@ const KeywordNetwork = () => {
   }, []);
 
   const setNetwork = (data) => {
-    const testNodes = data.node.map((nodeList, idx) => (nodeList.map((node) => ({
+    const nodes = data.node.map((nodeList, idx) => (nodeList.map((node) => ({
       id: node,
       depth: idx,
       radius: nodeStandard[idx].radius,
       color: nodeStandard[idx].color,
     }))));
-    const testLinks = data.link.map((link) => ({
+    const links = data.link.map((link) => ({
       source: link.source,
       target: link.target,
       distance: linkStandard[link.depth[0]][link.depth[1]],
     }));
-    setNetworkData({
-      nodes: testNodes.flat(),
-      links: testLinks,
-    });
+    return {
+      nodes: nodes.flat(),
+      links,
+    };
   };
-
-  // Set network data
-  useEffect(() => {
-    // eslint-disable-next-line import/no-dynamic-require, global-require
-    setNetwork(require(`../../assets/strings/Network/Data/${range.year}${range.month}.json`));
-  }, [range]);
 
   return (
     <FullWidthNoWidthLayout>
@@ -145,7 +133,7 @@ const KeywordNetwork = () => {
           ref={svgRef}
         >
           <Network
-            data={networkData}
+            data={setNetwork(statistics[range.year + range.month])}
             handleTooltipInfo={handleTooltipInfo}
           />
           <Tooltip tooltipRef={tooltipRef} />
