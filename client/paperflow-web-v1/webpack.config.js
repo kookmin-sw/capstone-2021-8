@@ -42,6 +42,10 @@ module.exports = {
         test: /\.(png|jpg|svg|gif)?$/,
         use: ['file-loader'],
       },
+      {
+        test: /react-spring/,
+        sideEffects: true,
+      },
     ],
   },
   plugins: [
