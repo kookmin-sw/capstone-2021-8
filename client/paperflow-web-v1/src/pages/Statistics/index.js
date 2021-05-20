@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import {
+  DropdownButton, Dropdown, Form,
+} from 'react-bootstrap';
 import AlertModal from '../../components/AlertModal';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 import useRootData from '../../hooks/useRootData';
@@ -22,7 +25,7 @@ const Statictics = () => {
   const styles = stylesDesktopDefault;
 
   const [range, setRange] = useState({
-    year: '21',
+    year: '2021',
     month: '03',
   });
 
@@ -30,12 +33,13 @@ const Statictics = () => {
   const years = ['2017', '2018', '2019', '2020', '2021'];
 
   const handleSelect = (e) => {
-    if (e.target.name === 'year' && e.target.value === '21' && Number(range.month) > 3) {
+    const value = e.target.innerHTML;
+    if (e.target.name === 'year' && value === '2021' && Number(range.month) > 3) {
       changeAlertModalContent('잘못된 범위를 선택했습니다.');
-    } else if (e.target.name === 'month' && Number(e.target.value) > 3 && range.year === '21') {
+    } else if (e.target.name === 'month' && Number(value) > 3 && range.year === '2021') {
       changeAlertModalContent('잘못된 범위를 선택했습니다.');
     } else {
-      setRange({ ...range, [e.target.name]: e.target.value });
+      setRange({ ...range, [e.target.name]: value });
     }
   };
 
@@ -49,34 +53,26 @@ const Statictics = () => {
       <AlertModal />
       <div className={styles.container}>
         <div className={styles.filter}>
-          <div className={styles.filterTitle}>
-            Year :
-          </div>
-          <select
-            name="year"
-            onChange={handleSelect}
+          <Form.Label className={`${styles.filterTitle} align-center`}>년도</Form.Label>
+          <DropdownButton
             className={styles.filterBox}
-            value={range.year}
+            variant="outline-primary"
+            title={range.year}
           >
             {years.map((y) => (
-              <option value={y.slice(-2)} key={y}>{y}</option>
+              <Dropdown.Item key={y} name="year" onClick={handleSelect}>{y}</Dropdown.Item>
             ))}
-          </select>
-        </div>
-        <div className={styles.filter}>
-          <div className={styles.filterTitle}>
-            Month :
-          </div>
-          <select
-            name="month"
-            onChange={handleSelect}
+          </DropdownButton>
+          <Form.Label className={styles.filterTitle}>월</Form.Label>
+          <DropdownButton
             className={styles.filterBox}
-            value={range.month}
+            variant="outline-primary"
+            title={range.month}
           >
             {months.map((m) => (
-              <option value={m} key={m}>{m}</option>
+              <Dropdown.Item key={m} name="month" onClick={handleSelect}>{m}</Dropdown.Item>
             ))}
-          </select>
+          </DropdownButton>
         </div>
         <div className={styles.titleContainer}>
           {range.year}년 {range.month}월 통계
@@ -85,7 +81,7 @@ const Statictics = () => {
         <hr />
         <br />
         <div className={styles.statisticsContainer}>
-          { statistics[range.year + range.month].map((data) => {
+          { statistics[range.year.slice(-2) + range.month].map((data) => {
             if (data.type === 'Pie') {
               return (
                 <div key={data.title} className={styles.graphContainer}>
