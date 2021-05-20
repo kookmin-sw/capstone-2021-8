@@ -5,7 +5,7 @@ import AlertModal from '../../components/AlertModal';
 import useRootData from '../../hooks/useRootData';
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
-import FullWidthNoWidthLayout from '../../layouts/Layouts/FullWidthNoFooter';
+import FullWidthNoFooterLayout from '../../layouts/Layouts/FullWidthNoFooter';
 import {
   nodeStandard, linkStandard, months, years,
 } from '../../assets/strings/Network/config';
@@ -93,7 +93,7 @@ const KeywordNetwork = () => {
   };
 
   return (
-    <FullWidthNoWidthLayout>
+    <FullWidthNoFooterLayout>
       <AlertModal />
       <div className={styles.filterContainer}>
         <div className={styles.filter}>
@@ -139,7 +139,7 @@ const KeywordNetwork = () => {
           <Tooltip tooltipRef={tooltipRef} />
         </div>
       </Jumbotron>
-    </FullWidthNoWidthLayout>
+    </FullWidthNoFooterLayout>
   );
 };
 
