@@ -40,7 +40,7 @@ const KeywordNetwork = () => {
     if (next.visible) {
       const { offsetTop } = containerRef.current;
       tooltip
-        .style('display', null)
+        .style('display', 'block')
         .style('transform', `translate(${next.x}px, ${next.y - offsetTop}px)`);
     } else {
       tooltip.style('display', 'none');
