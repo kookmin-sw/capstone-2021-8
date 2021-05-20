@@ -1,6 +1,7 @@
 @import '../../../assets/scsses/config';
 
 .tooltip {
+  display: none;
   pointer-events: none;
   position: absolute;
   z-index: 10;
