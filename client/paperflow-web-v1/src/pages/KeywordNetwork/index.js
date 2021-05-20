@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { select, zoom } from 'd3';
-import { Jumbotron } from 'react-bootstrap';
+import {
+  Jumbotron, DropdownButton, Dropdown, Form,
+} from 'react-bootstrap';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import useRootData from '../../hooks/useRootData';
 import Network from '../../components/Network';
@@ -26,7 +28,7 @@ const KeywordNetwork = () => {
   const containerRef = useRef();
 
   const [range, setRange] = useState({
-    year: '21',
+    year: '2021',
     month: '03',
   });
 
@@ -47,12 +49,13 @@ const KeywordNetwork = () => {
   };
 
   const handleSelect = (e) => {
-    if (e.target.name === 'year' && e.target.value === '21' && Number(range.month) > 3) {
+    const value = e.target.innerHTML;
+    if (e.target.name === 'year' && value === '2021' && Number(range.month) > 3) {
       changeAlertModalContent('잘못된 범위를 선택했습니다.');
-    } else if (e.target.name === 'month' && Number(e.target.value) > 3 && range.year === '21') {
+    } else if (e.target.name === 'month' && Number(value) > 3 && range.year === '2021') {
       changeAlertModalContent('잘못된 범위를 선택했습니다.');
     } else {
-      setRange({ ...range, [e.target.name]: e.target.value });
+      setRange({ ...range, [e.target.name]: value });
     }
   };
 
@@ -100,34 +103,26 @@ const KeywordNetwork = () => {
     <FullWidthNoFooterLayout>
       <div className={styles.filterContainer}>
         <div className={styles.filter}>
-          <div className={styles.filterTitle}>
-            Year :
-          </div>
-          <select
-            name="year"
-            onChange={handleSelect}
+          <Form.Label className={`${styles.filterTitle} align-center`}>년도</Form.Label>
+          <DropdownButton
             className={styles.filterBox}
-            value={range.year}
+            variant="outline-primary"
+            title={range.year}
           >
             {years.map((y) => (
-              <option value={y.slice(-2)} key={y}>{y}</option>
+              <Dropdown.Item key={y} name="year" onClick={handleSelect}>{y}</Dropdown.Item>
             ))}
-          </select>
-        </div>
-        <div className={styles.filter}>
-          <div className={styles.filterTitle}>
-            Month :
-          </div>
-          <select
-            name="month"
-            onChange={handleSelect}
+          </DropdownButton>
+          <Form.Label className={styles.filterTitle}>월</Form.Label>
+          <DropdownButton
             className={styles.filterBox}
-            value={range.month}
+            variant="outline-primary"
+            title={range.month}
           >
             {months.map((m) => (
-              <option value={m} key={m}>{m}</option>
+              <Dropdown.Item key={m} name="month" onClick={handleSelect}>{m}</Dropdown.Item>
             ))}
-          </select>
+          </DropdownButton>
         </div>
       </div>
       <Jumbotron id={styles.networkContainer} ref={containerRef}>
@@ -140,7 +135,7 @@ const KeywordNetwork = () => {
                 ref={svgRef}
               >
                 <Network
-                  data={setNetwork(statistics[range.year + range.month])}
+                  data={setNetwork(statistics[range.year.slice(-2) + range.month])}
                   handleTooltipInfo={handleTooltipInfo}
                   style={{ height, width }}
                 />
