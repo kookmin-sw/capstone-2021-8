@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { select, zoom } from 'd3';
 import { Jumbotron } from 'react-bootstrap';
 import AutoSizer from 'react-virtualized-auto-sizer';
-import AlertModal from '../../components/AlertModal';
 import useRootData from '../../hooks/useRootData';
 import Network from '../../components/Network';
 import Tooltip from '../../components/Network/Tooltip';
@@ -99,7 +98,6 @@ const KeywordNetwork = () => {
 
   return (
     <FullWidthNoFooterLayout>
-      <AlertModal />
       <div className={styles.filterContainer}>
         <div className={styles.filter}>
           <div className={styles.filterTitle}>
