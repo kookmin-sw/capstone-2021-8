@@ -128,7 +128,7 @@ const KeywordNetwork = () => {
       <Jumbotron id={styles.networkContainer} ref={containerRef}>
         <AutoSizer>
           {({ height, width }) => {
-            setCurrentHeight(height);
+            setTimeout(() => setCurrentHeight(height), 10);
             return (
               <div
                 style={{ height, width }}
