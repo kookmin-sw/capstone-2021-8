@@ -28,7 +28,11 @@ PaperFlow는 각 논문의 참조 (references)를 자동 추출 및 가중치 �
 
 ### 1.2. 발표 자료
 
+- [최종 발표 자료](https://github.com/kookmin-sw/capstone-2021-8/blob/master/docs/%EC%B5%9C%EC%A2%85%20%EB%B0%9C%ED%91%9C_team8.pdf)
+
 ### 1.3. 포스터
+
+- [최종 포스터](https://github.com/kookmin-sw/capstone-2021-8/blob/master/docs/%ED%8F%AC%EC%8A%A4%ED%84%B0.pdf)
 
 ## 2. Abstract
 
@@ -37,6 +41,8 @@ The PaperFlow is a service that helps researchers to catch up current research f
 ## 3. 소개 영상
 
 ### 3.1. 시연 영상
+
+[![YoutubeVid](http://img.youtube.com/vi/wibfS6SR_P0/0.jpg)](http://www.youtube.com/watch?v=wibfS6SR_P0)
 
 ## 4. 팀 소개
 
