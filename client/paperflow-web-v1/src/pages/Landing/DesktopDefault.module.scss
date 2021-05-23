@@ -4,4 +4,37 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.carouselCaption {
+  top: 55%;
+  transform: translateY(-50%);
+  bottom: initial;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  .mainPhrase {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .submainPhrase {
+    font-size: 30px;
+    color: white;
+  }
+}
+
+.paperSearchSection {
+  .mainPhrase {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .subPhrase {
+    font-size: 20px;
+  }
 }

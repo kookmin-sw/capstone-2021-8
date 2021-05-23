@@ -4,6 +4,7 @@ from rest_framework.response import Response
 
 from .serializers import NewsletterEmailSerializer
 from .models import NewsletterEmail
+from .apis import send_newsletter
 
 
 class NewsletterEmailView(APIView):
@@ -18,3 +19,10 @@ class NewsletterEmailView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class SendingNewsletterView(APIView):
+    def get(self, request):
+        emails = NewsletterEmail.objects.all()
+        send_newsletter(emails)
+        return Response({}, status=status.HTTP_200_OK)

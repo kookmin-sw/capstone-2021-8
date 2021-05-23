@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {
   Form,
+  ButtonGroup,
+  Button,
 } from 'react-bootstrap';
 import axios from 'axios';
 import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
+import stylesMobileDefault from './MobileDefault.module.scss';
 import DefaultLayout from '../../layouts/Layouts/Default';
 import PaperListItem from '../../components/PaperListItem';
 import {
@@ -20,31 +23,56 @@ const Search = () => {
   }));
   const isDesktop = screenClass === 'xl';
 
-  // eslint-disable-next-line no-unused-vars
-  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
+
+  const paginationSize = 10;
+  const paginationRadius = isDesktop ? 5 : 2;
 
   const { search } = parseQueryString();
   const [searchKeyword, setSearchKeyword] = useState('');
+  const [fromIndex, setFromIndex] = useState(0);
   const [searchedPapers, setSearchedPapers] = useState([]);
+  const [totalPapers, setTotalPapers] = useState(0);
+  const [searchTook, setSearchTook] = useState(0);
+
+  const [titleFilter, setTitleFilter] = useState(true);
+  const [abstractFilter, setAbstractFilter] = useState(true);
+  const [authorFilter, setAuthorFilter] = useState(false);
+
+  const pagination = (pageNum) => {
+    setFromIndex((pageNum - 1) * paginationSize);
+    window.scrollTo(0, 0);
+  };
 
   const searchHandler = async () => {
     try {
-      const { data: { papers } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
-        params: { searchKeyword },
+      const { data: { papers, total, took } } = await axios.get(`${config.backendEndPoint}/backend/search-paper`, {
+        params: {
+          searchKeyword,
+          from: fromIndex,
+          size: paginationSize,
+          filters: {
+            title: titleFilter,
+            abstract: abstractFilter,
+            authors: authorFilter,
+          },
+        },
       });
       setSearchedPapers(papers);
+      setTotalPapers(total);
+      setSearchTook(took);
     } catch (err) {
       changeAlertModalContent(`뭔가 잘못되었습니다. ${err}`);
     }
   };
 
   useEffect(() => {
-    (async () => {
-      setSearchKeyword(search || '');
-
-      await searchHandler();
-    })();
+    setSearchKeyword(search || '');
   }, []);
+
+  useEffect(() => {
+    searchHandler();
+  }, [searchKeyword, fromIndex]);
 
   return (
     <DefaultLayout>
@@ -52,7 +80,7 @@ const Search = () => {
         <Form.Label>Search Papers</Form.Label>
         <Form.Control
           type="text"
-          placeholder="논문 이름으로 검색"
+          placeholder="논문 검색"
           value={searchKeyword}
           onChange={(e) => setSearchKeyword(e.target.value)}
           onKeyPress={(e) => {
@@ -61,26 +89,81 @@ const Search = () => {
             }
           }}
         />
-        <Form.Text className="text-muted">
-          논문 이름으로 검색할 수 있습니다.
+        <Form.Text>
+          검색 옵션
         </Form.Text>
+        <Form.Text className="text-muted">
+          검색 가중치
+        </Form.Text>
+        <Form.Check
+          type="switch"
+          id="paper_name"
+          label="논문 이름"
+          inline
+          checked={titleFilter}
+          onChange={(e) => setTitleFilter(e.target.checked)}
+        />
+        <Form.Check
+          type="switch"
+          id="paper_abstract"
+          label="논문 Abstract"
+          inline
+          checked={abstractFilter}
+          onChange={(e) => setAbstractFilter(e.target.checked)}
+        />
+        <Form.Check
+          type="switch"
+          id="paper_author"
+          label="논문 저자"
+          inline
+          checked={authorFilter}
+          onChange={(e) => setAuthorFilter(e.target.checked)}
+        />
       </Form.Group>
       <hr />
+      <div className={styles.searchResultSummary}>검색 결과: {totalPapers.toLocaleString()}개
+        ({searchTook / 1000} 초)
+      </div>
       {
         searchedPapers.map(({
-          title, date, authors, abstract, highlightKeywords, keywords,
+          paper_id: paperId, title, publication_year: publicationYear,
+          authors, abstract, field_list: fieldList,
         }) => (
           <PaperListItem
-            key={title}
+            key={paperId}
+            paperId={paperId}
             title={title}
-            date={date}
-            authors={authors}
+            date={publicationYear}
+            authors={JSON.parse(authors).map((item) => item.name)}
             abstract={abstract}
-            highlightKeywords={highlightKeywords}
-            keywords={keywords}
+            highlightKeywords={JSON.parse(fieldList).filter((item) => item === 'Computer Science')}
+            keywords={JSON.parse(fieldList).filter((item) => item !== 'Computer Science')}
           />
         ))
       }
+
+      <div className={styles.paginationButtons}>
+        <ButtonGroup size="md" className="mb-2">
+          {Math.floor(1 + fromIndex / paginationSize) !== 1 && (
+          <Button onClick={() => pagination(1)}>처음
+          </Button>
+          )}
+          {!!totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+            .map((_, index) => (_ - paginationRadius + index))
+            .filter((pageNum) => pageNum > 0)
+            .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
+          <Button variant="secondary">{Math.floor(1 + fromIndex / paginationSize)}</Button>
+          {!!totalPapers && Array(paginationRadius).fill(Math.floor(1 + fromIndex / paginationSize))
+            .map((_, index) => (_ + index + 1))
+            .filter((pageNum) => pageNum <= Math.floor(1 + totalPapers / paginationSize))
+            .map((pageNum) => (<Button onClick={() => pagination(pageNum)}>{pageNum}</Button>))}
+          {Math.floor(1 + fromIndex / paginationSize)
+          !== Math.floor(1 + totalPapers / paginationSize) && (
+          <Button onClick={() => pagination(Math.floor(1 + totalPapers / paginationSize))}>마지막
+          </Button>
+          )}
+        </ButtonGroup>
+      </div>
 
     </DefaultLayout>
   );

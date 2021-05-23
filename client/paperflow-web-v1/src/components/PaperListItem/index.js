@@ -1,53 +1,34 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import {
-  Card,
-} from 'react-bootstrap';
-import useRootData from '../../hooks/useRootData';
-import KeywordBadge from '../KeywordBadge';
-import stylesDesktopDefault from './DesktopDefault.module.scss';
-// import stylesMobileDefault from './MobileDefault.module.scss';
+import CompactPaperListItem from './CompactPaperListItem';
+import DetailPaperListItem from './DetailPaperListItem';
 
 const PaperListItem = ({
-  title, date, authors, abstract, highlightKeywords, keywords, abstractMaxLength = 300,
-}) => {
-  const { screenClass } = useRootData(({ appStore }) => ({
-    screenClass: appStore.screenClass.get(),
-  }));
-  const isDesktop = screenClass === 'xl';
-
-  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
-
-  return (
-    <Card className={styles.paperListItem}>
-      <Card.Body>
-        <div className={styles.paperTitle}>
-          {title}
-        </div>
-        <div className={styles.basicInfo}>
-          <span className={styles.publishDate}>{date}</span>
-          <span className={styles.authors}>&nbsp;by&nbsp;
-            {(authors.length > 3 ? [...authors.slice(0, 3), 'et al.'] : authors).join(', ')}
-          </span>
-        </div>
-        <p className={styles.abstract}>
-          {abstract.length > abstractMaxLength ? `${abstract.slice(0, abstractMaxLength)} ...` : abstract}
-        </p>
-        <div className={styles.keywordContainer}>
-          {
-            highlightKeywords && highlightKeywords.map((item) => (
-              <KeywordBadge key={item} keyword={item} highlight />
-            ))
-          }
-          {
-            keywords && keywords.map((item) => (
-              <KeywordBadge key={item} keyword={item} />
-            ))
-          }
-        </div>
-      </Card.Body>
-    </Card>
-  );
-};
+  paperId, title, date, authors, abstract, highlightKeywords, keywords,
+  compact = false, abstractMaxLength = 300,
+}) => (compact
+  ? (
+    <CompactPaperListItem
+      paperId={paperId}
+      title={title}
+      date={date}
+      authors={authors}
+      abstract={abstract}
+      highlightKeywords={highlightKeywords}
+      keywords={keywords}
+      abstractMaxLength={abstractMaxLength}
+    />
+  )
+  : (
+    <DetailPaperListItem
+      paperId={paperId}
+      title={title}
+      date={date}
+      authors={authors}
+      abstract={abstract}
+      highlightKeywords={highlightKeywords}
+      keywords={keywords}
+      abstractMaxLength={abstractMaxLength}
+    />
+  ));
 
 export default PaperListItem;

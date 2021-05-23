@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode=development",
-    "prod": "webpack --mode=production",
+    "dev": "cross-env NODE_ENV=development webpack serve --mode=development --host 0.0.0.0 --port 8088",
+    "prod": "cross-env NODE_ENV=production webpack serve --mode=production --host 0.0.0.0 --port 8088",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npx patch-package"
   },
@@ -13,10 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nivo/bar": "^0.67.0",
     "@nivo/core": "^0.67.0",
     "@nivo/network": "^0.67.0",
+    "@nivo/pie": "^0.67.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.1.1",
     "d3": "^6.6.1",
     "file-loader": "^6.2.0",
@@ -28,6 +31,8 @@
     "react-bootstrap-icons": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
+    "react-vertical-timeline-component": "^3.3.3",
+    "react-virtualized-auto-sizer": "^1.0.5",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1"
   },

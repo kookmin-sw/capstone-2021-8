@@ -5,6 +5,7 @@ import Search from './pages/Search';
 import PaperDetail from './pages/PaperDetail';
 import KeywordNetwork from './pages/KeywordNetwork';
 import EmailInputPage from './pages/EmailInput';
+import Statistics from './pages/Statistics';
 
 const App = () => (
 
@@ -13,6 +14,7 @@ const App = () => (
     <Route path="/search" component={Search} />
     <Route path="/keyword-network" component={KeywordNetwork} />
     <Route path="/email-input" component={EmailInputPage} />
+    <Route path="/statistics" component={Statistics} />
     <Route path="/" component={Landing} />
   </Switch>
 

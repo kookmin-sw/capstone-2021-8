@@ -5,8 +5,9 @@ import {
   Carousel,
 } from 'react-bootstrap';
 import useRootData from '../../hooks/useRootData';
-import backgroundImage from '../../assets/images/concept-1868728_1920.jpg';
+import backgroundImage from '../../assets/images/books-1245690_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
+import stylesMobileDefault from './MobileDefault.module.scss';
 import FullWidthLayout from '../../layouts/Layouts/FullWidth';
 import AchvCounter from '../../components/AchvCounter';
 import IntroCard from '../../components/IntroCard';
@@ -20,7 +21,7 @@ const Lading = () => {
   }));
   const isDesktop = screenClass === 'xl';
 
-  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (
     <FullWidthLayout>
@@ -31,24 +32,24 @@ const Lading = () => {
             src={backgroundImage}
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h1>
+          <Carousel.Caption className={styles.carouselCaption}>
+            <div className={styles.mainPhrase}>
               Discover flow of papers with PaperFlow
-            </h1>
-            <p>
+            </div>
+            <div className={styles.submainPhrase}>
               PaperFlow helps you to catch up recent research flow
               by gives you &ldquo;paper flow diagram&rdquo;
-            </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
       <Jumbotron fluid>
-        <Container>
-          <h1>
+        <Container className={styles.paperSearchSection}>
+          <div className={styles.mainPhrase}>
             지금 바로 논문을 검색해 보세요!
-          </h1>
-          <p>
+          </div>
+          <p className={styles.subPhrase}>
             생소한 분야의 논문이더라도, 흐름을 쉽게 파악할 수 있습니다!
           </p>
           <input

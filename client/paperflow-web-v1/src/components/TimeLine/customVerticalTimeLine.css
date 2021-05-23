@@ -1,0 +1,20 @@
+/* CUSTOM LINE COLOR */
+/* The line */
+.vertical-timeline.vertical-timeline-custom-line::before {
+  background: #424242;
+}
+
+/* Element container box */
+.vertical-timeline-element-content {
+  padding: 0px;
+  box-shadow: initial;
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-content {
+  padding: 0px;
+}
+
+/* Icon container's border */
+.vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #424242, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}

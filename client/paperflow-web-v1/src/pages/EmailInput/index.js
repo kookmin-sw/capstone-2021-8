@@ -7,15 +7,19 @@ import useRootData from '../../hooks/useRootData';
 import DefaultDesktopLayout from '../../layouts/Layouts/DefaultDesktop';
 
 import stylesDesktopDefault from './DesktopDefault.module.scss';
+import stylesMobileDefault from './MobileDefault.module.scss';
 
 const EmailInputPage = () => {
   const {
-    changeAlertModalContent,
+    screenClass, changeAlertModalContent,
   } = useRootData(({ appStore }) => ({
+    screenClass: appStore.screenClass.get(),
+
     changeAlertModalContent: appStore.changeAlertModalContent,
   }));
+  const isDesktop = screenClass === 'xl';
 
-  const styles = stylesDesktopDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   const [email, setEmail] = useState('');
 
@@ -49,7 +53,7 @@ const EmailInputPage = () => {
               분석, 통계 및 시각화하여 제공하고 있습니다.
             </h2>
             <br />
-            <div>
+            <div className={styles.desciption}>
               만약 지속적으로 소식을 받고 싶다면 이메일을 입력하세요.
             </div>
           </div>

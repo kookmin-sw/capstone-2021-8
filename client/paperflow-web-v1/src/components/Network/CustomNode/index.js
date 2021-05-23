@@ -1,10 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 import { select } from 'd3';
 import { nodeStandard } from '../../../assets/strings/Network/config';
-
+import useRootData from '../../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 
 const CustomNode = (nodeInfo, handleTooltipInfo) => {
+  const { changeMainMenu } = useRootData(({ appStore }) => ({
+    changeMainMenu: appStore.changeMainMenu,
+  }));
+
   const styles = stylesDesktopDefault;
 
   const nodeRef = useRef();
@@ -22,7 +26,8 @@ const CustomNode = (nodeInfo, handleTooltipInfo) => {
     select(nodeRef.current)
       .on('mouseover', (d) => handleTooltip(d, true))
       .on('mousemove', (d) => handleTooltip(d, true))
-      .on('mouseout', (d) => handleTooltip(d, false));
+      .on('mouseout', (d) => handleTooltip(d, false))
+      .on('click', handleClickTooltip);
 
     const words = nodeInfo.node.id.split(' ');
     const nodeText = select(nodeRef.current).select('text');
@@ -42,10 +47,15 @@ const CustomNode = (nodeInfo, handleTooltipInfo) => {
     }
   }, []);
 
+  const handleClickTooltip = () => {
+    changeMainMenu(`/search?search=${nodeInfo.node.id}`);
+  };
+
   return (
     <g
       ref={nodeRef}
       transform={`translate(${[nodeInfo.x, nodeInfo.y]}) scale(0.7)`}
+      className={styles.node}
     >
       <circle
         r={nodeInfo.radius}

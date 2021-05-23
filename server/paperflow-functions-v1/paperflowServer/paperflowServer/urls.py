@@ -14,10 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
 from django.urls import include, path
+
+from paperData.views import PaperInfoView
 
 urlpatterns = [
     path('backend/', include('backendApp.urls')),
     path('admin/', admin.site.urls),
     path('newsletter/', include('newsletter.urls')),
+    url(r"^paper/(?P<paper_id>.+)", PaperInfoView.get)
 ]

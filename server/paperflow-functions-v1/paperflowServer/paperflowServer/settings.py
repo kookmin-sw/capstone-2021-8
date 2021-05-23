@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import json
+import os
+
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.dirname(SETTINGS_DIR))
+
+with open('{}/../config.json'.format(PROJECT_ROOT), 'r') as f:
+    CONFIG = json.load(f)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@c1l1h88291cl8m3-e$z9(9@b$0bw^*p21h)b%h7d9l90yga+g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("PYTHON_ENV") != 'production'
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'arxiv.apps.ArxivConfig',
+    'backendApp.apps.BackendappConfig',
+    'paperData.apps.PaperdataConfig',
     'newsletter',
 ]
 
@@ -82,11 +91,12 @@ WSGI_APPLICATION = 'paperflowServer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'arxiv',
-        'USER' : 'root',
-        'PASSWORD' : '1234',
-        'HOST' : 'localhost',
-        'PORT' : '3306'
+        'NAME': CONFIG['DATABASE']['NAME'],
+        'USER': CONFIG['DATABASE']['USER'],
+        'PASSWORD': CONFIG['DATABASE']['PASSWORD'],
+        'HOST': CONFIG['DATABASE']['HOST'],
+        'PORT': CONFIG['DATABASE']['PORT'],
+        'OPTIONS': {'charset': 'utf8mb4'}
     }
 }
 

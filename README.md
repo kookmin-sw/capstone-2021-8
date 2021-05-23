@@ -1,5 +1,7 @@
 # PaperFlow
 
+**[http://paperflow.org](http://paperflow.org)**
+
 **팀페이지 주소**: https://kookmin-sw.github.io/capstone-2021-8
 
 - [PaperFlow](#PaperFlow)
@@ -22,8 +24,17 @@ PaperFlow는 각 논문의 참조 (references)를 자동 추출 및 가중치 �
 
 - 논문 기본 정보 열람
 - 논문 흐름 서비스
-- 그래프를 통한 시각화 서비스
-- 사용자 취향에 맞는 주요 논문 추천 서비스
+- 연구 키워드 시각화
+- 연구 통계
+- 뉴스레터
+
+### 1.2. 발표 자료
+
+- [최종 발표 자료](https://github.com/kookmin-sw/capstone-2021-8/blob/master/docs/%EC%B5%9C%EC%A2%85%20%EB%B0%9C%ED%91%9C_team8.pdf)
+
+### 1.3. 포스터
+
+- [최종 포스터](https://github.com/kookmin-sw/capstone-2021-8/blob/master/docs/%ED%8F%AC%EC%8A%A4%ED%84%B0.pdf)
 
 ## 2. Abstract
 
@@ -31,25 +42,29 @@ The PaperFlow is a service that helps researchers to catch up current research f
 
 ## 3. 소개 영상
 
+### 3.1. 시연 영상
+
+[![YoutubeVid](http://img.youtube.com/vi/wibfS6SR_P0/0.jpg)](http://www.youtube.com/watch?v=wibfS6SR_P0)
+
 ## 4. 팀 소개
 
 - 윤상건
 
-  - Role: 팀장, Front-end, Back-end, 데이터 분석
+  - Role: 팀장, Full-stack, AWS 배포, 데이터 분석
   - Student ID: 20191632
   - E-Mail: ggj06281@kookmin.ac.kr
   - Github: [@c0510gy](https://github.com/c0510gy)
 
 - 이민종
 
-  - Role: Front-end, 데이터 시각화, 데이터 분석
+  - Role: Full-stack, 데이터 시각화, 데이터 분석
   - Student ID: 20181656
   - E-Mail: lsjppp8069@kookmin.ac.kr
   - Github: [@hughugh](https://github.com/hughugh)
 
 - 김태영
 
-  - Role: Back-end, 데이터 크롤링, 데이터 분석
+  - Role: Back-end, DB 구축, 데이터 분석
   - Student ID: 20160729
   - E-Mail: tykim75@kookmin.ac.kr
   - Github: [@tykim75](https://github.com/tykim75)

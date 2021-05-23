@@ -6,9 +6,19 @@
   .cardImage {
     width: 300px;
     height: 300px;
+    overflow: hidden;
+    object-fit: cover;
   }
 
   .contentText {
     margin-left: 60px;
+
+    .title {
+      font-size: 30px;
+      font-weight: 500;
+    }
+    .content {
+      font-size: 20px;
+    }
   }
 }

@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
-// import stylesMobileDefault from './MobileDefault.module.scss';
+import stylesMobileDefault from './MobileDefault.module.scss';
 
 const IntroCard = ({ image, title, content }) => {
   const { screenClass } = useRootData(({ appStore }) => ({
@@ -13,7 +13,7 @@ const IntroCard = ({ image, title, content }) => {
   }));
   const isDesktop = screenClass === 'xl';
 
-  const styles = isDesktop ? stylesDesktopDefault : stylesDesktopDefault;
+  const styles = isDesktop ? stylesDesktopDefault : stylesMobileDefault;
 
   return (
     <Jumbotron fluid>
@@ -24,10 +24,10 @@ const IntroCard = ({ image, title, content }) => {
           alt=""
         />
         <div className={styles.contentText}>
-          <h2>{title}</h2>
-          <p>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.content}>
             {content}
-          </p>
+          </div>
         </div>
       </Container>
     </Jumbotron>

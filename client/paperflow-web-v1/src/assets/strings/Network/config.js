@@ -30,7 +30,7 @@ export const nodeStandard = {
 
 export const linkStandard = {
   0: {
-    0: 250,
+    0: 700,
     1: 200,
     2: 200,
     3: 200,
