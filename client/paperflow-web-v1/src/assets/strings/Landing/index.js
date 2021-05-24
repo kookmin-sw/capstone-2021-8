@@ -6,15 +6,15 @@ import subscriptionFeatureImage from '../../images/financial-2860753_1920.jpg';
 export const achvs = [
   {
     description: 'CS분야 출판물',
-    number: '14,116,789',
+    number: 14116789,
   },
   {
     description: '유사도가 계산된 논문 쌍',
-    number: '175,831,702',
+    number: 175831702,
   },
   {
     description: '논문 분야',
-    number: '19',
+    number: 19,
   },
 ];
 

@@ -4,6 +4,7 @@ import {
   Container,
   Carousel,
 } from 'react-bootstrap';
+import ScrollAnimation from 'react-animate-on-scroll';
 import useRootData from '../../hooks/useRootData';
 import backgroundImage from '../../assets/images/books-1245690_1920.jpg';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
@@ -70,7 +71,11 @@ const Lading = () => {
       {
         features.map((item) => {
           const { image, title, content } = item;
-          return <IntroCard key={title} image={image} title={title} content={content} />;
+          return (
+            <ScrollAnimation key={title} animateIn="fadeIn" animateOut="fadeOut">
+              <IntroCard image={image} title={title} content={content} />
+            </ScrollAnimation>
+          );
         })
       }
 
