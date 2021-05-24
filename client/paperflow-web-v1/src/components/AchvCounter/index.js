@@ -4,6 +4,7 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
+import CountUp from 'react-countup';
 import useRootData from '../../hooks/useRootData';
 import stylesDesktopDefault from './DesktopDefault.module.scss';
 import stylesMobileDefault from './MobileDefault.module.scss';
@@ -22,7 +23,11 @@ const AchvCounter = ({ achvs = [] }) => {
         {
           achvs.map((item) => (
             <Col key={item.description} className={styles.achvItemCol}>
-              <h2 className={styles.number}>{item.number}</h2>
+              <CountUp start={0} separator="," end={item.number} delay={0}>
+                {({ countUpRef }) => (
+                  <h2 className={styles.number} ref={countUpRef}>{' '}</h2>
+                )}
+              </CountUp>
               <span className={styles.description}>{item.description}</span>
             </Col>
           ))
@@ -35,7 +40,11 @@ const AchvCounter = ({ achvs = [] }) => {
         achvs.map((item) => (
           <Row className={`align-items-center ${styles.achvItemRow}`}>
             <Col key={item.description} className={styles.achvItemCol}>
-              <h2 className={styles.number}>{item.number}</h2>
+              <CountUp start={0} separator="," end={item.number} delay={0}>
+                {({ countUpRef }) => (
+                  <h2 className={styles.number} ref={countUpRef}>{' '}</h2>
+                )}
+              </CountUp>
               <span className={styles.description}>{item.description}</span>
             </Col>
           </Row>
