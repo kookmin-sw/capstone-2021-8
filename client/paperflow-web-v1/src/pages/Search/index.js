@@ -72,7 +72,7 @@ const Search = () => {
 
   useEffect(() => {
     searchHandler();
-  }, [searchKeyword, fromIndex]);
+  }, [searchKeyword, fromIndex, titleFilter, abstractFilter, authorFilter]);
 
   return (
     <DefaultLayout>
