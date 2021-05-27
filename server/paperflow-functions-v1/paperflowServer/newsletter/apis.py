@@ -1,7 +1,7 @@
-import json
 import csv
 import smtplib
 import codecs
+from django.conf import settings
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -41,12 +41,8 @@ def init(email, password):
 
 
 def send_newsletter(receivers):
-    # Read config
-    with open('newsletter/config.json', 'r', encoding='UTF-8') as config_file:
-        config = json.load(config_file)
-
     # Send with template
-    s = init(config['email'], config['password'])
+    s = init(settings.CONFIG['NEWSLETTER']['email'], settings.CONFIG['NEWSLETTER']['password'])
     for receiver in receivers:
-        send_mail(s, config['sender'], receiver.email, config['subject'], config['html_file'], config['images'])
+        send_mail(s, settings.CONFIG['NEWSLETTER']['sender'], receiver.email, settings.CONFIG['NEWSLETTER']['subject'], settings.CONFIG['NEWSLETTER']['html_file'], settings.CONFIG['NEWSLETTER']['images'])
     s.quit()
