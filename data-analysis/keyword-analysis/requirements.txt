@@ -73,7 +73,7 @@ tqdm==4.60.0
 transformers==4.5.0
 typer==0.3.2
 typing-extensions==3.7.4.3
-urllib3==1.26.4
+urllib3==1.26.5
 wasabi==0.8.2
 yake @ git+https://github.com/LIAAD/yake@e2f67634608719f0136c9a439cbfb79fa388604a
 zc.lockfile==2.0
