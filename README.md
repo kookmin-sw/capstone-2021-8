@@ -1,6 +1,14 @@
 # PaperFlow
 
-**[http://paperflow.org](http://paperflow.org)**
+**[http://paperflow.org](http://paperflow.org)** (현재는 서버를 운영중이지 않습니다)
+
+- Archived Pages
+  - [Landing Page](https://web.archive.org/web/20210801085134mp_/http://paperflow.org/)
+  - [Search Page](https://web.archive.org/web/20210801085351/http://paperflow.org/search)
+  - [Detail Page](https://web.archive.org/web/20210801090057/http://paperflow.org/paper-detail?id=3d49b0ee9250a42759b7d9566478b9fb7129741e)
+  - [Keyword Graph Page](https://web.archive.org/web/20210801085631/http://paperflow.org/keyword-network)
+  - [Statistics Page](https://web.archive.org/web/20210801085704/http://paperflow.org/statistics)
+  - [Newsletter Page](https://web.archive.org/web/20210801085745/http://paperflow.org/email-input)
 
 **팀페이지 주소**: https://kookmin-sw.github.io/capstone-2021-8
 
