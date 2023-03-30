@@ -1,0 +1,73 @@
+{
+  "name": "paperflow-web-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --mode=development --host 0.0.0.0 --port 8088",
+    "prod": "cross-env NODE_ENV=production webpack serve --mode=production --host 0.0.0.0 --port 8088",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npx patch-package"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nivo/bar": "^0.67.0",
+    "@nivo/core": "^0.67.0",
+    "@nivo/network": "^0.67.0",
+    "@nivo/pie": "^0.67.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.1.1",
+    "d3": "^6.6.1",
+    "file-loader": "^6.2.0",
+    "history": "^4.10.1",
+    "mobx": "^6.1.8",
+    "mobx-react-lite": "^3.2.0",
+    "react": "^17.0.1",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-bootstrap": "^1.5.2",
+    "react-bootstrap-icons": "^1.4.0",
+    "react-countup": "^4.3.3",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-vertical-timeline-component": "^3.3.3",
+    "react-virtualized-auto-sizer": "^1.0.5",
+    "react-visibility-sensor": "^5.1.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-react": "^7.12.13",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "html-webpack-plugin": "^5.2.0",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb"
+    ]
+  }
+}

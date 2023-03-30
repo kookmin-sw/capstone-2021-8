@@ -1,0 +1,42 @@
+@import '../../assets/scsses/config';
+
+#networkContainer {
+  padding: 0;
+  margin: 10px;
+  height: 100%;
+}
+
+.filterContainer {
+  display: inline-block;
+  margin: 15px 0 0 15px;
+  text-align: center;
+}
+
+.filter {
+  display: flex;
+  margin-right: 20px;
+}
+
+.filterTitle {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.filterBox {
+  padding-right: 10px;
+  border-radius: 4px;
+}
+
+.network {
+  width: 100%;
+}
+
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /paperflow_web
+
+npm run prod

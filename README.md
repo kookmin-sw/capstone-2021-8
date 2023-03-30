@@ -1,77 +1,101 @@
-[![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=349923&assignment_repo_type=GroupAssignmentRepo)
-# Welcome to GitHub
+# PaperFlow
 
-캡스톤 팀 생성을 축하합니다.
+**[http://paperflow.org](http://paperflow.org)** (현재는 서버를 운영중이지 않습니다)
 
-## 팀소개 및 페이지를 꾸며주세요.
+- Archived Pages
+  - [Landing Page](https://web.archive.org/web/20210801085134mp_/http://paperflow.org/)
+  - [Search Page](https://web.archive.org/web/20210801085351/http://paperflow.org/search)
+  - [Detail Page](https://web.archive.org/web/20210801090057/http://paperflow.org/paper-detail?id=3d49b0ee9250a42759b7d9566478b9fb7129741e)
+  - [Keyword Graph Page](https://web.archive.org/web/20210801085631/http://paperflow.org/keyword-network)
+  - [Statistics Page](https://web.archive.org/web/20210801085704/http://paperflow.org/statistics)
+  - [Newsletter Page](https://web.archive.org/web/20210801085745/http://paperflow.org/email-input)
 
-- 프로젝트 소개
-  - 프로젝트 설치방법 및 데모, 사용방법, 프리뷰등을 readme.md에 작성.
-  - Api나 사용방법등 내용이 많을경우 wiki에 꾸미고 링크 추가.
+**팀페이지 주소**: https://kookmin-sw.github.io/capstone-2021-8
 
-- 팀페이지 꾸미기
-  - 프로젝트 소개 및 팀원 소개
-  - index.md 예시보고 수정.
+- [PaperFlow](#PaperFlow)
+  - [1. 프로젝트 소개](#1-프로젝트-소개)
+    - [1.1. 핵심 서비스](#11-핵심-서비스)
+  - [2. Abstract](#2-Abstract)
+  - [3. 소개 영상](#3-소개-영상)
+  - [4. 팀 소개](#4-팀-소개)
+  - [5. 사용법](#5-사용법)
+    - [5.1. client/paperflow-web-v1](#51-client/paperflow-web-v1)
+    - [5.2. server/paperflow-functions-v1](#52-server/paperflow-functions-v1)
+  - [6. 기타](#6-기타)
 
-- GitHub Pages 리파지토리 Settings > Options > GitHub Pages 
-  - Source를 marster branch
-  - Theme Chooser에서 태마선택
-  - 수정후 팀페이지 확인하여 점검.
+## 1. 프로젝트 소개
 
-**팀페이지 주소** -> https://kookmin-sw.github.io/ '{{자신의 리파지토리 아이디}}'
+![intro image](images/intro.png)
+PaperFlow는 각 논문의 참조 (references)를 자동 추출 및 가중치 분석 (각 참조된 논문이 현재 논문에서 얼만큼 중요도를 가지는지)을 통해 사용자가 어떤 논문이 현재 어떤 식으로 연구되고 있는지 **“연구 동향을 쉽고 빠르게 파악할 수 있도록 도와주는 웹 서비스”** 입니다.
 
-**예시)** 2020년 0조  https://kookmin-sw.github.io/capstone-2020-0/
+### 1.1. 핵심 서비스
 
+- 논문 기본 정보 열람
+- 논문 흐름 서비스
+- 연구 키워드 시각화
+- 연구 통계
+- 뉴스레터
 
-## 내용에 아래와 같은 내용들을 추가하세요.
+### 1.2. 발표 자료
 
-### 1. 프로잭트 소개
+- [최종 발표 자료](https://github.com/kookmin-sw/capstone-2021-8/blob/master/docs/%EC%B5%9C%EC%A2%85%20%EB%B0%9C%ED%91%9C_team8.pdf)
 
-프로젝트
+### 1.3. 포스터
 
-### 2. 소개 영상
+- [최종 포스터](https://github.com/kookmin-sw/capstone-2021-8/blob/master/docs/%ED%8F%AC%EC%8A%A4%ED%84%B0.pdf)
 
-프로젝트 소개하는 영상을 추가하세요
+## 2. Abstract
 
-### 3. 팀 소개
+The PaperFlow is a service that helps researchers to catch up current research flow by automatically extracting references from papers and estimating the similarity between those papers.
 
-팀을 소개하세요.
+## 3. 소개 영상
 
-팀원정보 및 담당이나 사진 및 SNS를 이용하여 소개하세요.
+### 3.1. 시연 영상
 
-### 4. 사용법
+[![YoutubeVid](http://img.youtube.com/vi/wibfS6SR_P0/0.jpg)](http://www.youtube.com/watch?v=wibfS6SR_P0)
 
-소스코드제출시 설치법이나 사용법을 작성하세요.
+## 4. 팀 소개
 
-### 5. 기타
+- 윤상건
 
-추가적인 내용은 자유롭게 작성하세요.
+  - Role: 팀장, Full-stack, AWS 배포, 데이터 분석
+  - Student ID: 20191632
+  - E-Mail: ggj06281@kookmin.ac.kr
+  - Github: [@c0510gy](https://github.com/c0510gy)
 
+- 이민종
 
-## Markdown을 사용하여 내용꾸미기
+  - Role: Full-stack, 데이터 시각화, 데이터 분석
+  - Student ID: 20181656
+  - E-Mail: lsjppp8069@kookmin.ac.kr
+  - Github: [@hughugh](https://github.com/hughugh)
 
-Markdown은 작문을 스타일링하기위한 가볍고 사용하기 쉬운 구문입니다. 여기에는 다음을위한 규칙이 포함됩니다.
+- 김태영
 
-```markdown
-Syntax highlighted code block
+  - Role: Back-end, DB 구축, 데이터 분석
+  - Student ID: 20160729
+  - E-Mail: tykim75@kookmin.ac.kr
+  - Github: [@tykim75](https://github.com/tykim75)
 
-# Header 1
-## Header 2
-### Header 3
+## 5. 사용법
 
-- Bulleted
-- List
+### 5.1. client/paperflow-web-v1
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+cd ./client/paperflow-web-v1
+npm install
+npm run dev
 ```
 
-자세한 내용은 [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 5.2. server/paperflow-functions-v1
 
-### Support or Contact
+```
+cd ./server/paperflow-functions-v1
+python3 -m venv ./venv
+source ./venv/bin/activate
+pip3 install -r requirements.txt
+python3 ./paperflowServer/manage.py migrate
+python3 ./paperflowServer/manage.py runserver
+```
 
-readme 파일 생성에 추가적인 도움이 필요하면 [도움말](https://help.github.com/articles/about-readmes/) 이나 [contact support](https://github.com/contact) 을 이용하세요.
+## 6. 기타
